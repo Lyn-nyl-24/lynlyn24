@@ -1,0 +1,50 @@
+name: Publish verified static Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lynlyn24-pages
+  cancel-in-progress: false
+
+jobs:
+  package:
+    if: github.repository == 'Lyn-nyl-24/lynlyn24' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Package only static files
+        run: |
+          test "$(git ls-remote https://github.com/Lyn-nyl-24/lynlyn24.git refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+          mkdir "$RUNNER_TEMP/pages"
+          git archive HEAD -- . ':(exclude).github' | tar -xf - -C "$RUNNER_TEMP/pages"
+          test -f "$RUNNER_TEMP/pages/index.html"
+          test -z "$(find "$RUNNER_TEMP/pages" -type l -print -quit)"
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: ${{ runner.temp }}/pages
+
+  deploy:
+    needs: package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Verify that the packaged revision is still current
+        run: test "$(git ls-remote https://github.com/Lyn-nyl-24/lynlyn24.git refs/heads/main | cut -f1)" = "$GITHUB_SHA"
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
