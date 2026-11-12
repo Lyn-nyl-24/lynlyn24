@@ -3,7 +3,7 @@
   const header = document.querySelector('.site-header');
   const menu = document.querySelector('.menu-button');
   const theme = document.querySelector('.theme-button');
-  const mobile = matchMedia('(max-width: 650px)');
+  const mobile = matchMedia('(max-width: 585px)');
   const storageKey = 'notebook:' + new URL('../', document.currentScript.src).pathname + ':theme';
 
   function setMenu(open) {
@@ -44,6 +44,26 @@
     updateTheme();
     try { localStorage.setItem(storageKey, root.dataset.theme); } catch { /* Keep the in-page setting. */ }
   });
+
+  const sortButton = document.querySelector('[data-title-sort]');
+  if (sortButton) {
+    const list = document.getElementById(sortButton.getAttribute('aria-controls'));
+    const entries = Array.from(list.children, element => ({ element, title: element.querySelector('.note-title').textContent }));
+    const status = document.querySelector('[data-title-status]');
+    const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
+    let ascending = false;
+    sortButton.hidden = false;
+    document.querySelector('[data-title-label]').hidden = true;
+    sortButton.addEventListener('click', () => {
+      ascending = !ascending;
+      const direction = ascending ? 1 : -1;
+      const sorted = entries.toSorted((a, b) => direction * collator.compare(a.title, b.title));
+      list.append(...sorted.map(entry => entry.element));
+      sortButton.firstElementChild.textContent = ascending ? '↑' : '↓';
+      sortButton.setAttribute('aria-label', 'Sort titles ' + (ascending ? 'Z to A' : 'A to Z'));
+      status.textContent = 'Titles sorted ' + (ascending ? 'A to Z.' : 'Z to A.');
+    });
+  }
 
   const query = document.querySelector('#query');
   if (!query) return;
