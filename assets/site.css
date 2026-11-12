@@ -16,15 +16,15 @@
   --accent: #8A0303;
   --tint: #fff1e9;
   --selection: #f6b6ad;
-  --link-glow: rgb(138 3 3 / 18%);
   --gutter: clamp(1rem, 3.8vw, 3rem);
   --shell-width: 68rem;
   --index-width: 61rem;
   --page-width: calc(100% - 2 * var(--gutter));
   --reading-size: clamp(1.08rem, 1rem + .35vw, 1.24rem);
+  --sans: "Instrument Sans", "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
   --serif: "Times New Roman", Times, "Liberation Serif", serif;
   --mono: "IBM Plex Mono", Consolas, monospace;
-  font-family: var(--serif);
+  font-family: var(--sans);
   background: var(--paper);
   color: var(--ink);
 }
@@ -38,7 +38,6 @@
   --soft-line: #514a4d;
   --accent: #ffa59f;
   --tint: #352827;
-  --link-glow: rgb(255 165 159 / 23%);
 }
 
 * { box-sizing: border-box; }
@@ -71,25 +70,16 @@ button, input { font: inherit; }
   align-items: center;
   gap: 12px;
   padding-inline: max(var(--gutter), calc((100% - var(--shell-width)) / 2));
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--soft-line);
   background: var(--paper);
 }
 .site-header a, .site-footer a { color: inherit; text-decoration: none; }
 .wordmark { width: fit-content; font-size: 1.3rem; font-weight: 700; letter-spacing: -.025em; }
+.brand-initial { font-family: "TeX Gyre Termes Math", "Cambria Math", serif; font-weight: 400; }
 .site-nav, .header-tools { display: flex; align-items: center; }
-.site-nav { gap: clamp(.75rem, 2.25vw, 2rem); font-size: .82rem; font-weight: 700; letter-spacing: .045em; }
-.site-nav a { position: relative; padding-block: .45rem; }
-.site-nav a::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 .18rem;
-  height: 1px;
-  background: var(--accent);
-  box-shadow: 0 0 .45rem var(--accent);
-  opacity: 0;
-  pointer-events: none;
-}
-.site-nav a:is([aria-current], :focus-visible)::after { opacity: 1; }
+.site-nav { gap: clamp(.75rem, 2.25vw, 2rem); font-size: .875rem; font-weight: 700; letter-spacing: .04em; }
+.site-nav a { padding-block: .45rem; }
+.site-nav a[aria-current] { text-decoration: underline; }
 .header-tools { justify-self: end; gap: clamp(.35rem, 1.6vw, 1.2rem); font-size: .97rem; font-weight: 700; white-space: nowrap; }
 .theme-button, .menu-button {
   min-width: 36px;
@@ -105,17 +95,17 @@ button, input { font: inherit; }
 .hero, .catalogue, .listing { inline-size: min(var(--page-width), var(--index-width)); margin-inline: auto; }
 .hero { padding-block: clamp(3.25rem, 8vw, 7.25rem) clamp(2.75rem, 6vw, 5rem); text-align: center; }
 h1 { margin: 0; font-size: clamp(3.1rem, 2rem + 4.6vw, 5.6rem); line-height: 1.04; font-weight: 400; letter-spacing: -.045em; overflow-wrap: anywhere; text-wrap: balance; }
-.hero p, .lede { margin: .7em 0 0; max-inline-size: 60ch; font: clamp(1.11rem, 1rem + .48vw, 1.4rem)/1.55 var(--serif); color: var(--muted); overflow-wrap: anywhere; }
+.hero p, .lede { margin: .7em 0 0; max-inline-size: 60ch; font-size: clamp(1.15rem, 1.04rem + .48vw, 1.44rem); line-height: 1.55; color: var(--muted); overflow-wrap: anywhere; }
 .hero p { margin-inline: auto; }
 
-.catalogue { border-top: 1px solid var(--line); }
+.catalogue { border-top: 1px solid var(--soft-line); }
 .catalogue-section {
   display: grid;
   grid-template-columns: minmax(9rem, 21%) minmax(0, 1fr);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--soft-line);
 }
 .catalogue-label { padding: 19px 14px 19px 0; }
-.catalogue-label h2 { margin: 0; font-size: clamp(1.1rem, .99rem + .56vw, 1.42rem); font-weight: 400; }
+.catalogue-label h2 { margin: 0; font-size: clamp(1.14rem, 1.03rem + .56vw, 1.46rem); font-weight: 400; }
 .catalogue-label h2 a { color: inherit; text-decoration: none; }
 .topic-list, .note-list { list-style: none; padding: 0; margin: 0; }
 .topic-list li + li, .note-list li + li { border-top: 1px solid var(--soft-line); }
@@ -129,19 +119,19 @@ h1 { margin: 0; font-size: clamp(3.1rem, 2rem + 4.6vw, 5.6rem); line-height: 1.0
   padding-inline: .6rem;
 }
 .topic-link { grid-template-columns: minmax(8rem, 28%) minmax(0, 1fr) auto 16px; }
-.topic-title, .note-title { color: var(--accent); font-size: 1.08rem; font-weight: 700; overflow-wrap: anywhere; }
-.topic-description, .note-summary, .topic-count { color: var(--muted); font-size: .99rem; line-height: 1.5; overflow-wrap: anywhere; }
+.topic-title, .note-title { color: var(--accent); font-size: 1.15rem; font-weight: 700; overflow-wrap: anywhere; }
+.topic-description, .note-summary, .topic-count { color: var(--muted); font-size: 1.03rem; line-height: 1.5; overflow-wrap: anywhere; }
 .topic-count { white-space: nowrap; }
 .row-arrow { color: var(--accent); justify-self: end; }
 
 .listing, .reading { padding-block: clamp(2.5rem, 5.7vw, 4.8rem) clamp(2.5rem, 6vw, 4.5rem); }
 .reading {
-  font-size: var(--reading-size);
-  inline-size: min(var(--page-width), 70ch);
+  font-size: calc(var(--reading-size) + .04rem);
+  inline-size: min(var(--page-width), 44rem);
   margin-inline: auto;
 }
 .listing h1, .reading h1 { font-size: clamp(2.3rem, 1.68rem + 2.6vw, 3.8rem); }
-.listing .topic-list, .listing .note-list { margin-block-start: 34px; border-block: 1px solid var(--line); }
+.listing .topic-list, .listing .note-list { margin-block-start: 34px; border-block: 1px solid var(--soft-line); }
 .note-link { grid-template-columns: 5.4rem minmax(0, 1fr) 16px; padding-block: 15px; }
 .tag { color: var(--accent); font: .8rem/1.4 var(--mono); }
 .note-summary { display: block; margin-top: .3rem; }
@@ -168,7 +158,7 @@ h1 { margin: 0; font-size: clamp(3.1rem, 2rem + 4.6vw, 5.6rem); line-height: 1.0
 }
 .reader-navigation a { display: block; padding: .75rem .4rem; text-decoration: none; overflow-wrap: anywhere; }
 .reader-navigation span { display: block; margin-block-end: 3px; color: var(--muted); font-size: .77rem; }
-.reader-navigation strong { font-size: .9rem; }
+.reader-navigation strong { font-size: .96rem; }
 .reader-prev { grid-column: 1; }
 .reader-up { grid-column: 2; text-align: center; }
 .reader-next { grid-column: 3; text-align: end; }
@@ -179,6 +169,7 @@ h1 { margin: 0; font-size: clamp(3.1rem, 2rem + 4.6vw, 5.6rem); line-height: 1.0
 .article-toc { margin-block: 28px 20px; border-block: 1px solid var(--soft-line); }
 .article-toc ul { display: flex; flex-wrap: wrap; gap: .55rem 1.25rem; list-style: none; margin: 0; padding: 12px 0; font-size: .98rem; }
 .prose { margin-top: 1.6rem; line-height: 1.7; overflow-wrap: anywhere; }
+.note-body { font-family: var(--serif); font-size: var(--reading-size); }
 .prose math { font-family: "TeX Gyre Termes Math", math; font-size: 1em; }
 .prose table { width: 100%; border-collapse: collapse; margin-block: 1.25rem; font-size: .93em; }
 .prose th, .prose td { padding: .28em .6em; border-bottom: 1px solid var(--soft-line); text-align: left; }
@@ -186,19 +177,33 @@ h1 { margin: 0; font-size: clamp(3.1rem, 2rem + 4.6vw, 5.6rem); line-height: 1.0
 .prose .align-center { text-align: center; }
 .prose .align-right { text-align: right; }
 .math-figure { margin: 1.6rem 0 2.2rem; }
-.math-figure-frame { overflow-x: auto; padding: .8rem 0; }
-.math-figure img { display: block; inline-size: min(100%, 39rem); min-inline-size: 22rem; block-size: auto; margin-inline: auto; }
-:root[data-theme="dark"] :is(.math-figure img, .spectral-chart) { filter: invert(1); }
+.diagram-image { display: block; inline-size: 100%; block-size: auto; }
+.diagram-view { font: .94rem/1.55 var(--sans); }
+.diagram-view label { margin-inline: .15em .65em; cursor: pointer; }
+.diagram-view input { margin-inline: 0; accent-color: var(--accent); }
+.diagram-file { white-space: nowrap; }
+.diagram-panel { display: none; overflow-x: auto; margin-block: .55rem; }
+.diagram-web:checked ~ .diagram-web-panel,
+.diagram-svg:checked ~ .diagram-svg-panel { display: block; }
+.diagram-canvas { position: relative; container-type: inline-size; }
+.diagram-label { position: absolute; transform: translate(-50%, -50%) rotate(var(--label-angle, 0deg)); line-height: 1; white-space: nowrap; }
+.diagram-label .katex { display: block; }
+.diagram-label math { font-family: "TeX Gyre Termes Math", math; font-size: 1em; }
+.math-figure :is(.diagram-canvas, .diagram-svg-panel .diagram-image) {
+  inline-size: min(100%, 39rem); min-inline-size: 22rem; margin-inline: auto;
+}
+:root[data-theme="dark"] .diagram-image { filter: invert(1); }
 .math-figure figcaption, .figure-key, .spectral-status {
   color: var(--muted);
   font: .96rem/1.5 var(--serif);
 }
 .math-figure figcaption { text-align: center; }
+.format-guide { font: .9rem/1.45 var(--sans); }
 .spectral-computation { margin-block: 1.7rem; }
 .spectral-pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
-.spectral-page { min-width: 0; margin: 0; border-top: 1px solid var(--line); padding-top: .8rem; }
+.spectral-page { min-width: 0; margin: 0; border-top: 1px solid var(--soft-line); padding-top: .8rem; }
 .spectral-page figcaption { font: .96rem/1.4 var(--mono); }
-.spectral-chart { display: block; width: 100%; height: auto; max-height: 270px; object-fit: contain; }
+.spectral-page .diagram-view { margin-block-start: .65rem; }
 .spectral-status { margin: .3rem 0; }
 .spectral-maps { margin: .2rem 0 .5rem; padding-inline-start: 1.2rem; font-size: .86rem; }
 .spectral-page details { font-size: .86rem; }
@@ -284,47 +289,113 @@ h1 { margin: 0; font-size: clamp(3.1rem, 2rem + 4.6vw, 5.6rem); line-height: 1.0
   .math-block { padding-inline-start: .7rem; }
 }
 
-:is(.topic-link, .note-link, .reader-navigation a) {
-  position: relative;
-  isolation: isolate;
-  overflow: clip;
-  border-radius: .22rem;
-}
-
-:is(.topic-link, .note-link, .reader-navigation a)::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 1px -5%;
-  background: radial-gradient(ellipse at 26% 50%, var(--link-glow), transparent 74%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-:is(.topic-link, .note-link, .reader-navigation a):focus-visible::before { opacity: 1; }
-
 @media (hover: hover) and (pointer: fine) {
-  :is(.topic-link, .note-link, .reader-navigation a):hover::before,
-  .site-nav a:hover::after { opacity: 1; }
+  a:hover { text-decoration-thickness: 2px; }
+  :is(.topic-link, .note-link):hover { background: var(--tint); }
+  .topic-link:hover .topic-title, .note-link:hover .note-title,
+  .reader-navigation a:hover strong { text-decoration: underline; }
   :is(.site-header, .site-footer, .catalogue-label) a:hover { color: var(--accent); }
-  :is(.reading, .listing) a:hover { text-shadow: 0 0 .7rem var(--link-glow); }
   :is(.theme-button, .menu-button):hover { background: var(--tint); color: var(--accent); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :is(.topic-link, .note-link, .reader-navigation a)::before {
-    transform: translateX(-7%);
-    transition: opacity 190ms ease-out, transform 330ms cubic-bezier(.2, .65, .3, 1);
-  }
-  .site-nav a::after {
-    transform: scaleX(.45);
-    transition: opacity 180ms ease-out, transform 240ms cubic-bezier(.2, .65, .3, 1);
-  }
-  .site-nav a:is([aria-current], :focus-visible)::after { transform: scaleX(1); }
-  .row-arrow { transition: transform 220ms ease-out; }
-  @media (hover: hover) and (pointer: fine) {
-    :is(.topic-link, .note-link, .reader-navigation a):hover::before { transform: translateX(0); }
-    .site-nav a:hover::after { transform: scaleX(1); }
-    :is(.topic-link, .note-link):hover .row-arrow { transform: translate(2px, -2px); }
-  }
-}
+[data-diagram="exact-rows"] [data-label="0"]{left:5.03859%;top:18.90471%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="1"]{left:26.84907%;top:18.127%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="2"]{left:38.68931%;top:12.44919%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="3"]{left:29.40585%;top:48.15527%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="4"]{left:49.3688%;top:18.86519%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="5"]{left:60.05892%;top:13.43373%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="6"]{left:51.29208%;top:48.99225%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="7"]{left:72.05784%;top:18.127%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="8"]{left:74.99251%;top:48.15527%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="9"]{left:94.9431%;top:18.90471%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="10"]{left:5.03859%;top:78.96128%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="11"]{left:26.94755%;top:78.18357%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="12"]{left:38.72584%;top:87.55078%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="13"]{left:49.5108%;top:79.02056%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="14"]{left:60.09545%;top:86.56626%;font-size:3.40231cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="15"]{left:72.15632%;top:78.18357%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="16"]{left:94.9431%;top:78.96128%;font-size:4.59771cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="0"]{left:3.65417%;top:14.83086%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="1"]{left:24.5906%;top:15.36627%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="2"]{left:49.67013%;top:15.95078%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="3"]{left:74.80933%;top:15.36627%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="4"]{left:48.57025%;top:47.19559%;font-size:2.46748cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="5"]{left:24.6205%;top:84.63371%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="6"]{left:49.70003%;top:85.21822%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="7"]{left:74.83923%;top:84.63371%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="8"]{left:96.33255%;top:84.0983%;font-size:3.33443cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="0"]{left:4.82194%;top:20.90896%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="1"]{left:22.17141%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="2"]{left:41.5771%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="3"]{left:59.52716%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="4"]{left:77.22165%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="5"]{left:95.17806%;top:20.90896%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="6"]{left:41.67095%;top:74.01092%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="7"]{left:59.62101%;top:74.01092%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="8"]{left:77.3155%;top:74.01092%;font-size:3.76802cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="9"]{left:32.03665%;top:13.30062%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="10"]{left:51.67058%;top:13.30062%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="11"]{left:45.83091%;top:47.75917%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="12"]{left:67.68121%;top:13.30062%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="13"]{left:62.40923%;top:47.75917%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="14"]{left:81.47547%;top:47.75917%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="15"]{left:36.272%;top:40.14519%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="16"]{left:53.95215%;top:40.93541%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="17"]{left:50.76613%;top:81.2029%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="18"]{left:72.28214%;top:38.7582%;font-size:2.78834cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="9"]{left:21.70912%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="10"]{left:21.70912%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="11"]{left:42.83502%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="12"]{left:42.90465%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="13"]{left:64.10018%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="14"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="15"]{left:39.44921%;top:30.36871%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="9"]{left:21.70912%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="10"]{left:21.70912%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="11"]{left:42.90465%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="12"]{left:64.10018%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="13"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="14"]{left:31.47153%;top:38.1322%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="9"]{left:21.70912%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="10"]{left:42.90465%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="11"]{left:64.10018%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="12"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="13"]{left:42.77723%;top:24.29727%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="9"]{left:42.90465%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="10"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
