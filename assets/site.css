@@ -304,10 +304,8 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .prose { margin-top: 1.6rem; line-height: 1.7; overflow-wrap: anywhere; }
 .note-body { font-family: var(--serif); font-size: var(--reading-size); }
 .edition-excerpt { margin: .55rem 0 1rem; }
-.edition-scroll { overflow-x: auto; }
 .edition-image { display: block; inline-size: 100%; block-size: auto; }
-.edition-scroll > .edition-image { min-inline-size: 33rem; }
-.edition-diagram :is(.edition-diagram-canvas, .diagram-svg-panel > .edition-image) { min-inline-size: 33rem; }
+.edition-diagram :is(.edition-diagram-canvas, .diagram-svg-panel > .edition-image) { inline-size: 100%; }
 .edition-diagram-canvas { position: relative; container-type: inline-size; }
 .edition-diagram-label { position: absolute; line-height: 1; white-space: nowrap; transform: translateY(-.82em); }
 .edition-inline { display: inline-block; max-inline-size: 100%; }
@@ -369,7 +367,7 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   .diagram-segments label:hover span, .diagram-options a:hover, .diagram-file a:hover { color: var(--accent); }
 }
 .diagram-file { text-align: end; color: var(--muted); font: .72rem/1.35 var(--sans); }
-.diagram-panel { overflow-x: auto; margin-block: .55rem; }
+.diagram-panel { min-inline-size: 0; margin-block: .55rem; }
 .diagram-web-panel { display: none; }
 @supports selector(:has(*)) {
   .diagram-display, .diagram-web-panel { display: block; }
@@ -593,6 +591,52 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 [data-diagram="unrolled-exact-couple"] [data-label="16"]{left:53.43891%;top:41.87956%;font-size:2.64621cqw;--label-angle:0deg;}
 [data-diagram="unrolled-exact-couple"] [data-label="17"]{left:50.90447%;top:83.5479%;font-size:2.64621cqw;--label-angle:0deg;}
 [data-diagram="unrolled-exact-couple"] [data-label="18"]{left:71.95176%;top:39.49739%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="ac-pullback-of-epimorphisms"] [data-label="0"]{left:18.89989%;top:17.95671%;font-size:13.7265cqw;--label-angle:0deg;}
+[data-diagram="ac-pullback-of-epimorphisms"] [data-label="1"]{left:82.24278%;top:17.78016%;font-size:13.7265cqw;--label-angle:0deg;}
+[data-diagram="ac-pullback-of-epimorphisms"] [data-label="2"]{left:18.72591%;top:82.22516%;font-size:13.7265cqw;--label-angle:0deg;}
+[data-diagram="ac-pullback-of-epimorphisms"] [data-label="3"]{left:82.62416%;top:82.22516%;font-size:13.7265cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="0"]{left:36.93314%;top:7.78923%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="1"]{left:65.52652%;top:7.67321%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="2"]{left:93.05182%;top:7.92634%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="3"]{left:8.05044%;top:36.02166%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="4"]{left:37.04379%;top:36.02166%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="5"]{left:65.50402%;top:36.15877%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="6"]{left:8.11427%;top:64.26464%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="7"]{left:36.96425%;top:64.3912%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-exact-corner"] [data-label="8"]{left:8.08481%;top:92.3502%;font-size:6.45132cqw;--label-angle:0deg;}
+[data-diagram="ac-quotient-corner"] [data-label="0"]{left:20.95694%;top:17.26665%;font-size:9.66176cqw;--label-angle:0deg;}
+[data-diagram="ac-quotient-corner"] [data-label="1"]{left:80.5995%;top:18.43915%;font-size:9.66176cqw;--label-angle:0deg;}
+[data-diagram="ac-quotient-corner"] [data-label="2"]{left:20.78407%;top:81.53033%;font-size:9.66176cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="0"]{left:24.88035%;top:7.79634%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="1"]{left:50.21059%;top:7.79634%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="2"]{left:75.34718%;top:7.79634%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="3"]{left:24.89684%;top:35.65893%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="4"]{left:26.63845%;top:49.76044%;font-size:2.85269cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="5"]{left:50.16352%;top:35.7739%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="6"]{left:51.80945%;top:49.78699%;font-size:2.85269cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="7"]{left:75.34432%;top:35.7739%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="8"]{left:76.95102%;top:49.76044%;font-size:2.85269cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="9"]{left:95.84813%;top:35.90977%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="10"]{left:4.14803%;top:64.36428%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="11"]{left:24.81569%;top:63.98039%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="12"]{left:50.12785%;top:63.98039%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="13"]{left:75.2579%;top:64.05703%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="14"]{left:24.89187%;top:92.28339%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="15"]{left:50.22211%;top:92.28339%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-snake-lemma-proof"] [data-label="16"]{left:75.35871%;top:92.28339%;font-size:3.85498cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="0"]{left:4.55991%;top:51.35801%;font-size:3.23693cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="1"]{left:20.058%;top:51.27747%;font-size:3.23693cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="2"]{left:38.45493%;top:51.35801%;font-size:3.23693cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="3"]{left:57.22361%;top:51.27747%;font-size:3.23693cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="4"]{left:67.14349%;top:32.98528%;font-size:2.39533cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="5"]{left:78.09515%;top:51.27747%;font-size:3.23693cqw;--label-angle:0deg;}
+[data-diagram="ac-zig-zag-homology"] [data-label="6"]{left:95.44081%;top:51.35801%;font-size:3.23693cqw;--label-angle:0deg;}
+[data-diagram="ac-kernel-cokernel-chain"] [data-label="0"]{left:6.98268%;top:49.99999%;font-size:3.74417cqw;--label-angle:0deg;}
+[data-diagram="ac-kernel-cokernel-chain"] [data-label="1"]{left:22.34626%;top:46.2203%;font-size:3.74417cqw;--label-angle:0deg;}
+[data-diagram="ac-kernel-cokernel-chain"] [data-label="2"]{left:39.4581%;top:49.99999%;font-size:3.74417cqw;--label-angle:0deg;}
+[data-diagram="ac-kernel-cokernel-chain"] [data-label="3"]{left:58.957%;top:46.2203%;font-size:3.74417cqw;--label-angle:0deg;}
+[data-diagram="ac-kernel-cokernel-chain"] [data-label="4"]{left:74.27558%;top:46.2203%;font-size:3.74417cqw;--label-angle:0deg;}
+[data-diagram="ac-kernel-cokernel-chain"] [data-label="5"]{left:91.27018%;top:46.2203%;font-size:3.74417cqw;--label-angle:0deg;}
 [data-diagram="chart-n0006-filtered-example-e0"] [data-label="0"]{left:21.70202%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
 [data-diagram="chart-n0006-filtered-example-e0"] [data-label="1"]{left:42.9152%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
 [data-diagram="chart-n0006-filtered-example-e0"] [data-label="2"]{left:64.09308%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
