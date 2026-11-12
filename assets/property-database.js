@@ -5,33 +5,42 @@ const data = JSON.parse(byId('property-data').content.textContent);
 const entries = new Map(data.entries.map(entry => [entry.id,entry]));
 const records = [...document.querySelectorAll('[data-record]')];
 const normalize = value => value.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replaceAll('π','pi');
-const searchable = records.map(record => [record,normalize(record.dataset.search),new Set(record.dataset.externalIds.toLowerCase().split(' '))]);
+const searchable = records.map(record => [record,normalize(record.dataset.search),
+  new Set(record.dataset.externalIds.toLowerCase().split(' ')),new Set(record.dataset.stacksTags.toLowerCase().split(' '))]);
 const search = byId('database-query'), kind = byId('database-kind'), topic = byId('database-topic');
 const filterPanel = search.closest('.property-filters');
 const resultCount = byId('database-results');
+const clearFilters = byId('database-clear');
 const clusters = [...document.querySelectorAll('.property-cluster')];
 const sections = [...document.querySelectorAll('.property-group')];
 
 function filter() {
   const external = [];
-  const query = normalize(search.value).replace(/\bpi[- ]?base[:\s]+([pts]\d{6})\b/g,(_,id) => {
+  const stacks = [];
+  const query = normalize(search.value).replace(/\bstacks[:\s]+([0-9][a-z0-9]{3})\b/g,(_,id) => {
+    stacks.push(id);
+    return ' ';
+  }).replace(/\bpi[- ]?base[:\s]+([pts]\d{6})\b/g,(_,id) => {
     external.push(id);
     return ' ';
   });
   const terms = query.trim().split(/\s+/).filter(Boolean);
   let visible = 0;
-  for (const [record,index,externalIds] of searchable) {
+  for (const [record,index,externalIds,stacksTags] of searchable) {
     record.hidden = (kind.value !== '' && kind.value !== record.dataset.kind)
       || (topic.value !== '' && topic.value !== record.dataset.topic && topic.value !== record.dataset.subject)
-      || !terms.every(term => index.includes(term)) || !external.every(id => externalIds.has(id));
+      || !terms.every(term => index.includes(term)) || !external.every(id => externalIds.has(id)) ||
+      !stacks.every(id => stacksTags.has(id));
     if (!record.hidden) visible++;
   }
   for (const cluster of clusters) cluster.hidden = !cluster.querySelector('[data-record]:not([hidden])');
   for (const section of sections) section.hidden = !section.querySelector('.property-cluster:not([hidden])');
   resultCount.textContent = visible === 0 ? 'No matching records.' : visible + ' matching records';
+  clearFilters.hidden = !(search.value || kind.value || topic.value);
 }
 function revealHash() {
   const id = location.hash.slice(1);
+  if (id === 'database-check') byId(id).open = true;
   if (!/^[PGTX]\d{6}$/.test(id)) return;
   const record = byId(id);
   if (!record) return;
@@ -46,6 +55,11 @@ filterPanel.hidden = false;
 search.addEventListener('input',filter);
 kind.addEventListener('change',filter);
 topic.addEventListener('change',filter);
+clearFilters.addEventListener('click', () => {
+  search.value = kind.value = topic.value = '';
+  filter();
+  search.focus();
+});
 addEventListener('hashchange',revealHash);
 document.addEventListener('click',event => {
   const link = event.target.closest('a[href^="#"]');

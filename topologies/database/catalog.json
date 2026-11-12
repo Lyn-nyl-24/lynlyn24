@@ -28,6 +28,10 @@
         [
           "https://arxiv.org/pdf/1407.5782",
           "Gabber–Kelly, Definition 2.5, Theorem 2.6 and Table 1"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/020O",
+          "Stacks 020O · Zariski covering"
         ]
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of local rings.",
@@ -74,6 +78,10 @@
         [
           "https://arxiv.org/pdf/1407.5782",
           "Gabber–Kelly, Definition 2.5, Theorem 2.6 and Table 1"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0215",
+          "Stacks 0215 · étale covering"
         ]
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of strictly henselian local rings.",
@@ -99,6 +107,10 @@
         [
           "https://stacks.math.columbia.edu/tag/020K",
           "Stacks 020K · topologies on schemes"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/021Z",
+          "Stacks 021Z · smooth covering"
         ]
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of strictly henselian local rings (by equality with étale).",
@@ -124,6 +136,10 @@
         [
           "https://stacks.math.columbia.edu/tag/01UB",
           "Stacks 01UB · syntomic morphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0225",
+          "Stacks 0225 · syntomic covering"
         ]
       ],
       "points": null,
@@ -153,6 +169,14 @@
         [
           "https://arxiv.org/pdf/1407.5782",
           "Gabber–Kelly, Definition 2.5, Theorem 2.6 and Table 1"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/021M",
+          "Stacks 021M · fppf covering"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0DET",
+          "Stacks 0DET · étale-local finite locally free refinement"
         ]
       ],
       "points": null,
@@ -178,6 +202,10 @@
         [
           "https://stacks.math.columbia.edu/tag/03NV",
           "Stacks 03NV · the fpqc topology"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/022B",
+          "Stacks 022B · fpqc covering"
         ]
       ],
       "points": null,
@@ -203,6 +231,14 @@
         [
           "https://stacks.math.columbia.edu/tag/03NV",
           "Stacks 03NV · fpqc subcanonicity"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00ZA",
+          "Stacks 00ZA · canonical topology"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00Z9",
+          "Stacks 00Z9 · finest topology making given presheaves sheaves"
         ]
       ],
       "points": null,
@@ -1511,7 +1547,13 @@
           "url": "https://topology.pi-base.org/properties/P000075"
         }
       ],
-      "id": "P000046"
+      "id": "P000046",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-ag-qcqs",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Morphisms of schemes",
@@ -1741,7 +1783,13 @@
           "url": "https://topology.pi-base.org/properties/P000195"
         }
       ],
-      "id": "P000055"
+      "id": "P000055",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-sp-profinite",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Topological spaces",
@@ -1765,7 +1813,13 @@
           "url": "https://topology.pi-base.org/properties/P000075"
         }
       ],
-      "id": "P000056"
+      "id": "P000056",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-sp-spectral",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Topological spaces",
@@ -1789,7 +1843,13 @@
           "url": "https://topology.pi-base.org/properties/P000002"
         }
       ],
-      "id": "P000057"
+      "id": "P000057",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-sp-t1",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Topological spaces",
@@ -1813,7 +1873,13 @@
           "url": "https://topology.pi-base.org/properties/P000073"
         }
       ],
-      "id": "P000058"
+      "id": "P000058",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-sp-sober",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Spectral spaces and locales",
@@ -1899,7 +1965,13 @@
           "url": "https://topology.pi-base.org/properties/P000195"
         }
       ],
-      "id": "G000029"
+      "id": "G000029",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-site-patch",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Foundations",
@@ -1921,6 +1993,14 @@
         [
           "https://ncatlab.org/nlab/show/site",
           "nLab, site (bibliographic index)"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00Z4",
+          "Stacks 00Z4 · topology in terms of covering sieves"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00ZC",
+          "Stacks 00ZC · passage from a site to a topology"
         ]
       ],
       "aliases": [
@@ -1946,6 +2026,14 @@
         [
           "https://stacks.math.columbia.edu/tag/00X9",
           "Stacks 00X9 · topoi"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00XA",
+          "Stacks 00XA · topos and morphisms of topoi"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00Y4",
+          "Stacks 00Y4 · point of a topos"
         ]
       ],
       "aliases": [
@@ -1965,12 +2053,16 @@
       "definition": "A topos with a sheaf of rings as structure sheaf. Sheaves of modules, and their derived global sections, depend on this extra structure.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/04D1",
-          "Stacks 04D1 · sites and sheaves"
+          "https://stacks.math.columbia.edu/tag/01D3",
+          "Stacks 01D3 · definition of ringed topoi"
         ],
         [
           "https://doi.org/10.1007/BFb0081551",
           "Artin–Grothendieck–Verdier, SGA 4, Tome 1, exposés II–IV"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01D3",
+          "Stacks 01D3 · ringed topos"
         ]
       ],
       "aliases": [],
@@ -2013,6 +2105,14 @@
         [
           "https://stacks.math.columbia.edu/tag/00WO",
           "Stacks 00WO · subcanonical sites"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00ZA",
+          "Stacks 00ZA · canonical topology"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00WQ",
+          "Stacks 00WQ · subcanonical topology"
         ]
       ],
       "aliases": [],
@@ -2034,13 +2134,31 @@
         [
           "https://arxiv.org/abs/2111.03685v1",
           "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/020T",
+          "Stacks 020T · big and small Zariski sites"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/020X",
+          "Stacks 020X · small Zariski site and usual topology"
         ]
       ],
       "aliases": [
         "small Zariski",
         "little Zariski"
       ],
-      "id": "G000035"
+      "id": "G000035",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-site-petit-zar",
+          "title": "Crystalline and prismatic geometry"
+        },
+        {
+          "anchor": "top-synthetic-algebraic-geometry-site-petit-zar",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "topic": "Schemes and spaces",
@@ -2058,13 +2176,23 @@
         [
           "https://arxiv.org/abs/2111.03685v1",
           "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/020T",
+          "Stacks 020T · big and small Zariski sites"
         ]
       ],
       "aliases": [
         "big Zariski",
         "large Zariski"
       ],
-      "id": "G000036"
+      "id": "G000036",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-site-gros-zar",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "topic": "Synthetic geometry",
@@ -2085,7 +2213,13 @@
         "finitely presented algebras",
         "synthetic"
       ],
-      "id": "G000037"
+      "id": "G000037",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-site-zar-fp",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "topic": "Schemes and spaces",
@@ -2103,6 +2237,18 @@
         [
           "https://stacks.math.columbia.edu/tag/04HP",
           "Stacks 04HP · the étale topos"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0215",
+          "Stacks 0215 · étale covering"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/021B",
+          "Stacks 021B · big and small étale sites"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03PU",
+          "Stacks 03PU · stalkwise exactness"
         ]
       ],
       "aliases": [
@@ -2127,6 +2273,14 @@
         [
           "https://doi.org/10.1007/BFb0081551",
           "Artin–Grothendieck–Verdier, SGA 4, Tome 1, exposés II–IV"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0215",
+          "Stacks 0215 · étale covering"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/040S",
+          "Stacks 040S · geometric points on the big site"
         ]
       ],
       "aliases": [
@@ -2177,6 +2331,10 @@
         [
           "https://stacks.math.columbia.edu/tag/099R",
           "Stacks 099R · the pro-étale topos"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/098K",
+          "Stacks 098K · big and small pro-étale sites"
         ]
       ],
       "aliases": [
@@ -2191,15 +2349,23 @@
       "subject": "site",
       "name": "Étale site of an algebraic space",
       "ambient": "Schemes étale over an algebraic space X",
-      "definition": "Use scheme charts étale over X and jointly surjective étale covering families. A scheme chart presentation computes the étale topos of X.",
+      "definition": "Use scheme charts étale over X and jointly surjective étale covering families. Allowing algebraic spaces as objects gives an equivalent topos by the special cocontinuous comparison.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/03YC",
-          "Stacks 03YC · étale topology on algebraic spaces"
+          "https://stacks.math.columbia.edu/tag/03ED",
+          "Stacks 03ED · small étale site of an algebraic space"
         ],
         [
-          "https://stacks.math.columbia.edu/tag/03Y7",
-          "Stacks 03Y7 · fppf site of algebraic spaces"
+          "https://stacks.math.columbia.edu/tag/03G1",
+          "Stacks 03G1 · comparison with algebraic spaces as objects"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03G1",
+          "Stacks 03G1 · comparison of object categories"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0H01",
+          "Stacks 0H01 · affine étale site of an algebraic space"
         ]
       ],
       "aliases": [],
@@ -2225,6 +2391,14 @@
         [
           "https://stacks.math.columbia.edu/tag/0GR1",
           "Stacks 0GR1 · functoriality for smooth maps"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0787",
+          "Stacks 0787 · definition of the lisse-étale and flat-fppf sites"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07AT",
+          "Stacks 07AT · functoriality"
         ]
       ],
       "aliases": [],
@@ -2236,16 +2410,28 @@
       "key": "site-flat-fppf",
       "subject": "site",
       "name": "Flat-fppf site",
-      "ambient": "Schemes flat and locally of finite presentation over an algebraic stack",
-      "definition": "Objects are flat, locally finitely presented scheme maps to the stack; covers are fppf coverings of the source schemes.",
+      "ambient": "Schemes flat over an algebraic stack",
+      "definition": "Objects are flat scheme maps to the stack. Covering arrows form an fppf family of the source schemes, so they are flat and locally of finite presentation.",
       "refs": [
         [
           "https://stacks.math.columbia.edu/tag/0786",
           "Stacks 0786 · lisse-étale and flat-fppf sites"
         ],
         [
+          "https://stacks.math.columbia.edu/tag/0787",
+          "Stacks 0787 · definition of the flat-fppf site"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/0H0Y",
           "Stacks 0H0Y · cohomological comparison"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0787",
+          "Stacks 0787 · definition of the lisse-étale and flat-fppf sites"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0GR0",
+          "Stacks 0GR0 · cohomological comparison"
         ]
       ],
       "aliases": [],
@@ -2288,13 +2474,31 @@
         [
           "https://stacks.math.columbia.edu/tag/07I5",
           "Stacks 07I5 · big crystalline site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07MF",
+          "Stacks 07MF · base hypotheses"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07I6",
+          "Stacks 07I6 · divided power thickening"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07IG",
+          "Stacks 07IG · small crystalline site"
         ]
       ],
       "aliases": [
         "crystalline",
         "crys"
       ],
-      "id": "G000046"
+      "id": "G000046",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-site-crys-small",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
     },
     {
       "topic": "Arithmetic",
@@ -2312,6 +2516,14 @@
         [
           "https://stacks.math.columbia.edu/tag/07IF",
           "Stacks 07IF · small crystalline site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07I6",
+          "Stacks 07I6 · divided power thickening"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07IB",
+          "Stacks 07IB · big crystalline site"
         ]
       ],
       "aliases": [
@@ -2319,7 +2531,13 @@
         "divided powers",
         "PD"
       ],
-      "id": "G000047"
+      "id": "G000047",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-site-crys-big",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
     },
     {
       "topic": "Arithmetic",
@@ -2337,6 +2555,10 @@
         [
           "https://stacks.math.columbia.edu/tag/07IF",
           "Stacks 07IF · small crystalline site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07IS",
+          "Stacks 07IS · crystal in modules"
         ]
       ],
       "aliases": [],
@@ -2380,7 +2602,13 @@
         "prismatic",
         "delta ring"
       ],
-      "id": "G000050"
+      "id": "G000050",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-site-prism-rel",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
     },
     {
       "topic": "Arithmetic",
@@ -2403,7 +2631,13 @@
       "aliases": [
         "prismatic"
       ],
-      "id": "G000051"
+      "id": "G000051",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-site-prism-abs",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
     },
     {
       "topic": "Arithmetic",
@@ -2844,7 +3078,13 @@
           "url": "https://topology.pi-base.org/properties/P000075"
         }
       ],
-      "id": "G000071"
+      "id": "G000071",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-found-coherent",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "topic": "Spectral spaces and locales",
@@ -2884,8 +3124,8 @@
           "Hochster, Prime ideal structure in commutative rings (1969)"
         ],
         [
-          "https://stacks.math.columbia.edu/tag/0A2S",
-          "Stacks 0A2S · spectral maps"
+          "https://stacks.math.columbia.edu/tag/08YG",
+          "Stacks 08YG · spectral spaces and spectral maps"
         ]
       ],
       "aliases": [],
@@ -2950,7 +3190,7 @@
       "refs": [
         [
           "https://arxiv.org/abs/2307.00073",
-          "Cherubini–Coquand–Hutzler–Wärn, A foundation for synthetic algebraic geometry"
+          "Cherubini–Coquand–Hutzler, A Foundation for Synthetic Algebraic Geometry"
         ],
         [
           "https://arxiv.org/abs/2405.13916",
@@ -2961,7 +3201,13 @@
         "HoTT",
         "higher Zariski"
       ],
-      "id": "G000076"
+      "id": "G000076",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-found-syn-hott",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "topic": "Schemes and spaces",
@@ -2975,6 +3221,10 @@
         [
           "https://stacks.math.columbia.edu/tag/021L",
           "Stacks 021L · fppf topology"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/021M",
+          "Stacks 021M · fppf covering families"
         ]
       ],
       "aliases": [
@@ -3377,6 +3627,493 @@
         }
       ],
       "id": "P000066"
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "construction",
+      "key": "coh-prismatic",
+      "subject": "site",
+      "name": "Relative prismatic cohomology",
+      "definition": "$R\\Gamma_\\Delta(X/A)=R\\Gamma((X/A)_\\Delta,\\mathcal O_\\Delta)$, where the structure sheaf evaluates to the prism ring. The complex has a semilinear Frobenius.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Definition 4.1 and Theorem 1.8"
+        ]
+      ],
+      "id": "G000087",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-coh-prismatic",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "construction",
+      "key": "coh-crystalline",
+      "subject": "site",
+      "name": "Crystalline cohomology",
+      "definition": "The derived global sections of $\\mathcal O_{X/S}$ on the small crystalline site. For a formal divided-power base in the prismatic comparison, use the $p$-adic crystalline theory of Bhatt–Scholze.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/07IG",
+          "Stacks 07IG · definition of the small crystalline site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07IN",
+          "Stacks 07IN · sheaves and the crystalline structure sheaf"
+        ],
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorem 5.2"
+        ]
+      ],
+      "id": "G000088",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-coh-crystalline",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "construction",
+      "key": "coh-ht-forms",
+      "subject": "site",
+      "name": "Hodge–Tate differential forms",
+      "definition": "For $X=\\operatorname{Spf}(R)$ smooth over a bounded prism quotient $A/I$, take the $p$-completed modules of differentials $\\widehat{\\Omega}^i_{R/(A/I)}\\{-i\\}$. The twist uses the invertible $A/I$-module $I/I^2$.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(2) and 6.3"
+        ]
+      ],
+      "id": "G000089",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-coh-ht-forms",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "construction",
+      "key": "coh-padic-derham",
+      "subject": "site",
+      "name": "Completed relative de Rham cohomology",
+      "definition": "For smooth $p$-adic formal $X$ over $A/I$, take derived global sections of the relative $p$-completed de Rham complex.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorem 1.8(3) and Corollary 15.4"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0FL6",
+          "Stacks 0FL6 · de Rham cohomology"
+        ]
+      ],
+      "id": "G000090",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-coh-padic-derham",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "construction",
+      "key": "coh-eta-etale",
+      "subject": "site",
+      "name": "Étale cohomology of the generic fibre",
+      "definition": "For the generic fibre $X_\\eta$ of $X$ in the sense of Bhatt–Scholze, use $R\\Gamma_{\\acute{e}t}(X_\\eta,\\mathbf Z/p^n)$ with finite coefficients.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(4) and 9.1"
+        ]
+      ],
+      "id": "G000091",
+      "diagrams": [
+        {
+          "anchor": "top-crystalline-prismatic-coh-eta-etale",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Synthetic geometry",
+      "kind": "site",
+      "key": "site-zar-lfp",
+      "subject": "site",
+      "name": "Locally finitely presented big Zariski site",
+      "definition": "Objects are schemes locally of finite presentation over the chosen base scheme. Covers are jointly surjective families of open immersions.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §15"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/020S",
+          "Stacks 020S · big Zariski site"
+        ]
+      ],
+      "id": "G000092",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-site-zar-lfp",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Synthetic geometry",
+      "kind": "construction",
+      "key": "syn-local-ring",
+      "subject": "site",
+      "name": "Internal local ring",
+      "definition": "In the little Zariski topos, the structure sheaf satisfies the intuitionistic local-ring axiom. If a sum is 1, the two unit loci cover the open on which the sum is given.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §3"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01HA",
+          "Stacks 01HA · locally ringed spaces"
+        ]
+      ],
+      "id": "G000093",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-syn-local-ring",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Synthetic geometry",
+      "kind": "construction",
+      "key": "syn-internal-free",
+      "subject": "site",
+      "name": "Internally free module of fixed rank",
+      "definition": "For an $\\mathcal O_S$-module $\\mathcal F$, the little Zariski topos forces the existence of an isomorphism $\\mathcal O_S^n\\simeq \\mathcal F$ for a fixed finite rank $n$.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §4.1"
+        ]
+      ],
+      "id": "G000094",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-syn-internal-free",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Synthetic geometry",
+      "kind": "construction",
+      "key": "syn-external-free",
+      "subject": "site",
+      "name": "Locally free sheaf of fixed rank",
+      "definition": "Every point has an open neighbourhood where the module is free of the given finite rank.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §4.1"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01C5",
+          "Stacks 01C5 · locally free modules"
+        ]
+      ],
+      "id": "G000095",
+      "diagrams": [
+        {
+          "anchor": "top-synthetic-algebraic-geometry-syn-external-free",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "topic": "Spectral spaces and locales",
+      "kind": "construction",
+      "key": "found-distributive",
+      "subject": "site",
+      "name": "Bounded distributive lattice",
+      "definition": "A lattice with least and greatest elements and distributive finite meets and joins. Its ideal completion is a coherent frame. Its prime spectrum carries the basic opens consisting of prime ideals missing a given element.",
+      "refs": [
+        [
+          "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
+          "Hochster, Prime ideal structure in commutative rings, Theorem 6"
+        ],
+        [
+          "https://arxiv.org/abs/2012.13850",
+          "Blechschmidt, Generalized spaces for constructive algebra"
+        ]
+      ],
+      "id": "G000096",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-found-distributive",
+          "title": "Spectral spaces and locales"
+        }
+      ]
+    },
+    {
+      "topic": "Spectral spaces and locales",
+      "kind": "construction",
+      "key": "found-prime-spectrum",
+      "subject": "site",
+      "name": "Prime spectrum of a ring",
+      "definition": "For a commutative ring $A$, the points of $\\operatorname{Spec}(A)$ are prime ideals. The principal opens $D(f)=\\{\\mathfrak p:f\\notin\\mathfrak p\\}$ form a basis of the Zariski topology.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00DY",
+          "Stacks 00DY · the spectrum of a ring"
+        ],
+        [
+          "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
+          "Hochster, Prime ideal structure in commutative rings, Theorem 6"
+        ]
+      ],
+      "id": "G000100",
+      "diagrams": [
+        {
+          "anchor": "top-spectral-locales-found-prime-spectrum",
+          "title": "Spectral spaces and locales"
+        }
+      ]
+    },
+    {
+      "topic": "Schemes and spaces",
+      "kind": "site",
+      "key": "site-gros-fppf",
+      "subject": "site",
+      "name": "Big fppf site",
+      "definition": "Take a size-bounded category of schemes over a base scheme X. A family covers when its maps are flat and locally of finite presentation and their images jointly cover the target.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/021M",
+          "Stacks 021M · definition of fppf coverings"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/021L",
+          "Stacks 021L · §34.7, fppf sites"
+        ]
+      ],
+      "id": "G000097"
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "site",
+      "key": "site-formal-etale",
+      "subject": "site",
+      "name": "Formal small étale site",
+      "definition": "For a p-adic formal scheme X, use étale formal schemes over X and jointly surjective étale covers. Reduction identifies the site with the small étale site of the special fibre.",
+      "refs": [
+        [
+          "https://people.mpim-bonn.mpg.de/scholze/prisms.pdf#page=37",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Construction 4.4"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0DE9",
+          "Stacks 0DE9 · §87.34, the small étale site of a formal algebraic space"
+        ]
+      ],
+      "id": "G000098"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "topos",
+      "key": "topos-localic",
+      "subject": "site",
+      "name": "Localic topos",
+      "definition": "The topos of sheaves on a locale. In the frame presentation the objects are opens, arrows are inclusions, and a family covers an open when its join is that open.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2012.13850",
+          "Blechschmidt, Generalized spaces for constructive algebra"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/009H",
+          "Stacks 009H · sheaves on a basis"
+        ]
+      ],
+      "id": "G000099"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "stacks-covering-family",
+      "subject": "site",
+      "name": "Covering-family presentation",
+      "definition": "A category with specified families of arrows $\\{U_i\\to U\\}$ containing the isomorphism covers, closed under composition of covers, and stable under base change along every arrow to a covering target. The requisite pullbacks of the covering arrows exist.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00VH",
+          "Stacks 00VH · site specified by covering families"
+        ]
+      ],
+      "id": "G000101"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "stacks-sieve",
+      "subject": "site",
+      "name": "Sieve on an object",
+      "definition": "A sieve on $U$ is a subpresheaf $S\\subseteq h_U$ of the representable presheaf. Equivalently its arrows with target $U$ are closed under precomposition. The pullback along $V\\to U$ is $S\\times_{h_U}h_V\\subseteq h_V$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00YX",
+          "Stacks 00YX · sieve"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00Z2",
+          "Stacks 00Z2 · pullback of a sieve"
+        ]
+      ],
+      "id": "G000102"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "topology",
+      "key": "stacks-grothendieck-topology",
+      "subject": "site",
+      "name": "Grothendieck topology in sieves",
+      "definition": "For each object $U$ choose a collection $J(U)$ of covering sieves. It contains $h_U$ and is stable under pullback. If $S\\in J(U)$ and a sieve $R$ restricts to a covering sieve along every arrow in $S$, then $R\\in J(U)$. A sheaf $F$ satisfies $F(U)\\cong\\operatorname{Hom}(S,F)$ by restriction for each $S\\in J(U)$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00Z4",
+          "Stacks 00Z4 · topology axioms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00Z8",
+          "Stacks 00Z8 · sheaf condition for covering sieves"
+        ]
+      ],
+      "id": "G000103"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "stacks-sheafification",
+      "subject": "site",
+      "name": "Sheafification",
+      "definition": "The left adjoint $F\\mapsto F^\\#$ to the inclusion of sheaves of sets in presheaves. It can be computed by applying the plus construction twice. The plus construction forms the colimit, over refinements, of matching families on covers.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00WH",
+          "Stacks 00WH · sheafification on a site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00ZM",
+          "Stacks 00ZM · sheafification for a topology in sieves"
+        ]
+      ],
+      "id": "G000104"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "topology",
+      "key": "stacks-subcanonical",
+      "subject": "site",
+      "name": "Subcanonical topology",
+      "definition": "A topology on $\\mathcal C$ is subcanonical when every representable presheaf is a sheaf, or equivalently when the topology is contained in the canonical topology. In the covering-family convention, each cover is a universal effective epimorphism of families.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00WP",
+          "Stacks 00WP · universal effective epimorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00WQ",
+          "Stacks 00WQ · subcanonical site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00ZA",
+          "Stacks 00ZA · canonical topology in sieves"
+        ]
+      ],
+      "id": "G000105"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "stacks-geometric-morphism",
+      "subject": "site",
+      "name": "Geometric morphism",
+      "definition": "A morphism $f:\\mathcal E\\to\\mathcal F$ of topoi is an adjunction $f^{-1}:\\mathcal F\\rightleftarrows\\mathcal E:f_*$ with $f^{-1}$ preserving finite limits. A point of $\\mathcal E$ is a geometric morphism $\\mathrm{Set}\\to\\mathcal E$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00XA",
+          "Stacks 00XA · morphism of topoi"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00Y4",
+          "Stacks 00Y4 · point of a topos"
+        ]
+      ],
+      "id": "G000106"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "stacks-conservative-points",
+      "subject": "site",
+      "name": "Enough points",
+      "definition": "A family of points is conservative if a map of sheaves is an isomorphism whenever the induced map at every stalk in the family is bijective. A site has enough points when it admits a conservative family of points.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00Y5",
+          "Stacks 00Y5 · point of a site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00YK",
+          "Stacks 00YK · conservative family of points"
+        ]
+      ],
+      "id": "G000107"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "stacks-weakly-contractible",
+      "subject": "site",
+      "name": "Weakly contractible object of a site",
+      "definition": "An object $U$ is weakly contractible if evaluation at $U$ sends epimorphisms of sheaves of sets to surjections. Equivalently the canonical map $\\coprod_i h_{U_i}^\\#\\to h_U^\\#$ in sheaves admits a section for every covering $\\{U_i\\to U\\}$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/090K",
+          "Stacks 090K · equivalent criteria for weak contractibility"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/090L",
+          "Stacks 090L · enough weakly contractible objects"
+        ]
+      ],
+      "id": "G000108"
+    },
+    {
+      "topic": "Schemes and spaces",
+      "kind": "site",
+      "key": "stacks-site-affine-fppf",
+      "subject": "site",
+      "name": "Big affine fppf site of a scheme",
+      "definition": "Take the full subcategory of the big fppf site over $S$ on those $U\\to S$ for which $U$ is affine. Use finite jointly surjective families of flat, locally finitely presented morphisms from affine schemes as standard fppf covers.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/021S",
+          "Stacks 021S · big affine fppf site"
+        ]
+      ],
+      "id": "G000109"
     }
   ],
   "theorems": [
@@ -3461,6 +4198,10 @@
         [
           "https://stacks.math.columbia.edu/tag/020K",
           "Stacks 020K · topologies on schemes"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01VD",
+          "Stacks 01VD · smooth morphisms are syntomic"
         ]
       ],
       "ambient": "Separated schemes of finite type over a separated Noetherian base S; see individual edge scope.",
@@ -3527,6 +4268,10 @@
         [
           "https://stacks.math.columbia.edu/tag/03NV",
           "Stacks 03NV · fpqc subcanonicity"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03O3",
+          "Stacks 03O3 · representables are fpqc sheaves"
         ]
       ],
       "ambient": "Big category of schemes over S.",
@@ -3549,6 +4294,10 @@
         [
           "https://stacks.math.columbia.edu/tag/05WM",
           "Stacks 05WM · finite locally free refinements of fppf covers"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0DET",
+          "Stacks 0DET · étale-local finite locally free refinement of fppf covers"
         ]
       ],
       "ambient": "Separated schemes of finite type over a separated Noetherian base S; see individual edge scope.",
@@ -5358,11 +6107,19 @@
       "concludes": [
         "P000055"
       ],
-      "proof": "On a spectral space, having all points closed is equivalent to being profinite by Lemma 5.23.8.",
+      "proof": "A spectral space in which all points are closed is profinite by Lemma 5.23.8. Conversely a profinite space is Hausdorff and has a quasi-compact clopen basis, so it is spectral with closed points.",
       "refs": [
         [
           "https://stacks.math.columbia.edu/tag/0905",
           "Stacks 0905 · equivalent criteria for spectral spaces to be profinite"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08ZY",
+          "Stacks 08ZY · characterization of profinite spaces"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08YF",
+          "Stacks 08YF · spectral spaces and the constructible topology"
         ],
         [
           "https://topology.pi-base.org/theorems/T000530",
@@ -5373,10 +6130,19 @@
           "π-Base T000531 · Stone spaces are spectral"
         ]
       ],
-      "kind": "implies",
+      "kind": "equivalence",
       "subject": "space",
-      "name": "Spectral space + T₁ space ⇒ Profinite space",
-      "id": "T000089"
+      "name": "Spectral space + T₁ space ⇔ Profinite space",
+      "relation": "equivalence",
+      "hypotheses": "Let $X$ be spectral, with its original topology.",
+      "statement": "$X$ is $T_1$ exactly when it is profinite. In this case the original topology is also Hausdorff and agrees with the patch topology.",
+      "id": "T000089",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-space-spectral-t1",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "key": "space-hausdorff-t1",
@@ -5425,7 +6191,16 @@
       "kind": "implies",
       "subject": "space",
       "name": "Spectral space ⇒ Sober space + Quasi-compact space",
-      "id": "T000091"
+      "relation": "implication",
+      "hypotheses": "Assume that the given topological space is spectral in the sense of Stacks Definition 5.23.1.",
+      "statement": "The space is sober and quasi-compact. This arrow displays the sobriety conclusion.",
+      "id": "T000091",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-space-spectral-sober",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "key": "flat-lfp-conjunction",
@@ -5831,6 +6606,10 @@
         [
           "https://stacks.math.columbia.edu/tag/009H",
           "Stacks 009H · sheaves on a basis"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03A0",
+          "Stacks 03A0 · comparison lemma for sites"
         ]
       ],
       "id": "T000101"
@@ -5867,6 +6646,10 @@
         [
           "https://stacks.math.columbia.edu/tag/04DY",
           "Stacks 04DY · topological invariance of the small étale site"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/04DZ",
+          "Stacks 04DZ · topological invariance theorem"
         ]
       ],
       "id": "T000103"
@@ -5879,7 +6662,8 @@
       "related": [
         "P000056",
         "P000031",
-        "G000071"
+        "G000071",
+        "G000100"
       ],
       "proof": "Every spectral space is homeomorphic to the prime spectrum of a commutative ring, and every prime spectrum is spectral. The assertion concerns the underlying topological space, without specifying a canonical ring or recovering a scheme structure.",
       "refs": [
@@ -5890,9 +6674,26 @@
         [
           "https://stacks.math.columbia.edu/tag/08YF",
           "Stacks 08YF · spectral spaces and the constructible topology"
+        ],
+        [
+          "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
+          "Hochster, Prime ideal structure in commutative rings, Theorem 6"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08YG",
+          "Stacks 08YG · definition of spectral space"
         ]
       ],
-      "id": "T000104"
+      "relation": "equivalence",
+      "hypotheses": "Work in classical set theory. Consider a topological space $X$ and commutative rings with identity, allowing the zero ring.",
+      "statement": "$X$ is spectral if and only if it is homeomorphic to $\\operatorname{Spec}(A)$ for some commutative ring $A$. The equivalence concerns existence of a realization as a topological space.",
+      "id": "T000104",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-hochster-representation",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -5918,9 +6719,26 @@
         [
           "https://arxiv.org/abs/2012.13850",
           "Blechschmidt, Generalized spaces for constructive algebra"
+        ],
+        [
+          "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
+          "Hochster, Prime ideal structure in commutative rings, Theorem 6"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08YG",
+          "Stacks 08YG · definition of a spectral space"
         ]
       ],
-      "id": "T000105"
+      "relation": "equivalence",
+      "hypotheses": "Use classical prime ideal separation, spectral spaces with spectral maps, and coherent locales with maps whose inverse image preserves compact opens.",
+      "statement": "Taking the locale of opens and taking the space of points are inverse equivalences. The compact elements of the frame are the quasi-compact opens of the spectral space.",
+      "id": "T000105",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-coherent-stone",
+          "title": "Spectral spaces and locales"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -5952,16 +6770,34 @@
       "name": "Locality of the structure sheaf",
       "related": [
         "G000074",
-        "G000035"
+        "G000035",
+        "G000093"
       ],
       "proof": "An element of the structure sheaf with a local inverse at a point is invertible on a neighbourhood. If a sum is 1 then at each stalk at least one summand is a unit; the two invertibility loci cover the open of definition, proving the internal disjunction.",
       "refs": [
         [
           "https://arxiv.org/abs/2111.03685v1",
           "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
+        ],
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §3"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01HA",
+          "Stacks 01HA · locally ringed spaces"
         ]
       ],
-      "id": "T000107"
+      "relation": "implication",
+      "hypotheses": "Let $S$ be a scheme. Work in the little Zariski topos and use its structure sheaf $\\mathcal O_S$.",
+      "statement": "The sheaf $\\mathcal O_S$ is internally a local ring. For $a+b=1$ on an open, the unit loci of $a$ and $b$ cover that open since all stalks are local rings. This forces the internal disjunction.",
+      "id": "T000107",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-internal-local",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -5970,16 +6806,35 @@
       "name": "Local freeness in the internal language",
       "related": [
         "G000074",
-        "G000035"
+        "G000035",
+        "G000094",
+        "G000095"
       ],
       "proof": "For fixed finite rank n, an internal witness that a module is isomorphic to the free module of rank n means that on an open cover there are such isomorphisms. These local witnesses are precisely a local trivialization in the external sense.",
       "refs": [
         [
           "https://arxiv.org/abs/2111.03685v1",
           "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
+        ],
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §4.1"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01C5",
+          "Stacks 01C5 · locally free modules"
         ]
       ],
-      "id": "T000108"
+      "relation": "equivalence",
+      "hypotheses": "Let $\\mathcal F$ be an $\\mathcal O_S$-module on a scheme $S$ and fix an external integer $n\\geq0$.",
+      "statement": "The little Zariski topos forces the existence of an isomorphism $\\mathcal O_S^n\\simeq \\mathcal F$ exactly when $\\mathcal F$ is locally free of rank $n$. The witnesses live on a Zariski open cover.",
+      "id": "T000108",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-internal-free",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -5997,9 +6852,26 @@
         [
           "https://arxiv.org/abs/2111.03685v1",
           "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
+        ],
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §16"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/020Z",
+          "Stacks 020Z · small and big Zariski comparison"
         ]
       ],
-      "id": "T000109"
+      "relation": "site",
+      "hypotheses": "Let $S$ be a scheme. Choose a big Zariski site as in Blechschmidt §15, containing the opens of $S$, and let $\\operatorname{Sh}(S)$ denote the little Zariski topos.",
+      "statement": "The geometric morphism $\\pi:\\operatorname{Zar}(S)\\to\\operatorname{Sh}(S)$ is connected and local. The direct image $\\pi_*$ is restriction and has a fully faithful right adjoint, giving a section of $\\pi$.",
+      "id": "T000109",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-compare-zariski-topoi",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -6032,16 +6904,35 @@
       "related": [
         "G000050",
         "G000046",
-        "G000049"
+        "G000049",
+        "G000087",
+        "G000088"
       ],
       "proof": "For a bounded crystalline prism with I=(p) and X smooth over A/I in the p-adic formal setting, the Frobenius base change of relative prismatic cohomology is canonically crystalline cohomology: $R\\Gamma_{\\mathrm{crys}}(X/A)\\simeq R\\Gamma_{\\Delta}(X/A)\\widehat{\\otimes}^{\\mathbf L}_{A,\\varphi_A}A$. This is a cohomology comparison, not a site equivalence.",
       "refs": [
         [
           "https://arxiv.org/abs/1905.08229",
           "Bhatt–Scholze, Prisms and prismatic cohomology"
+        ],
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(1) and 5.2"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07IG",
+          "Stacks 07IG · definition of the small crystalline site"
         ]
       ],
-      "id": "T000111"
+      "relation": "cohomology",
+      "hypotheses": "Fix a prime $p$, a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$. Assume $I=(p)$ and use the canonical divided powers on $(p)$ in the crystalline comparison over the formal base.",
+      "statement": "The comparison is a Frobenius-equivariant isomorphism of commutative algebras in $D(A)$: $R\\Gamma_{\\mathrm{crys}}(X/A)\\simeq R\\Gamma_\\Delta(X/A)\\widehat\\otimes^{\\mathbf L}_{A,\\varphi_A} A$.",
+      "id": "T000111",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-prism-crys-comparison",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -6050,16 +6941,31 @@
       "name": "Prismatic Hodge–Tate comparison",
       "related": [
         "G000050",
-        "G000049"
+        "G000049",
+        "G000087",
+        "G000089"
       ],
       "proof": "For a smooth affine p-adic formal X=Spf R over A/I with (A,I) bounded, the degree i cohomology of the derived reduction of prismatic cohomology modulo I is identified with completed relative i-forms with Breuil–Kisin twist −i. See the affine Hodge–Tate comparison in Theorem 1.8 and §4.",
       "refs": [
         [
           "https://arxiv.org/abs/1905.08229",
           "Bhatt–Scholze, Prisms and prismatic cohomology"
+        ],
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(2) and 6.3"
         ]
       ],
-      "id": "T000112"
+      "relation": "cohomology",
+      "hypotheses": "Fix a prime $p$, a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$. Assume $X=\\operatorname{Spf}(R)$ is affine and fix $i\\geq0$.",
+      "statement": "$H^i(R\\Gamma_\\Delta(X/A)\\otimes_A^{\\mathbf L} A/I)\\simeq\\widehat{\\Omega}^i_{R/(A/I)}\\{-i\\}$ canonically as $R$-modules.",
+      "id": "T000112",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-prism-ht-comparison",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
     },
     {
       "subject": "site",
@@ -6134,6 +7040,1034 @@
         ]
       ],
       "id": "T000116"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "crys-small-big",
+      "name": "Small and big crystalline topoi",
+      "relation": "site",
+      "related": [
+        "G000046",
+        "G000047"
+      ],
+      "hypotheses": "Fix a prime $p$, a divided-power scheme $(S,\\mathcal I,\\gamma)$ over $\\mathbf Z_{(p)}$, and a scheme $X$ over $V(\\mathcal I)$ on which $p$ is locally nilpotent. Use the size convention in Stacks Situation 60.7.5.",
+      "statement": "The inclusion $\\operatorname{Cris}(X/S)\\hookrightarrow\\operatorname{CRIS}(X/S)$ is fully faithful, continuous, cocontinuous and preserves finite nonempty limits. The induced map $i$ of topoi has a retraction $\\pi$, with $\\pi_* = i^{-1}$.",
+      "proof": "The inclusion $\\operatorname{Cris}(X/S)\\hookrightarrow\\operatorname{CRIS}(X/S)$ is fully faithful, continuous, cocontinuous and preserves finite nonempty limits. The induced map $i$ of topoi has a retraction $\\pi$, with $\\pi_* = i^{-1}$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/07IJ",
+          "Stacks 07IJ · Lemma 60.9.2"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07I6",
+          "Stacks 07I6 · divided power thickenings over X"
+        ]
+      ],
+      "id": "T000125",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-crys-small-big",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "crys-to-zariski",
+      "name": "Crystalline to Zariski geometric morphism",
+      "relation": "site",
+      "related": [
+        "G000046",
+        "G000035"
+      ],
+      "hypotheses": "Fix a prime $p$, a divided-power scheme $(S,\\mathcal I,\\gamma)$ over $\\mathbf Z_{(p)}$, and a scheme $X$ over $V(\\mathcal I)$ on which $p$ is locally nilpotent. Use the size convention in Stacks Situation 60.7.5.",
+      "statement": "The forgetful functor $(U,T,\\delta)\\mapsto U$ is continuous and cocontinuous and preserves products and fibre products. It induces $u_{X/S}:(X/S)_{\\mathrm{cris}}\\to\\operatorname{Sh}(X_{\\mathrm{Zar}})$. Its direct image evaluates a crystalline sheaf on the trivial thickenings.",
+      "proof": "The forgetful functor $(U,T,\\delta)\\mapsto U$ is continuous and cocontinuous and preserves products and fibre products. It induces $u_{X/S}:(X/S)_{\\mathrm{cris}}\\to\\operatorname{Sh}(X_{\\mathrm{Zar}})$. Its direct image evaluates a crystalline sheaf on the trivial thickenings.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/07IL",
+          "Stacks 07IL · Remark 60.9.4"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07MF",
+          "Stacks 07MF · Situation 60.7.5"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07IL",
+          "Stacks 07IL · comparison with the Zariski site"
+        ]
+      ],
+      "id": "T000126",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-crys-to-zariski",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "prism-forget-base",
+      "name": "Forgetting the base prism",
+      "relation": "site",
+      "related": [
+        "G000050",
+        "G000051"
+      ],
+      "hypotheses": "Fix a prime $p$, a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$. Use the bounded absolute site of the same $X$.",
+      "statement": "Send a relative object $(A,I)\\to(B,IB)$ with $\\operatorname{Spf}(B/IB)\\to X$ to the same prism over $X$, forgetting the map from $(A,I)$. Relative covering maps remain covers, since the prism ideal is unchanged. The arrow displays this functor on sites.",
+      "proof": "Send a relative object $(A,I)\\to(B,IB)$ with $\\operatorname{Spf}(B/IB)\\to X$ to the same prism over $X$, forgetting the map from $(A,I)$. Relative covering maps remain covers, since the prism ideal is unchanged. The arrow displays this functor on sites.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Definition 1.6, Remark 1.7 and Definition 4.1"
+        ]
+      ],
+      "id": "T000127",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-prism-forget-base",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "prism-cohomology-definition",
+      "name": "Global sections on the relative prismatic site",
+      "relation": "construction",
+      "related": [
+        "G000050",
+        "G000087"
+      ],
+      "hypotheses": "Fix a prime $p$, a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$.",
+      "statement": "Take derived global sections of the structure sheaf $\\mathcal O_\\Delta$ on $(X/A)_\\Delta$. On an object corresponding to $(B,IB)$ this sheaf has value $B$.",
+      "proof": "Take derived global sections of the structure sheaf $\\mathcal O_\\Delta$ on $(X/A)_\\Delta$. On an object corresponding to $(B,IB)$ this sheaf has value $B$.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Definition 4.1 and Theorem 1.8"
+        ]
+      ],
+      "id": "T000128",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-prism-cohomology-definition",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "prism-derham-comparison",
+      "name": "Prismatic to de Rham comparison",
+      "relation": "cohomology",
+      "related": [
+        "G000087",
+        "G000090"
+      ],
+      "hypotheses": "Fix a prime $p$, a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$.",
+      "statement": "There is a canonical comparison $R\\Gamma_{\\mathrm{dR}}(X/(A/I))\\simeq R\\Gamma_\\Delta(X/A)\\widehat\\otimes^{\\mathbf L}_{A,\\varphi_A} A/I$. The scalar map is Frobenius followed by reduction modulo $I$.",
+      "proof": "There is a canonical comparison $R\\Gamma_{\\mathrm{dR}}(X/(A/I))\\simeq R\\Gamma_\\Delta(X/A)\\widehat\\otimes^{\\mathbf L}_{A,\\varphi_A} A/I$. The scalar map is Frobenius followed by reduction modulo $I$.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorem 1.8(3) and Corollary 15.4"
+        ]
+      ],
+      "id": "T000129",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-prism-derham-comparison",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "prism-etale-comparison",
+      "name": "Prismatic to étale comparison",
+      "relation": "cohomology",
+      "related": [
+        "G000087",
+        "G000091"
+      ],
+      "hypotheses": "Fix a prime $p$, a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$. Assume $A$ is perfect, use the generic fibre $X_\\eta$ of Theorem 9.1, and fix an integer $n\\geq 1$.",
+      "statement": "There is a canonical comparison $R\\Gamma_{\\acute{e}t}(X_\\eta,\\mathbf Z/p^n)\\simeq (R\\Gamma_\\Delta(X/A)/p^n[1/I])^{\\varphi=1}$. Reduction is derived, and the fixed points are taken in the derived sense.",
+      "proof": "There is a canonical comparison $R\\Gamma_{\\acute{e}t}(X_\\eta,\\mathbf Z/p^n)\\simeq (R\\Gamma_\\Delta(X/A)/p^n[1/I])^{\\varphi=1}$. Reduction is derived, and the fixed points are taken in the derived sense.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(4) and 9.1"
+        ]
+      ],
+      "id": "T000130",
+      "diagrams": [
+        {
+          "anchor": "edge-crystalline-prismatic-prism-etale-comparison",
+          "title": "Crystalline and prismatic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "zar-affine-lfp",
+      "name": "Affine basis of the lfp big Zariski topos",
+      "relation": "site",
+      "related": [
+        "G000092",
+        "G000037"
+      ],
+      "hypotheses": "Let $S=\\operatorname{Spec}(A)$ be an affine scheme. Use the Zariski site of $S$-schemes locally of finite presentation and a fixed size convention.",
+      "statement": "Restriction to affine objects gives an equivalence of categories of sheaves. Every object admits an affine open cover, and an affine scheme locally of finite presentation over the affine base corresponds to a finitely presented algebra. The affine objects use the induced Zariski topology.",
+      "proof": "Restriction to affine objects gives an equivalence of categories of sheaves. Every object admits an affine open cover, and an affine scheme locally of finite presentation over the affine base corresponds to a finitely presented algebra. The affine objects use the induced Zariski topology.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §15, parsimonious sites"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03A0",
+          "Stacks 03A0 · general comparison lemma"
+        ]
+      ],
+      "id": "T000131",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-zar-affine-lfp",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "zar-affine-little",
+      "name": "The parsimonious Zariski topos over the little topos",
+      "relation": "site",
+      "related": [
+        "G000037",
+        "G000035"
+      ],
+      "hypotheses": "Let $S=\\operatorname{Spec}(A)$ be an affine scheme. Use the Zariski site of $S$-schemes locally of finite presentation and a fixed size convention.",
+      "statement": "Use the lfp big Zariski topos, identified with the sheaves on the affine basis. Its canonical geometric morphism to the little topos has direct image given by restriction in the lfp site model. Its inverse image sends $\\mathcal F$ to $T\\mapsto\\Gamma(T,f^{-1}\\mathcal F)$ for $f:T\\to S$.",
+      "proof": "Use the lfp big Zariski topos, identified with the sheaves on the affine basis. Its canonical geometric morphism to the little topos has direct image given by restriction in the lfp site model. Its inverse image sends $\\mathcal F$ to $T\\mapsto\\Gamma(T,f^{-1}\\mathcal F)$ for $f:T\\to S$.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §§15–16"
+        ]
+      ],
+      "id": "T000132",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-zar-affine-little",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "zar-higher-model",
+      "name": "Higher Zariski model",
+      "relation": "site",
+      "related": [
+        "G000037",
+        "G000076"
+      ],
+      "hypotheses": "Fix a base ring and the site opposite to its finitely presented algebras, with finite principal covers generating the unit ideal. Use the higher sheaf model and the universe conventions of the cited paper.",
+      "statement": "The higher Zariski topos supplies a model of the stated synthetic axioms. Its 0-truncated sheaves recover the ordinary sheaves of sets on the same affine site.",
+      "proof": "The higher Zariski topos supplies a model of the stated synthetic axioms. Its 0-truncated sheaves recover the ordinary sheaves of sets on the same affine site.",
+      "refs": [
+        [
+          "https://arxiv.org/html/2307.00073v2#S8",
+          "Cherubini–Coquand–Hutzler, A Foundation for Synthetic Algebraic Geometry, §8"
+        ],
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf",
+          "Lurie, Higher Topos Theory, §6.4.5"
+        ]
+      ],
+      "id": "T000133",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-zar-higher-model",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "syn-little-semantics",
+      "name": "Free modules in the internal language",
+      "relation": "construction",
+      "related": [
+        "G000035",
+        "G000094"
+      ],
+      "hypotheses": "Work in the little Zariski topos of a scheme $S$, with an $\\mathcal O_S$-module and a fixed finite rank $n$.",
+      "statement": "Interpret the existence of a basis in the Kripke–Joyal semantics. An existential witness over an open is given on an open cover, with the same rank fixed throughout.",
+      "proof": "Interpret the existence of a basis in the Kripke–Joyal semantics. An existential witness over an open is given on an open cover, with the same rank fixed throughout.",
+      "refs": [
+        [
+          "https://arxiv.org/abs/2111.03685",
+          "Blechschmidt, Using the internal language of toposes, §§2.2 and 4.1"
+        ]
+      ],
+      "id": "T000134",
+      "diagrams": [
+        {
+          "anchor": "edge-synthetic-algebraic-geometry-syn-little-semantics",
+          "title": "Synthetic algebraic geometry"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "spectral-qcqs-underlying",
+      "name": "Qcqs schemes and their spectral spaces",
+      "relation": "equivalence",
+      "related": [
+        "P000046",
+        "P000056"
+      ],
+      "hypotheses": "Let $X$ be a scheme, and equip $|X|$ with its original Zariski topology.",
+      "statement": "$X$ is quasi-compact and quasi-separated if and only if $|X|$ is spectral. Affine opens give a quasi-compact basis, sobriety holds for every scheme, and quasi-separatedness is equivalent to quasi-compactness of affine intersections.",
+      "proof": "$X$ is quasi-compact and quasi-separated if and only if $|X|$ is spectral. Affine opens give a quasi-compact basis, sobriety holds for every scheme, and quasi-separatedness is equivalent to quasi-compactness of affine intersections.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/094L",
+          "Stacks 094L · Lemma 28.2.4"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01KO",
+          "Stacks 01KO · affine intersection criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08YG",
+          "Stacks 08YG · definition of a spectral space"
+        ]
+      ],
+      "id": "T000135",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-spectral-qcqs-underlying",
+          "title": "Spectral spaces and locales"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "spectral-to-patch",
+      "name": "Formation of the patch topology",
+      "relation": "construction",
+      "related": [
+        "P000056",
+        "G000029"
+      ],
+      "hypotheses": "Let $X$ be a spectral space with its given topology.",
+      "statement": "The quasi-compact opens of $X$ and their complements generate the constructible topology. The identity $X_{\\mathrm{patch}}\\to X$ is continuous.",
+      "proof": "The quasi-compact opens of $X$ and their complements generate the constructible topology. The identity $X_{\\mathrm{patch}}\\to X$ is continuous.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0901",
+          "Stacks 0901 · constructible topology of a spectral space"
+        ]
+      ],
+      "id": "T000136",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-spectral-to-patch",
+          "title": "Spectral spaces and locales"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "patch-to-profinite",
+      "name": "The patch space is profinite",
+      "relation": "implication",
+      "related": [
+        "G000029",
+        "P000055"
+      ],
+      "hypotheses": "Let $X$ be spectral and consider $X_{\\mathrm{patch}}$, on the same underlying set.",
+      "statement": "The patch topology is quasi-compact Hausdorff. Its generators are clopen and finite intersections form a clopen basis, so the patch space is totally disconnected and hence profinite.",
+      "proof": "The patch topology is quasi-compact Hausdorff. Its generators are clopen and finite intersections form a clopen basis, so the patch space is totally disconnected and hence profinite.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0901",
+          "Stacks 0901 · constructible topology of a spectral space"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08ZY",
+          "Stacks 08ZY · characterization of profinite spaces"
+        ]
+      ],
+      "id": "T000137",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-patch-to-profinite",
+          "title": "Spectral spaces and locales"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "locale-lattice",
+      "name": "Coherent frames and their compact elements",
+      "relation": "equivalence",
+      "related": [
+        "G000071",
+        "G000096"
+      ],
+      "hypotheses": "Use coherent frames and frame homomorphisms preserving compact elements, or their opposite category of coherent locales. Use bounded distributive lattices and maps preserving the bounds and finite meets and joins.",
+      "statement": "Taking the compact elements of a coherent frame and taking the frame of ideals of a bounded distributive lattice are inverse equivalences at the level of frames. Passing to locales reverses arrows.",
+      "proof": "Taking the compact elements of a coherent frame and taking the frame of ideals of a bounded distributive lattice are inverse equivalences at the level of frames. Passing to locales reverses arrows.",
+      "refs": [
+        [
+          "https://dml.cz/handle/10338.dmlcz/118836",
+          "Banaschewski, Radical ideals and coherent frames, §1"
+        ],
+        [
+          "https://arxiv.org/abs/2012.13850",
+          "Blechschmidt, Generalized spaces for constructive algebra"
+        ],
+        [
+          "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
+          "Hochster, Prime ideal structure in commutative rings, Theorem 6"
+        ]
+      ],
+      "id": "T000138",
+      "diagrams": [
+        {
+          "anchor": "edge-spectral-locales-locale-lattice",
+          "title": "Spectral spaces and locales"
+        }
+      ]
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "etale-small-big",
+      "name": "Small and big étale topoi",
+      "related": [
+        "G000038",
+        "G000039"
+      ],
+      "hypotheses": "Let $X$ be a scheme. Use compatible choices of big and small sites as in Stacks Remark 34.11.1.",
+      "statement": "The inclusion of the small site induces $i:X_{\\acute{e}t}\\to(\\mathrm{Sch}/X)_{\\acute{e}t}$ on topoi. There is a retraction $\\pi$ with $\\pi\\circ i=\\mathrm{id}$ and $\\pi_*=i^{-1}$.",
+      "proof": "The inclusion of the small site induces $i:X_{\\acute{e}t}\\to(\\mathrm{Sch}/X)_{\\acute{e}t}$ on topoi. There is a retraction $\\pi$ with $\\pi\\circ i=\\mathrm{id}$ and $\\pi_*=i^{-1}$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/021G",
+          "Stacks 021G · Lemma 34.4.14, small and big étale sites"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000139"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "etale-zariski",
+      "name": "Small étale to small Zariski",
+      "related": [
+        "G000038",
+        "G000035"
+      ],
+      "hypotheses": "Let $X$ be a scheme. Use compatible choices of big and small sites as in Stacks Remark 34.11.1.",
+      "statement": "The inclusion of open immersions into étale objects induces the geometric morphism $\\operatorname{Sh}(X_{\\acute{e}t})\\to\\operatorname{Sh}(X_{\\mathrm{Zar}})$. Its direct image is restriction to the opens of $X$.",
+      "proof": "The inclusion of open immersions into étale objects induces the geometric morphism $\\operatorname{Sh}(X_{\\acute{e}t})\\to\\operatorname{Sh}(X_{\\mathrm{Zar}})$. Its direct image is restriction to the opens of $X$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03FE",
+          "Stacks 03FE · §34.11, change of topologies"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03FF",
+          "Stacks 03FF · Remark 34.11.1, compatible sites"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000140"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "big-etale-zariski",
+      "name": "Big étale to big Zariski",
+      "related": [
+        "G000039",
+        "G000036"
+      ],
+      "hypotheses": "Let $X$ be a scheme. Use compatible choices of big and small sites as in Stacks Remark 34.11.1.",
+      "statement": "The identity on the chosen underlying category induces the geometric morphism from the big étale topos to the big Zariski topos. A Zariski covering is an étale covering.",
+      "proof": "The identity on the chosen underlying category induces the geometric morphism from the big étale topos to the big Zariski topos. A Zariski covering is an étale covering.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03FE",
+          "Stacks 03FE · §34.11, change of topologies"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03FF",
+          "Stacks 03FF · Remark 34.11.1, compatible sites"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000141"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "big-fppf-etale",
+      "name": "Big fppf to big étale",
+      "related": [
+        "G000097",
+        "G000039"
+      ],
+      "hypotheses": "Let $X$ be a scheme. Use compatible choices of big and small sites as in Stacks Remark 34.11.1.",
+      "statement": "The identity on the common underlying category induces the geometric morphism from the big fppf topos to the big étale topos. Every étale covering is fppf.",
+      "proof": "The identity on the common underlying category induces the geometric morphism from the big fppf topos to the big étale topos. Every étale covering is fppf.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03FE",
+          "Stacks 03FE · §34.11, change of topologies"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03FF",
+          "Stacks 03FF · Remark 34.11.1, compatible sites"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000142"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "proet-et-comparison",
+      "name": "Pro-étale to small étale",
+      "related": [
+        "G000041",
+        "G000038"
+      ],
+      "hypotheses": "Let $X$ be a scheme. Use compatible small étale and pro-étale sites as in Stacks §61.19.",
+      "statement": "Inclusion of the étale objects induces $\\epsilon:\\operatorname{Sh}(X_{\\mathrm{pro\\acute{e}t}})\\to\\operatorname{Sh}(X_{\\acute{e}t})$. The inverse image $\\epsilon^{-1}$ is fully faithful.",
+      "proof": "Inclusion of the étale objects induces $\\epsilon:\\operatorname{Sh}(X_{\\mathrm{pro\\acute{e}t}})\\to\\operatorname{Sh}(X_{\\acute{e}t})$. The inverse image $\\epsilon^{-1}$ is fully faithful.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/099R",
+          "Stacks 099R · §61.19, comparison morphism"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/099T",
+          "Stacks 099T · fully faithful inverse image"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000143"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "proet-et-cohomology",
+      "name": "Étale and pro-étale cohomology",
+      "related": [
+        "G000041",
+        "G000038"
+      ],
+      "hypotheses": "Let $X$ be a scheme and $\\epsilon$ the comparison of small sites. Take an abelian étale sheaf $\\mathcal F$ or $K\\in D^+(X_{\\acute{e}t})$.",
+      "statement": "The canonical comparison is $R\\Gamma(X_{\\acute{e}t},K)\\simeq R\\Gamma(X_{\\mathrm{pro\\acute{e}t}},\\epsilon^{-1}K)$. In particular the pullback preserves cohomology in every degree for $\\mathcal F$.",
+      "proof": "The canonical comparison is $R\\Gamma(X_{\\acute{e}t},K)\\simeq R\\Gamma(X_{\\mathrm{pro\\acute{e}t}},\\epsilon^{-1}K)$. In particular the pullback preserves cohomology in every degree for $\\mathcal F$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/099W",
+          "Stacks 099W · Lemma 61.19.6"
+        ]
+      ],
+      "relation": "cohomology",
+      "id": "T000144"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "prism-formal-etale",
+      "name": "Prismatic to formal étale topos",
+      "related": [
+        "G000050",
+        "G000098"
+      ],
+      "hypotheses": "Fix a bounded prism $(A,I)$ and a smooth $p$-adic formal scheme $X$ over $\\operatorname{Spf}(A/I)$. Use the formal small étale site in Construction 4.4.",
+      "statement": "The quotient $(B,IB)\\mapsto\\operatorname{Spf}(B/IB)$ gives a cocontinuous functor to the big formal étale site. Composing the induced geometric morphism with the comparison to the small formal étale topos gives $\\nu_X$. Over $U\\to X$, the direct image of $\\mathcal F$ is the space of sections over $(U/A)_\\Delta$.",
+      "proof": "The quotient $(B,IB)\\mapsto\\operatorname{Spf}(B/IB)$ gives a cocontinuous functor to the big formal étale site. Composing the induced geometric morphism with the comparison to the small formal étale topos gives $\\nu_X$. Over $U\\to X$, the direct image of $\\mathcal F$ is the space of sections over $(U/A)_\\Delta$.",
+      "refs": [
+        [
+          "https://people.mpim-bonn.mpg.de/scholze/prisms.pdf#page=37",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Construction 4.4"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00XO",
+          "Stacks 00XO · geometric morphism from a cocontinuous functor"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000145"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "formal-etale-special-fibre",
+      "name": "Formal étale site and the special fibre",
+      "related": [
+        "G000098",
+        "G000038"
+      ],
+      "hypotheses": "Let $X$ be a $p$-adic formal scheme and $X_0=X\\bmod p$. Compare adic étale formal schemes over $X$ with étale schemes over $X_0$.",
+      "statement": "Reduction to $X_0$ yields an equivalence of small étale sites. Étale objects lift uniquely up to unique isomorphism through the successive nilpotent thickenings $X\\bmod p^n$, and these lifts form the formal étale object.",
+      "proof": "Reduction to $X_0$ yields an equivalence of small étale sites. Étale objects lift uniquely up to unique isomorphism through the successive nilpotent thickenings $X\\bmod p^n$, and these lifts form the formal étale object.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0DE9",
+          "Stacks 0DE9 · §87.34, the small étale site of a formal algebraic space"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/04DZ",
+          "Stacks 04DZ · topological invariance of the étale site"
+        ],
+        [
+          "https://people.mpim-bonn.mpg.de/scholze/prisms.pdf#page=37",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Construction 4.4"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000146"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "zar-localic-topos",
+      "name": "Little Zariski and localic presentations",
+      "related": [
+        "G000035",
+        "G000099"
+      ],
+      "hypotheses": "Let $X$ be a scheme and take the locale whose frame is the opens of its Zariski space.",
+      "statement": "There is an equivalence $\\operatorname{Sh}(X_{\\mathrm{Zar}})\\simeq\\operatorname{Sh}(\\mathcal O(|X|))$. Both sides impose the sheaf condition for open covers. If $X$ is qcqs, the locale of opens is coherent.",
+      "proof": "There is an equivalence $\\operatorname{Sh}(X_{\\mathrm{Zar}})\\simeq\\operatorname{Sh}(\\mathcal O(|X|))$. Both sides impose the sheaf condition for open covers. If $X$ is qcqs, the locale of opens is coherent.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/020X",
+          "Stacks 020X · small Zariski site and ordinary sheaves"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/094L",
+          "Stacks 094L · spectral underlying space"
+        ],
+        [
+          "https://arxiv.org/abs/2012.13850",
+          "Blechschmidt, Generalized spaces for constructive algebra"
+        ]
+      ],
+      "relation": "site",
+      "id": "T000147"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-family-topology",
+      "name": "From covering families to covering sieves",
+      "relation": "site",
+      "related": [
+        "G000101",
+        "G000103",
+        "G000102",
+        "G000030"
+      ],
+      "hypotheses": "Let $\\mathcal C$ be a site specified by covering families satisfying the isomorphism, composition and base-change axioms.",
+      "statement": "A sieve is covering precisely when it contains the sieve generated by some covering family. The resulting Grothendieck topology has the same sheaves as the covering-family presentation.",
+      "proof": "The axioms on the families give the maximal-sieve, pullback and local-character axioms. A matching family on a cover extends to its generated sieve by compatibility on the pullbacks. Uniqueness and existence on a larger covering sieve can then be tested on a contained covering family and its pullbacks.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00ZC",
+          "Stacks 00ZC · covering families give a topology"
+        ]
+      ],
+      "id": "T000148"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-sheafification-covering",
+      "name": "Sheafification detects covering sieves",
+      "relation": "equivalence",
+      "related": [
+        "G000102",
+        "G000103",
+        "G000104"
+      ],
+      "hypotheses": "Fix a topology $J$ on $\\mathcal C$ and a sieve $S\\subseteq h_U$ on an object $U$.",
+      "statement": "$S\\in J(U)$ if and only if $S^\\#\\to h_U^\\#$ is an isomorphism.",
+      "proof": "Sheafification preserves the monomorphism. For a covering sieve the local sections over the arrows of $S$ give the lift of $\\operatorname{id}_U$ needed for surjectivity. Conversely a lift of $\\operatorname{id}_U$ is represented locally by sections of $S$ after refinement, which gives a covering sieve contained in $S$.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00ZO",
+          "Stacks 00ZO · covering sieve detected by sheafification"
+        ]
+      ],
+      "id": "T000149"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-topology-reconstruction",
+      "name": "Recovering a topology from its sheaves",
+      "relation": "equivalence",
+      "related": [
+        "G000103",
+        "G000104",
+        "G000031"
+      ],
+      "hypotheses": "Let $J$ and $J'$ be Grothendieck topologies on the same category $\\mathcal C$, with the same ambient presheaf category.",
+      "statement": "$J=J'$ if and only if $\\operatorname{Sh}(\\mathcal C,J)$ and $\\operatorname{Sh}(\\mathcal C,J')$ are the same full subcategory of presheaves.",
+      "proof": "A full subcategory of sheaves with its inclusion determines the left adjoint up to natural isomorphism. The sheafification criterion then recovers the covering sieves from that adjunction.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00ZP",
+          "Stacks 00ZP · topology determined by sheaves in presheaves"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00ZO",
+          "Stacks 00ZO · criterion for covering sieves"
+        ]
+      ],
+      "id": "T000150"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-sheafification-exact",
+      "name": "Finite-limit preservation by sheafification",
+      "relation": "construction",
+      "related": [
+        "G000104",
+        "G000031"
+      ],
+      "hypotheses": "Let the presheaves and sheaves be set-valued on a site.",
+      "statement": "The sheafification functor preserves finite limits and all small colimits.",
+      "proof": "The plus construction uses directed colimits over refinements. Finite limits in sets commute with these colimits and with the limits imposing compatibility on matching families. Applying plus twice gives preservation of finite limits. The adjunction gives preservation of colimits.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00WJ",
+          "Stacks 00WJ · exactness of sheafification"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00WH",
+          "Stacks 00WH · adjunction for sheafification"
+        ]
+      ],
+      "id": "T000151"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-comparison-lemma",
+      "name": "Comparison lemma for sites",
+      "relation": "equivalence",
+      "related": [
+        "G000030",
+        "G000106",
+        "G000031"
+      ],
+      "hypotheses": "Let $u:\\mathcal C\\to\\mathcal D$ be continuous and cocontinuous. Require that two arrows with the same image under $u$ agree after a cover of their common source, and that an arrow $u(U')\\to u(U)$ locally lifts after a cover of $U'$ in $\\mathcal C$. Require every object of $\\mathcal D$ to have a cover by objects in the image of $u$.",
+      "statement": "The morphism $\\operatorname{Sh}(\\mathcal C)\\to\\operatorname{Sh}(\\mathcal D)$ obtained from the cocontinuous functor $u$ is an equivalence.",
+      "proof": "Local lifting and equality of arrows identify the sheafified morphism data on image objects. The covering condition then reconstructs each sheaf on the target from those local data by descent.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03A0",
+          "Stacks 03A0 · comparison lemma with local fullness, faithfulness and cover density"
+        ]
+      ],
+      "id": "T000152"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-subcanonical-presentation",
+      "name": "Subcanonical presentation by sheafified representables",
+      "relation": "equivalence",
+      "related": [
+        "G000030",
+        "G000105",
+        "G000031",
+        "G000104"
+      ],
+      "hypotheses": "Let $\\mathcal C'$ be a small full subcategory of $\\operatorname{Sh}(\\mathcal C)$ containing the sheafified representables $h_U^\\#$ and closed under fibre products in the sheaf category.",
+      "statement": "The families in $\\mathcal C'$ with epimorphic coproduct map form a subcanonical site presentation. The functor $U\\mapsto h_U^\\#$ induces $\\operatorname{Sh}(\\mathcal C)\\simeq\\operatorname{Sh}(\\mathcal C')$.",
+      "proof": "Epimorphisms of sheaves are effective and stable under pullback, so representables satisfy descent for the specified families. The original covers induce such epimorphisms, and the $h_U^\\#$ generate the sheaf category. The resulting functor satisfies the site comparison hypotheses.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03A1",
+          "Stacks 03A1 · subcanonical presentation"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03A0",
+          "Stacks 03A0 · comparison lemma"
+        ]
+      ],
+      "id": "T000153"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-points-exactness",
+      "name": "Conservative stalks detect finite limits and colimits",
+      "relation": "construction",
+      "related": [
+        "G000107",
+        "G000031"
+      ],
+      "hypotheses": "Fix a conservative family of points of a site.",
+      "statement": "Stalks jointly detect monomorphisms, epimorphisms, equality of morphisms, and limiting and colimiting cones for finite diagrams.",
+      "proof": "Inverse images of points preserve finite limits and colimits. Compare a cone to the actual limit or colimit and use conservativity on the comparison map. For monomorphisms and epimorphisms one can test the diagonal and codiagonal, respectively. An equalizer detects equality of maps.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00YL",
+          "Stacks 00YL · exactness and comparison at stalks"
+        ]
+      ],
+      "id": "T000154"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-etale-conservative-points",
+      "name": "Geometric stalks on small and big étale sites",
+      "relation": "construction",
+      "related": [
+        "G000038",
+        "G000039",
+        "G000107"
+      ],
+      "hypotheses": "Let $S$ be a scheme, with the big site formed in a fixed size convention.",
+      "statement": "The geometric points of $S$ give a conservative family for the small étale site. On the big étale site use the geometric points of all objects $T\\to S$, evaluating the stalk after restriction to $T_{\\text{ét}}$. Exactness of sequences of abelian sheaves on the small site is equivalent to exactness at the geometric stalks.",
+      "proof": "A stalk is the filtered colimit over pointed étale neighbourhoods. A germ that lifts or vanishes does so after shrinking such a neighbourhood. Doing this above every point gives the covering family that witnesses the local sheaf condition for surjectivity or injectivity. On the big site these tests are made object by object.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03PU",
+          "Stacks 03PU · exactness at geometric stalks"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/040S",
+          "Stacks 040S · enough points of the small and big étale sites"
+        ]
+      ],
+      "id": "T000155"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-etale-structure-stalk",
+      "name": "Étale structure sheaf stalk",
+      "relation": "construction",
+      "related": [
+        "G000038",
+        "G000032",
+        "G000107"
+      ],
+      "hypotheses": "Let $\\bar s$ be a geometric point of a scheme $S$ lying over $s$, and take the separable algebraic closure of $\\kappa(s)$ inside $\\kappa(\\bar s)$.",
+      "statement": "The stalk $(\\mathcal O_S)_{\\bar s}$ on $S_{\\text{ét}}$ identifies canonically with the strict henselization of $\\mathcal O_{S,s}$ for that choice of separable closure.",
+      "proof": "The filtered colimit of local rings of pointed étale neighbourhoods is the construction of the strict henselization with this residue field.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04HX",
+          "Stacks 04HX · étale stalk as strict henselization"
+        ]
+      ],
+      "id": "T000156"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-etale-proper-base-change",
+      "name": "Proper base change in étale cohomology",
+      "relation": "cohomology",
+      "related": [
+        "G000038",
+        "G000106"
+      ],
+      "hypotheses": "Let $f:X\\to Y$ be a proper morphism of schemes and $g:Y'\\to Y$ any morphism of schemes. Put $X'=X\\times_Y Y'$ and let $f':X'\\to Y'$ and $g':X'\\to X$ be the projections. Let $F$ be an abelian torsion sheaf on $X_{\\text{ét}}$.",
+      "statement": "The base-change map $g^{-1}Rf_*F\\to Rf'_*((g')^{-1}F)$ on $Y'_{\\text{ét}}$ is an isomorphism.",
+      "proof": "Reduce to $\\mathbf P^1_S\\to S$ and then test over strictly henselian local bases. For $\\mathbf Z/\\ell\\mathbf Z$-module sheaves with $\\ell$ prime, restrictions of injectives to the closed fibre are acyclic for global sections. Computing by this resolution gives the fibre comparison, and dévissage and filtered colimits give the torsion assertion.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/095T",
+          "Stacks 095T · proper base change theorem"
+        ]
+      ],
+      "id": "T000157"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-proetale-weakly-contractible",
+      "name": "Weakly contractible pro-étale covers",
+      "relation": "construction",
+      "related": [
+        "G000041",
+        "G000108"
+      ],
+      "hypotheses": "Let $S$ be any scheme. Work in the small pro-étale site of $S$, the big pro-étale site over $S$, or the global big pro-étale site in the chosen size convention.",
+      "statement": "Each object $U$ admits a singleton covering $\\{V\\to U\\}$ by a weakly contractible object. When $U$ is quasi-compact, $V$ can be chosen affine. The affine versions of the sites admit covering families by affine quasi-compact weakly contractible objects.",
+      "proof": "The construction gives weakly contractible affine covers of affine charts. A disjoint union of weakly contractible objects is weakly contractible, since evaluation on it is a product of evaluations on the components.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0F4P",
+          "Stacks 0F4P · singleton weakly contractible covers"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0990",
+          "Stacks 0990 · enough affine quasi-compact weakly contractible objects"
+        ]
+      ],
+      "id": "T000158"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-weakly-contractible-acyclic",
+      "name": "Cohomology on a weakly contractible object",
+      "relation": "cohomology",
+      "related": [
+        "G000108",
+        "G000030"
+      ],
+      "hypotheses": "Let $U$ be weakly contractible in a site $\\mathcal C$. Let $F$ be an abelian sheaf on $\\mathcal C$.",
+      "statement": "Evaluation at $U$ is exact on abelian sheaves, so $H^i(U,F)=0$ for $i>0$. Every torsor for a sheaf of groups has a section over $U$.",
+      "proof": "Evaluation preserves kernels, and weak contractibility makes evaluation of sheaf epimorphisms surjective. A torsor is locally nonempty, so its map to the terminal sheaf is epimorphic and lifts the unique section over the object.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0946",
+          "Stacks 0946 · acyclicity and sections of torsors"
+        ]
+      ],
+      "id": "T000159"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-proetale-locally-constant",
+      "name": "Locally constant finitely presented coefficients",
+      "relation": "equivalence",
+      "related": [
+        "G000038",
+        "G000041"
+      ],
+      "hypotheses": "Let $X$ be a scheme, let $\\Lambda$ be a ring, and use the natural morphism $\\epsilon:X_{\\mathrm{pro\\acute et}}\\to X_{\\mathrm{\\acute et}}$ of small topoi.",
+      "statement": "The functor $\\epsilon^{-1}$ gives an equivalence between locally constant sheaves of $\\Lambda$-modules of finite presentation on the two topoi.",
+      "proof": "The inverse image is fully faithful. On an open piece where the fibre module has fixed isomorphism type $M$, the sheaf of trivializations is a torsor under the constant sheaf $\\operatorname{Aut}_{\\Lambda}(M)$ by finite presentation. Comparison of these torsors gives étale-local trivializations.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/099Y",
+          "Stacks 099Y · étale and pro-étale comparison for locally constant finitely presented modules"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/099T",
+          "Stacks 099T · fully faithful inverse image"
+        ]
+      ],
+      "id": "T000160"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-algebraic-space-etale-presentation",
+      "name": "Scheme and algebraic-space objects in the étale site",
+      "relation": "equivalence",
+      "related": [
+        "G000042",
+        "G000031",
+        "G000106"
+      ],
+      "hypotheses": "Let $X$ be an algebraic space. Compare the small étale site using scheme objects over $X$ with the version using algebraic-space objects over $X$.",
+      "statement": "The inclusion of the scheme objects induces an equivalence of topoi.",
+      "proof": "The inclusion is fully faithful and continuous. Every algebraic-space object admits an étale cover by a scheme, and such refinements also yield cocontinuity. Apply the comparison lemma.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03G1",
+          "Stacks 03G1 · comparison of the two étale sites of an algebraic space"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03A0",
+          "Stacks 03A0 · comparison lemma"
+        ]
+      ],
+      "id": "T000161"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-fppf-affine-comparison",
+      "name": "Affine presentation of the big fppf topos",
+      "relation": "equivalence",
+      "related": [
+        "G000097",
+        "G000109",
+        "G000031"
+      ],
+      "hypotheses": "Let $S$ belong to the chosen big fppf site of schemes.",
+      "statement": "The inclusion $(\\mathrm{Aff}/S)_{\\mathrm{fppf}}\\to(\\mathrm{Sch}/S)_{\\mathrm{fppf}}$ induces an equivalence of topoi.",
+      "proof": "Every object has an affine open covering. For an affine target each fppf cover can be refined by a finite standard affine fppf cover. Together with full faithfulness these are the hypotheses of the comparison lemma.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/021V",
+          "Stacks 021V · big and big affine fppf topoi"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03A0",
+          "Stacks 03A0 · comparison lemma"
+        ]
+      ],
+      "id": "T000162"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "stacks-spectral-finite-sober-limit",
+      "name": "Finite sober inverse limits characterize spectral spaces",
+      "relation": "equivalence",
+      "related": [
+        "P000056",
+        "P000058",
+        "G000073",
+        "G000029"
+      ],
+      "hypotheses": "Let the limit be taken in topological spaces over a directed inverse system.",
+      "statement": "A space is spectral if and only if it can be presented as an inverse limit of finite sober spaces.",
+      "proof": "A spectral space embeds in a product of Sierpiński spaces using its quasi-compact opens, with patch-closed image. Its projections to finite coordinate sets give finite sober spaces. Patch compactness identifies the image with the compatible tuples in these projections, and the finite-coordinate opens recover the spectral topology. Conversely, directed limits of finite sober spaces are spectral.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/09XW",
+          "Stacks 09XW · embedding in a product of Sierpiński spaces"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/09XX",
+          "Stacks 09XX · characterization by inverse limits of finite sober spaces"
+        ]
+      ],
+      "id": "T000163"
     }
   ],
   "examples": [
@@ -6450,6 +8384,220 @@
       "id": "X000014"
     }
   ],
+  "diagrams": [
+    {
+      "id": "crystalline-prismatic",
+      "title": "Crystalline and prismatic geometry",
+      "nodes": [
+        "G000047",
+        "G000046",
+        "G000035",
+        "G000051",
+        "G000050",
+        "G000087",
+        "G000088",
+        "G000090",
+        "G000089",
+        "G000091"
+      ],
+      "edges": [
+        {
+          "from": "G000046",
+          "to": "G000047",
+          "theorem": "T000125",
+          "label": "Inclusion and retraction",
+          "relation": "site"
+        },
+        {
+          "from": "G000046",
+          "to": "G000035",
+          "theorem": "T000126",
+          "label": "Structure morphism",
+          "relation": "site"
+        },
+        {
+          "from": "G000050",
+          "to": "G000051",
+          "theorem": "T000127",
+          "label": "Forget the base",
+          "relation": "site"
+        },
+        {
+          "from": "G000050",
+          "to": "G000087",
+          "theorem": "T000128",
+          "label": "Derived global sections",
+          "relation": "construction"
+        },
+        {
+          "from": "G000087",
+          "to": "G000088",
+          "theorem": "T000111",
+          "label": "Frobenius base change",
+          "relation": "cohomology"
+        },
+        {
+          "from": "G000087",
+          "to": "G000090",
+          "theorem": "T000129",
+          "label": "de Rham comparison",
+          "relation": "cohomology"
+        },
+        {
+          "from": "G000087",
+          "to": "G000089",
+          "theorem": "T000112",
+          "label": "Hodge–Tate comparison",
+          "relation": "cohomology"
+        },
+        {
+          "from": "G000087",
+          "to": "G000091",
+          "theorem": "T000130",
+          "label": "Étale comparison",
+          "relation": "cohomology"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-algebraic-geometry",
+      "title": "Synthetic algebraic geometry",
+      "nodes": [
+        "G000036",
+        "G000035",
+        "G000093",
+        "G000092",
+        "G000037",
+        "G000076",
+        "G000094",
+        "G000095"
+      ],
+      "edges": [
+        {
+          "from": "G000036",
+          "to": "G000035",
+          "theorem": "T000109",
+          "label": "Canonical geometric morphism",
+          "relation": "site"
+        },
+        {
+          "from": "G000035",
+          "to": "G000093",
+          "theorem": "T000107",
+          "label": "Locality of the structure sheaf",
+          "relation": "implication"
+        },
+        {
+          "from": "G000092",
+          "to": "G000037",
+          "theorem": "T000131",
+          "label": "Equivalent sheaf categories",
+          "relation": "site"
+        },
+        {
+          "from": "G000037",
+          "to": "G000035",
+          "theorem": "T000132",
+          "label": "Morphism from the restricted site",
+          "relation": "site"
+        },
+        {
+          "from": "G000037",
+          "to": "G000076",
+          "theorem": "T000133",
+          "label": "Higher sheaves and the model",
+          "relation": "site"
+        },
+        {
+          "from": "G000035",
+          "to": "G000094",
+          "theorem": "T000134",
+          "label": "Interpret an internal basis",
+          "relation": "construction"
+        },
+        {
+          "from": "G000094",
+          "to": "G000095",
+          "theorem": "T000108",
+          "label": "Internal and external freeness",
+          "relation": "equivalence"
+        }
+      ]
+    },
+    {
+      "id": "spectral-locales",
+      "title": "Spectral spaces and locales",
+      "nodes": [
+        "P000046",
+        "P000056",
+        "G000071",
+        "P000058",
+        "G000029",
+        "G000096",
+        "P000055",
+        "G000100",
+        "P000057"
+      ],
+      "edges": [
+        {
+          "from": "P000046",
+          "to": "P000056",
+          "theorem": "T000135",
+          "label": "Spectrality of the Zariski space",
+          "relation": "equivalence"
+        },
+        {
+          "from": "P000056",
+          "to": "G000071",
+          "theorem": "T000105",
+          "label": "Equivalent categories",
+          "relation": "equivalence"
+        },
+        {
+          "from": "P000056",
+          "to": "P000058",
+          "theorem": "T000091",
+          "label": "Spectral implies sober",
+          "relation": "implication"
+        },
+        {
+          "from": "P000056",
+          "to": "G000029",
+          "theorem": "T000136",
+          "label": "Constructible topology",
+          "relation": "construction"
+        },
+        {
+          "from": "G000029",
+          "to": "P000055",
+          "theorem": "T000137",
+          "label": "Profinite patch topology",
+          "relation": "implication"
+        },
+        {
+          "from": "G000071",
+          "to": "G000096",
+          "theorem": "T000138",
+          "label": "Compact elements and ideal completion",
+          "relation": "equivalence"
+        },
+        {
+          "from": "P000056",
+          "to": "G000100",
+          "theorem": "T000104",
+          "label": "Hochster realization",
+          "relation": "equivalence"
+        },
+        {
+          "from": "P000057",
+          "to": "P000055",
+          "theorem": "T000089",
+          "label": "Equivalence for spectral spaces",
+          "relation": "equivalence"
+        }
+      ]
+    }
+  ],
   "bibliography": [
     [
       "Foundations and historical sources",
@@ -6510,7 +8658,7 @@
         ],
         [
           "https://arxiv.org/abs/2307.00073",
-          "Cherubini–Coquand–Hutzler–Wärn, A foundation for synthetic algebraic geometry"
+          "Cherubini–Coquand–Hutzler, A Foundation for Synthetic Algebraic Geometry"
         ],
         [
           "https://arxiv.org/abs/2012.13850",
@@ -6580,5 +8728,11 @@
         ]
       ]
     ]
-  ]
+  ],
+  "stacksIndex": {
+    "revision": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "count": 21446,
+    "citedTagCount": 161,
+    "path": "stacks/tags.json"
+  }
 }
