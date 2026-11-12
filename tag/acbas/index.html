@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;self&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;; frame-src https://giscus.app">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Definition and basic properties — Lynlyn24</title>
+  <meta name="description" content="Toni Annala, Diagram Chasing in Abelian Categories, Section 2.1.">
+  <link rel="stylesheet" href="../../assets/site-7001bb5929ce2803.css">
+  <script defer src="../../assets/site.js"></script>
+  <script defer src="../../assets/comments.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../../" aria-label="Lynlyn24"><span class="brand-initial">𝕃</span>ynlyn24</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open menu" hidden>≡</button>
+    <nav id="site-navigation" class="site-nav" aria-label="Main navigation"><a href="../../">INDEX</a><a href="../../books/">BOOKS</a><a href="../../notes/">NOTES</a><a href="../../literature/">LITERATURE</a><a href="../../about/">ABOUT</a></nav>
+    <div class="header-tools">
+      <a href="../../search/">Search</a>
+      <button class="theme-button" type="button" aria-label="Dark theme" aria-pressed="false" hidden><span aria-hidden="true">☾</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><article class="reading">
+    <header class="article-header">
+      <div class="article-meta">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+    <li><a href="../../">Index</a></li>
+    <li><a href="../../books/">Books</a></li><li><a href="../../books/diagram-chasing-in-abelian-categories/">Diagram Chasing in Abelian Categories</a></li><li><a href="../../books/diagram-chasing-in-abelian-categories/abelian-categories/">2 Abelian Categories</a></li>
+  </ol></nav>
+        <p class="tag">2.1 · <a href="../0010/" aria-label="Permanent tag 0010">Tag 0010</a></p>
+      </div>
+      <h1>Definition and basic properties</h1>
+      <p class="lede">Toni Annala, Diagram Chasing in Abelian Categories, Section 2.1.</p>
+    </header>
+
+    <div class="prose note-body"><section class="math-block math-definition" id="def:ac-2-1-1">
+<p class="math-block-title"><strong>Definition 2.1.1</strong><a class="reference-link" href="../../ref/def~ac-2-1-1/" aria-label="Permalink for def:ac-2-1-1">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/0104" rel="noreferrer">Tag 0104</a> — equivalent definition of additive category.</p>
+<p>A category <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> is <em>additive</em> if</p>
+<ol>
+<li>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mi>o</mi><msub><mi>m</mi><mi class="math-euler-script" mathvariant="normal">𝒞</mi></msub><mo stretchy="false">(</mo><mi>X</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Hom_{\mathcal{C}} ( X, Y )</annotation></semantics></math></span> is an abelian group for all <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span> .</p>
+</li>
+<li>
+<p>The composition of morphisms is biadditive.</p>
+</li>
+<li>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> has a zero object.</p>
+</li>
+<li>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> has finite products.</p>
+</li>
+<li>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> has finite coproducts.</p>
+</li>
+</ol>
+<p>It is well known, that if the assumptions 1-3 above are satisfied then 4 and 5 are equivalent,
+and moreover they are equivalent to</p>
+<ol start="6">
+<li>Given objects <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span> , we have an object <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>⊕</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \oplus  Y</annotation></semantics></math></span> together with maps <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>:</mo><mi>X</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">i_{1} : X \to  X \oplus  Y</annotation></semantics></math></span> ,</li>
+</ol>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mn>2</mn></msub><mo>:</mo><mi>Y</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">i_{2} : Y \to  X \oplus  Y</annotation></semantics></math></span> , <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>:</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">p_{1} : X \oplus  Y \to  X</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>2</mn></msub><mo>:</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">p_{2} : X \oplus  Y \to  Y</annotation></semantics></math></span> that satisfy <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>a</mi></msub><mo>∘</mo><msub><mi>i</mi><mi>b</mi></msub><mo>=</mo><msub><mi>δ</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub></mrow><annotation encoding="application/x-tex">p_{a} \circ  i_{b} = \delta _{ab}</annotation></semantics></math></span> and</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>p</mi><mn>1</mn></msub><mo>+</mo><msub><mi>i</mi><mn>2</mn></msub><mo>∘</mo><msub><mi>p</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">i_{1} \circ  p_{1} + i_{2} \circ  p_{2} = 1</annotation></semantics></math></span>.</p>
+<p>The object in 6, together with the four maps satisfying the above conditions, is called
+the <em>direct sum</em> of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span> . The &quot;projections&quot; <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">p_{1} , p_{2}</annotation></semantics></math></span> make it a direct product and the
+&quot;injections&quot; <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>i</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">i_{1} , i_{2}</annotation></semantics></math></span> make it a direct sum.</p>
+<p>The notion of &quot;zero map&quot; could now have two different meanings, namely a map that
+factors trough a zero object and a map that is the the zero element of the abelian group
+of morphisms. These two notions however coincide, which is seen from the biadditivity of
+composition of morphisms.</p>
+<p>It is clear that if <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> is additive then the opposite category <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi class="math-euler-script" mathvariant="normal">𝒞</mi><mrow><mi>o</mi><mi>p</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\mathcal{C}^{op}</annotation></semantics></math></span> is additive as well.
+Therefore we can prove pairs of dual statements in additive categories by proving either
+one of them.</p>
+</section>
+<section class="math-block math-definition" id="def:ac-2-1-2">
+<p class="math-block-title"><strong>Definition 2.1.2</strong><a class="reference-link" href="../../ref/def~ac-2-1-2/" aria-label="Permalink for def:ac-2-1-2">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/0109" rel="noreferrer">Tag 0109</a> — equivalent definition using the coimage-to-image isomorphism.</p>
+<p>An additive category <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> is <em>abelian</em> if</p>
+<ol>
+<li>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span> has kernels and cokernels.</p>
+</li>
+<li>
+<p>Any monomorphism is the kernel of its cokernel.</p>
+</li>
+<li>
+<p>Any epimorphism is the cokernel of its kernel.</p>
+</li>
+</ol>
+<p>Again it is clear that the opposite category of an abelian category is still abelian, so we
+may use duality arguments. One does not need to assume that an abelian category comes
+with additive structure, if we drop the assumptions 1 and 2 in 2.1.1 then one can define an
+additive structure for the category using the other assumptions. (See for example &lt;insert
+Freyd's book here&gt;). From now on, all the categories are assumed to be abelian unless
+otherwise stated.</p>
+<p>Using the fact that limits (colimits) can be constructed using only products and kernels
+(coproducts and cokernels), we obtain the following.</p>
+<p>Source references: <a href="#def:ac-2-1-1">2.1.1</a></p>
+</section>
+<section class="math-block math-proposition" id="pro:ac-2-1-3">
+<p class="math-block-title"><strong>Proposition 2.1.3</strong><a class="reference-link" href="../../ref/pro~ac-2-1-3/" aria-label="Permalink for pro:ac-2-1-3">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010D" rel="noreferrer">Tag 010D</a> — same finite limits and colimits statement.</p>
+<p><em>Abelian categories have finite limits and finite colimits.</em></p>
+<p>Especially, fibre products exist in abelian categories.</p>
+<p>In abelian categories monomorphisms and epimorphisms have the following alternative
+descriptions</p>
+</section>
+<section class="math-block math-proposition" id="pro:ac-2-1-4">
+<p class="math-block-title"><strong>Proposition 2.1.4</strong><a class="reference-link" href="../../ref/pro~ac-2-1-4/" aria-label="Permalink for pro:ac-2-1-4">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010C" rel="noreferrer">Tag 010C</a> — part (1) gives the kernel criterion.</p>
+<p><em>Let</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f : X \to  Y</annotation></semantics></math></span> <em>be a map in an abelian category. The following are</em>
+<em>equivalent:</em></p>
+<p><em>1.</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>is a monomorphism.</em></p>
+<p><em>2. Composition by</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>sends nonzero maps to nonzero maps.</em></p>
+<p><em>3. The kernel of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>is</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>.</p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-1-4">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-1-4/" aria-label="Permalink for pf:ac-2-1-4">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010C" rel="noreferrer">Tag 010C</a> — alternative proof of the kernel criterion via representability.</p>
+<p>2 follows from 1 trivially. If 2 holds, then for <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>X</mi><mo>→</mo><mi>Y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">U \to  X \to  Y = 0</annotation></semantics></math></span> we have that
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>X</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">U \to  X = 0</annotation></semantics></math></span>, so it factors uniquely trough <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>, giving us 3. If we have two different maps <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span>
+and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>g</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">g^{\prime }</annotation></semantics></math></span> such that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi><mo>=</mo><mi>f</mi><mo>∘</mo><msup><mi>g</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">f \circ  g = f \circ  g^{\prime }</annotation></semantics></math></span>, then <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>−</mo><msup><mi>g</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">g - g^{\prime }</annotation></semantics></math></span> is nonzero but <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mo stretchy="false">(</mo><mi>g</mi><mo>−</mo><msup><mi>g</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f \circ  ( g - g^{\prime } ) = 0</annotation></semantics></math></span>. As nonzero
+maps cannot factor trough <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>, we see that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span> cannot be the kernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>. Therefore 1 follows
+from 3. □</p>
+</section>
+<p>Dually we have:</p>
+<section class="math-block math-proposition" id="pro:ac-2-1-5">
+<p class="math-block-title"><strong>Proposition 2.1.5</strong><a class="reference-link" href="../../ref/pro~ac-2-1-5/" aria-label="Permalink for pro:ac-2-1-5">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010C" rel="noreferrer">Tag 010C</a> — part (2) gives the dual cokernel criterion.</p>
+<p><em>Let</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f : X \to  Y</annotation></semantics></math></span> <em>be a map in an abelian category. The following are</em>
+<em>equivalent:</em></p>
+<p><em>1.</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>is an epimorphism.</em></p>
+<p><em>2. Precomposition by</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>sends nonzero maps to nonzero maps.</em></p>
+<p><em>3. The cokernel of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>is</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>.</p>
+<p>For abelian groups, modules over a ring or essentielly any other type such algebraic
+structure, a bijective morphism is always an isomorphism. This generalizes to abelian
+categories.</p>
+</section>
+<section class="math-block math-proposition" id="pro:ac-2-1-6">
+<p class="math-block-title"><strong>Proposition 2.1.6</strong><a class="reference-link" href="../../ref/pro~ac-2-1-6/" aria-label="Permalink for pro:ac-2-1-6">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010C" rel="noreferrer">Tag 010C</a> — part (3) gives the isomorphism criterion.</p>
+<p><em>A map</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f : X \to  Y</annotation></semantics></math></span> <em>is isomorphism if and only if it is both monic</em>
+<em>and epic.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-1-6">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-1-6/" aria-label="Permalink for pf:ac-2-1-6">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010C" rel="noreferrer">Tag 010C</a> — alternative proof via the coimage-to-image map.</p>
+<p>Clearly an isomorphism is both epic and monic. Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f : X \to  Y</annotation></semantics></math></span> be both an
+epimorphism and a monomorphism. Now <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Y \to  0</annotation></semantics></math></span> is its cokernel. Now by definition of
+abelian categories, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \to  Y</annotation></semantics></math></span> is its kernel. On the other hand, clearly also <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mn>1</mn></mpadded></mover><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y \xrightarrow{1} Y</annotation></semantics></math></span> is its
+kernel. By essential uniqueness of kernel we have an isomorphism <img class="edition-inline edition-view-ac-p06-part-01" src="../../assets/editions/ac-p06-part-01.png" alt="g : X → ∼ Y" decoding="async"> s.t.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 6"><img class="edition-image edition-view-ac-p06-part-02" width="465" height="58" loading="lazy" decoding="async" src="../../assets/editions/ac-p06.svg#part-02" alt="Diagram from PDF page 6"></div><details class="edition-transcript"><summary>Extracted text</summary><p>g
+X
+Y
+1
+f
+Y</p></details></figure>
+<p>commutes, i.e., <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">f = g</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> is an isomorphism. □</p>
+</section>
+<section class="math-block math-proposition" id="pro:ac-2-1-7">
+<p class="math-block-title"><strong>Proposition 2.1.7</strong><a class="reference-link" href="../../ref/pro~ac-2-1-7/" aria-label="Permalink for pro:ac-2-1-7">#</a></p>
+<p><em>If</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>is monic, then</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">f \circ  g</annotation></semantics></math></span> <em>have the same kernel. If</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span> <em>is epic,</em>
+<em>then</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">f \circ  g</annotation></semantics></math></span> <em>have the same cokernel.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-1-7">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-1-7/" aria-label="Permalink for pf:ac-2-1-7">#</a></p>
+<p>By monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span>, we have that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi><mo>∘</mo><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f \circ  g \circ  a = 0</annotation></semantics></math></span> if and only id <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∘</mo><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">g \circ  a = 0</annotation></semantics></math></span>, so the kernels
+must be the same. The second follows from duality. □</p>
+</section>
+</div>
+    <aside class="backlinks">
+      <h2>Referenced by</h2>
+      <ul><li><a href="../acfront/">Title page and contents</a> <span class="tag">acfront</span></li><li><a href="../acsub/">Subobjects and quotient objects</a> <span class="tag">acsub</span></li></ul>
+    </aside>
+    <nav class="reader-navigation" aria-label="Book navigation">
+    <a class="reader-prev" href="../acov/" rel="prev">
+      <span>← Previous section</span><strong>Overview</strong>
+    </a>
+    <a class="reader-up" href="../../books/diagram-chasing-in-abelian-categories/abelian-categories/">
+      <span>↑ Chapter contents</span><strong>Abelian Categories</strong>
+    </a>
+    <a class="reader-next" href="../acsub/" rel="next">
+      <span>Next section →</span><strong>Subobjects and quotient objects</strong>
+    </a>
+  </nav>
+    <details class="note-comments" id="lynlyn-comments" data-note-comments="0010" hidden>
+      <summary>Comments</summary>
+      <p>Comments are public on GitHub. Load comments to connect to Giscus, or <a href="https://github.com/Lyn-nyl-24/lynlyn24/discussions/categories/announcements" rel="noreferrer">open GitHub Discussions</a>.</p>
+      <button type="button" data-load-comments>Load comments</button>
+      <p class="visually-hidden" data-comments-status role="status"></p>
+      <div data-comments-widget></div>
+    </details>
+  </article></main>
+  <footer class="site-footer">
+    <a class="footer-name" href="../../" aria-label="Lynlyn24"><span class="brand-initial">𝕃</span>ynlyn24</a>
+    <a href="../../about/">About and privacy</a>
+    <a href="https://glowing-disco-xr4xrwrqp59ghvgjp-4317.app.github.dev/" rel="noreferrer">Editor</a>
+  </footer>
+</body>
+</html>

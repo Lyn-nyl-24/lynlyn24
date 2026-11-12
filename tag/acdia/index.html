@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;self&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;; frame-src https://giscus.app">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exact sequences and diagram chasing — Lynlyn24</title>
+  <meta name="description" content="Toni Annala, Diagram Chasing in Abelian Categories, Section 2.4.">
+  <link rel="stylesheet" href="../../assets/site-7001bb5929ce2803.css">
+  <script defer src="../../assets/site.js"></script>
+  <script defer src="../../assets/comments.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../../" aria-label="Lynlyn24"><span class="brand-initial">𝕃</span>ynlyn24</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open menu" hidden>≡</button>
+    <nav id="site-navigation" class="site-nav" aria-label="Main navigation"><a href="../../">INDEX</a><a href="../../books/">BOOKS</a><a href="../../notes/">NOTES</a><a href="../../literature/">LITERATURE</a><a href="../../about/">ABOUT</a></nav>
+    <div class="header-tools">
+      <a href="../../search/">Search</a>
+      <button class="theme-button" type="button" aria-label="Dark theme" aria-pressed="false" hidden><span aria-hidden="true">☾</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><article class="reading">
+    <header class="article-header">
+      <div class="article-meta">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+    <li><a href="../../">Index</a></li>
+    <li><a href="../../books/">Books</a></li><li><a href="../../books/diagram-chasing-in-abelian-categories/">Diagram Chasing in Abelian Categories</a></li><li><a href="../../books/diagram-chasing-in-abelian-categories/abelian-categories/">2 Abelian Categories</a></li>
+  </ol></nav>
+        <p class="tag">2.4 · <a href="../0013/" aria-label="Permanent tag 0013">Tag 0013</a></p>
+      </div>
+      <h1>Exact sequences and diagram chasing</h1>
+      <p class="lede">Toni Annala, Diagram Chasing in Abelian Categories, Section 2.4.</p>
+    </header>
+
+    <div class="prose note-body"><section class="math-block math-definition" id="def:ac-2-4-1">
+<p class="math-block-title"><strong>Definition 2.4.1</strong><a class="reference-link" href="../../ref/def~ac-2-4-1/" aria-label="Permalink for def:ac-2-4-1">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010E" rel="noreferrer">Tag 010E</a> — same exactness condition in an abelian category.</p>
+<p>The sequence <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mi>f</mi></mpadded></mover><mi>Y</mi><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mi>g</mi></mpadded></mover><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \xrightarrow{f} Y \xrightarrow{g} Z</annotation></semantics></math></span> is <em>exact</em> if <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">im</mi><mo>⁡</mo><mi>f</mi><mo>=</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\operatorname{im} f = \operatorname{ker} g</annotation></semantics></math></span>. A longer sequence
+is exact if any such shorter sequence in it is exact.</p>
+<p>The next properties follow immediately from previous results.</p>
+</section>
+<section class="math-block math-proposition" id="pro:ac-2-4-2">
+<p class="math-block-title"><strong>Proposition 2.4.2</strong><a class="reference-link" href="../../ref/pro~ac-2-4-2/" aria-label="Permalink for pro:ac-2-4-2">#</a></p>
+<p><em>Some basic properties of exactness.</em></p>
+<p><em>1.</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>→</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">0 \to  X \to  Y</annotation></semantics></math></span> <em>is exact if and only if</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \to  Y</annotation></semantics></math></span> <em>is monic.</em></p>
+<p><em>2.</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">X \to  Y \to  0</annotation></semantics></math></span> <em>is exact if and only if</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \to  Y</annotation></semantics></math></span> <em>is epic.</em></p>
+<p><em>3.</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>→</mo><mi>X</mi><mo>→</mo><mi>Y</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 \to  X \to  Y \to  0</annotation></semantics></math></span> <em>is exact if and only if</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \to  Y</annotation></semantics></math></span> <em>is an isomorphism.</em></p>
+<p><em>4. If</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>→</mo><mi>X</mi><mo>→</mo><mi>Y</mi><mo>→</mo><mi>Z</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 \to  X \to  Y \to  Z \to  0</annotation></semantics></math></span> <em>is exact, then</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mi>Y</mi><mi mathvariant="normal">/</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">Z = Y /X</annotation></semantics></math></span>.</p>
+<p>It is known that exactness of a sequence is a self-dual notion, so if <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \to  Y \to  Z</annotation></semantics></math></span> is exact,
+then <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mrow><mi>o</mi><mi>p</mi></mrow></msup><mo>→</mo><msup><mi>Y</mi><mrow><mi>o</mi><mi>p</mi></mrow></msup><mo>→</mo><msup><mi>X</mi><mrow><mi>o</mi><mi>p</mi></mrow></msup></mrow><annotation encoding="application/x-tex">Z^{op} \to  Y^{op} \to  X^{op}</annotation></semantics></math></span> is exact in the opposite category. This allows us sometimes to
+prove pairs of dual statements about exact sequences/diagrams.</p>
+<p>As an application of the results in the previous section, we will now prove the five
+lemma for arbitary abelian categories.</p>
+</section>
+<section class="math-block math-lemma" id="lem:ac-2-4-3">
+<p class="math-block-title"><strong>Lemma 2.4.3 · Four Lemma</strong><a class="reference-link" href="../../ref/lem~ac-2-4-3/" aria-label="Permalink for lem:ac-2-4-3">#</a></p>
+<p><em>Let us have the following commutative diagram, with</em>
+<em>exact rows</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 17"><img class="edition-image edition-view-ac-p17-part-01" width="465" height="62" loading="lazy" decoding="async" src="../../assets/editions/ac-p17.svg#part-01" alt="Diagram from PDF page 17"></div><details class="edition-transcript"><summary>Extracted text</summary><p>A
+B
+C
+D
+γ
+α
+β
+δ
+A 0
+B 0
+C 0
+D 0</p></details></figure>
+<p><em>If</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span> <em>are monic and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span> <em>is epic, then</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span> <em>is monic.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-3">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-3/" aria-label="Permalink for pf:ac-2-4-3">#</a></p>
+<p>It is enough to show that the only subobject of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span> of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span> s.t. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\gamma c = 0</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>. Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span> be such
+an subobject. Now its image in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span> must be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span> by monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">\delta</annotation></semantics></math></span>. Thus <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span> is contained in the
+image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span>. Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span> be the pullback if <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span> from <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>=</mo><mi>β</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">b^{\prime } = \beta b</annotation></semantics></math></span>. By commutativity,
+and the fact that image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span>, we have that the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">b^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">C^{\prime }</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>. Denote
+by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">a^{\prime }</annotation></semantics></math></span> the preimage of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">b^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">A^{\prime }</annotation></semantics></math></span> and by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span> the preimage of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">a^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span>. Now the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span> in
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi><mo>→</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">A \to  B \to  B^{\prime }</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">b^{\prime }</annotation></semantics></math></span>, so the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> must be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span> by monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math></span>. Thus the image
+of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span> must be <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>, proving the monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi></mrow><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></span>. □</p>
+</section>
+<p>Using the four lemma and its dual, we obtain the five lemma as a corollary.</p>
+<section class="math-block math-corollary" id="cor:ac-2-4-4">
+<p class="math-block-title"><strong>Corollary 2.4.4 · Five Lemma</strong><a class="reference-link" href="../../ref/cor~ac-2-4-4/" aria-label="Permalink for cor:ac-2-4-4">#</a></p>
+<p><em>Let us have the following commutative diagram, with</em>
+<em>exact rows</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 18"><img class="edition-image edition-view-ac-p18-part-01" width="465" height="62" loading="lazy" decoding="async" src="../../assets/editions/ac-p18.svg#part-01" alt="Diagram from PDF page 18"></div><details class="edition-transcript"><summary>Extracted text</summary><p>A
+B
+C
+D
+E
+γ
+α
+ϵ
+β
+δ
+A 0
+B 0
+C 0
+D 0
+E 0</p></details></figure>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Source excerpt from PDF page 18"><img class="edition-image edition-view-ac-p18-part-02" width="465" height="50" loading="lazy" decoding="async" src="../../assets/editions/ac-p18-part-02.png" alt="Source excerpt from PDF page 18"></div><details class="edition-transcript"><summary>Extracted text</summary><p>If β and δ are isomorphisms, α is epic, and ϵ is monic, then γ is an isomorphism.
+As another application, we prove the nine lemma.</p></details></figure>
+</section>
+<section class="math-block math-theorem" id="the:ac-2-4-5">
+<p class="math-block-title"><strong>Theorem 2.4.5 · Nine Lemma</strong><a class="reference-link" href="../../ref/the~ac-2-4-5/" aria-label="Permalink for the:ac-2-4-5">#</a></p>
+<p><em>Let us have the following commutative diagram with</em>
+<em>exact columns and exact middle row.</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 18"><img class="edition-image edition-view-ac-p18-part-03" width="465" height="179" loading="lazy" decoding="async" src="../../assets/editions/ac-p18.svg#part-03" alt="Diagram from PDF page 18"></div><details class="edition-transcript"><summary>Extracted text</summary><p>0
+0
+0
+A 1
+B 1
+C 1
+0
+0
+A 2
+B 2
+C 2
+0
+0
+A 3
+B 3
+C 3
+0
+0
+0
+0
+0</p></details></figure>
+<p><em>Now the top row is exact if and only if the bottom row is exact.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-5">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-5/" aria-label="Permalink for pf:ac-2-4-5">#</a></p>
+<p>Clearly <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>→</mo><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_{1} \to  B_{1}</annotation></semantics></math></span> is monic and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub><mo>→</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">B_{3} \to  C_{3}</annotation></semantics></math></span> is epic. Moreover, the facts that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>→</mo></mrow><annotation encoding="application/x-tex">A_{1} \to</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">B_{1} \to  C_{1} = 0</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>→</mo><msub><mi>B</mi><mn>3</mn></msub><mo>→</mo><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A_{3} \to  B_{3} \to  C_{3} = 0</annotation></semantics></math></span> follow without any assumptions on the exactness
+of top/bottom rows.</p>
+<p>Let the top row be exact and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">a_{3}</annotation></semantics></math></span> a subobject of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_{3}</annotation></semantics></math></span> whose image in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">B_{3}</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span>. Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_{2}</annotation></semantics></math></span>
+be its inverse image in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_{2}</annotation></semantics></math></span>, and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">b_{2}</annotation></semantics></math></span> its image in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B_{2}</annotation></semantics></math></span>. As the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">b_{2}</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">B_{3}</annotation></semantics></math></span> is 0, we can
+pull <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">b_{2}</annotation></semantics></math></span> to a subobject <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">b_{1}</annotation></semantics></math></span> of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">B_{1}</annotation></semantics></math></span>. By monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>→</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_{1} \to  C_{2}</annotation></semantics></math></span> the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">b_{1}</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_{1}</annotation></semantics></math></span> is 0, so
+we may pull it back to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⊂</mo><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a_{2} \subset  A_{1}</annotation></semantics></math></span>. By the monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>→</mo><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_{2} \to  B_{2}</annotation></semantics></math></span>, the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a_{1}</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_{2}</annotation></semantics></math></span> is
+exactly <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_{2}</annotation></semantics></math></span>, and hence <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a_{3} = 0</annotation></semantics></math></span>. Therefore, if the top row is exact, then <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>→</mo><msub><mi>B</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_{3} \to  B_{3}</annotation></semantics></math></span> is monic.
+Using duality, we see that if the bottom row is exact, then <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">B_{1} \to  C_{1}</annotation></semantics></math></span> is epic.</p>
+<p>Let the bottom row be exact and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">b_{1}</annotation></semantics></math></span> a subobject of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">B_{1}</annotation></semantics></math></span> that is sent to 0 in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_{1}</annotation></semantics></math></span>. Now
+its image <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">b_{2}</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B_{2}</annotation></semantics></math></span> is sent to 0 in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_{2}</annotation></semantics></math></span>, so we can pull it back to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⊂</mo><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_{2} \subset  A_{2}</annotation></semantics></math></span> in a good way. As
+the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">b_{2}</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">B_{3}</annotation></semantics></math></span> is 0 and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>→</mo><msub><mi>B</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_{3} \to  B_{3}</annotation></semantics></math></span> is monic, we see that the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_{2}</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_{3}</annotation></semantics></math></span> is 0,
+so we have a good preimage in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_{1}</annotation></semantics></math></span>. The image of this object in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">B_{1}</annotation></semantics></math></span> must be exactly <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">b_{1}</annotation></semantics></math></span> as</p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B_{1} \to  B_{2}</annotation></semantics></math></span> is monic. Therefore the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>→</mo><msub><mi>B</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_{1} \to  B_{1}</annotation></semantics></math></span> contains the kernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">B_{1} \to  C_{1}</annotation></semantics></math></span>, so
+it is exactly the kernel as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>→</mo><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A_{1} \to  B_{1} \to  C_{1} = 0</annotation></semantics></math></span>. We proved that from the exactness of the
+bottom row, one obtains the exactness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>→</mo><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_{1} \to  B_{1} \to  C_{1}</annotation></semantics></math></span>. From duality, the exactness of
+the top row gives the exactness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub><mo>→</mo><msub><mi>B</mi><mn>3</mn></msub><mo>→</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_{3} \to  B_{3} \to  C_{3}</annotation></semantics></math></span>. This concludes our proof. □</p>
+</section>
+<p>Sometimes we would to like to show the existence of some maps, whose existence is
+not known a priori. This will be needed in the proof of snake lemma or similar statements.
+Our next goal is to obtain the necessary tools for proving such claims.</p>
+<p>We begin by giving an alternative characterization for square being a pullback and
+pushout. This characterization, and the two lemmas following that characterization, are
+taken from &lt;Freyd's book [honestly, look up how to cite already...]&gt;.</p>
+<section class="math-block math-lemma" id="lem:ac-2-4-6">
+<p class="math-block-title"><strong>Lemma 2.4.6</strong><a class="reference-link" href="../../ref/lem~ac-2-4-6/" aria-label="Permalink for lem:ac-2-4-6">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/08N2" rel="noreferrer">Tag 08N2</a> — part (1) is the same pullback criterion.</p>
+<p><em>Let us have maps</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">f : X \to  Z</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>:</mo><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">g : Y \to  Z</annotation></semantics></math></span><em>. An object</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span> <em>together with</em>
+<em>maps</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">W \to  X</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">W \to  Y</annotation></semantics></math></span> <em>is the pullback if and only if the sequence</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>→</mo><mi>W</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo></mrow><annotation encoding="application/x-tex">0 \to  W \to  X \oplus  Y \to</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span> <em>is exact, where the map</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \oplus  Y \to  Z</annotation></semantics></math></span> <em>is given by</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">- g</annotation></semantics></math></span>.</p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-6">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-6/" aria-label="Permalink for pf:ac-2-4-6">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/08N2" rel="noreferrer">Tag 08N2</a> — same proof by the universal property of the kernel.</p>
+<p>If <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>→</mo><mi>W</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">0 \to  W \to  X \oplus  Y \to  Z</annotation></semantics></math></span> is exact then for any pair of maps <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">U \to  X</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">U \to  Y</annotation></semantics></math></span>
+s.t.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 19"><img class="edition-image edition-view-ac-p19-part-01" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p19.svg#part-01" alt="Diagram from PDF page 19"></div><details class="edition-transcript"><summary>Extracted text</summary><p>U
+X
+Y
+Z</p></details></figure>
+<p>commutes, we have an unique map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">U \to  W</annotation></semantics></math></span> s.t.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 19"><img class="edition-image edition-view-ac-p19-part-02" width="465" height="57" loading="lazy" decoding="async" src="../../assets/editions/ac-p19.svg#part-02" alt="Diagram from PDF page 19"></div><details class="edition-transcript"><summary>Extracted text</summary><p>U
+X ⊕ Y
+W</p></details></figure>
+<p>commutes. This is to say, that we have an unique map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">U \to  W</annotation></semantics></math></span> s.t.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 19"><img class="edition-image edition-view-ac-p19-part-03" width="465" height="104" loading="lazy" decoding="async" src="../../assets/editions/ac-p19.svg#part-03" alt="Diagram from PDF page 19"></div><details class="edition-transcript"><summary>Extracted text</summary><p>U
+W
+X
+Y
+Z</p></details></figure>
+<p>commutes. The square</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 19"><img class="edition-image edition-view-ac-p19-part-04" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p19.svg#part-04" alt="Diagram from PDF page 19"></div><details class="edition-transcript"><summary>Extracted text</summary><p>W
+X
+Y
+Z</p></details></figure>
+<p>commutes as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>Z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">W \to  X \oplus  Y \to  Z = 0</annotation></semantics></math></span>, so we see that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span> is the fibre product of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span>
+over <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span>. It is straightforward to verify that the fibre product satisfies these properties, so
+we are done. □</p>
+</section>
+<section class="math-block math-lemma" id="lem:ac-2-4-7">
+<p class="math-block-title"><strong>Lemma 2.4.7</strong><a class="reference-link" href="../../ref/lem~ac-2-4-7/" aria-label="Permalink for lem:ac-2-4-7">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/08N3" rel="noreferrer">Tag 08N3</a> — part (1) identifies the two kernels and implies the claim.</p>
+<p><em>Let</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \to  Z</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> <em>be maps. If</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">X \times _{Z} Y \to  X</annotation></semantics></math></span> <em>is monic, then so is</em>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span>.</p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-7">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-7/" aria-label="Permalink for pf:ac-2-4-7">#</a></p>
+<p>Denote by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span> the fibre product <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi></mrow><annotation encoding="application/x-tex">X \times _{Z} Y</annotation></semantics></math></span> . If <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> is not monic, then it has a
+nonzero kernel <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">K \to  Y</annotation></semantics></math></span> . Together with the zero map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">K \to  X</annotation></semantics></math></span> it gives a nonzero map
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">K \to  W</annotation></semantics></math></span> s.t. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>W</mi><mo>→</mo><mi>Y</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">K \to  W \to  Y = 0</annotation></semantics></math></span>, so <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">X \times _{Z} Y \to  X</annotation></semantics></math></span> cannot be monic. □</p>
+</section>
+<section class="math-block math-lemma" id="lem:ac-2-4-8">
+<p class="math-block-title"><strong>Lemma 2.4.8</strong><a class="reference-link" href="../../ref/lem~ac-2-4-8/" aria-label="Permalink for lem:ac-2-4-8">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/05PK" rel="noreferrer">Tag 05PK</a> — part (1) is preservation of epimorphisms under base change.</p>
+<p><em>Let</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \to  Z</annotation></semantics></math></span> <em>be a map and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> <em>be an epic map. Now</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">X \times _{Z} Y \to  X</annotation></semantics></math></span> <em>is</em>
+<em>epic, so epicness is preserved under base change.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-8">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-8/" aria-label="Permalink for pf:ac-2-4-8">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/08N4" rel="noreferrer">Tag 08N4</a> — compare the proof via the same pullback and pushout criterion.</p>
+<p>We will prove the dual claim. Let</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 20"><img class="edition-image edition-view-ac-p20-part-01" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p20.svg#part-01" alt="Diagram from PDF page 20"></div><details class="edition-transcript"><summary>Extracted text</summary><p>W
+X
+Y
+Z</p></details></figure>
+<p>be pushout, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">W \to  X</annotation></semantics></math></span> monic. We want to to show that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> is a monomorphism. By
+the dual of 2.4.6 we have that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>Z</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">W \to  X \oplus  Y \to  Z \to  0</annotation></semantics></math></span> is exact. As <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">W \to  X</annotation></semantics></math></span> is monic, also
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">W \to  X \oplus  Y</annotation></semantics></math></span> is monic, so actually <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>→</mo><mi>W</mi><mo>→</mo><mi>X</mi><mo>⊕</mo><mi>Y</mi><mo>→</mo><mi>Z</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 \to  W \to  X \oplus  Y \to  Z \to  0</annotation></semantics></math></span> is exact. Therefore the
+square is pullback, and the monicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> follows from the previous lemma. □</p>
+<p>Source references: <a href="#lem:ac-2-4-6">2.4.6</a></p>
+</section>
+<p>Next we prove that fibre products are &quot;local&quot;. The following lemma has counterparts at
+least in the theory of topological spaces, schemes, covers and so on.</p>
+<section class="math-block math-lemma" id="lem:ac-2-4-9">
+<p class="math-block-title"><strong>Lemma 2.4.9</strong><a class="reference-link" href="../../ref/lem~ac-2-4-9/" aria-label="Permalink for lem:ac-2-4-9">#</a></p>
+<p><em>Let</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \to  Z</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> <em>be maps,</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span> <em>a subobject of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><em>. Now the preimage</em>
+<em>of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span> <em>in</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">X \times _{Z} Y \to  X</annotation></semantics></math></span> <em>is</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi></mrow><annotation encoding="application/x-tex">U \times _{Z} Y</annotation></semantics></math></span> .</p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-9">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-9/" aria-label="Permalink for pf:ac-2-4-9">#</a></p>
+<p>Denote by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span> the fibre product and by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime }</annotation></semantics></math></span> the preimage of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span>. Let</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 20"><img class="edition-image edition-view-ac-p20-part-02" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p20.svg#part-02" alt="Diagram from PDF page 20"></div><details class="edition-transcript"><summary>Extracted text</summary><p>V
+U
+Y
+Z</p></details></figure>
+<p>commute. This gives an unique map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">V \to  W</annotation></semantics></math></span> , s.t. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>→</mo><mi>W</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">V \to  W \to  X</annotation></semantics></math></span> factors trough <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span>, so
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">V \to  W</annotation></semantics></math></span> factores uniquely to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>→</mo><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">V \to  W^{\prime }</annotation></semantics></math></span>, which proves the claim. □</p>
+</section>
+<section class="math-block math-theorem" id="the:ac-2-4-10">
+<p class="math-block-title"><strong>Theorem 2.4.10</strong><a class="reference-link" href="../../ref/the~ac-2-4-10/" aria-label="Permalink for the:ac-2-4-10">#</a></p>
+<p><em>Let</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">X \to  Z</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">Y \to  Z</annotation></semantics></math></span> <em>be epic maps,</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><mi>X</mi><msub><mo>×</mo><mi>Z</mi></msub><mi>Y</mi></mrow><annotation encoding="application/x-tex">W = X \times _{Z} Y</annotation></semantics></math></span> <em>. Now all the</em>
+<em>maps in</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Source excerpt from PDF page 21"><img class="edition-image edition-view-ac-p21-part-01" width="465" height="98" loading="lazy" decoding="async" src="../../assets/editions/ac-p21-part-01.png" alt="Source excerpt from PDF page 21"></div><details class="edition-transcript"><summary>Extracted text</summary><p>W
+X
+Y
+Z
+are epic. Moreover, for any subobject X 0 of X we get the same subobject of Y regardless
+of which route we take (using images and preimages).</p></details></figure>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-10">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-10/" aria-label="Permalink for pf:ac-2-4-10">#</a></p>
+<p>Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Z^{\prime }</annotation></semantics></math></span> be the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">X^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Y^{\prime }</annotation></semantics></math></span> the preimage of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Z^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span> . Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime }</annotation></semantics></math></span> be the
+preimage of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">X^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span> . By epicness and commutativity, the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Z^{\prime }</annotation></semantics></math></span>, so the
+image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Y^{\prime }</annotation></semantics></math></span> is at least contained in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Y^{\prime }</annotation></semantics></math></span>. Now <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime }</annotation></semantics></math></span> is the fibre product <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><msub><mo>×</mo><mi>Z</mi></msub><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">X^{\prime } \times _{Z} Y^{\prime }</annotation></semantics></math></span>,
+and as the images of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">X^{\prime }</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Y^{\prime }</annotation></semantics></math></span> are exactly <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Z^{\prime }</annotation></semantics></math></span>, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>=</mo><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><msubsup><mo>×</mo><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime } = X^{\prime } \times _{Z}^{\prime } Y^{\prime }</annotation></semantics></math></span>. The maps <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">X^{\prime } \to  Z^{\prime }</annotation></semantics></math></span> and
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Y^{\prime } \to  Z^{\prime }</annotation></semantics></math></span> are epic, and therefore <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime } \to  Y^{\prime }</annotation></semantics></math></span> is epic. This proves that the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">W^{\prime }</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi></mrow><annotation encoding="application/x-tex">Y</annotation></semantics></math></span>
+is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>Y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">Y^{\prime }</annotation></semantics></math></span>, which was exactly what we wanted to prove. □</p>
+</section>
+<p>This allows us to show existence of certain types of maps in certain situations, as the next
+theorem shows.</p>
+<section class="math-block math-theorem" id="the:ac-2-4-11">
+<p class="math-block-title"><strong>Theorem 2.4.11</strong><a class="reference-link" href="../../ref/the~ac-2-4-11/" aria-label="Permalink for the:ac-2-4-11">#</a></p>
+<p><em>Let us have the following commutative diagram</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 21"><img class="edition-image edition-view-ac-p21-part-02" width="465" height="98" loading="lazy" decoding="async" src="../../assets/editions/ac-p21.svg#part-02" alt="Diagram from PDF page 21"></div><details class="edition-transcript"><summary>Extracted text</summary><p>B
+A
+D
+C
+E</p></details></figure>
+<p><em>and a subobject of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span> <em>with the following property: for any subobject</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>U</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">U^{\prime }</annotation></semantics></math></span> <em>contained in</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span>,
+<em>as we go down from</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span> <em>to</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span> <em>using preimages and images, at each point the image of the</em>
+<em>preimage is the original object itself. If the subobject</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span> <em>of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span> <em>gives us</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span> <em>in</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><em>, then we</em>
+<em>have a map</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>→</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">U \to  E</annotation></semantics></math></span><em>, s.t., the image functor associated to it is exactly the one we get from</em>
+<em>preimages and images in the above diagram.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-11">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-11/" aria-label="Permalink for pf:ac-2-4-11">#</a></p>
+<p>Replacing <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span> with the subobject <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span>, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> with the preimage of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span> and so on, we may
+assume that the rows and columns of</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Source excerpt from PDF page 22"><img class="edition-image edition-view-ac-p22-part-01" width="465" height="173" loading="lazy" decoding="async" src="../../assets/editions/ac-p22-part-01.png" alt="Source excerpt from PDF page 22"></div><details class="edition-transcript"><summary>Extracted text</summary><p>0
+B
+A
+0
+D
+C
+0
+E
+0
+are exact. Denote by W the fibre product of D and B over C . Now W → A and W → E
+are epic, so actually we are in the following situation</p></details></figure>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 22"><img class="edition-image edition-view-ac-p22-part-02" width="465" height="46" loading="lazy" decoding="async" src="../../assets/editions/ac-p22.svg#part-02" alt="Diagram from PDF page 22"></div><details class="edition-transcript"><summary>Extracted text</summary><p>W/K
+W</p></details></figure>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Source excerpt from PDF page 22"><img class="edition-image edition-view-ac-p22-part-03" width="465" height="107" loading="lazy" decoding="async" src="../../assets/editions/ac-p22-part-03.png" alt="Source excerpt from PDF page 22"></div><details class="edition-transcript"><summary>Extracted text</summary><p>W/K 0
+0
+= B . By assumptions and 2.4.10 K is contained in K 0 , so
+where W/K = A and W/K
+0
+we obtain a map W/K → W/K . The image functor of this map is clearly the functor
+obtained by composing the preimage functor of W → W/K with the image functor of
+W → W/K 0 because W → W/K 0 factors to W → W/K → W/K 0 , and because the
+composition of preimage and image functors of W → W/K is the identity functor. But
+this functor is by 2.4.10 the original functor, so we have proven the claim.</p></details></figure>
+<p>Source references: <a href="#the:ac-2-4-10">2.4.10</a> · <a href="#the:ac-2-4-10">2.4.10</a></p>
+</section>
+<section class="math-block math-remark" id="rem:ac-2-4-12">
+<p class="math-block-title"><strong>Remark 2.4.12</strong><a class="reference-link" href="../../ref/rem~ac-2-4-12/" aria-label="Permalink for rem:ac-2-4-12">#</a></p>
+<p>One should note that the above theorem generalizes easily to longer such
+diagrams.</p>
+<p>Now we are ready to prove the snake lemma.</p>
+</section>
+<section class="math-block math-theorem" id="the:ac-2-4-13">
+<p class="math-block-title"><strong>Theorem 2.4.13 · Snake Lemma</strong><a class="reference-link" href="../../ref/the~ac-2-4-13/" aria-label="Permalink for the:ac-2-4-13">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010H" rel="noreferrer">Tag 010H</a> — the snake lemma for exact rows in an abelian category.</p>
+<p><em>Let us have the following commutative diagram with</em>
+<em>exact rows</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 22"><img class="edition-image edition-view-ac-p22-part-04" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p22.svg#part-04" alt="Diagram from PDF page 22"></div><details class="edition-transcript"><summary>Extracted text</summary><p>0
+A
+B
+C
+a
+c
+b
+A 0
+B 0
+C 0
+0</p></details></figure>
+<p><em>Now there exists a connecting morphism</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>c</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} c \to  \operatorname{coker} a</annotation></semantics></math></span><em>, s.t. the sequence</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>a</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>b</mi><mo>→</mo></mrow><annotation encoding="application/x-tex">\operatorname{ker} a \to  \operatorname{ker} b \to</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>c</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>a</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>b</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} c \to  \operatorname{coker} a \to  \operatorname{coker} b \to  \operatorname{coker} c</annotation></semantics></math></span> <em>is exact.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-13">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-13/" aria-label="Permalink for pf:ac-2-4-13">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010H" rel="noreferrer">Tag 010H</a> — alternative proof via pullback and pushout.</p>
+<p>This is the complete diagram of all objects of interest:</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Source excerpt from PDF page 23"><img class="edition-image edition-view-ac-p23-part-01" width="465" height="416" loading="lazy" decoding="async" src="../../assets/editions/ac-p23-part-01.png" alt="Source excerpt from PDF page 23"></div><details class="edition-transcript"><summary>Extracted text</summary><p>ker a
+ker b
+ker c
+0
+A
+B
+C
+a
+c
+b
+A 0
+B 0
+C 0
+0
+cokera
+cokerb
+cokerc
+The proof for exactness of ker a → ker b → ker c is a standard diagram chasing, much
+like in the proofs of five lemma and nine lemma, so we are not going to prove them. The
+exactness of cokera → cokerb → cokerc follows from duality.
+We may use 2.4.11 to give a map ker c → cokera , it is straightforward to check that
+the diagram satisfies the assumptions.
+0
+First of all ker b → ker c → cokera = 0 . This because if we send ker b to B along the
+0
+path ker b → kerc → C → B → B , then it is exactly the same subobject as the image
+0
+0
+of the kernel of B → C in B . Therefore the preimage of that subobject in A lies in the
+0
+image of A → A , so indeed, the image of ker b in ker c is sent to 0. By duality we also
+obtain that ker c → cokera → cokerb = 0 .
+Next we will show that the kernel of cokera → cokerb is contained in the image of
+ker c → cokera . Pull cokera to A 0 and push it to B 0 . This subobject has zero image in
+0
+both C and cokerb . Pull it back to B and push it to C . This map subobject has image 0
+in C so it is contained in the kernel of c . This proves the claim and concludes our proof
+for exactness of ker c → cokera → cokerb . The exactness of ker b → ker c → cokera follows
+from duality.</p></details></figure>
+<p>Source references: <a href="#the:ac-2-4-11">2.4.11</a></p>
+</section>
+<section class="math-block math-remark" id="rem:ac-2-4-14">
+<p class="math-block-title"><strong>Remark 2.4.14</strong><a class="reference-link" href="../../ref/rem~ac-2-4-14/" aria-label="Permalink for rem:ac-2-4-14">#</a></p>
+<p>Both in the proof of nine lemma, and in the proof of snake lemma, we have
+chosen the subclaims to prove from dual pairs of claims in a very specific way. This is
+because their duals may not be as easy to prove using subobjects! The concept
+of subobject is not self-dual, so if we would like to prove these hard duals as easily as the
+claims that we now prove, we would have to create the theory of quotient objects that
+considers their images and pullback.</p>
+</section>
+<section class="math-block math-definition" id="def:ac-2-4-15">
+<p class="math-block-title"><strong>Definition 2.4.15</strong><a class="reference-link" href="../../ref/def~ac-2-4-15/" aria-label="Permalink for def:ac-2-4-15">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010E" rel="noreferrer">Tag 010E</a> — same definition of a complex.</p>
+<p>A sequence is <em>complex</em> if the composition of any consecutive mor-
+phisms is the zero morphism. Before we start talking about homology we will need a
+lemma.</p>
+</section>
+<section class="math-block math-lemma" id="lem:ac-2-4-16">
+<p class="math-block-title"><strong>Lemma 2.4.16</strong><a class="reference-link" href="../../ref/lem~ac-2-4-16/" aria-label="Permalink for lem:ac-2-4-16">#</a></p>
+<p><em>Let us have the following commutative diagram</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 24"><img class="edition-image edition-view-ac-p24-part-01" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p24.svg#part-01" alt="Diagram from PDF page 24"></div><details class="edition-transcript"><summary>Extracted text</summary><p>A
+B
+C
+A 0
+B 0
+C 0</p></details></figure>
+<p><em>where the left vertical maps are epic, and the right vertical maps are monic. Now there</em>
+<em>is an unique map</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">B \to  B^{\prime }</annotation></semantics></math></span> <em>making the diagram commute. Moreover, if</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">B \to  B^{\prime }</annotation></semantics></math></span> <em>makes</em>
+<em>either of the little squares commute, then it makes the whole diagram commute.</em></p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-16">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-16/" aria-label="Permalink for pf:ac-2-4-16">#</a></p>
+<p>Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">K \to  A</annotation></semantics></math></span> be the kernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \to  B</annotation></semantics></math></span>. By the definition of abelian category <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \to  B</annotation></semantics></math></span>
+is the cokernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">K \to  A</annotation></semantics></math></span>. As our diagram commutes and as <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><msup><mi>C</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">B^{\prime } \to  C^{\prime }</annotation></semantics></math></span> is monic, we have
+that <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo>→</mo><mi>A</mi><mo>→</mo><msup><mi>A</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">K \to  A \to  A^{\prime } \to  B^{\prime } = 0</annotation></semantics></math></span>. Therefore there is an unique map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">B \to  B^{\prime }</annotation></semantics></math></span> making the left
+little square in</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 24"><img class="edition-image edition-view-ac-p24-part-02" width="465" height="61" loading="lazy" decoding="async" src="../../assets/editions/ac-p24.svg#part-02" alt="Diagram from PDF page 24"></div><details class="edition-transcript"><summary>Extracted text</summary><p>A
+B
+C
+A 0
+B 0
+C 0</p></details></figure>
+<p>commute. By epicness of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \to  B</annotation></semantics></math></span> the right little square commutes as well, so we are done.
+The second claim is also clear. □</p>
+</section>
+<section class="math-block math-definition" id="def:ac-2-4-17">
+<p class="math-block-title"><strong>Definition 2.4.17</strong><a class="reference-link" href="../../ref/def~ac-2-4-17/" aria-label="Permalink for def:ac-2-4-17">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/010V" rel="noreferrer">Tag 010V</a> — equivalent homology description as kernel modulo image.</p>
+<p>Let <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mi>f</mi></mpadded></mover><mi>B</mi><mover><mo stretchy="true" minsize="3.0em">→</mo><mpadded width="+0.6em" lspace="0.3em"><mi>g</mi></mpadded></mover><mi>C</mi></mrow><annotation encoding="application/x-tex">A \xrightarrow{f} B \xrightarrow{g} C</annotation></semantics></math></span> be a complex. Now we obtain the map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi><mo>→</mo></mrow><annotation encoding="application/x-tex">\operatorname{ker} g \to</annotation></semantics></math></span>
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">B \to  \operatorname{coker} f</annotation></semantics></math></span>. We define the <em>homology</em> of the original sequence at <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> to be the image of
+the map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g \to  \operatorname{coker} f</annotation></semantics></math></span>.</p>
+<p>This definition is functorial: if</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 24"><img class="edition-image edition-view-ac-p24-part-03" width="465" height="68" loading="lazy" decoding="async" src="../../assets/editions/ac-p24.svg#part-03" alt="Diagram from PDF page 24"></div><details class="edition-transcript"><summary>Extracted text</summary><p>f
+g
+A
+B
+C
+f 0
+g 0
+0
+0
+C 0
+A
+B</p></details></figure>
+<p>commutes, then we have unique maps <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><msup><mi>g</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\operatorname{ker} g \to  \operatorname{ker} g^{\prime }</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><msup><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\operatorname{coker} f \to  \operatorname{coker} f^{\prime }</annotation></semantics></math></span> s.t.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 24"><img class="edition-image edition-view-ac-p24-part-04" width="465" height="62" loading="lazy" decoding="async" src="../../assets/editions/ac-p24.svg#part-04" alt="Diagram from PDF page 24"></div><details class="edition-transcript"><summary>Extracted text</summary><p>ker g
+cokerf
+B
+ker g 0
+cokerf 0
+B 0</p></details></figure>
+<p>commutes. Therefore, using the previous lemma, we obtain an unique map between the
+homologies that makes the related diagram commute.</p>
+</section>
+<section class="math-block math-lemma" id="lem:ac-2-4-18">
+<p class="math-block-title"><strong>Lemma 2.4.18</strong><a class="reference-link" href="../../ref/lem~ac-2-4-18/" aria-label="Permalink for lem:ac-2-4-18">#</a></p>
+<p><em>Let us have the following commutative diagram with complexes as rows</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 25"><img class="edition-image edition-view-ac-p25-part-01" width="465" height="82" loading="lazy" decoding="async" src="../../assets/editions/ac-p25.svg#part-01" alt="Diagram from PDF page 25"></div><details class="edition-transcript"><summary>Extracted text</summary><p>f
+g
+h
+A
+B
+C
+D
+f 0
+g 0
+h 0
+0
+0
+C 0
+D 0
+A
+B</p></details></figure>
+<p><em>Now we have an unique commutative diagram of form</em></p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 25"><img class="edition-image edition-view-ac-p25-part-02" width="465" height="77" loading="lazy" decoding="async" src="../../assets/editions/ac-p25.svg#part-02" alt="Diagram from PDF page 25"></div><details class="edition-transcript"><summary>Extracted text</summary><p>cokerf
+B
+C
+ker h
+cokerf 0
+B 0
+ker h 0
+C 0</p></details></figure>
+<p><em>where</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi><mo>→</mo><mi>D</mi><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">B \to  \operatorname{coker} f \to  \operatorname{ker} h \to  D = g</annotation></semantics></math></span> <em>and</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>B</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><msup><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><msup><mi>h</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><msup><mi>D</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>=</mo><msup><mi>g</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">B^{\prime } \to  \operatorname{coker} f^{\prime } \to  \operatorname{ker} h^{\prime } \to  D^{\prime } = g^{\prime }</annotation></semantics></math></span>.</p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-18">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-18/" aria-label="Permalink for pf:ac-2-4-18">#</a></p>
+<p>Factorization of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi><mo>→</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">B \to  \operatorname{coker} f \to  \operatorname{ker} h \to  D</annotation></semantics></math></span> follows trivially from the fact
+that the rows are complexes and from universal properties of kernels and cokernels. We
+already know that we have an unique map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><msup><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\operatorname{coker} f \to  \operatorname{coker} f^{\prime }</annotation></semantics></math></span> (<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><msup><mi>h</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">\operatorname{ker} h \to  \operatorname{ker} h^{\prime }</annotation></semantics></math></span>) making the
+left (right) little square commute. Commutativity of the middle little square follows from
+the fact that maps to cokernels are epic and maps from kernels are monic, and from the
+fact that the big square commutes. □</p>
+</section>
+<section class="math-block math-lemma" id="lem:ac-2-4-19">
+<p class="math-block-title"><strong>Lemma 2.4.19</strong><a class="reference-link" href="../../ref/lem~ac-2-4-19/" aria-label="Permalink for lem:ac-2-4-19">#</a></p>
+<p><em>In the case of previous lemma, we have that the homology at</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span> <em>is natu-</em>
+<em>rally isomorphic to the kernel of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">\operatorname{coker} f \to  \operatorname{ker} h</annotation></semantics></math></span> <em>and that the homology at</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span> <em>is naturally</em>
+<em>isomorphic to the cokernel of</em> <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">\operatorname{coker} f \to  \operatorname{ker} h</annotation></semantics></math></span>.</p>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-19">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-19/" aria-label="Permalink for pf:ac-2-4-19">#</a></p>
+<p>Now we have the following sequence <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi>B</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi><mo>→</mo><mi>C</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} f \to  B \to  \operatorname{coker} f \to  \operatorname{ker} h \to  C \to  \operatorname{coker} h</annotation></semantics></math></span>.
+Denote the kernel and cokernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">\operatorname{coker} f \to  \operatorname{ker} h</annotation></semantics></math></span> by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">H^{\prime }</annotation></semantics></math></span> respectively. Using the
+universal properties of kernels and cokernels, we obtain the diagram</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 25"><img class="edition-image edition-view-ac-p25-part-03" width="465" height="44" loading="lazy" decoding="async" src="../../assets/editions/ac-p25.svg#part-03" alt="Diagram from PDF page 25"></div><details class="edition-transcript"><summary>Extracted text</summary><p>ker g
+cokerf
+cokerg
+B
+C
+ker h
+H 0
+H</p></details></figure>
+<p>which commutes. Now <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi><mo>→</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g \to  H</annotation></semantics></math></span> is epic and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">H^{\prime } \to  \operatorname{coker} g</annotation></semantics></math></span> is monic. It is enough to
+show the first one, the second follows from duality. As <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi><mo>→</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} h \to  C</annotation></semantics></math></span> is epic, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g</annotation></semantics></math></span> is the
+kernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">B \to  \operatorname{coker} f \to  \operatorname{ker} h</annotation></semantics></math></span>. As the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span> is contained in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g</annotation></semantics></math></span>, the preimage
+of the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">\operatorname{coker} f</annotation></semantics></math></span> is exactly <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g</annotation></semantics></math></span>. On the other hand, the inverse image
+functor associated to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">B \to  \operatorname{coker} f</annotation></semantics></math></span> is injective and the pullback of the kernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span>
+is the kernel of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>h</mi><mo>=</mo><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">B \to  \operatorname{ker} h = \operatorname{ker} g</annotation></semantics></math></span>, we have that the image of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g</annotation></semantics></math></span> in <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">coker</mi><mo>⁡</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">\operatorname{coker} f</annotation></semantics></math></span> is <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span> so
+<span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">ker</mi><mo>⁡</mo><mi>g</mi><mo>→</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">\operatorname{ker} g \to  H</annotation></semantics></math></span> must be epic. Therefore <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">H^{\prime }</annotation></semantics></math></span> are exactly the images (i.e., homologies),
+the naturality of the isomorphism follows from the fact that it is enough to have one little
+square to commute to get the map of homologies. □</p>
+</section>
+<section class="math-block math-theorem" id="the:ac-2-4-20">
+<p class="math-block-title"><strong>Theorem 2.4.20 · Zig-Zag Lemma</strong><a class="reference-link" href="../../ref/the~ac-2-4-20/" aria-label="Permalink for the:ac-2-4-20">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/0111" rel="noreferrer">Tag 0111</a> — the corresponding long exact homology sequence.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Source excerpt from PDF page 26"><img class="edition-image edition-view-ac-p26-part-01" width="465" height="88" loading="lazy" decoding="async" src="../../assets/editions/ac-p26-part-01.png" alt="Source excerpt from PDF page 26"></div><details class="edition-transcript"><summary>Extracted text</summary><p>Theorem 2.4.20. Zig-Zag Lemma. A short exact sequence 0 → A 0 → A → A 00 → 0 of
+complexes gives rise to a long exact sequence
+∂
+· · · → H n (A 0 ) → H n (A) → H n (A 00 ) → H n−1 (A 0 ) → · · ·
+of homologies.</p></details></figure>
+</section>
+<section class="math-block math-proof" id="pf:ac-2-4-20">
+<p class="math-block-title"><strong>Proof</strong><a class="reference-link" href="../../ref/pf~ac-2-4-20/" aria-label="Permalink for pf:ac-2-4-20">#</a></p>
+<p>Stacks Project: <a href="https://stacks.math.columbia.edu/tag/0111" rel="noreferrer">Tag 0111</a> — the same snake-lemma construction, with the proof abbreviated.</p>
+<p>The only thing unclear is the existence of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∂</mi></mrow><annotation encoding="application/x-tex">\partial</annotation></semantics></math></span>. Using the previous lemmas, we obtain
+the following commutative diagram with exact rows.</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 26"><img class="edition-image edition-view-ac-p26-part-02" width="465" height="190" loading="lazy" decoding="async" src="../../assets/editions/ac-p26.svg#part-02" alt="Diagram from PDF page 26"></div><details class="edition-transcript"><summary>Extracted text</summary><p>H n (A 0 )
+H n (A 00 )
+H n (A)
+cokerd A 0 ,n+1
+cokerd A,n+1
+cokerd A 00 ,n+1
+0
+ker d A 0 ,n−1
+ker d A,n−1
+ker d A 00 ,n−1
+0
+H n−1 (A 0 )
+H n−1 (A 00 )
+H n−1 (A)</p></details></figure>
+<p>The exactness of the two middle rows can be confirmed with a straightforward diagram
+chasing argument. Now the existence of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∂</mi></mrow><annotation encoding="application/x-tex">\partial</annotation></semantics></math></span> follows from the snake lemma. □</p>
+</section>
+<section class="math-block math-remark" id="rem:ac-2-4-21">
+<p class="math-block-title"><strong>Remark 2.4.21</strong><a class="reference-link" href="../../ref/rem~ac-2-4-21/" aria-label="Permalink for rem:ac-2-4-21">#</a></p>
+<p>By going over the necessary lemmas again, one can show that the map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∂</mi></mrow><annotation encoding="application/x-tex">\partial</annotation></semantics></math></span> is
+natural in the following sense: if we have the following commutative diagram of complexes
+with exact rows</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 26"><img class="edition-image edition-view-ac-p26-part-03" width="465" height="62" loading="lazy" decoding="async" src="../../assets/editions/ac-p26.svg#part-03" alt="Diagram from PDF page 26"></div><details class="edition-transcript"><summary>Extracted text</summary><p>0
+A 00
+0
+0
+A
+A
+B 0
+B 00
+0
+0
+B</p></details></figure>
+<p>then the maps of homologies make</p>
+<figure class="edition-excerpt"><div class="edition-scroll" tabindex="0" role="region" aria-label="Diagram from PDF page 26"><img class="edition-image edition-view-ac-p26-part-04" width="465" height="77" loading="lazy" decoding="async" src="../../assets/editions/ac-p26.svg#part-04" alt="Diagram from PDF page 26"></div><details class="edition-transcript"><summary>Extracted text</summary><p>H n (A 0 )
+H n (A 00 )
+H n−1 (A 0 )
+···
+···
+H n (A)
+H n (B 0 )
+H n (B 00 )
+H n−1 (B 0 )
+···
+···
+H n (B)</p></details></figure>
+<p>commute.</p>
+</section>
+</div>
+    <aside class="backlinks">
+      <h2>Referenced by</h2>
+      <ul><li><a href="../acfront/">Title page and contents</a> <span class="tag">acfront</span></li><li><a href="../acov/">Overview</a> <span class="tag">acov</span></li></ul>
+    </aside>
+    <nav class="reader-navigation" aria-label="Book navigation">
+    <a class="reader-prev" href="../acimg/" rel="prev">
+      <span>← Previous section</span><strong>The image and inverse image functors</strong>
+    </a>
+    <a class="reader-up" href="../../books/diagram-chasing-in-abelian-categories/abelian-categories/">
+      <span>↑ Chapter contents</span><strong>Abelian Categories</strong>
+    </a>
+    <a class="reader-next" href="../acpages/" rel="next">
+      <span>Next section →</span><strong>Original pages</strong>
+    </a>
+  </nav>
+    <details class="note-comments" id="lynlyn-comments" data-note-comments="0013" hidden>
+      <summary>Comments</summary>
+      <p>Comments are public on GitHub. Load comments to connect to Giscus, or <a href="https://github.com/Lyn-nyl-24/lynlyn24/discussions/categories/announcements" rel="noreferrer">open GitHub Discussions</a>.</p>
+      <button type="button" data-load-comments>Load comments</button>
+      <p class="visually-hidden" data-comments-status role="status"></p>
+      <div data-comments-widget></div>
+    </details>
+  </article></main>
+  <footer class="site-footer">
+    <a class="footer-name" href="../../" aria-label="Lynlyn24"><span class="brand-initial">𝕃</span>ynlyn24</a>
+    <a href="../../about/">About and privacy</a>
+    <a href="https://glowing-disco-xr4xrwrqp59ghvgjp-4317.app.github.dev/" rel="noreferrer">Editor</a>
+  </footer>
+</body>
+</html>
