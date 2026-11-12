@@ -20,10 +20,31 @@
   mobile.addEventListener('change', setMobile);
   menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && header.hasAttribute('data-menu-open')) {
+    if (event.key !== 'Escape') return;
+    const reference = document.querySelector('.stacks-reference[open]');
+    if (reference) {
+      reference.open = false;
+      reference.querySelector('summary').focus();
+    } else if (header.hasAttribute('data-menu-open')) {
       setMenu(false);
       menu.focus();
     }
+  });
+  document.addEventListener('click', event => {
+    const reference = document.querySelector('.stacks-reference[open]');
+    if (reference && !reference.contains(event.target)) reference.open = false;
+  });
+  function fitReference(reference) {
+    const panel = reference.querySelector('.stacks-reference-panel');
+    reference.classList.toggle('align-end',
+      reference.getBoundingClientRect().left + panel.offsetWidth > root.clientWidth - 12);
+  }
+  document.addEventListener('toggle', event => {
+    if (event.target.open && event.target.matches('.stacks-reference')) fitReference(event.target);
+  }, true);
+  addEventListener('resize', () => {
+    const reference = document.querySelector('.stacks-reference[open]');
+    if (reference) fitReference(reference);
   });
 
   function updateTheme() {
