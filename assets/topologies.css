@@ -1,0 +1,101 @@
+.topo-atlas {
+  --topo-surface: color-mix(in srgb, var(--paper) 97%, var(--ink));
+  --topo-stroke: color-mix(in srgb, var(--ink) 49%, var(--paper));
+  --topo-before: #285e74;
+  --topo-after: #70570c;
+  --topo-same: #603b75;
+  box-sizing: border-box;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: var(--edge);
+}
+:root[data-theme="dark"] .topo-atlas { --topo-before: #9ad6f1; --topo-after: #eed386; --topo-same: #dcb4ef; }
+.topo-atlas [hidden] { display: none !important; }
+.topo-atlas [id] { scroll-margin-top: 4.5rem; }
+.topo-hero h1 { line-height: 1.08; }
+.topo-hero .lede { max-width: 54ch; }
+.topo-jumps, .topo-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.05rem; align-items: center; }
+.topo-jumps { margin-block: 1.1rem 2rem; font-size: .88rem; font-weight: 700; }
+.topo-jumps a { text-decoration-color: var(--soft-line); }
+.topo-jumps a:hover { text-decoration-color: currentColor; }
+.topo-guide, .topo-graph-head p, .topo-reading p, .topo-property-section > p, .topo-notes p { max-width: 77ch; }
+.topo-guide, .topo-graph-head p { color: var(--muted); }
+.topo-guide { margin: 0 0 .75rem; }
+.topo-legend { margin: .4rem 0 .85rem; font-size: .79rem; }
+.topo-legend > span:is(.topo-prior,.topo-current,.topo-later,.topo-equal) {
+  display: inline-flex; gap: .38rem; align-items: center; color: var(--topo-state-color);
+}
+.topo-legend > span:is(.topo-prior,.topo-current,.topo-later,.topo-equal)::before { content: ''; width: .48rem; height: .48rem; border-radius: 50%; background: currentColor; }
+.topo-prior { --topo-state-color: var(--topo-before); }
+.topo-current { --topo-state-color: var(--accent); }
+.topo-later { --topo-state-color: var(--topo-after); }
+.topo-equal { --topo-state-color: var(--topo-same); }
+.topo-graph {
+  min-width: 0;
+  border: 1px solid var(--soft-line);
+  background: var(--topo-surface);
+  border-radius: 4px;
+  padding: clamp(.65rem, 1.4vw, 1.2rem);
+  align-self: start;
+}
+.topo-graph-head { margin-bottom: .6rem; }
+.topo-graph-head :is(h2,h3), .topo-passport h4 { margin: 0; line-height: 1.15; }
+.topo-graph-head p { margin: .32rem 0 0; font-size: .87rem; }
+.topo-graph-sites h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+.topo-canvas { overflow-x: auto; max-width: 100%; padding: 3px; }
+.topo-svg { display: block; width: 100%; min-width: 32rem; margin-inline: auto; overflow: visible; }
+.topo-graph-sites .topo-svg { min-width: 59rem; max-width: 75rem; }
+.topo-graph[data-graph="relative-topological"] .topo-svg { max-width: 46rem; margin-inline-start: 0; }
+.topo-atlas .topo-fitted .topo-svg { min-width: 0; }
+.topo-node rect { fill: var(--paper); stroke: var(--topo-stroke); stroke-width: 1; }
+.topo-node text { fill: var(--ink); font: 700 14.5px var(--sans); pointer-events: none; }
+.topo-graph-sites .topo-node text { font-size: 17px; }
+.topo-node:is(.topo-prior,.topo-current,.topo-later,.topo-equal) rect {
+  fill: color-mix(in srgb, var(--topo-state-color) 14%, var(--paper)); stroke: var(--topo-state-color); stroke-width: 2;
+}
+.topo-node:is(.topo-prior,.topo-current,.topo-later,.topo-equal) text { fill: var(--topo-state-color); }
+.topo-node.topo-prior rect { stroke-dasharray: 5 2; }
+.topo-node.topo-later rect { stroke-dasharray: 1 2; }
+.topo-node[aria-current] rect { stroke-width: 3.5; }
+.topo-node:focus-visible rect { stroke: var(--accent); stroke-width: 3; }
+.topo-edge { color: var(--topo-stroke); cursor: pointer; }
+.topo-edge-line { fill: none; stroke: currentColor; stroke-width: 1.45; pointer-events: none; }
+.topo-edge-hit { stroke: transparent; stroke-width: 13; fill: none; pointer-events: stroke; }
+.topo-edge.conditional .topo-edge-line { stroke-dasharray: 5 3; }
+.topo-edge:is(:hover,:focus-visible,.topo-current) { color: var(--accent); }
+.topo-edge:is(:hover,:focus-visible,.topo-current) .topo-edge-line { stroke-width: 2.3; }
+.topo-svg marker { fill: var(--topo-stroke); }
+.topo-equal-ground { fill: var(--topo-surface); }
+.topo-equal-mark { fill: none; stroke: var(--topo-stroke); stroke-width: 1.2; }
+.topo-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .85rem; font-size: .84rem; margin-block: .45rem; }
+.topo-controls :is(button,select) { padding: .28rem .48rem; border: 1px solid var(--soft-line); color: var(--ink); background: var(--paper); border-radius: 3px; font: inherit; max-width: 100%; min-height: 2.2rem; }
+.topo-controls button { color: var(--accent); cursor: pointer; }
+.topo-controls select { min-width: 0; max-width: min(100%, 16rem); }
+.topo-fit { display: none; }
+.topo-passport { padding: .85rem 1rem; margin-block: .85rem; border-inline-start: 3px solid var(--accent); background: var(--paper); scroll-margin-top: 4.5rem; }
+.topo-passport h4 { font-size: 1.2rem; }
+.topo-entry-body { font-size: .92rem; overflow-wrap: anywhere; }
+.topo-entry-body dl { margin-block: .6rem 0; }
+.topo-entry-body dt { margin-top: .6rem; font-weight: 700; }
+.topo-entry-body dd { margin: .14rem 0 0; max-width: 82ch; }
+.topo-entry-body ul { margin: 0; padding-inline-start: 1.25rem; }
+.topo-atlas summary { color: var(--accent); cursor: pointer; font-weight: 700; }
+.topo-catalogue { padding-block-start: .5rem; margin-block-start: .5rem; border-block-start: 1px solid var(--soft-line); font-size: .85rem; }
+.topo-entries { margin-block-start: .5rem; }
+.topo-entry { padding: .3rem .45rem; background: var(--paper); border-block-end: 1px solid var(--soft-line); }
+.topo-entry:target { outline: 2px solid var(--accent); }
+.topo-proof { border-inline-start: 2px solid var(--topo-stroke); }
+.topo-notes { margin-block: .75rem 0; padding: .45rem 0; }
+.topo-quadrants { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-bottom: .75rem; }
+.topo-property-section, .topo-reading { margin-block-start: 2.7rem; }
+.topo-formulas, .topo-sources { padding: 0; list-style: none; }
+.topo-formulas { margin: .6rem 0; font-size: .86rem; }
+.topo-formulas li { padding: .3rem 0; border-block-start: 1px solid var(--soft-line); }
+.topo-formulas p { margin: .35rem 0; }
+.topo-examples details, .topo-sources li { border-block-start: 1px solid var(--soft-line); padding: .5rem 0; max-width: 77ch; }
+.topo-cites, .topo-muted { color: var(--muted); font-size: .88em; }
+@media (max-width: 69rem) { .topo-quadrants { grid-template-columns: minmax(0, 1fr); } }
+@media (69rem < width < 76rem) { .topo-quadrants .topo-fit { display: inline-block; } }
+@media (max-width: 64rem) { .topo-graph-sites .topo-fit { display: inline-block; } }
+@media (max-width: 39rem) { .topo-fit { display: inline-block; } }
+@media (max-width: 35rem) { .topo-passport { padding-inline: .65rem; } }
