@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39;; font-src &#39;self&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A spectral sequence with a nonzero d₂ — Lynlyn24</title>
+  <meta name="description" content="Compute the pages of a filtered complex over F₂, including a differential that requires a corrected lift.">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../../">Lynlyn24</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open menu" hidden>≡</button>
+    <nav id="site-navigation" class="site-nav" aria-label="Main navigation"><a href="../../">INDEX</a><a href="../../books/">BOOKS</a><a href="../../notes/">NOTES</a><a href="../../about/">ABOUT</a></nav>
+    <div class="header-tools">
+      <a href="../../search/">Search</a>
+      <button class="theme-button" type="button" aria-label="Dark theme" aria-pressed="false" hidden><span aria-hidden="true">☾</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><article class="reading">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+    <li><a href="../../">Index</a></li>
+    <li><a href="../../books/">Books</a></li><li><a href="../../books/introductory-mathematics/">Foundations and homological algebra</a></li><li><a href="../../books/introductory-mathematics/homological-algebra/">3 Exact and filtered complexes</a></li>
+  </ol></nav>
+    <header class="article-header">
+      <p class="tag"><a href="./" aria-label="Permalink for n0006">n0006</a></p>
+      <h1><span class="book-section-number">3.2</span> A spectral sequence with a nonzero d₂</h1>
+      <p class="lede">Compute the pages of a filtered complex over F₂, including a differential that requires a corrected lift.</p>
+    </header>
+    <nav class="article-toc" aria-label="On this page">
+      <ul><li><a href="#sec:filtered-example">A finite filtered complex</a></li><li><a href="#sec:spectral-pages">Computing the pages</a></li><li><a href="#section-3">Reference</a></li></ul>
+    </nav>
+    <div class="prose"><h2 id="sec:filtered-example">A finite filtered complex <a class="reference-link" href="../../ref/sec~filtered-example/" aria-label="Permalink for sec:filtered-example">#</a></h2>
+<p>Use a decreasing filtration on a cochain complex over <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">𝔽</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbb F_2</annotation></semantics></math></span>. A generator of filtration <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span> belongs to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>F</mi><mi>s</mi></msup><msup><mi>C</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">F^sC^n</annotation></semantics></math></span> exactly when <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>≤</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">s\leq p</annotation></semantics></math></span>. The differential has total degree one and preserves the filtration.</p>
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th class="align-right">Total degree <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span></th>
+<th class="align-right">Filtration <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span></th>
+<th>Differential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span></td>
+<td class="align-right">0</td>
+<td class="align-right">0</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span></td>
+<td class="align-right">1</td>
+<td class="align-right">0</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span></td>
+<td class="align-right">1</td>
+<td class="align-right">1</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span></td>
+<td class="align-right">1</td>
+<td class="align-right">1</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span></td>
+<td class="align-right">1</td>
+<td class="align-right">1</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>+</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">y+w</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span></td>
+<td class="align-right">2</td>
+<td class="align-right">1</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span></td>
+<td class="align-right">2</td>
+<td class="align-right">2</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span></td>
+</tr>
+<tr>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span></td>
+<td class="align-right">2</td>
+<td class="align-right">3</td>
+<td><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec:spectral-pages">Computing the pages <a class="reference-link" href="../../ref/sec~spectral-pages/" aria-label="Permalink for sec:spectral-pages">#</a></h2>
+<p>Write <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>p</mi><mo>+</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">n=p+q</annotation></semantics></math></span>. For <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r\geq1</annotation></semantics></math></span>, use the subspaces</p>
+<div class="display-math"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>Z</mi><mi>r</mi><mrow><mi>p</mi><mo separator="true">,</mo><mi>n</mi></mrow></msubsup><mo>=</mo><mo stretchy="false">{</mo><mi>c</mi><mo>∈</mo><msup><mi>F</mi><mi>p</mi></msup><msup><mi>C</mi><mi>n</mi></msup><mo>:</mo><mi>d</mi><mi>c</mi><mo>∈</mo><msup><mi>F</mi><mrow><mi>p</mi><mo>+</mo><mi>r</mi></mrow></msup><msup><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">}</mo><mo separator="true">,</mo><mspace width="2em"/><msubsup><mi>E</mi><mi>r</mi><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow></msubsup><mo>=</mo><mfrac><msubsup><mi>Z</mi><mi>r</mi><mrow><mi>p</mi><mo separator="true">,</mo><mi>n</mi></mrow></msubsup><mrow><msubsup><mi>Z</mi><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>p</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi></mrow></msubsup><mo>+</mo><mi>d</mi><msubsup><mi>Z</mi><mrow><mi>r</mi><mo>−</mo><mn>1</mn></mrow><mrow><mi>p</mi><mo>−</mo><mi>r</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msubsup></mrow></mfrac><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">Z_r^{p,n}=\{c\in F^pC^n:dc\in F^{p+r}C^{n+1}\},\qquad
+E_r^{p,q}=\frac{Z_r^{p,n}}{Z_{r-1}^{p+1,n}+dZ_{r-1}^{p-r+1,n-1}}.
+</annotation></semantics></math></span></div>
+<p>Here <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>Z</mi><mn>0</mn><mrow><mi>p</mi><mo separator="true">,</mo><mi>n</mi></mrow></msubsup><mo>=</mo><msup><mi>F</mi><mi>p</mi></msup><msup><mi>C</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">Z_0^{p,n}=F^pC^n</annotation></semantics></math></span>. The map <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">d_r</annotation></semantics></math></span> is induced by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span> and has bidegree <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>r</mi><mo separator="true">,</mo><mn>1</mn><mo>−</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(r,1-r)</annotation></semantics></math></span>. The diagrams below are generated by binary row reduction on this input. The basis table on each page gives the chosen lifts.</p>
+<section class="spectral-computation" aria-label="Computed spectral-sequence pages"><p class="figure-key">Each dot marks a nonzero term and its dimension. An arrow marks a nonzero differential.</p><div class="spectral-pages"><figure class="spectral-page"><figcaption><strong>E0</strong></figcaption><svg class="spectral-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 174" role="img" aria-label="E0 chart. Horizontal axis p; vertical axis q. Data follow."><defs><marker id="chart-n0006-filtered-example-arrow-0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="spectral-tip" d="M0 0L10 5L0 10Z"/></marker></defs><g class="spectral-grid"><path d="M40 17V145"/><text x="40" y="163">0</text><path d="M104 17V145"/><text x="104" y="163">1</text><path d="M168 17V145"/><text x="168" y="163">2</text><path d="M232 17V145"/><text x="232" y="163">3</text><path d="M28 134H252"/><text x="17" y="138">-1</text><path d="M28 80H252"/><text x="17" y="84">0</text><path d="M28 26H252"/><text x="17" y="30">1</text><text x="261" y="163">p</text><text x="17" y="12">q</text></g><g class="spectral-arrows"><line x1="104" y1="68" x2="104" y2="38" marker-end="url(#chart-n0006-filtered-example-arrow-0)"/></g><g class="spectral-dots"><circle cx="40" cy="80" r="4.5"/><text x="50" y="72">1</text><circle cx="40" cy="26" r="4.5"/><text x="50" y="18">1</text><circle cx="104" cy="80" r="4.5"/><text x="114" y="72">3</text><circle cx="104" cy="26" r="4.5"/><text x="114" y="18">1</text><circle cx="168" cy="80" r="4.5"/><text x="178" y="72">1</text><circle cx="232" cy="134" r="4.5"/><text x="242" y="126">1</text></g></svg><p class="spectral-status">Nonzero differential</p><ul class="spectral-maps"><li><code>d0(z) = y</code></li></ul><details><summary>Basis representatives</summary><table><thead><tr><th scope="col">(p, q)</th><th scope="col">Dim.</th><th scope="col">Representatives</th></tr></thead><tbody><tr><td>(0, 0)</td><td>1</td><td><code>a</code></td></tr><tr><td>(0, 1)</td><td>1</td><td><code>x</code></td></tr><tr><td>(1, 0)</td><td>3</td><td><code>b; u; z</code></td></tr><tr><td>(1, 1)</td><td>1</td><td><code>y</code></td></tr><tr><td>(2, 0)</td><td>1</td><td><code>w</code></td></tr><tr><td>(3, -1)</td><td>1</td><td><code>v</code></td></tr></tbody></table></details></figure><figure class="spectral-page"><figcaption><strong>E1</strong></figcaption><svg class="spectral-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 174" role="img" aria-label="E1 chart. Horizontal axis p; vertical axis q. Data follow."><defs><marker id="chart-n0006-filtered-example-arrow-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="spectral-tip" d="M0 0L10 5L0 10Z"/></marker></defs><g class="spectral-grid"><path d="M40 17V145"/><text x="40" y="163">0</text><path d="M104 17V145"/><text x="104" y="163">1</text><path d="M168 17V145"/><text x="168" y="163">2</text><path d="M232 17V145"/><text x="232" y="163">3</text><path d="M28 134H252"/><text x="17" y="138">-1</text><path d="M28 80H252"/><text x="17" y="84">0</text><path d="M28 26H252"/><text x="17" y="30">1</text><text x="261" y="163">p</text><text x="17" y="12">q</text></g><g class="spectral-arrows"><line x1="52" y1="80" x2="92" y2="80" marker-end="url(#chart-n0006-filtered-example-arrow-1)"/></g><g class="spectral-dots"><circle cx="40" cy="80" r="4.5"/><text x="50" y="72">1</text><circle cx="40" cy="26" r="4.5"/><text x="50" y="18">1</text><circle cx="104" cy="80" r="4.5"/><text x="114" y="72">2</text><circle cx="168" cy="80" r="4.5"/><text x="178" y="72">1</text><circle cx="232" cy="134" r="4.5"/><text x="242" y="126">1</text></g></svg><p class="spectral-status">Nonzero differential</p><ul class="spectral-maps"><li><code>d1(a) = b</code></li></ul><details><summary>Basis representatives</summary><table><thead><tr><th scope="col">(p, q)</th><th scope="col">Dim.</th><th scope="col">Representatives</th></tr></thead><tbody><tr><td>(0, 0)</td><td>1</td><td><code>a</code></td></tr><tr><td>(0, 1)</td><td>1</td><td><code>x</code></td></tr><tr><td>(1, 0)</td><td>2</td><td><code>b; u</code></td></tr><tr><td>(2, 0)</td><td>1</td><td><code>w</code></td></tr><tr><td>(3, -1)</td><td>1</td><td><code>v</code></td></tr></tbody></table></details></figure><figure class="spectral-page"><figcaption><strong>E2</strong></figcaption><svg class="spectral-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 174" role="img" aria-label="E2 chart. Horizontal axis p; vertical axis q. Data follow."><defs><marker id="chart-n0006-filtered-example-arrow-2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="spectral-tip" d="M0 0L10 5L0 10Z"/></marker></defs><g class="spectral-grid"><path d="M40 17V145"/><text x="40" y="163">0</text><path d="M104 17V145"/><text x="104" y="163">1</text><path d="M168 17V145"/><text x="168" y="163">2</text><path d="M232 17V145"/><text x="232" y="163">3</text><path d="M28 134H252"/><text x="17" y="138">-1</text><path d="M28 80H252"/><text x="17" y="84">0</text><path d="M28 26H252"/><text x="17" y="30">1</text><text x="261" y="163">p</text><text x="17" y="12">q</text></g><g class="spectral-arrows"><line x1="51.056369931499944" y1="30.66440606485154" x2="156.94363006850006" y2="75.33559393514847" marker-end="url(#chart-n0006-filtered-example-arrow-2)"/></g><g class="spectral-dots"><circle cx="40" cy="26" r="4.5"/><text x="50" y="18">1</text><circle cx="104" cy="80" r="4.5"/><text x="114" y="72">1</text><circle cx="168" cy="80" r="4.5"/><text x="178" y="72">1</text><circle cx="232" cy="134" r="4.5"/><text x="242" y="126">1</text></g></svg><p class="spectral-status">Nonzero differential</p><ul class="spectral-maps"><li><code>d2(x + z) = w</code></li></ul><details><summary>Basis representatives</summary><table><thead><tr><th scope="col">(p, q)</th><th scope="col">Dim.</th><th scope="col">Representatives</th></tr></thead><tbody><tr><td>(0, 1)</td><td>1</td><td><code>x + z</code></td></tr><tr><td>(1, 0)</td><td>1</td><td><code>u</code></td></tr><tr><td>(2, 0)</td><td>1</td><td><code>w</code></td></tr><tr><td>(3, -1)</td><td>1</td><td><code>v</code></td></tr></tbody></table></details></figure><figure class="spectral-page"><figcaption><strong>E3 = E∞</strong></figcaption><svg class="spectral-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 174" role="img" aria-label="E3 = E∞ chart. Horizontal axis p; vertical axis q. Data follow."><defs><marker id="chart-n0006-filtered-example-arrow-3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="spectral-tip" d="M0 0L10 5L0 10Z"/></marker></defs><g class="spectral-grid"><path d="M40 17V145"/><text x="40" y="163">0</text><path d="M104 17V145"/><text x="104" y="163">1</text><path d="M168 17V145"/><text x="168" y="163">2</text><path d="M232 17V145"/><text x="232" y="163">3</text><path d="M28 134H252"/><text x="17" y="138">-1</text><path d="M28 80H252"/><text x="17" y="84">0</text><path d="M28 26H252"/><text x="17" y="30">1</text><text x="261" y="163">p</text><text x="17" y="12">q</text></g><g class="spectral-arrows"></g><g class="spectral-dots"><circle cx="104" cy="80" r="4.5"/><text x="114" y="72">1</text><circle cx="232" cy="134" r="4.5"/><text x="242" y="126">1</text></g></svg><p class="spectral-status">All differentials on this page vanish.</p><details><summary>Basis representatives</summary><table><thead><tr><th scope="col">(p, q)</th><th scope="col">Dim.</th><th scope="col">Representatives</th></tr></thead><tbody><tr><td>(1, 0)</td><td>1</td><td><code>u</code></td></tr><tr><td>(3, -1)</td><td>1</td><td><code>v</code></td></tr></tbody></table></details></figure></div></section><ul>
+<li>On <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E_0</annotation></semantics></math></span>, the filtration-preserving part sends <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span> to <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span>, so those classes vanish on <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">E_1</annotation></semantics></math></span>.</li>
+<li>On <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">E_1</annotation></semantics></math></span>, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">[</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">d_1[a]=[b]</annotation></semantics></math></span>. The class of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span> survives because <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>d</mi><mn>0</mn></msub><mi>z</mi></mrow><annotation encoding="application/x-tex">y=d_0z</annotation></semantics></math></span> on the associated graded.</li>
+<li>On <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">E_2</annotation></semantics></math></span>, lift the surviving class by <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x+z</annotation></semantics></math></span>, since <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">d(x+z)=w</annotation></semantics></math></span>. Therefore <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="false">[</mo><mi>x</mi><mo>+</mo><mi>z</mi><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">[</mo><mi>w</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">d_2[x+z]=[w]</annotation></semantics></math></span>.</li>
+<li>On <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>3</mn></msub><mo>=</mo><msub><mi>E</mi><mi mathvariant="normal">∞</mi></msub></mrow><annotation encoding="application/x-tex">E_3=E_\infty</annotation></semantics></math></span>, the survivors are <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>u</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[u]</annotation></semantics></math></span> in bidegree <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1,0)</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>v</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[v]</annotation></semantics></math></span> in bidegree <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>3</mn><mo separator="true">,</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(3,-1)</annotation></semantics></math></span>. Directly, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>1</mn></msup><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^1(C)</annotation></semantics></math></span> is generated by the class of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span> and <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>H</mi><mn>2</mn></msup><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H^2(C)</annotation></semantics></math></span> by the class of <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span>, with these filtration degrees.</li>
+</ul>
+<p>The calculation applies to finite filtered complexes over <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">𝔽</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbb F_2</annotation></semantics></math></span> given by an explicit filtered basis and differential. General coefficient rings, multiplicative extensions, and infinite filtrations require separate input and arguments.</p>
+<h2 id="section-3">Reference</h2>
+<ul>
+<li><a href="https://stacks.math.columbia.edu/tag/012K" rel="noreferrer">The Stacks Project, Spectral sequences of filtered complexes</a></li>
+</ul>
+</div>
+
+    <nav class="reader-navigation" aria-label="Book navigation">
+    <a class="reader-prev" href="../n0005/" rel="prev">
+      <span>← Previous section</span><strong>Commutative diagrams and the snake lemma</strong>
+    </a>
+    <a class="reader-up" href="../../books/introductory-mathematics/homological-algebra/">
+      <span>↑ Chapter contents</span><strong>Exact and filtered complexes</strong>
+    </a>
+
+  </nav>
+  </article></main>
+  <footer class="site-footer">
+    <a class="footer-name" href="../../">Lynlyn24</a>
+    <a href="../../about/">About and privacy</a>
+  </footer>
+</body>
+</html>

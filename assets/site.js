@@ -10,7 +10,7 @@
   function setMenu(open) {
     header.toggleAttribute('data-menu-open', open);
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
   function setMobile() {
     menu.hidden = !mobile.matches;
@@ -63,7 +63,7 @@
       entry.element.hidden = !matches;
       if (matches) count += 1;
     }
-    status.textContent = count ? '노트 ' + count + '편' : '일치하는 노트가 없습니다.';
+    status.textContent = count ? count + (count === 1 ? ' note' : ' notes') : 'No matching notes.';
   }
   query.addEventListener('input', filter);
   filter();
