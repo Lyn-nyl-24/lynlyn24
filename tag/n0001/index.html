@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동치관계와 분할 — Notebook</title>
+  <meta name="description" content="동치류가 집합을 분할하며, 모든 분할에서 동치관계를 복원할 수 있음을 보입니다.">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="wordmark" href="../../">Notebook</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기" hidden>≡</button>
+    <nav id="site-navigation" class="site-nav" aria-label="주 메뉴"><a href="../../">INDEX</a><a href="../../books/">BOOKS</a><a href="../../notes/">NOTES</a><a href="../../about/">ABOUT</a></nav>
+    <div class="header-tools">
+      <a href="../../search/">검색</a>
+      <button class="theme-button" type="button" aria-label="어두운 테마" aria-pressed="false" hidden><span aria-hidden="true">☾</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><article class="reading">
+    <nav class="breadcrumbs" aria-label="현재 위치"><ol>
+    <li><a href="../../">목차</a></li>
+    <li><a href="../../books/">교재</a></li><li><a href="../../books/introductory-mathematics/">기초수학 강의 노트</a></li><li><a href="../../books/introductory-mathematics/sets/">1 집합과 관계</a></li>
+  </ol></nav>
+    <header class="article-header">
+      <p class="tag"><a href="./" aria-label="고정 주소 n0001">n0001</a></p>
+      <h1><span class="book-section-number">1.1</span> 동치관계와 분할</h1>
+      <p class="lede">동치류가 집합을 분할하며, 모든 분할에서 동치관계를 복원할 수 있음을 보입니다.</p>
+    </header>
+    <nav class="article-toc" aria-label="이 노트의 목차">
+      <ul><li><a href="#sec:equivalence">정의와 표기</a></li><li><a href="#section-2">동치류가 만드는 분할</a></li></ul>
+    </nav>
+    <div class="prose"><h2 id="sec:equivalence">정의와 표기 <a class="reference-link" href="../../ref/sec~equivalence/" aria-label="sec:equivalence 고정 참조">#</a></h2>
+<section class="math-block math-definition" id="def:equivalence">
+<p class="math-block-title"><strong>정의 1.1.1 · 동치관계</strong><a class="reference-link" href="../../ref/def~equivalence/" aria-label="def:equivalence 고정 참조">#</a></p>
+<p>집합 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span> 위의 관계 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo></mrow><annotation encoding="application/x-tex">\sim</annotation></semantics></math></span>가 반사적이고, 대칭적이고, 추이적일 때 이를 <strong>동치관계</strong>라 한다. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x \in X</annotation></semantics></math></span>의 동치류를 다음과 같이 쓴다.</p>
+<div class="equation" id="eq:equivalence-class"><div class="display-math"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo><mo>=</mo><mo stretchy="false">{</mo><mi>y</mi><mo>∈</mo><mi>X</mi><mo>:</mo><mi>y</mi><mo>∼</mo><mi>x</mi><mo stretchy="false">}</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">[x] = \{y \in X : y \sim x\}.</annotation></semantics></math></span></div><a class="equation-number" href="../../ref/eq~equivalence-class/" aria-label="식 1.1.1 고정 참조">(1.1.1)</a></div>
+</section>
+<p>집합 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>의 <strong>분할</strong>은 공집합이 아닌 부분집합들로 이루어진 모임으로, 그 원소들은 서로소이고 합집합은 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>다. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>가 공집합이면 빈 모임이 그 분할이다.</p>
+<h2 id="section-2">동치류가 만드는 분할</h2>
+<section class="math-block math-proposition" id="prop:partition">
+<p class="math-block-title"><strong>명제 1.1.2 · 동치관계와 분할의 대응</strong><a class="reference-link" href="../../ref/prop~partition/" aria-label="prop:partition 고정 참조">#</a></p>
+<p>동치관계의 서로 다른 동치류들은 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>의 분할을 이룬다. 역으로 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>의 분할이 주어지면, 같은 부분집합에 속하는 두 원소를 관련짓는 관계는 동치관계이며 그 동치류들이 주어진 분할을 복원한다.</p>
+</section>
+<section class="math-block math-proof" id="pf:partition">
+<p class="math-block-title"><strong>증명</strong><a class="reference-link" href="../../ref/pf~partition/" aria-label="pf:partition 고정 참조">#</a></p>
+<p>식 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>(1.1.1)</mtext></mrow><annotation encoding="application/x-tex">\text{(1.1.1)}</annotation></semantics></math></span>와 반사성으로 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">x \in [x]</annotation></semantics></math></span>이므로 모든 동치류는 비어 있지 않고 합집합은 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span>다. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>∈</mo><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo><mo>∩</mo><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">z \in [x] \cap [y]</annotation></semantics></math></span>이면 대칭성과 추이성으로 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x \sim y</annotation></semantics></math></span>다. 다시 추이성을 쓰면 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo><mo>⊆</mo><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[x] \subseteq [y]</annotation></semantics></math></span>를 얻고, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span>와 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span>를 바꾸면 역포함도 성립한다.</p>
+<p>분할에서 각 원소가 속하는 부분집합은 유일하다. 따라서 같은 부분집합에 속한다는 관계는 반사적이고 대칭적이다. <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span>와 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span>가 같은 부분집합에 있고 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span>와 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span>도 같은 부분집합에 있다면, <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span>가 속하는 부분집합의 유일성으로 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span>와 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi></mrow><annotation encoding="application/x-tex">z</annotation></semantics></math></span> 역시 같은 부분집합에 있다. 이는 추이성을 주며, 정의상 각 동치류는 분할의 해당 부분집합이다.</p>
+</section>
+<section class="math-block math-example" id="ex:fibers">
+<p class="math-block-title"><strong>예 1.1.3</strong><a class="reference-link" href="../../ref/ex~fibers/" aria-label="ex:fibers 고정 참조">#</a></p>
+<p><a href="../n0002/#prop:kernel-cosets">선형사상의 상이 같은 벡터</a>는 같은 상을 갖는다는 조건으로 정의한 동치관계의 예다.</p>
+</section>
+</div>
+    <aside class="backlinks">
+      <h2>이 글을 인용하는 노트</h2>
+      <ul><li><a href="../n0002/">선형사상과 핵</a> <span class="tag">n0002</span></li><li><a href="../n0004/">고정 식별자로 노트 연결하기</a> <span class="tag">n0004</span></li></ul>
+    </aside>
+    <nav class="reader-navigation" aria-label="교재 탐색">
+
+    <a class="reader-up" href="../../books/introductory-mathematics/sets/">
+      <span>↑ 장 목차</span><strong>집합과 관계</strong>
+    </a>
+    <a class="reader-next" href="../n0002/" rel="next">
+      <span>다음 절 →</span><strong>선형사상과 핵</strong>
+    </a>
+  </nav>
+  </article></main>
+  <footer class="site-footer">
+    <a class="footer-name" href="../../">Notebook</a>
+    <a href="../../about/">소개 및 개인정보</a>
+  </footer>
+</body>
+</html>

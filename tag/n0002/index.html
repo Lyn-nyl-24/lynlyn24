@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>선형사상과 핵 — Notebook</title>
+  <meta name="description" content="선형사상의 같은 상을 갖는 벡터들을 핵의 잉여류로 기술합니다.">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script defer src="../../assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <a class="wordmark" href="../../">Notebook</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="메뉴 열기" hidden>≡</button>
+    <nav id="site-navigation" class="site-nav" aria-label="주 메뉴"><a href="../../">INDEX</a><a href="../../books/">BOOKS</a><a href="../../notes/">NOTES</a><a href="../../about/">ABOUT</a></nav>
+    <div class="header-tools">
+      <a href="../../search/">검색</a>
+      <button class="theme-button" type="button" aria-label="어두운 테마" aria-pressed="false" hidden><span aria-hidden="true">☾</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><article class="reading">
+    <nav class="breadcrumbs" aria-label="현재 위치"><ol>
+    <li><a href="../../">목차</a></li>
+    <li><a href="../../books/">교재</a></li><li><a href="../../books/introductory-mathematics/">기초수학 강의 노트</a></li><li><a href="../../books/introductory-mathematics/linear-maps/">2 벡터공간과 선형사상</a></li>
+  </ol></nav>
+    <header class="article-header">
+      <p class="tag"><a href="./" aria-label="고정 주소 n0002">n0002</a></p>
+      <h1><span class="book-section-number">2.1</span> 선형사상과 핵</h1>
+      <p class="lede">선형사상의 같은 상을 갖는 벡터들을 핵의 잉여류로 기술합니다.</p>
+    </header>
+    <nav class="article-toc" aria-label="이 노트의 목차">
+      <ul><li><a href="#sec:kernel">설정</a></li><li><a href="#section-2">상이 같은 벡터</a></li><li><a href="#section-3">몫공간을 통한 인수분해</a></li></ul>
+    </nav>
+    <div class="prose"><h2 id="sec:kernel">설정 <a class="reference-link" href="../../ref/sec~kernel/" aria-label="sec:kernel 고정 참조">#</a></h2>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span>와 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span>를 같은 체 위의 벡터공간이라 하고 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mspace></mspace><mspace width="0.1111em"/><mo lspace="0em" rspace="0.17em"></mo><mtext> ⁣</mtext><mo lspace="0em" rspace="0em">:</mo><mspace width="0.3333em"/><mi>V</mi><mo>→</mo><mi>W</mi></mrow><annotation encoding="application/x-tex">T \colon V \to W</annotation></semantics></math></span>를 선형사상이라 하자.</p>
+<section class="math-block math-definition" id="def:kernel">
+<p class="math-block-title"><strong>정의 2.1.1 · 선형사상의 핵</strong><a class="reference-link" href="../../ref/def~kernel/" aria-label="def:kernel 고정 참조">#</a></p>
+<p>선형사상 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span>의 <strong>핵</strong>은 다음 부분공간이다.</p>
+<div class="equation" id="eq:kernel"><div class="display-math"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>ker</mi><mo>⁡</mo><mi>T</mi><mo>=</mo><mo stretchy="false">{</mo><mi>v</mi><mo>∈</mo><mi>V</mi><mo>:</mo><mi>T</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mo stretchy="false">}</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\ker T = \{v \in V : T(v) = 0\}.</annotation></semantics></math></span></div><a class="equation-number" href="../../ref/eq~kernel/" aria-label="식 2.1.1 고정 참조">(2.1.1)</a></div>
+</section>
+<h2 id="section-2">상이 같은 벡터</h2>
+<section class="math-block math-proposition" id="prop:kernel-cosets">
+<p class="math-block-title"><strong>명제 2.1.2 · 핵의 잉여류</strong><a class="reference-link" href="../../ref/prop~kernel-cosets/" aria-label="prop:kernel-cosets 고정 참조">#</a></p>
+<p><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">v \in V</annotation></semantics></math></span>와 같은 상을 갖는 벡터들의 집합은 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>+</mo><mi>ker</mi><mo>⁡</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">v + \ker T</annotation></semantics></math></span>다.</p>
+</section>
+<section class="math-block math-proof">
+<p class="math-block-title"><strong>증명</strong></p>
+<p>식 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>(2.1.1)</mtext></mrow><annotation encoding="application/x-tex">\text{(2.1.1)}</annotation></semantics></math></span>과 선형성으로 다음이 성립한다.</p>
+<div class="display-math"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mo>=</mo><mi>T</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>T</mi><mo stretchy="false">(</mo><mi>u</mi><mo>−</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>u</mi><mo>−</mo><mi>v</mi><mo>∈</mo><mi>ker</mi><mo>⁡</mo><mi>T</mi><mi mathvariant="normal">.</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+T(u) = T(v) &amp;\iff T(u-v)=0 \\
+            &amp;\iff u-v \in \ker T.
+\end{aligned}
+</annotation></semantics></math></span></div>
+<p>두 번째 조건은 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>∈</mo><mi>v</mi><mo>+</mo><mi>ker</mi><mo>⁡</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">u \in v + \ker T</annotation></semantics></math></span>와 동치다. 이 잉여류들이 만드는 분할은 <a href="../n0001/#prop:partition">동치관계와 분할의 대응</a>의 예다.</p>
+</section>
+<h2 id="section-3">몫공간을 통한 인수분해</h2>
+<section class="math-block math-theorem" id="thm:linear-factorization">
+<p class="math-block-title"><strong>정리 2.1.3 · 제1동형정리</strong><a class="reference-link" href="../../ref/thm~linear-factorization/" aria-label="thm:linear-factorization 고정 참조">#</a></p>
+<p>함수 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>v</mi><mo stretchy="false">]</mo><mo>↦</mo><mi>T</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[v] \mapsto T(v)</annotation></semantics></math></span>는 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mi mathvariant="normal">/</mi><mi>ker</mi><mo>⁡</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">V / \ker T</annotation></semantics></math></span>에서 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">im</mi><mo>⁡</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">\image T</annotation></semantics></math></span>로 가는 선형 동형사상을 정의한다.</p>
+</section>
+<section class="math-block math-proof">
+<p class="math-block-title"><strong>증명</strong></p>
+<p><a href="#prop:kernel-cosets">핵의 잉여류</a>에 의해 대표원을 어떻게 택해도 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T(v)</annotation></semantics></math></span>가 같고, 두 동치류가 같은 값으로 가면 동치류가 같다. 몫공간의 연산과 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span>의 선형성으로 이 함수는 선형이다. 전사성은 <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">im</mi><mo>⁡</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">\image T</annotation></semantics></math></span>의 정의에서 따른다.</p>
+</section>
+</div>
+    <aside class="backlinks">
+      <h2>이 글을 인용하는 노트</h2>
+      <ul><li><a href="../n0001/">동치관계와 분할</a> <span class="tag">n0001</span></li></ul>
+    </aside>
+    <nav class="reader-navigation" aria-label="교재 탐색">
+    <a class="reader-prev" href="../n0001/" rel="prev">
+      <span>← 이전 절</span><strong>동치관계와 분할</strong>
+    </a>
+    <a class="reader-up" href="../../books/introductory-mathematics/linear-maps/">
+      <span>↑ 장 목차</span><strong>벡터공간과 선형사상</strong>
+    </a>
+
+  </nav>
+  </article></main>
+  <footer class="site-footer">
+    <a class="footer-name" href="../../">Notebook</a>
+    <a href="../../about/">소개 및 개인정보</a>
+  </footer>
+</body>
+</html>
