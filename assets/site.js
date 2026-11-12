@@ -3,7 +3,6 @@
   const header = document.querySelector('.site-header');
   const menu = document.querySelector('.menu-button');
   const theme = document.querySelector('.theme-button');
-  const systemTheme = matchMedia('(prefers-color-scheme: dark)');
   const mobile = matchMedia('(max-width: 650px)');
   const storageKey = 'notebook:' + new URL('../', document.currentScript.src).pathname + ':theme';
 
@@ -28,7 +27,7 @@
   });
 
   function updateTheme() {
-    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : systemTheme.matches;
+    const dark = root.dataset.theme === 'dark';
     theme.setAttribute('aria-pressed', String(dark));
     theme.firstElementChild.textContent = dark ? '☀' : '☾';
   }
@@ -40,7 +39,6 @@
   }
   updateTheme();
   theme.hidden = false;
-  systemTheme.addEventListener('change', updateTheme);
   theme.addEventListener('click', () => {
     root.dataset.theme = theme.getAttribute('aria-pressed') === 'true' ? 'light' : 'dark';
     updateTheme();

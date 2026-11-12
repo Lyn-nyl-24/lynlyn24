@@ -8,7 +8,7 @@
 
 :root {
   color-scheme: light;
-  --paper: #fff;
+  --paper: #FFF8E7;
   --ink: #161616;
   --muted: #595959;
   --line: #232323;
@@ -34,19 +34,6 @@
   --soft-line: #514a4d;
   --accent: #ffa7c8;
   --tint: #35282f;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    color-scheme: dark;
-    --paper: #1e1e1e;
-    --ink: #f2f0f0;
-    --muted: #bdb8ba;
-    --line: #d6d1d3;
-    --soft-line: #514a4d;
-    --accent: #ffa7c8;
-    --tint: #35282f;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -187,10 +174,7 @@ h1 { margin: 0; font-size: clamp(2.2rem, 5.4vw, 4.6rem); line-height: 1.06; font
 .math-figure { margin: 1.6rem 0 2.2rem; }
 .math-figure-frame { overflow-x: auto; padding: .8rem 0; }
 .math-figure img { display: block; width: 100%; min-width: 380px; max-width: 560px; height: auto; margin-inline: auto; }
-:root[data-theme="dark"] .math-figure img { filter: invert(1); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .math-figure img { filter: invert(1); }
-}
+:root[data-theme="dark"] :is(.math-figure img, .spectral-chart) { filter: invert(1); }
 .math-figure figcaption, .figure-key, .spectral-status {
   color: var(--muted);
   font: .86rem/1.55 var(--sans);
@@ -200,12 +184,7 @@ h1 { margin: 0; font-size: clamp(2.2rem, 5.4vw, 4.6rem); line-height: 1.06; font
 .spectral-pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .spectral-page { min-width: 0; margin: 0; border-top: 1px solid var(--line); padding-top: .8rem; }
 .spectral-page figcaption { font: .96rem/1.4 var(--mono); }
-.spectral-chart { display: block; width: 100%; max-height: 270px; }
-.spectral-grid path { stroke: var(--soft-line); stroke-width: 1; fill: none; }
-.spectral-grid text { text-anchor: middle; fill: var(--muted); font: 13px var(--mono); }
-.spectral-dots { fill: var(--ink); font: 13px var(--mono); }
-.spectral-arrows line { stroke: var(--accent); stroke-width: 2; }
-.spectral-tip { fill: var(--accent); }
+.spectral-chart { display: block; width: 100%; height: auto; max-height: 270px; object-fit: contain; }
 .spectral-status { margin: .3rem 0; }
 .spectral-maps { margin: .2rem 0 .5rem; padding-inline-start: 1.2rem; font-size: .86rem; }
 .spectral-page details { font-size: .86rem; }
