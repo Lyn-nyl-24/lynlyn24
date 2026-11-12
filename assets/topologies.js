@@ -2,6 +2,8 @@
   'use strict';
   const atlas = document.querySelector('.topo-atlas');
   if (!atlas) return;
+  atlas.dataset.enhanced = '';
+  const compact = matchMedia('(max-width: 42rem)');
   const sections = new Map();
   const entries = new Map();
   let pinned = null;
@@ -11,16 +13,29 @@
 
   for (const section of atlas.querySelectorAll('[data-graph]')) {
     const canvas = section.querySelector('.topo-canvas');
-    const buttons = [...canvas.querySelectorAll('.topo-node, .topo-edge')];
+    const buttons = [...section.querySelectorAll('.topo-board .topo-node, .topo-edge, .topo-index .topo-node, .topo-index-edge')];
+    const views = [...section.querySelectorAll('[data-view-choice]')];
     const panel = section.querySelector('.topo-passport');
     const select = section.querySelector('select');
     const fit = section.querySelector('.topo-fit');
     const reset = section.querySelector('.topo-reset');
     const status = section.querySelector('.topo-state');
-    const state = { section, canvas, buttons, panel, select, reset, status };
+    const state = { section, buttons, panel, select, reset, status };
     sections.set(section, state);
     for (const entry of section.querySelectorAll('.topo-entry')) entries.set(entry.id, { entry, state });
     section.querySelector('.topo-controls').hidden = false;
+    const updateViews = () => {
+      const choice = section.dataset.view === 'auto' ? (compact.matches ? 'index' : 'diagram') : section.dataset.view;
+      for (const view of views) view.setAttribute('aria-pressed', String(view.dataset.viewChoice === choice));
+    };
+    for (const view of views) view.addEventListener('click', () => {
+      section.dataset.view = view.dataset.viewChoice;
+      hovered = focused = null;
+      updateViews();
+      render();
+    });
+    compact.addEventListener('change', updateViews);
+    updateViews();
     fit.addEventListener('click', () => {
       const fitted = canvas.classList.toggle('topo-fitted');
       fit.setAttribute('aria-pressed', String(fitted));
@@ -30,7 +45,7 @@
       clear();
       select.focus();
     });
-    select.addEventListener('change', () => select.value ? pin(select.value) : clear());
+    select.addEventListener('change', () => select.value ? pin(select.value, false, true) : clear());
     for (const button of buttons) {
       const id = button.getAttribute('href').slice(1);
       if (button.classList.contains('topo-node')) {
@@ -42,23 +57,18 @@
       button.addEventListener('keydown', event => {
         if (event.key !== ' ' || event.altKey || event.ctrlKey || event.metaKey) return;
         event.preventDefault();
-        if (!event.repeat) pin(id, true);
+        if (!event.repeat) pin(id, true, compact.matches);
       });
     }
   }
 
-  function idsFrom(source, index) {
-    const links = source.querySelectorAll('dd')[index]?.querySelectorAll('a[href^="#top-"]') ?? [];
+  function idsFrom(source, kind) {
+    const links = source.querySelectorAll(`dd[data-relation="${kind}"] a[href^="#top-"]`);
     return new Set([...links].map(link => link.hash.slice(1)));
   }
 
   function relationships(entry) {
-    const keys = [...entry.querySelectorAll('dt')].map(dt => dt.textContent);
-    return {
-      prior: idsFrom(entry, keys.findIndex(key => key === 'Finer than' || key === 'Implied by')),
-      later: idsFrom(entry, keys.findIndex(key => key === 'Coarser than' || key === 'Implies')),
-      equal: idsFrom(entry, keys.indexOf('Equivalent to')),
-    };
+    return Object.fromEntries(['prior','later','equal'].map(kind => [kind,idsFrom(entry,kind)]));
   }
 
   function render() {
@@ -77,19 +87,22 @@
         button.classList.toggle('topo-prior', links.prior?.has(key) ?? false);
         button.classList.toggle('topo-later', links.later?.has(key) ?? false);
         button.classList.toggle('topo-equal', links.equal?.has(key) ?? false);
+        if (button.classList.contains('topo-edge')) {
+          button.classList.toggle('topo-related', button.dataset.from === id || button.dataset.to === id);
+        }
         if (key === pinned) button.setAttribute('aria-current', 'true');
         else button.removeAttribute('aria-current');
       }
       const locked = pinned && current?.state === state;
       state.select.value = locked && id.startsWith('top-') ? id : '';
       state.reset.hidden = !locked;
-      const announcement = locked ? `Pinned: ${current.entry.querySelector('summary').textContent}` : '';
+      const announcement = locked ? `Pinned: ${current.entry.dataset.entryName}` : '';
       if (state.status.textContent !== announcement) state.status.textContent = announcement;
     }
     if (current && shown !== id) {
       const heading = document.createElement('h4');
       heading.tabIndex = -1;
-      heading.textContent = current.entry.querySelector('summary').textContent;
+      heading.append(current.entry.querySelector('.topo-entry-title').cloneNode(true));
       current.state.panel.replaceChildren(heading, current.entry.querySelector('.topo-entry-body').cloneNode(true));
       current.state.panel.hidden = false;
     }
@@ -112,7 +125,10 @@
     if (reveal) {
       const {panel} = entries.get(id).state;
       panel.querySelector('h4').focus({preventScroll:true});
-      panel.scrollIntoView({block:'nearest'});
+      panel.querySelector('h4').scrollIntoView({block:'start'});
+    } else {
+      const heading = entries.get(id).state.panel.querySelector('h4');
+      if (heading.getBoundingClientRect().top > window.innerHeight - 100) heading.scrollIntoView({block:'start'});
     }
   }
 
@@ -122,8 +138,9 @@
     const id = a?.getAttribute('href').slice(1);
     if (!entries.has(id)) return;
     event.preventDefault();
-    const inCanvas = !!a.closest('.topo-canvas');
-    pin(id, inCanvas, !inCanvas);
+    const inDiagram = !!a.closest('.topo-canvas');
+    const inIndex = !!a.closest('.topo-index');
+    pin(id, inDiagram || inIndex, !inDiagram || compact.matches);
   });
   atlas.addEventListener('keydown', event => {
     if (event.key !== 'Escape' || (!pinned && !shown)) return;
@@ -138,7 +155,7 @@
     pinned = entries.has(id) ? id : null;
     focused = hovered = null;
     render();
-    if (pinned) entries.get(pinned).state.panel.scrollIntoView({block:'nearest'});
+    if (pinned) entries.get(pinned).state.panel.querySelector('h4').scrollIntoView({block:'start'});
   }
   addEventListener('hashchange', readHash);
   addEventListener('popstate', readHash);
