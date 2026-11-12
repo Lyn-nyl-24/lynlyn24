@@ -526,11 +526,13 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .literature-list p { margin-block: .25rem 0; }
 .literature-list .citation { color: var(--muted); font-size: .9em; }
 
-@media (max-width: 585px) {
+@media (max-width: 700px) {
   .site-header { flex-wrap: wrap; gap: 0 .5rem; }
   .site-nav { order: 3; flex-basis: 100%; flex-wrap: wrap; padding-block-end: .4rem; }
   .site-header[data-enhanced] .site-nav { display: none; }
   .site-header[data-menu-open] .site-nav { display: flex; }
+}
+@media (max-width: 585px) {
   .topic-link, .note-link { min-block-size: 2.25rem; }
   .reference-index .note-link { grid-template-columns: minmax(0, 1fr) minmax(5rem, 27%); }
   .math-block { padding-inline-start: .7rem; }

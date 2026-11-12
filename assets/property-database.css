@@ -44,6 +44,8 @@
   font-size: .82rem;
   font-weight: 700;
 }
+.atlas-filters { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.atlas-filters label:first-child { grid-column: 1 / -1; }
 .property-database :is(input, select, button) {
   color: var(--ink);
   font: inherit;

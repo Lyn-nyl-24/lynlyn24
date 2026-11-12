@@ -7,6 +7,7 @@ const status = document.getElementById('stacks-status');
 const matches = document.getElementById('stacks-matches');
 const more = document.getElementById('stacks-more');
 const normalize = value => value.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
+const formal = new Set(['definition','lemma','proposition','theorem']);
 let index;
 let requestId = 0;
 let shown = 0;
@@ -56,7 +57,7 @@ async function search() {
       }))));
     const rows = await index;
     if (request !== requestId) return;
-    current = rows.filter(row => (!kind.value || kind.value === row.kind) &&
+    current = rows.filter(row => (!kind.value || kind.value === row.kind || kind.value === 'formal' && formal.has(row.kind)) &&
       (!chapter.value || chapter.value === row.chapterKey) &&
       (!coverage.value || row.linked === (coverage.value === 'linked')) && terms.every(term => row.search.includes(term)));
     const exact = current.findIndex(row => row.tag.toLowerCase() === input);

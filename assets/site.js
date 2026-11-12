@@ -3,7 +3,7 @@
   const header = document.querySelector('.site-header');
   const menu = document.querySelector('.menu-button');
   const theme = document.querySelector('.theme-button');
-  const mobile = matchMedia('(max-width: 585px)');
+  const mobile = matchMedia('(max-width: 700px)');
   const storageKey = 'notebook:' + new URL('../', document.currentScript.src).pathname + ':theme';
 
   function setMenu(open) {

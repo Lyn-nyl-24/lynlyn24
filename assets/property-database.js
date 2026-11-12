@@ -8,6 +8,9 @@ const normalize = value => value.toLowerCase().normalize('NFD').replace(/\p{M}/g
 const searchable = records.map(record => [record,normalize(record.dataset.search),
   new Set(record.dataset.externalIds.toLowerCase().split(' ')),new Set(record.dataset.stacksTags.toLowerCase().split(' '))]);
 const search = byId('database-query'), kind = byId('database-kind'), topic = byId('database-topic'), role = byId('database-role');
+const discipline = byId('database-discipline');
+const initial = new URLSearchParams(location.search);
+if (['algebras','topologies'].includes(initial.get('discipline'))) discipline.value = initial.get('discipline');
 const filterPanel = search.closest('.property-filters');
 const resultCount = byId('database-results');
 const clearFilters = byId('database-clear');
@@ -30,6 +33,7 @@ function filter() {
     record.hidden = (kind.value !== '' && kind.value !== record.dataset.kind)
       || (topic.value !== '' && topic.value !== record.dataset.topic && topic.value !== record.dataset.subject)
       || (role.value !== '' && role.value !== record.dataset.role)
+      || (discipline.value !== '' && discipline.value !== record.dataset.discipline)
       || !terms.every(term => index.includes(term)) || !external.every(id => externalIds.has(id)) ||
       !stacks.every(id => stacksTags.has(id));
     if (!record.hidden) visible++;
@@ -37,7 +41,7 @@ function filter() {
   for (const cluster of clusters) cluster.hidden = !cluster.querySelector('[data-record]:not([hidden])');
   for (const section of sections) section.hidden = !section.querySelector('.property-cluster:not([hidden])');
   resultCount.textContent = visible === 0 ? 'No matching records.' : visible + ' matching records';
-  clearFilters.hidden = !(search.value || kind.value || topic.value || role.value);
+  clearFilters.hidden = !(search.value || kind.value || topic.value || role.value || discipline.value);
 }
 function revealHash() {
   const id = location.hash.slice(1);
@@ -46,7 +50,7 @@ function revealHash() {
   const record = byId(id);
   if (!record) return;
   if (record.hidden) {
-    search.value = kind.value = topic.value = role.value = '';
+    search.value = kind.value = topic.value = role.value = discipline.value = '';
     filter();
   }
   record.open = true;
@@ -57,8 +61,9 @@ search.addEventListener('input',filter);
 kind.addEventListener('change',filter);
 topic.addEventListener('change',filter);
 role.addEventListener('change',filter);
+discipline.addEventListener('change',filter);
 clearFilters.addEventListener('click', () => {
-  search.value = kind.value = topic.value = role.value = '';
+  search.value = kind.value = topic.value = role.value = discipline.value = '';
   filter();
   search.focus();
 });
@@ -72,6 +77,7 @@ revealHash();
 
 const deduction = createDeduction(data.theorems,data.examples,data.entries);
 const domain = byId('database-domain'), premise = byId('database-premise'), goal = byId('database-goal');
+if ([...domain.options].some(option => option.value === initial.get('domain'))) domain.value = initial.get('domain');
 const premiseValue = byId('database-premise-value'), goalValue = byId('database-goal-value');
 const add = byId('database-add'), check = byId('database-run');
 const hypotheses = byId('database-hypotheses'), output = byId('database-proof');
@@ -103,7 +109,7 @@ function updateAssumptions() {
 function selectDomain() {
   assumptions.clear();
   premiseValue.value = goalValue.value = '';
-  const choices = data.entries.filter(entry => entry.subject === domain.value)
+  const choices = data.entries.filter(entry => entry.subject === domain.value && entry.executable)
     .sort((a,b) => a.name.localeCompare(b.name));
   setOptions(premise,choices);
   setOptions(goal,choices);
