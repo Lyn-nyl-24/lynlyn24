@@ -229,6 +229,11 @@ h1 {
 .listing-links [aria-current] { text-decoration: underline; }
 .reference-index .note-link { grid-template-columns: minmax(0, 1fr) minmax(5rem, 15%); }
 .reference-index .tag { overflow-wrap: anywhere; text-align: end; }
+.reference-group { scroll-margin-block-start: 3.25rem; }
+.reference-group + .reference-group { margin-block-start: 1.1rem; }
+.reference-group h2 { margin: 0; padding: .45rem var(--edge); font-size: 1.15rem; font-weight: 800; }
+.reference-group .empty { margin: 0; padding: .45rem var(--edge); border-block: 1px solid var(--line); font-size: .85rem; }
+.reference-page .lede a { display: inline-block; }
 
 .book-chapters { margin-block-start: 42px; }
 .book-chapter + .book-chapter { margin-block-start: 32px; }
