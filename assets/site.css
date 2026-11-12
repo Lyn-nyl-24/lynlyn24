@@ -239,52 +239,45 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .diagram-display {
   display: none;
   min-inline-size: 0;
-  margin: 0 0 1.25rem;
+  margin: 0 0 .25rem;
   border: 0;
-  border-block-end: 1px solid var(--soft-line);
-  padding: 0 0 .85rem;
-  font: .88rem/1.5 var(--sans);
+  padding: 0;
+  color: var(--muted);
+  font: .75rem/1.35 var(--sans);
 }
-.diagram-display legend { padding: 0; margin-block-end: .5rem; color: var(--ink); font-weight: 700; }
-.diagram-options { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.15rem; }
-.diagram-segments {
-  display: inline-grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  inline-size: min(100%, 13rem);
-  border: 1px solid var(--line);
-}
+.diagram-options { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0 .35rem; }
+.diagram-segments { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 .diagram-segments label { position: relative; cursor: pointer; }
-.diagram-segments label + label { border-inline-start: 1px solid var(--line); }
 .diagram-segments input { position: absolute; inline-size: 1px; block-size: 1px; margin: 0; opacity: 0; }
 .diagram-segments span {
   display: grid;
   place-items: center;
-  min-block-size: 2.75rem;
-  padding: .35rem .45rem;
-  text-align: center;
-  font-weight: 600;
+  min-block-size: 2rem;
+  padding-inline: .4rem;
 }
 .diagram-segments input:checked + span {
-  background: var(--accent);
-  color: var(--paper);
+  color: var(--accent);
   font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .22em;
 }
 .diagram-segments input:focus-visible + span {
-  position: relative;
-  z-index: 1;
   outline: 2px solid var(--accent);
-  outline-offset: 3px;
+  outline-offset: -2px;
 }
-.diagram-options a { display: inline-flex; align-items: center; min-block-size: 2rem; }
-#diagram-display-help { margin: .45rem 0 0; color: var(--muted); }
+.diagram-options a, .diagram-file a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2rem;
+  color: inherit;
+}
 @media (forced-colors: active) {
-  .diagram-segments input:checked + span { forced-color-adjust: none; background: Highlight; color: HighlightText; }
   .diagram-segments input:focus-visible + span { outline-color: Highlight; }
 }
 @media (hover: hover) and (pointer: fine) {
-  .diagram-segments label:hover input:not(:checked) + span { background: var(--tint); }
+  .diagram-segments label:hover span, .diagram-options a:hover, .diagram-file a:hover { color: var(--accent); }
 }
-.diagram-file { text-align: end; font: .82rem/1.5 var(--sans); }
+.diagram-file { text-align: end; color: var(--muted); font: .72rem/1.35 var(--sans); }
 .diagram-panel { overflow-x: auto; margin-block: .55rem; }
 .diagram-web-panel { display: none; }
 @supports selector(:has(*)) {
