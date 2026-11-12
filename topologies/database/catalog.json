@@ -4,6 +4,7 @@
     "scheme": "Schemes",
     "morphism": "Morphisms of schemes",
     "space": "Topological spaces",
+    "algebraic-space": "Algebraic spaces",
     "classical-cover": "Classical topology refinement",
     "qcqs-cover": "Valuative topology refinement",
     "site": "Sites and presentations"
@@ -36,6 +37,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of local rings.",
       "diagram": "top-Zar",
+      "role": "structure",
       "id": "G000001"
     },
     {
@@ -57,6 +59,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of henselian local rings.",
       "diagram": "top-Nis",
+      "role": "structure",
       "id": "G000002"
     },
     {
@@ -86,6 +89,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of strictly henselian local rings.",
       "diagram": "top-et",
+      "role": "structure",
       "id": "G000003"
     },
     {
@@ -115,6 +119,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of strictly henselian local rings (by equality with étale).",
       "diagram": "top-sm",
+      "role": "structure",
       "id": "G000004"
     },
     {
@@ -144,6 +149,7 @@
       ],
       "points": null,
       "diagram": "top-syn",
+      "role": "structure",
       "id": "G000005"
     },
     {
@@ -181,6 +187,7 @@
       ],
       "points": null,
       "diagram": "top-fppf",
+      "role": "structure",
       "id": "G000006"
     },
     {
@@ -210,6 +217,7 @@
       ],
       "points": null,
       "diagram": "top-fpqc",
+      "role": "structure",
       "id": "G000007"
     },
     {
@@ -243,6 +251,7 @@
       ],
       "points": null,
       "diagram": "top-can",
+      "role": "structure",
       "id": "G000008"
     },
     {
@@ -264,6 +273,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of absolutely integrally closed local domains.",
       "diagram": "top-qfh",
+      "role": "structure",
       "id": "G000009"
     },
     {
@@ -285,6 +295,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of domains.",
       "diagram": "top-cl",
+      "role": "structure",
       "id": "G000010"
     },
     {
@@ -306,6 +317,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of normal domains.",
       "diagram": "top-cdf",
+      "role": "structure",
       "id": "G000011"
     },
     {
@@ -327,6 +339,7 @@
       ],
       "points": null,
       "diagram": "top-fpsl",
+      "role": "structure",
       "id": "G000012"
     },
     {
@@ -352,6 +365,7 @@
       ],
       "points": null,
       "diagram": "top-fps",
+      "role": "structure",
       "id": "G000013"
     },
     {
@@ -373,6 +387,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of absolutely integrally closed domains.",
       "diagram": "top-f",
+      "role": "structure",
       "id": "G000014"
     },
     {
@@ -398,6 +413,7 @@
       ],
       "points": null,
       "diagram": "top-prop",
+      "role": "structure",
       "id": "G000015"
     },
     {
@@ -419,6 +435,7 @@
       ],
       "points": null,
       "diagram": "top-cdp",
+      "role": "structure",
       "id": "G000016"
     },
     {
@@ -440,6 +457,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of valuation rings.",
       "diagram": "top-rh",
+      "role": "structure",
       "id": "G000017"
     },
     {
@@ -461,6 +479,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of henselian valuation rings.",
       "diagram": "top-cdh",
+      "role": "structure",
       "id": "G000018"
     },
     {
@@ -482,6 +501,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of strictly henselian valuation rings.",
       "diagram": "top-eh",
+      "role": "structure",
       "id": "G000019"
     },
     {
@@ -503,6 +523,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of henselian valuation rings whose fraction fields have no nontrivial finite extension of degree prime to ℓ.",
       "diagram": "top-ldh",
+      "role": "structure",
       "id": "G000020"
     },
     {
@@ -524,6 +545,7 @@
       ],
       "points": "For the Gabber–Kelly finite-type site, the affine local test objects are spectra of absolutely integrally closed valuation rings.",
       "diagram": "top-h",
+      "role": "structure",
       "id": "G000021"
     },
     {
@@ -544,6 +566,7 @@
         ]
       ],
       "diagram": "top-research-fpqc",
+      "role": "structure",
       "id": "G000022"
     },
     {
@@ -568,6 +591,7 @@
         ]
       ],
       "diagram": "top-research-ph",
+      "role": "structure",
       "id": "G000023"
     },
     {
@@ -596,6 +620,7 @@
         ]
       ],
       "diagram": "top-research-v",
+      "role": "structure",
       "id": "G000024"
     },
     {
@@ -616,6 +641,7 @@
         ]
       ],
       "diagram": "top-research-arc",
+      "role": "structure",
       "id": "G000025"
     },
     {
@@ -634,6 +660,7 @@
         ]
       ],
       "diagram": "top-rl-lfp",
+      "role": "predicate",
       "id": "P000001"
     },
     {
@@ -652,6 +679,7 @@
         ]
       ],
       "diagram": "top-rl-lft",
+      "role": "predicate",
       "id": "P000002"
     },
     {
@@ -670,6 +698,7 @@
         ]
       ],
       "diagram": "top-rl-etale",
+      "role": "predicate",
       "id": "P000003"
     },
     {
@@ -688,6 +717,7 @@
         ]
       ],
       "diagram": "top-rl-smooth",
+      "role": "predicate",
       "id": "P000004"
     },
     {
@@ -706,6 +736,7 @@
         ]
       ],
       "diagram": "top-rl-syntomic",
+      "role": "predicate",
       "id": "P000005"
     },
     {
@@ -724,6 +755,7 @@
         ]
       ],
       "diagram": "top-rl-flat",
+      "role": "predicate",
       "id": "P000006"
     },
     {
@@ -742,6 +774,7 @@
         ]
       ],
       "diagram": "top-rl-unramified",
+      "role": "predicate",
       "id": "P000007"
     },
     {
@@ -760,6 +793,7 @@
         ]
       ],
       "diagram": "top-rl-lci",
+      "role": "predicate",
       "id": "P000008"
     },
     {
@@ -778,6 +812,7 @@
         ]
       ],
       "diagram": "top-al-lnoeth",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000208",
@@ -805,6 +840,7 @@
         ]
       ],
       "diagram": "top-al-lconn",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000041",
@@ -832,6 +868,7 @@
         ]
       ],
       "diagram": "top-al-regular",
+      "role": "predicate",
       "id": "P000011"
     },
     {
@@ -850,6 +887,7 @@
         ]
       ],
       "diagram": "top-al-normal",
+      "role": "predicate",
       "id": "P000012"
     },
     {
@@ -868,6 +906,7 @@
         ]
       ],
       "diagram": "top-al-reduced",
+      "role": "predicate",
       "id": "P000013"
     },
     {
@@ -890,6 +929,7 @@
         ]
       ],
       "diagram": "top-al-lci",
+      "role": "predicate",
       "id": "P000014"
     },
     {
@@ -908,6 +948,7 @@
         ]
       ],
       "diagram": "top-al-gorenstein",
+      "role": "predicate",
       "id": "P000015"
     },
     {
@@ -926,6 +967,7 @@
         ]
       ],
       "diagram": "top-al-cm",
+      "role": "predicate",
       "id": "P000016"
     },
     {
@@ -944,6 +986,7 @@
         ]
       ],
       "diagram": "top-rg-affine",
+      "role": "predicate",
       "id": "P000017"
     },
     {
@@ -962,6 +1005,7 @@
         ]
       ],
       "diagram": "top-rg-quasiaffine",
+      "role": "predicate",
       "id": "P000018"
     },
     {
@@ -980,6 +1024,7 @@
         ]
       ],
       "diagram": "top-rg-finite",
+      "role": "predicate",
       "id": "P000019"
     },
     {
@@ -998,6 +1043,7 @@
         ]
       ],
       "diagram": "top-rg-projective",
+      "role": "predicate",
       "id": "P000020"
     },
     {
@@ -1016,6 +1062,7 @@
         ]
       ],
       "diagram": "top-rg-quasiprojective",
+      "role": "predicate",
       "id": "P000021"
     },
     {
@@ -1034,6 +1081,7 @@
         ]
       ],
       "diagram": "top-rg-qc",
+      "role": "predicate",
       "id": "P000022"
     },
     {
@@ -1052,7 +1100,15 @@
         ]
       ],
       "diagram": "top-rg-proper",
-      "id": "P000023"
+      "role": "compound",
+      "id": "P000023",
+      "expression": {
+        "and": [
+          "P000024",
+          "P000026",
+          "P000042"
+        ]
+      }
     },
     {
       "key": "rg-separated",
@@ -1067,10 +1123,16 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · common source definition"
         ]
       ],
       "diagram": "top-rg-separated",
-      "id": "P000024"
+      "role": "predicate",
+      "id": "P000024",
+      "definitionTag": "01KK"
     },
     {
       "key": "rg-qs",
@@ -1085,10 +1147,16 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · common source definition"
         ]
       ],
       "diagram": "top-rg-qs",
-      "id": "P000025"
+      "role": "predicate",
+      "id": "P000025",
+      "definitionTag": "01KK"
     },
     {
       "key": "rg-ft",
@@ -1106,7 +1174,14 @@
         ]
       ],
       "diagram": "top-rg-ft",
-      "id": "P000026"
+      "role": "compound",
+      "id": "P000026",
+      "expression": {
+        "and": [
+          "P000002",
+          "P000022"
+        ]
+      }
     },
     {
       "key": "rg-fp",
@@ -1124,7 +1199,15 @@
         ]
       ],
       "diagram": "top-rg-fp",
-      "id": "P000027"
+      "role": "compound",
+      "id": "P000027",
+      "expression": {
+        "and": [
+          "P000001",
+          "P000022",
+          "P000025"
+        ]
+      }
     },
     {
       "key": "ag-irred",
@@ -1142,6 +1225,7 @@
         ]
       ],
       "diagram": "top-ag-irred",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000039",
@@ -1169,6 +1253,7 @@
         ]
       ],
       "diagram": "top-ag-connected",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000036",
@@ -1196,6 +1281,7 @@
         ]
       ],
       "diagram": "top-ag-local",
+      "role": "predicate",
       "id": "P000030"
     },
     {
@@ -1214,6 +1300,7 @@
         ]
       ],
       "diagram": "top-ag-affine",
+      "role": "predicate",
       "id": "P000031"
     },
     {
@@ -1232,6 +1319,7 @@
         ]
       ],
       "diagram": "top-ag-quasiaffine",
+      "role": "predicate",
       "id": "P000032"
     },
     {
@@ -1250,6 +1338,7 @@
         ]
       ],
       "diagram": "top-ag-qc",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000016",
@@ -1274,9 +1363,14 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · common source definition"
         ]
       ],
       "diagram": "top-ag-separated",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000003",
@@ -1286,7 +1380,8 @@
           "url": "https://topology.pi-base.org/properties/P000003"
         }
       ],
-      "id": "P000034"
+      "id": "P000034",
+      "definitionTag": "01KK"
     },
     {
       "key": "ag-qs",
@@ -1301,9 +1396,14 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · common source definition"
         ]
       ],
       "diagram": "top-ag-qs",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000075",
@@ -1313,7 +1413,8 @@
           "url": "https://topology.pi-base.org/properties/P000075"
         }
       ],
-      "id": "P000035"
+      "id": "P000035",
+      "definitionTag": "01KK"
     },
     {
       "key": "ag-noeth",
@@ -1331,6 +1432,7 @@
         ]
       ],
       "diagram": "top-ag-noeth",
+      "role": "compound",
       "pibase": [
         {
           "id": "P000208",
@@ -1340,7 +1442,13 @@
           "url": "https://topology.pi-base.org/properties/P000208"
         }
       ],
-      "id": "P000036"
+      "id": "P000036",
+      "expression": {
+        "and": [
+          "P000009",
+          "P000033"
+        ]
+      }
     },
     {
       "key": "ag-integral",
@@ -1358,7 +1466,14 @@
         ]
       ],
       "diagram": "top-ag-integral",
-      "id": "P000037"
+      "role": "compound",
+      "id": "P000037",
+      "expression": {
+        "and": [
+          "P000013",
+          "P000028"
+        ]
+      }
     },
     {
       "key": "ag-spectral",
@@ -1380,6 +1495,7 @@
         ]
       ],
       "diagram": "top-ag-spectral",
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000075",
@@ -1396,10 +1512,10 @@
       "subject": "morphism",
       "topic": "Relative · behaviour under base change",
       "ambient": "A universal property holds on the underlying spaces after every scheme base change $Y^{\\prime}\\to Y$.",
-      "name": "Flat and locally finitely presented",
+      "name": "Flat ∧ locally finitely presented",
       "aliases": [],
       "kind": "property",
-      "definition": "Both flatness and local finite presentation hold.",
+      "definition": "Both flatness and local finite presentation hold for the same morphism.",
       "refs": [
         [
           "https://stacks.math.columbia.edu/tag/01UA",
@@ -1407,7 +1523,14 @@
         ]
       ],
       "diagram": "top-re-fplfp",
-      "id": "P000039"
+      "role": "compound",
+      "id": "P000039",
+      "expression": {
+        "and": [
+          "P000006",
+          "P000001"
+        ]
+      }
     },
     {
       "key": "re-open",
@@ -1425,6 +1548,7 @@
         ]
       ],
       "diagram": "top-re-open",
+      "role": "predicate",
       "id": "P000040"
     },
     {
@@ -1443,6 +1567,7 @@
         ]
       ],
       "diagram": "top-re-homeo",
+      "role": "predicate",
       "id": "P000041"
     },
     {
@@ -1461,6 +1586,7 @@
         ]
       ],
       "diagram": "top-re-closed",
+      "role": "predicate",
       "id": "P000042"
     },
     {
@@ -1479,6 +1605,7 @@
         ]
       ],
       "diagram": "top-re-surj",
+      "role": "predicate",
       "id": "P000043"
     },
     {
@@ -1497,6 +1624,7 @@
         ]
       ],
       "diagram": "top-re-radicial",
+      "role": "predicate",
       "id": "P000044"
     },
     {
@@ -1515,6 +1643,7 @@
         ]
       ],
       "diagram": "top-re-integral",
+      "role": "predicate",
       "id": "P000045"
     },
     {
@@ -1538,6 +1667,7 @@
           "Stacks 094L · the space of a qcqs scheme is spectral"
         ]
       ],
+      "role": "compound",
       "pibase": [
         {
           "id": "P000075",
@@ -1548,6 +1678,12 @@
         }
       ],
       "id": "P000046",
+      "expression": {
+        "and": [
+          "P000033",
+          "P000035"
+        ]
+      },
       "diagrams": [
         {
           "anchor": "top-spectral-locales-ag-qcqs",
@@ -1572,7 +1708,14 @@
           "Stacks 01KH · quasi-separated schemes and morphisms"
         ]
       ],
-      "id": "P000047"
+      "role": "compound",
+      "id": "P000047",
+      "expression": {
+        "and": [
+          "P000022",
+          "P000025"
+        ]
+      }
     },
     {
       "topic": "Schemes",
@@ -1587,6 +1730,7 @@
           "Stacks 0CKV · zero-dimensional schemes"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000002",
@@ -1622,6 +1766,7 @@
           "Stacks 08YF · spectral spaces and the constructible topology"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000003",
@@ -1650,6 +1795,7 @@
           "Stacks 08ZY · characterization of profinite spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000195",
@@ -1678,6 +1824,7 @@
           "Stacks 08YF · spectral spaces and the constructible topology"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000195",
@@ -1702,6 +1849,7 @@
           "Stacks 0059 · quasi-compact spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000016",
@@ -1726,6 +1874,7 @@
           "Stacks 08ZY · characterization of profinite spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000003",
@@ -1750,6 +1899,7 @@
           "Stacks 08ZY · characterization of profinite spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000047",
@@ -1774,6 +1924,7 @@
           "Stacks 08ZY · characterization of profinite spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000195",
@@ -1802,8 +1953,13 @@
         [
           "https://stacks.math.columbia.edu/tag/08YF",
           "Stacks 08YF · spectral spaces and the constructible topology"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08YG",
+          "Stacks 08YG · common source definition"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000075",
@@ -1814,6 +1970,7 @@
         }
       ],
       "id": "P000056",
+      "definitionTag": "08YG",
       "diagrams": [
         {
           "anchor": "top-spectral-locales-sp-spectral",
@@ -1834,6 +1991,7 @@
           "Stacks 08YF · spectral spaces and the constructible topology"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000002",
@@ -1864,6 +2022,7 @@
           "Stacks 08YF · spectral spaces and the constructible topology"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000073",
@@ -1902,6 +2061,7 @@
           "Stacks 009H · sheaves on a basis"
         ]
       ],
+      "role": "structure",
       "id": "G000026"
     },
     {
@@ -1917,6 +2077,7 @@
           "Stacks 09WY · the qc topology and comparison with open covers"
         ]
       ],
+      "role": "structure",
       "id": "G000027"
     },
     {
@@ -1932,6 +2093,7 @@
           "Scholze, Lectures on Condensed Mathematics, §2"
         ]
       ],
+      "role": "structure",
       "pibase": [
         {
           "id": "P000195",
@@ -1948,7 +2110,7 @@
       "kind": "topology",
       "key": "site-patch",
       "subject": "site",
-      "name": "Constructible or patch topology",
+      "name": "Constructible topology",
       "definition": "On a spectral space take the topology generated by quasi-compact opens and their complements. The identity to the original spectral space is continuous. The topology is profinite and equals the original one exactly when the original is Hausdorff.",
       "refs": [
         [
@@ -1956,6 +2118,10 @@
           "Stacks 08YF · spectral spaces and the constructible topology"
         ]
       ],
+      "aliases": [
+        "patch topology"
+      ],
+      "role": "structure",
       "pibase": [
         {
           "id": "P000195",
@@ -2008,6 +2174,7 @@
         "covering sieve",
         "pretopology"
       ],
+      "role": "structure",
       "id": "G000030"
     },
     {
@@ -2041,6 +2208,7 @@
         "points",
         "geometric morphism"
       ],
+      "role": "structure",
       "id": "G000031"
     },
     {
@@ -2066,6 +2234,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000032"
     },
     {
@@ -2073,20 +2242,19 @@
       "kind": "topos",
       "key": "found-infty",
       "subject": "site",
-      "name": "∞-topos and hypercompletion",
-      "ambient": "Sheaves of spaces on an ∞-site",
-      "definition": "In the ∞-categorical formulation the sheaf condition uses limits of spaces. Hyperdescent additionally imposes descent along hypercovers; passing to the hypercompletion is a separate operation.",
+      "name": "∞-topos",
+      "ambient": "∞-categories in a fixed universe",
+      "definition": "An ∞-category $\\mathcal X$ is an ∞-topos if there is a small ∞-category $\\mathcal C$ and an accessible left exact localization $\\mathcal P(\\mathcal C)\\to\\mathcal X$ of its presheaves of spaces.",
       "refs": [
         [
-          "https://arxiv.org/abs/math/0608040",
-          "Lurie, Higher Topos Theory, §6.2"
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=547",
+          "Lurie, Higher Topos Theory, Definition 6.1.0.4"
         ]
       ],
       "aliases": [
-        "higher topos",
-        "hypersheaf",
-        "hypercover"
+        "higher topos"
       ],
+      "role": "structure",
       "id": "G000033"
     },
     {
@@ -2094,28 +2262,21 @@
       "kind": "topology",
       "key": "found-canonical",
       "subject": "site",
-      "name": "Canonical and subcanonical topologies",
-      "ambient": "Fixed category, with size bounds",
-      "definition": "The canonical topology is the finest topology for which all representable presheaves are sheaves. A topology contained in it is called subcanonical.",
+      "name": "Canonical Grothendieck topology",
+      "ambient": "A small category C in the chosen universe",
+      "definition": "The canonical topology $J_{\\mathrm{can}}$ on $\\mathcal C$ is the largest Grothendieck topology on $\\mathcal C$ for which every representable presheaf is a sheaf.",
       "refs": [
-        [
-          "https://doi.org/10.1007/BFb0081551",
-          "Artin–Grothendieck–Verdier, SGA 4, Tome 1, exposés II–IV"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/00WO",
-          "Stacks 00WO · subcanonical sites"
-        ],
         [
           "https://stacks.math.columbia.edu/tag/00ZA",
           "Stacks 00ZA · canonical topology"
         ],
         [
-          "https://stacks.math.columbia.edu/tag/00WQ",
-          "Stacks 00WQ · subcanonical topology"
+          "https://doi.org/10.1007/BFb0081551",
+          "Artin–Grothendieck–Verdier, SGA 4, Tome 1, exposés II–IV"
         ]
       ],
       "aliases": [],
+      "role": "construction",
       "id": "G000034"
     },
     {
@@ -2148,15 +2309,12 @@
         "small Zariski",
         "little Zariski"
       ],
+      "role": "structure",
       "id": "G000035",
       "diagrams": [
         {
           "anchor": "top-crystalline-prismatic-site-petit-zar",
           "title": "Crystalline and prismatic geometry"
-        },
-        {
-          "anchor": "top-synthetic-algebraic-geometry-site-petit-zar",
-          "title": "Synthetic algebraic geometry"
         }
       ]
     },
@@ -2186,16 +2344,11 @@
         "big Zariski",
         "large Zariski"
       ],
-      "id": "G000036",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-site-gros-zar",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "role": "structure",
+      "id": "G000036"
     },
     {
-      "topic": "Synthetic geometry",
+      "topic": "Schemes and spaces",
       "kind": "site",
       "key": "site-zar-fp",
       "subject": "site",
@@ -2213,13 +2366,8 @@
         "finitely presented algebras",
         "synthetic"
       ],
-      "id": "G000037",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-site-zar-fp",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "role": "structure",
+      "id": "G000037"
     },
     {
       "topic": "Schemes and spaces",
@@ -2255,6 +2403,7 @@
         "small etale",
         "little etale"
       ],
+      "role": "structure",
       "id": "G000038"
     },
     {
@@ -2286,6 +2435,7 @@
       "aliases": [
         "big etale"
       ],
+      "role": "structure",
       "id": "G000039"
     },
     {
@@ -2309,6 +2459,7 @@
       "aliases": [
         "small Nisnevich"
       ],
+      "role": "structure",
       "id": "G000040"
     },
     {
@@ -2340,6 +2491,7 @@
       "aliases": [
         "pro etale"
       ],
+      "role": "structure",
       "id": "G000041"
     },
     {
@@ -2369,6 +2521,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000042"
     },
     {
@@ -2402,6 +2555,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000043"
     },
     {
@@ -2435,6 +2589,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000044"
     },
     {
@@ -2456,6 +2611,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000045"
     },
     {
@@ -2492,6 +2648,7 @@
         "crystalline",
         "crys"
       ],
+      "role": "structure",
       "id": "G000046",
       "diagrams": [
         {
@@ -2531,6 +2688,7 @@
         "divided powers",
         "PD"
       ],
+      "role": "structure",
       "id": "G000047",
       "diagrams": [
         {
@@ -2562,6 +2720,7 @@
         ]
       ],
       "aliases": [],
+      "role": "construction",
       "id": "G000048"
     },
     {
@@ -2569,9 +2728,9 @@
       "kind": "construction",
       "key": "found-prism",
       "subject": "site",
-      "name": "Prism and bounded prism",
+      "name": "Prism",
       "ambient": "δ-rings at a prime p",
-      "definition": "A prism is a δ-ring A and ideal I defining an effective Cartier divisor, with A derived (p,I)-complete and $p\\in I+\\varphi(I)A$. It is bounded when the p-power torsion in A/I is killed by a fixed power of p.",
+      "definition": "A prism is a δ-ring A with an ideal I defining an effective Cartier divisor, such that A is derived (p,I)-complete and $p\\in I+\\varphi(I)A$.",
       "refs": [
         [
           "https://arxiv.org/abs/1905.08229",
@@ -2582,6 +2741,7 @@
         "prismatic",
         "delta ring"
       ],
+      "role": "construction",
       "id": "G000049"
     },
     {
@@ -2602,6 +2762,7 @@
         "prismatic",
         "delta ring"
       ],
+      "role": "structure",
       "id": "G000050",
       "diagrams": [
         {
@@ -2631,6 +2792,7 @@
       "aliases": [
         "prismatic"
       ],
+      "role": "structure",
       "id": "G000051",
       "diagrams": [
         {
@@ -2657,6 +2819,7 @@
         "qsyn",
         "quasi syntomic"
       ],
+      "role": "structure",
       "id": "G000052"
     },
     {
@@ -2678,6 +2841,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000053"
     },
     {
@@ -2703,6 +2867,7 @@
         "ket",
         "log etale"
       ],
+      "role": "structure",
       "id": "G000054"
     },
     {
@@ -2727,6 +2892,7 @@
         "kfl",
         "log flat"
       ],
+      "role": "structure",
       "id": "G000055"
     },
     {
@@ -2746,6 +2912,7 @@
       "aliases": [
         "log etale"
       ],
+      "role": "structure",
       "id": "G000056"
     },
     {
@@ -2766,6 +2933,7 @@
         "classical topology",
         "GAGA"
       ],
+      "role": "structure",
       "id": "G000057"
     },
     {
@@ -2790,6 +2958,7 @@
         "Tate",
         "rigid analytic"
       ],
+      "role": "structure",
       "id": "G000058"
     },
     {
@@ -2810,6 +2979,7 @@
         "adic",
         "rigid"
       ],
+      "role": "structure",
       "id": "G000059"
     },
     {
@@ -2829,6 +2999,7 @@
       "aliases": [
         "diamond etale"
       ],
+      "role": "structure",
       "id": "G000060"
     },
     {
@@ -2849,6 +3020,7 @@
         "quasi pro etale",
         "qproet"
       ],
+      "role": "structure",
       "id": "G000061"
     },
     {
@@ -2869,6 +3041,7 @@
         "v topology",
         "v sheaf"
       ],
+      "role": "structure",
       "id": "G000062"
     },
     {
@@ -2886,6 +3059,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000063"
     },
     {
@@ -2903,6 +3077,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000064"
     },
     {
@@ -2924,6 +3099,7 @@
         ]
       ],
       "aliases": [],
+      "role": "structure",
       "id": "G000065"
     },
     {
@@ -2949,6 +3125,7 @@
         "Nisnevich",
         "A1"
       ],
+      "role": "construction",
       "id": "G000066"
     },
     {
@@ -2974,6 +3151,7 @@
         "DAG",
         "derived étale"
       ],
+      "role": "structure",
       "id": "G000067"
     },
     {
@@ -2994,6 +3172,7 @@
         "spectral algebraic geometry",
         "E-infinity"
       ],
+      "role": "structure",
       "id": "G000068"
     },
     {
@@ -3017,6 +3196,7 @@
       "aliases": [
         "derived flat"
       ],
+      "role": "structure",
       "id": "G000069"
     },
     {
@@ -3024,9 +3204,9 @@
       "kind": "construction",
       "key": "found-locale",
       "subject": "site",
-      "name": "Locale and frame",
+      "name": "Locale",
       "ambient": "Point-free topology",
-      "definition": "A frame has all joins and finite meets, with finite meets distributing over arbitrary joins. A locale is an object of the opposite category of frames. The frame of opens of a space is a standard example; an arbitrary locale need not be spatial.",
+      "definition": "The category of locales is the opposite of the category of frames. A map of locales is specified contravariantly by the inverse-image homomorphism of their frames of opens.",
       "refs": [
         [
           "https://arxiv.org/abs/2012.13850",
@@ -3041,6 +3221,7 @@
         "pointfree",
         "pointless topology"
       ],
+      "role": "construction",
       "id": "G000070"
     },
     {
@@ -3069,6 +3250,7 @@
         "coherent frame",
         "spectral locale"
       ],
+      "role": "construction",
       "pibase": [
         {
           "id": "P000075",
@@ -3108,6 +3290,7 @@
         "inverse topology",
         "de Groot dual"
       ],
+      "role": "structure",
       "id": "G000072"
     },
     {
@@ -3126,88 +3309,16 @@
         [
           "https://stacks.math.columbia.edu/tag/08YG",
           "Stacks 08YG · spectral spaces and spectral maps"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08YG",
+          "Stacks 08YG · common source definition"
         ]
       ],
       "aliases": [],
-      "id": "G000073"
-    },
-    {
-      "topic": "Synthetic geometry",
-      "kind": "topos",
-      "key": "found-syn-little",
-      "subject": "site",
-      "name": "Internal language of the little Zariski topos",
-      "ambient": "Sheaves on the open subsets of a scheme X",
-      "definition": "Kripke–Joyal semantics interprets existential statements and disjunction locally on open covers; the structure sheaf is internally a local ring. Internal statements translate back to external statements with their forcing conditions.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685v1",
-          "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
-        ],
-        [
-          "https://www.ingo-blechschmidt.eu/research.html",
-          "Blechschmidt, research and expository resources"
-        ]
-      ],
-      "aliases": [
-        "synthetic algebraic geometry",
-        "Kripke Joyal"
-      ],
-      "id": "G000074"
-    },
-    {
-      "topic": "Synthetic geometry",
-      "kind": "topos",
-      "key": "found-syn-big",
-      "subject": "site",
-      "name": "Internal language of the big Zariski topos",
-      "ambient": "The finite presentation affine model over an affine base, with Blechschmidt’s conventions",
-      "definition": "Affine objects give internal geometric objects and permit reasoning with a generic algebra. The functors comparing the big and little topoi have specific adjointness and exactness properties; the two languages are not freely interchangeable.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685v1",
-          "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
-        ],
-        [
-          "https://arxiv.org/abs/2012.13850",
-          "Blechschmidt, Generalized spaces for constructive algebra"
-        ]
-      ],
-      "aliases": [
-        "synthetic algebraic geometry",
-        "generic ring"
-      ],
-      "id": "G000075"
-    },
-    {
-      "topic": "Synthetic geometry",
-      "kind": "topos",
-      "key": "found-syn-hott",
-      "subject": "site",
-      "name": "Synthetic algebraic geometry in HoTT",
-      "ambient": "The higher Zariski topos model and axioms of the cited paper",
-      "definition": "A specified ring and axioms about finitely presented algebras, spectra and local choice support an internal development. The paper constructs a higher Zariski model; it does not identify arbitrary classical Zariski topoi with that model.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2307.00073",
-          "Cherubini–Coquand–Hutzler, A Foundation for Synthetic Algebraic Geometry"
-        ],
-        [
-          "https://arxiv.org/abs/2405.13916",
-          "Cherubini–Coquand–Hutzler–Wärn, projective space in synthetic algebraic geometry"
-        ]
-      ],
-      "aliases": [
-        "HoTT",
-        "higher Zariski"
-      ],
-      "id": "G000076",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-found-syn-hott",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "role": "construction",
+      "id": "G000073",
+      "definitionTag": "08YG"
     },
     {
       "topic": "Schemes and spaces",
@@ -3230,6 +3341,7 @@
       "aliases": [
         "small fppf"
       ],
+      "role": "structure",
       "id": "G000077"
     },
     {
@@ -3254,6 +3366,7 @@
         "Galois category",
         "finite etale"
       ],
+      "role": "structure",
       "id": "G000078"
     },
     {
@@ -3278,6 +3391,7 @@
         "h topology",
         "proper surjection"
       ],
+      "role": "structure",
       "id": "G000079"
     },
     {
@@ -3297,6 +3411,7 @@
       "aliases": [
         "pro Nisnevich"
       ],
+      "role": "structure",
       "id": "G000080"
     },
     {
@@ -3317,6 +3432,7 @@
         "procdh",
         "formal blowup"
       ],
+      "role": "structure",
       "id": "G000081"
     },
     {
@@ -3337,6 +3453,7 @@
         "procdh",
         "formal schemes"
       ],
+      "role": "structure",
       "id": "G000082"
     },
     {
@@ -3357,6 +3474,7 @@
         "arc p",
         "p-adic arc"
       ],
+      "role": "structure",
       "id": "G000083"
     },
     {
@@ -3378,6 +3496,7 @@
         "Spa",
         "rational opens"
       ],
+      "role": "structure",
       "id": "G000084"
     },
     {
@@ -3402,6 +3521,7 @@
         "Berkovich",
         "seminorm"
       ],
+      "role": "structure",
       "id": "G000085"
     },
     {
@@ -3422,6 +3542,7 @@
         "derived Zariski",
         "spectral algebraic geometry"
       ],
+      "role": "structure",
       "id": "G000086"
     },
     {
@@ -3437,6 +3558,7 @@
           "Dickmann–Schwartz–Tressl, Spectral Spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000001",
@@ -3461,6 +3583,7 @@
           "Stacks 004R · connected components"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000036",
@@ -3485,6 +3608,7 @@
           "Stacks 004U · irreducible spaces and generic points"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000039",
@@ -3509,6 +3633,7 @@
           "Stacks 04MF · local connectedness"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000041",
@@ -3535,8 +3660,13 @@
         [
           "https://stacks.math.columbia.edu/tag/0059",
           "Stacks 0059 · quasi-compact spaces"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0051",
+          "Stacks 0051 · common source definition"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000208",
@@ -3546,7 +3676,8 @@
           "url": "https://topology.pi-base.org/properties/P000208"
         }
       ],
-      "id": "P000063"
+      "id": "P000063",
+      "definitionTag": "0051"
     },
     {
       "topic": "Topological spaces",
@@ -3561,6 +3692,7 @@
           "Dickmann–Schwartz–Tressl, Spectral Spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000050",
@@ -3589,6 +3721,7 @@
           "Dickmann–Schwartz–Tressl, Spectral Spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000049",
@@ -3617,6 +3750,7 @@
           "Stacks 0050 · Noetherian topological spaces"
         ]
       ],
+      "role": "predicate",
       "pibase": [
         {
           "id": "P000208",
@@ -3641,6 +3775,7 @@
           "Bhatt–Scholze, Prisms and prismatic cohomology, Definition 4.1 and Theorem 1.8"
         ]
       ],
+      "role": "construction",
       "id": "G000087",
       "diagrams": [
         {
@@ -3670,6 +3805,7 @@
           "Bhatt–Scholze, Prisms and prismatic cohomology, Theorem 5.2"
         ]
       ],
+      "role": "construction",
       "id": "G000088",
       "diagrams": [
         {
@@ -3691,6 +3827,7 @@
           "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(2) and 6.3"
         ]
       ],
+      "role": "construction",
       "id": "G000089",
       "diagrams": [
         {
@@ -3716,6 +3853,7 @@
           "Stacks 0FL6 · de Rham cohomology"
         ]
       ],
+      "role": "construction",
       "id": "G000090",
       "diagrams": [
         {
@@ -3737,6 +3875,7 @@
           "Bhatt–Scholze, Prisms and prismatic cohomology, Theorems 1.8(4) and 9.1"
         ]
       ],
+      "role": "construction",
       "id": "G000091",
       "diagrams": [
         {
@@ -3746,7 +3885,7 @@
       ]
     },
     {
-      "topic": "Synthetic geometry",
+      "topic": "Schemes and spaces",
       "kind": "site",
       "key": "site-zar-lfp",
       "subject": "site",
@@ -3762,84 +3901,8 @@
           "Stacks 020S · big Zariski site"
         ]
       ],
-      "id": "G000092",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-site-zar-lfp",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "topic": "Synthetic geometry",
-      "kind": "construction",
-      "key": "syn-local-ring",
-      "subject": "site",
-      "name": "Internal local ring",
-      "definition": "In the little Zariski topos, the structure sheaf satisfies the intuitionistic local-ring axiom. If a sum is 1, the two unit loci cover the open on which the sum is given.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685",
-          "Blechschmidt, Using the internal language of toposes, §3"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/01HA",
-          "Stacks 01HA · locally ringed spaces"
-        ]
-      ],
-      "id": "G000093",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-syn-local-ring",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "topic": "Synthetic geometry",
-      "kind": "construction",
-      "key": "syn-internal-free",
-      "subject": "site",
-      "name": "Internally free module of fixed rank",
-      "definition": "For an $\\mathcal O_S$-module $\\mathcal F$, the little Zariski topos forces the existence of an isomorphism $\\mathcal O_S^n\\simeq \\mathcal F$ for a fixed finite rank $n$.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685",
-          "Blechschmidt, Using the internal language of toposes, §4.1"
-        ]
-      ],
-      "id": "G000094",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-syn-internal-free",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "topic": "Synthetic geometry",
-      "kind": "construction",
-      "key": "syn-external-free",
-      "subject": "site",
-      "name": "Locally free sheaf of fixed rank",
-      "definition": "Every point has an open neighbourhood where the module is free of the given finite rank.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685",
-          "Blechschmidt, Using the internal language of toposes, §4.1"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/01C5",
-          "Stacks 01C5 · locally free modules"
-        ]
-      ],
-      "id": "G000095",
-      "diagrams": [
-        {
-          "anchor": "top-synthetic-algebraic-geometry-syn-external-free",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "role": "structure",
+      "id": "G000092"
     },
     {
       "topic": "Spectral spaces and locales",
@@ -3858,6 +3921,7 @@
           "Blechschmidt, Generalized spaces for constructive algebra"
         ]
       ],
+      "role": "construction",
       "id": "G000096",
       "diagrams": [
         {
@@ -3883,6 +3947,7 @@
           "Hochster, Prime ideal structure in commutative rings, Theorem 6"
         ]
       ],
+      "role": "construction",
       "id": "G000100",
       "diagrams": [
         {
@@ -3908,6 +3973,7 @@
           "Stacks 021L · §34.7, fppf sites"
         ]
       ],
+      "role": "structure",
       "id": "G000097"
     },
     {
@@ -3927,6 +3993,7 @@
           "Stacks 0DE9 · §87.34, the small étale site of a formal algebraic space"
         ]
       ],
+      "role": "structure",
       "id": "G000098"
     },
     {
@@ -3946,6 +4013,7 @@
           "Stacks 009H · sheaves on a basis"
         ]
       ],
+      "role": "structure",
       "id": "G000099"
     },
     {
@@ -3961,6 +4029,7 @@
           "Stacks 00VH · site specified by covering families"
         ]
       ],
+      "role": "construction",
       "id": "G000101"
     },
     {
@@ -3980,6 +4049,7 @@
           "Stacks 00Z2 · pullback of a sieve"
         ]
       ],
+      "role": "construction",
       "id": "G000102"
     },
     {
@@ -3999,6 +4069,7 @@
           "Stacks 00Z8 · sheaf condition for covering sieves"
         ]
       ],
+      "role": "structure",
       "id": "G000103"
     },
     {
@@ -4018,6 +4089,7 @@
           "Stacks 00ZM · sheafification for a topology in sieves"
         ]
       ],
+      "role": "construction",
       "id": "G000104"
     },
     {
@@ -4026,21 +4098,14 @@
       "key": "stacks-subcanonical",
       "subject": "site",
       "name": "Subcanonical topology",
-      "definition": "A topology on $\\mathcal C$ is subcanonical when every representable presheaf is a sheaf, or equivalently when the topology is contained in the canonical topology. In the covering-family convention, each cover is a universal effective epimorphism of families.",
+      "definition": "A Grothendieck topology $J$ on $\\mathcal C$ is subcanonical if, for every object $U$ of $\\mathcal C$, the representable presheaf $h_U$ is a $J$-sheaf.",
       "refs": [
-        [
-          "https://stacks.math.columbia.edu/tag/00WP",
-          "Stacks 00WP · universal effective epimorphisms"
-        ],
         [
           "https://stacks.math.columbia.edu/tag/00WQ",
           "Stacks 00WQ · subcanonical site"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/00ZA",
-          "Stacks 00ZA · canonical topology in sieves"
         ]
       ],
+      "role": "predicate",
       "id": "G000105"
     },
     {
@@ -4060,6 +4125,7 @@
           "Stacks 00Y4 · point of a topos"
         ]
       ],
+      "role": "construction",
       "id": "G000106"
     },
     {
@@ -4079,6 +4145,7 @@
           "Stacks 00YK · conservative family of points"
         ]
       ],
+      "role": "construction",
       "id": "G000107"
     },
     {
@@ -4098,6 +4165,7 @@
           "Stacks 090L · enough weakly contractible objects"
         ]
       ],
+      "role": "construction",
       "id": "G000108"
     },
     {
@@ -4113,7 +4181,296 @@
           "Stacks 021S · big affine fppf site"
         ]
       ],
+      "role": "structure",
       "id": "G000109"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "found-hypercompletion",
+      "subject": "site",
+      "role": "construction",
+      "name": "Hypercompletion",
+      "ambient": "An ∞-topos",
+      "definition": "For an ∞-topos $\\mathcal X$, form the accessible left exact localization at its ∞-connective morphisms. The resulting full reflective subcategory $\\mathcal X^\\wedge$ consists of objects local with respect to those morphisms.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=687",
+          "Lurie, Higher Topos Theory, §6.5.2"
+        ]
+      ],
+      "id": "G000110"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "found-hypercomplete-object",
+      "subject": "site",
+      "role": "predicate",
+      "name": "Hypercomplete object",
+      "ambient": "Objects of an ∞-topos",
+      "definition": "An object $Z$ is hypercomplete if for every ∞-connective morphism $f:A\\to B$, precomposition gives an equivalence $\\operatorname{Map}(B,Z)\\simeq\\operatorname{Map}(A,Z)$.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=687",
+          "Lurie, Higher Topos Theory, §6.5.2"
+        ]
+      ],
+      "id": "G000111"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "topos",
+      "key": "found-hypercomplete-topos",
+      "subject": "site",
+      "role": "predicate",
+      "name": "Hypercomplete ∞-topos",
+      "ambient": "∞-topoi",
+      "definition": "An ∞-topos $\\mathcal X$ is hypercomplete if every ∞-connective morphism in $\\mathcal X$ is an equivalence.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=687",
+          "Lurie, Higher Topos Theory, §6.5.2"
+        ]
+      ],
+      "id": "G000112"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "found-hypercover",
+      "subject": "site",
+      "role": "structure",
+      "name": "Hypercover",
+      "ambient": "Simplicial objects in a slice ∞-topos",
+      "definition": "A simplicial object $U_\\bullet$ in $\\mathcal X_{/V}$ is a hypercover of $V$ when for each $n\\geq0$ the map $U_n\\to(\\operatorname{cosk}_{n-1}U_\\bullet)_n$ is an effective epimorphism in the slice. In degree zero the matching object is the terminal object $V$ of the slice.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=693",
+          "Lurie, Higher Topos Theory, Definition 6.5.3.2, applied in the slice"
+        ]
+      ],
+      "id": "G000113"
+    },
+    {
+      "topic": "Foundations",
+      "kind": "construction",
+      "key": "found-effective-hypercover",
+      "subject": "site",
+      "role": "predicate",
+      "name": "Effective hypercover",
+      "ambient": "Hypercovers in a slice ∞-topos",
+      "definition": "A hypercover $U_\\bullet$ of $V$ is effective if its colimit in $\\mathcal X_{/V}$ is terminal; equivalently the augmentation induces an equivalence $|U_\\bullet|\\simeq V$ in $\\mathcal X$.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=693",
+          "Lurie, Higher Topos Theory, Definition 6.5.3.2, applied in the slice"
+        ]
+      ],
+      "id": "G000116"
+    },
+    {
+      "topic": "Arithmetic",
+      "kind": "construction",
+      "key": "found-bounded-prism",
+      "subject": "site",
+      "role": "predicate",
+      "name": "Bounded prism",
+      "ambient": "Prisms at a fixed prime p",
+      "definition": "A prism $(A,I)$ is bounded if there is an integer $n\\geq0$ such that $p^n(A/I)[p^\\infty]=0$.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Definition 1.1"
+        ]
+      ],
+      "id": "G000114"
+    },
+    {
+      "topic": "Spectral spaces and locales",
+      "kind": "construction",
+      "key": "found-frame",
+      "subject": "site",
+      "role": "structure",
+      "name": "Frame",
+      "ambient": "Complete lattices",
+      "definition": "A frame is a complete lattice in which finite meets distribute over arbitrary joins. Frame homomorphisms preserve finite meets and arbitrary joins.",
+      "refs": [
+        [
+          "https://dml.cz/handle/10338.dmlcz/118836",
+          "Banaschewski, Radical ideals and coherent frames, §1"
+        ]
+      ],
+      "id": "G000115"
+    },
+    {
+      "topic": "Topological spaces",
+      "kind": "property",
+      "key": "sp-lnoeth",
+      "subject": "space",
+      "name": "Locally Noetherian space",
+      "definition": "Every point has a neighbourhood whose subspace topology is Noetherian. The neighbourhood is required to contain an open neighbourhood of the point.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0051",
+          "Stacks 0051 · source for the predicate"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0051",
+          "Stacks 0051 · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000067",
+      "definitionTag": "0051"
+    },
+    {
+      "topic": "Topological spaces",
+      "kind": "property",
+      "key": "sp-finite-irred-components",
+      "subject": "space",
+      "name": "Finitely many irreducible components",
+      "definition": "The set of maximal nonempty irreducible closed subsets of the space is finite.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/004V",
+          "Stacks 004V · source for the predicate"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000068"
+    },
+    {
+      "topic": "Topological spaces",
+      "kind": "property",
+      "key": "sp-components-interior",
+      "subject": "space",
+      "name": "Every irreducible component has nonempty interior",
+      "definition": "For each maximal nonempty irreducible closed subset, its interior in the ambient space is nonempty.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/004V",
+          "Stacks 004V · source for the predicate"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000069"
+    },
+    {
+      "topic": "Algebraic spaces",
+      "kind": "property",
+      "key": "as-separated",
+      "subject": "algebraic-space",
+      "name": "Separated algebraic space",
+      "definition": "Take the absolute diagonal $\\Delta_X:X\\to X\\times_{\\operatorname{Spec}\\mathbf Z} X$. It is a closed immersion.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · source for the predicate"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000070",
+      "definitionTag": "03BS"
+    },
+    {
+      "topic": "Algebraic spaces",
+      "kind": "property",
+      "key": "as-locally-separated",
+      "subject": "algebraic-space",
+      "name": "Locally separated algebraic space",
+      "definition": "Take the absolute diagonal $\\Delta_X:X\\to X\\times_{\\operatorname{Spec}\\mathbf Z} X$. It is an immersion.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · source for the predicate"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000071",
+      "definitionTag": "03BS"
+    },
+    {
+      "topic": "Algebraic spaces",
+      "kind": "property",
+      "key": "as-quasi-separated",
+      "subject": "algebraic-space",
+      "name": "Quasi-separated algebraic space",
+      "definition": "Take the absolute diagonal $\\Delta_X:X\\to X\\times_{\\operatorname{Spec}\\mathbf Z} X$. It is quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · source for the predicate"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000072",
+      "definitionTag": "03BS"
+    },
+    {
+      "topic": "Algebraic spaces",
+      "kind": "property",
+      "key": "as-zariski-locally-qs",
+      "subject": "algebraic-space",
+      "name": "Zariski locally quasi-separated algebraic space",
+      "definition": "There is a Zariski open cover by quasi-separated algebraic spaces.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · source for the predicate"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/03BS",
+          "Stacks 03BS · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000073",
+      "definitionTag": "03BS"
+    },
+    {
+      "topic": "Algebraic spaces",
+      "kind": "property",
+      "key": "as-affine-fibre-test",
+      "subject": "algebraic-space",
+      "name": "Quasi-compact fibre products of affine tests",
+      "definition": "For every pair of morphisms $U\\to X$ and $V\\to X$ from affine schemes, the scheme $U\\times_XV$ is quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0AHR",
+          "Stacks 0AHR · source for the predicate"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000074"
+    },
+    {
+      "topic": "Algebraic spaces",
+      "kind": "property",
+      "key": "as-qc-fibre-test",
+      "subject": "algebraic-space",
+      "name": "Quasi-compact fibre products of quasi-compact tests",
+      "definition": "For every pair of morphisms $U\\to X$ and $V\\to X$ from quasi-compact schemes, the scheme $U\\times_XV$ is quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0AHR",
+          "Stacks 0AHR · source for the predicate"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000075"
     }
   ],
   "theorems": [
@@ -5737,7 +6094,7 @@
       ],
       "ambient": "A universal property holds on the underlying spaces after every scheme base change $Y^{\\prime}\\to Y$.",
       "diagram": "edge-relative-topological-re-fplfp-re-open",
-      "name": "Flat and locally finitely presented ⇒ Universally open",
+      "name": "Flat ∧ locally finitely presented ⇒ Universally open",
       "id": "T000073"
     },
     {
@@ -6220,7 +6577,7 @@
       ],
       "kind": "equivalence",
       "subject": "morphism",
-      "name": "Flat + Locally of finite presentation ⇔ Flat and locally finitely presented",
+      "name": "Flat + Locally of finite presentation ⇔ Flat ∧ locally finitely presented",
       "id": "T000092"
     },
     {
@@ -6507,6 +6864,206 @@
       "id": "T000124"
     },
     {
+      "key": "logic-noeth-local",
+      "requires": [
+        "P000063"
+      ],
+      "concludes": [
+        "P000067"
+      ],
+      "kind": "implies",
+      "proof": "The whole space is a Noetherian neighbourhood of each point.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0051",
+          "Stacks 0051 · original numbered result"
+        ]
+      ],
+      "subject": "space",
+      "name": "Noetherian topological space ⇒ Locally Noetherian space",
+      "id": "T000164"
+    },
+    {
+      "key": "logic-lnoeth-lconn",
+      "requires": [
+        "P000067"
+      ],
+      "concludes": [
+        "P000062"
+      ],
+      "kind": "implies",
+      "proof": "In a Noetherian neighbourhood there are finitely many irreducible components and hence finitely many connected components, all open in the neighbourhood. Apply this within an arbitrary open neighbourhood.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04MF",
+          "Stacks 04MF · original numbered result"
+        ]
+      ],
+      "subject": "space",
+      "name": "Locally Noetherian space ⇒ Locally connected space",
+      "id": "T000165"
+    },
+    {
+      "key": "logic-noeth-finite-components",
+      "requires": [
+        "P000063"
+      ],
+      "concludes": [
+        "P000068"
+      ],
+      "kind": "implies",
+      "proof": "Noetherian induction on closed subsets gives a finite decomposition into irreducible closed sets; the maximal members are the irreducible components.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0052",
+          "Stacks 0052 · original numbered result"
+        ]
+      ],
+      "subject": "space",
+      "name": "Noetherian topological space ⇒ Finitely many irreducible components",
+      "id": "T000166"
+    },
+    {
+      "key": "logic-noeth-component-interior",
+      "requires": [
+        "P000063"
+      ],
+      "concludes": [
+        "P000069"
+      ],
+      "kind": "implies",
+      "proof": "Remove from the space the union of all other irreducible components. The remaining open is contained in the chosen component and is nonempty by irreducibility and maximality.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0052",
+          "Stacks 0052 · original numbered result"
+        ]
+      ],
+      "subject": "space",
+      "name": "Noetherian topological space ⇒ Every irreducible component has nonempty interior",
+      "id": "T000167"
+    },
+    {
+      "key": "logic-noeth-qc",
+      "requires": [
+        "P000063"
+      ],
+      "concludes": [
+        "P000052"
+      ],
+      "kind": "implies",
+      "proof": "The ascending chain condition on opens implies every open union is a finite union of members of the given family, by taking a maximal finite union.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04ZA",
+          "Stacks 04ZA · original numbered result"
+        ]
+      ],
+      "subject": "space",
+      "name": "Noetherian topological space ⇒ Quasi-compact space",
+      "id": "T000168"
+    },
+    {
+      "key": "logic-as-separated-ls",
+      "requires": [
+        "P000070"
+      ],
+      "concludes": [
+        "P000071"
+      ],
+      "kind": "implies",
+      "proof": "A closed immersion is an immersion.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03DY",
+          "Stacks 03DY · original numbered result"
+        ]
+      ],
+      "subject": "algebraic-space",
+      "name": "Separated algebraic space ⇒ Locally separated algebraic space",
+      "id": "T000169"
+    },
+    {
+      "key": "logic-as-separated-qs",
+      "requires": [
+        "P000070"
+      ],
+      "concludes": [
+        "P000072"
+      ],
+      "kind": "implies",
+      "proof": "A closed immersion is quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03DY",
+          "Stacks 03DY · original numbered result"
+        ]
+      ],
+      "subject": "algebraic-space",
+      "name": "Separated algebraic space ⇒ Quasi-separated algebraic space",
+      "id": "T000170"
+    },
+    {
+      "key": "logic-as-qs-zlqs",
+      "requires": [
+        "P000072"
+      ],
+      "concludes": [
+        "P000073"
+      ],
+      "kind": "implies",
+      "proof": "The space is itself a quasi-separated Zariski open cover with one member.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/03DY",
+          "Stacks 03DY · original numbered result"
+        ]
+      ],
+      "subject": "algebraic-space",
+      "name": "Quasi-separated algebraic space ⇒ Zariski locally quasi-separated algebraic space",
+      "id": "T000171"
+    },
+    {
+      "key": "logic-as-affine-test",
+      "requires": [
+        "P000072"
+      ],
+      "concludes": [
+        "P000074"
+      ],
+      "kind": "equivalence",
+      "proof": "The diagonal is quasi-compact precisely when this can be checked on affine test pairs.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0AHR",
+          "Stacks 0AHR · original numbered result"
+        ]
+      ],
+      "subject": "algebraic-space",
+      "name": "Quasi-separated algebraic space ⇔ Quasi-compact fibre products of affine tests",
+      "id": "T000172"
+    },
+    {
+      "key": "logic-as-qc-test",
+      "requires": [
+        "P000072"
+      ],
+      "concludes": [
+        "P000075"
+      ],
+      "kind": "equivalence",
+      "proof": "Use quasi-compactness under base change and a finite affine cover of each quasi-compact source; the converse includes the affine tests.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0AHR",
+          "Stacks 0AHR · original numbered result"
+        ]
+      ],
+      "subject": "algebraic-space",
+      "name": "Quasi-separated algebraic space ⇔ Quasi-compact fibre products of quasi-compact tests",
+      "id": "T000173"
+    },
+    {
       "subject": "site",
       "kind": "comparison",
       "key": "qc-basis-sheaves",
@@ -6766,86 +7323,12 @@
     {
       "subject": "site",
       "kind": "comparison",
-      "key": "internal-local",
-      "name": "Locality of the structure sheaf",
-      "related": [
-        "G000074",
-        "G000035",
-        "G000093"
-      ],
-      "proof": "An element of the structure sheaf with a local inverse at a point is invertible on a neighbourhood. If a sum is 1 then at each stalk at least one summand is a unit; the two invertibility loci cover the open of definition, proving the internal disjunction.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685v1",
-          "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
-        ],
-        [
-          "https://arxiv.org/abs/2111.03685",
-          "Blechschmidt, Using the internal language of toposes, §3"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/01HA",
-          "Stacks 01HA · locally ringed spaces"
-        ]
-      ],
-      "relation": "implication",
-      "hypotheses": "Let $S$ be a scheme. Work in the little Zariski topos and use its structure sheaf $\\mathcal O_S$.",
-      "statement": "The sheaf $\\mathcal O_S$ is internally a local ring. For $a+b=1$ on an open, the unit loci of $a$ and $b$ cover that open since all stalks are local rings. This forces the internal disjunction.",
-      "id": "T000107",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-internal-local",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "subject": "site",
-      "kind": "comparison",
-      "key": "internal-free",
-      "name": "Local freeness in the internal language",
-      "related": [
-        "G000074",
-        "G000035",
-        "G000094",
-        "G000095"
-      ],
-      "proof": "For fixed finite rank n, an internal witness that a module is isomorphic to the free module of rank n means that on an open cover there are such isomorphisms. These local witnesses are precisely a local trivialization in the external sense.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685v1",
-          "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
-        ],
-        [
-          "https://arxiv.org/abs/2111.03685",
-          "Blechschmidt, Using the internal language of toposes, §4.1"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/01C5",
-          "Stacks 01C5 · locally free modules"
-        ]
-      ],
-      "relation": "equivalence",
-      "hypotheses": "Let $\\mathcal F$ be an $\\mathcal O_S$-module on a scheme $S$ and fix an external integer $n\\geq0$.",
-      "statement": "The little Zariski topos forces the existence of an isomorphism $\\mathcal O_S^n\\simeq \\mathcal F$ exactly when $\\mathcal F$ is locally free of rank $n$. The witnesses live on a Zariski open cover.",
-      "id": "T000108",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-internal-free",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "subject": "site",
-      "kind": "comparison",
       "key": "compare-zariski-topoi",
       "name": "Little and big Zariski comparison",
       "related": [
         "G000035",
         "G000037",
-        "G000036",
-        "G000075"
+        "G000036"
       ],
       "proof": "For the big site chosen in the thesis, §16 constructs the comparison with the little topos and describes how the structure sheaves and internal statements transform. The restricted affine finite presentation model has its own specified hypotheses and is not being identified here with the entire category of schemes over an arbitrary base.",
       "refs": [
@@ -6865,13 +7348,7 @@
       "relation": "site",
       "hypotheses": "Let $S$ be a scheme. Choose a big Zariski site as in Blechschmidt §15, containing the opens of $S$, and let $\\operatorname{Sh}(S)$ denote the little Zariski topos.",
       "statement": "The geometric morphism $\\pi:\\operatorname{Zar}(S)\\to\\operatorname{Sh}(S)$ is connected and local. The direct image $\\pi_*$ is restriction and has a fully faithful right adjoint, giving a section of $\\pi$.",
-      "id": "T000109",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-compare-zariski-topoi",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "id": "T000109"
     },
     {
       "subject": "site",
@@ -7238,13 +7715,7 @@
           "Stacks 03A0 · general comparison lemma"
         ]
       ],
-      "id": "T000131",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-zar-affine-lfp",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "id": "T000131"
     },
     {
       "subject": "site",
@@ -7265,71 +7736,7 @@
           "Blechschmidt, Using the internal language of toposes, §§15–16"
         ]
       ],
-      "id": "T000132",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-zar-affine-little",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "subject": "site",
-      "kind": "comparison",
-      "key": "zar-higher-model",
-      "name": "Higher Zariski model",
-      "relation": "site",
-      "related": [
-        "G000037",
-        "G000076"
-      ],
-      "hypotheses": "Fix a base ring and the site opposite to its finitely presented algebras, with finite principal covers generating the unit ideal. Use the higher sheaf model and the universe conventions of the cited paper.",
-      "statement": "The higher Zariski topos supplies a model of the stated synthetic axioms. Its 0-truncated sheaves recover the ordinary sheaves of sets on the same affine site.",
-      "proof": "The higher Zariski topos supplies a model of the stated synthetic axioms. Its 0-truncated sheaves recover the ordinary sheaves of sets on the same affine site.",
-      "refs": [
-        [
-          "https://arxiv.org/html/2307.00073v2#S8",
-          "Cherubini–Coquand–Hutzler, A Foundation for Synthetic Algebraic Geometry, §8"
-        ],
-        [
-          "https://www.math.ias.edu/~lurie/papers/HTT.pdf",
-          "Lurie, Higher Topos Theory, §6.4.5"
-        ]
-      ],
-      "id": "T000133",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-zar-higher-model",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
-    },
-    {
-      "subject": "site",
-      "kind": "comparison",
-      "key": "syn-little-semantics",
-      "name": "Free modules in the internal language",
-      "relation": "construction",
-      "related": [
-        "G000035",
-        "G000094"
-      ],
-      "hypotheses": "Work in the little Zariski topos of a scheme $S$, with an $\\mathcal O_S$-module and a fixed finite rank $n$.",
-      "statement": "Interpret the existence of a basis in the Kripke–Joyal semantics. An existential witness over an open is given on an open cover, with the same rank fixed throughout.",
-      "proof": "Interpret the existence of a basis in the Kripke–Joyal semantics. An existential witness over an open is given on an open cover, with the same rank fixed throughout.",
-      "refs": [
-        [
-          "https://arxiv.org/abs/2111.03685",
-          "Blechschmidt, Using the internal language of toposes, §§2.2 and 4.1"
-        ]
-      ],
-      "id": "T000134",
-      "diagrams": [
-        {
-          "anchor": "edge-synthetic-algebraic-geometry-syn-little-semantics",
-          "title": "Synthetic algebraic geometry"
-        }
-      ]
+      "id": "T000132"
     },
     {
       "subject": "site",
@@ -8068,6 +8475,224 @@
         ]
       ],
       "id": "T000163"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-canonical-criterion",
+      "relation": "criterion",
+      "related": [
+        "G000034",
+        "G000105"
+      ],
+      "name": "Criterion for a subcanonical topology",
+      "hypotheses": "Fix a small category $\\mathcal C$. Let $J$ be a Grothendieck topology on $\\mathcal C$, and order topologies by inclusion of covering sieves.",
+      "statement": "$J$ is subcanonical if and only if $J\\subseteq J_{\\mathrm{can}}$. One direction is maximality. Conversely, a representable sheaf for $J_{\\mathrm{can}}$ satisfies the sheaf condition on every $J$-covering sieve.",
+      "proof": "$J$ is subcanonical if and only if $J\\subseteq J_{\\mathrm{can}}$. One direction is maximality. Conversely, a representable sheaf for $J_{\\mathrm{can}}$ satisfies the sheaf condition on every $J$-covering sieve.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00ZA",
+          "Stacks 00ZA · definition and maximality"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00WQ",
+          "Stacks 00WQ · subcanonicality"
+        ]
+      ],
+      "id": "T000175"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-canonical-subcanonical",
+      "relation": "implication",
+      "related": [
+        "G000034",
+        "G000105"
+      ],
+      "name": "The canonical topology is subcanonical",
+      "hypotheses": "Fix a small category $\\mathcal C$ and use its canonical topology $J_{\\mathrm{can}}$.",
+      "statement": "Every representable presheaf on $\\mathcal C$ is a $J_{\\mathrm{can}}$-sheaf. Thus the canonical topology itself satisfies the predicate of subcanonicality.",
+      "proof": "Every representable presheaf on $\\mathcal C$ is a $J_{\\mathrm{can}}$-sheaf. Thus the canonical topology itself satisfies the predicate of subcanonicality.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/00ZA",
+          "Stacks 00ZA · definition of the canonical topology"
+        ]
+      ],
+      "id": "T000181"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-topos-hypercompletion",
+      "relation": "construction",
+      "related": [
+        "G000033",
+        "G000110"
+      ],
+      "name": "Localize at ∞-connective morphisms",
+      "hypotheses": "Let $\\mathcal X$ be an ∞-topos.",
+      "statement": "The ∞-connective maps are stable under pullback and form a strongly saturated class of small generation. Their localization is accessible and left exact; its target $\\mathcal X^\\wedge$ is again an ∞-topos.",
+      "proof": "The ∞-connective maps are stable under pullback and form a strongly saturated class of small generation. Their localization is accessible and left exact; its target $\\mathcal X^\\wedge$ is again an ∞-topos.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=687",
+          "Lurie, Higher Topos Theory, Proposition 6.5.2.8 and following construction"
+        ]
+      ],
+      "id": "T000176"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-hypercompletion-is-hypercomplete",
+      "relation": "construction",
+      "related": [
+        "G000110",
+        "G000112"
+      ],
+      "name": "Hypercompletion produces a hypercomplete ∞-topos",
+      "hypotheses": "Let $\\mathcal X$ be an ∞-topos.",
+      "statement": "The ∞-topos $\\mathcal X^\\wedge$ is hypercomplete. The original $\\mathcal X$ is hypercomplete precisely when the localization functor is an equivalence.",
+      "proof": "The ∞-topos $\\mathcal X^\\wedge$ is hypercomplete. The original $\\mathcal X$ is hypercomplete precisely when the localization functor is an equivalence.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=687",
+          "Lurie, Higher Topos Theory, Lemma 6.5.2.12"
+        ]
+      ],
+      "id": "T000177"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-hypercomplete-object-membership",
+      "relation": "criterion",
+      "related": [
+        "G000111",
+        "G000110"
+      ],
+      "name": "Objects retained by hypercompletion",
+      "hypotheses": "Let $Z$ be an object of an ∞-topos $\\mathcal X$.",
+      "statement": "$Z$ is hypercomplete if and only if it is in the essential image of $\\mathcal X^\\wedge\\hookrightarrow\\mathcal X$; equivalently its localization unit is an equivalence.",
+      "proof": "$Z$ is hypercomplete if and only if it is in the essential image of $\\mathcal X^\\wedge\\hookrightarrow\\mathcal X$; equivalently its localization unit is an equivalence.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=687",
+          "Lurie, Higher Topos Theory, §6.5.2"
+        ]
+      ],
+      "id": "T000178"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-hypercover-effectivity",
+      "relation": "criterion",
+      "related": [
+        "G000112",
+        "G000116"
+      ],
+      "name": "Criterion by effectivity in all slices",
+      "hypotheses": "Let $\\mathcal X$ be an ∞-topos.",
+      "statement": "$\\mathcal X$ is hypercomplete if and only if, for every object $V$ of $\\mathcal X$, every hypercover of $V$ in the slice $\\mathcal X_{/V}$ is effective.",
+      "proof": "$\\mathcal X$ is hypercomplete if and only if, for every object $V$ of $\\mathcal X$, every hypercover of $V$ in the slice $\\mathcal X_{/V}$ is effective.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=698",
+          "Lurie, Higher Topos Theory, Theorem 6.5.3.12"
+        ]
+      ],
+      "id": "T000182"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-effective-hypercover-hypercover",
+      "relation": "implication",
+      "related": [
+        "G000116",
+        "G000113"
+      ],
+      "name": "An effective hypercover is a hypercover",
+      "hypotheses": "Let $\\mathcal X$ be an ∞-topos and let $V\\in\\mathcal X$.",
+      "statement": "Effectivity adds the colimit condition to the degreewise effective epimorphism conditions.",
+      "proof": "Effectivity adds the colimit condition to the degreewise effective epimorphism conditions.",
+      "refs": [
+        [
+          "https://www.math.ias.edu/~lurie/papers/HTT.pdf#page=693",
+          "Lurie, Higher Topos Theory, Definition 6.5.3.2"
+        ]
+      ],
+      "id": "T000183"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-bounded-prism-prism",
+      "relation": "implication",
+      "related": [
+        "G000114",
+        "G000049"
+      ],
+      "name": "A bounded prism is a prism",
+      "hypotheses": "Work at a fixed prime p.",
+      "statement": "Boundedness is an extra uniform annihilation condition on the p-power torsion of the quotient; all prism axioms remain required.",
+      "proof": "Boundedness is an extra uniform annihilation condition on the p-power torsion of the quotient; all prism axioms remain required.",
+      "refs": [
+        [
+          "https://doi.org/10.4007/annals.2022.196.3.5",
+          "Bhatt–Scholze, Prisms and prismatic cohomology, Definition 1.1"
+        ]
+      ],
+      "id": "T000179"
+    },
+    {
+      "subject": "site",
+      "kind": "comparison",
+      "key": "logic-frame-locale",
+      "relation": "construction",
+      "related": [
+        "G000115",
+        "G000070"
+      ],
+      "name": "Pass to the opposite category",
+      "hypotheses": "Take the category of frames with homomorphisms preserving finite meets and arbitrary joins.",
+      "statement": "The category $\\mathrm{Loc}$ is $\\mathrm{Frm}^{\\mathrm{op}}$. The object assignment is unchanged and each morphism is reversed.",
+      "proof": "The category $\\mathrm{Loc}$ is $\\mathrm{Frm}^{\\mathrm{op}}$. The object assignment is unchanged and each morphism is reversed.",
+      "refs": [
+        [
+          "https://dml.cz/handle/10338.dmlcz/118836",
+          "Banaschewski, Radical ideals and coherent frames, §1"
+        ]
+      ],
+      "id": "T000180"
+    },
+    {
+      "subject": "scheme",
+      "kind": "comparison",
+      "key": "logic-grassmannian-representability",
+      "relation": "construction",
+      "name": "Representability of the Grassmannian functor",
+      "hypotheses": "Fix integers $0<k<n$. For each scheme $S$, let $G(k,n)(S)$ be the set of isomorphism classes of locally free rank $n-k$ quotients of $\\mathcal O_S^{\\oplus n}$, with pullback on morphisms.",
+      "statement": "There exists a scheme $\\mathbf G(k,n)$ and a natural isomorphism $G(k,n)\\simeq\\operatorname{Hom}(-,\\mathbf G(k,n))$.",
+      "proof": "The quotient functor is a Zariski sheaf. For each choice of n−k coordinates, the locus on which their images are a basis is represented by affine k(n−k)-space. These open subfunctors cover the functor.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/089T",
+          "Stacks 089T · representability"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/089U",
+          "Stacks 089U · definition and base change"
+        ],
+        [
+          "https://grassmannian.info/",
+          "Grassmannian.info · classification over the classical homogeneous setting"
+        ]
+      ],
+      "id": "T000174"
     }
   ],
   "examples": [
@@ -8460,71 +9085,6 @@
       ]
     },
     {
-      "id": "synthetic-algebraic-geometry",
-      "title": "Synthetic algebraic geometry",
-      "nodes": [
-        "G000036",
-        "G000035",
-        "G000093",
-        "G000092",
-        "G000037",
-        "G000076",
-        "G000094",
-        "G000095"
-      ],
-      "edges": [
-        {
-          "from": "G000036",
-          "to": "G000035",
-          "theorem": "T000109",
-          "label": "Canonical geometric morphism",
-          "relation": "site"
-        },
-        {
-          "from": "G000035",
-          "to": "G000093",
-          "theorem": "T000107",
-          "label": "Locality of the structure sheaf",
-          "relation": "implication"
-        },
-        {
-          "from": "G000092",
-          "to": "G000037",
-          "theorem": "T000131",
-          "label": "Equivalent sheaf categories",
-          "relation": "site"
-        },
-        {
-          "from": "G000037",
-          "to": "G000035",
-          "theorem": "T000132",
-          "label": "Morphism from the restricted site",
-          "relation": "site"
-        },
-        {
-          "from": "G000037",
-          "to": "G000076",
-          "theorem": "T000133",
-          "label": "Higher sheaves and the model",
-          "relation": "site"
-        },
-        {
-          "from": "G000035",
-          "to": "G000094",
-          "theorem": "T000134",
-          "label": "Interpret an internal basis",
-          "relation": "construction"
-        },
-        {
-          "from": "G000094",
-          "to": "G000095",
-          "theorem": "T000108",
-          "label": "Internal and external freeness",
-          "relation": "equivalence"
-        }
-      ]
-    },
-    {
       "id": "spectral-locales",
       "title": "Spectral spaces and locales",
       "nodes": [
@@ -8650,27 +9210,15 @@
       ]
     ],
     [
-      "Internal and synthetic algebraic geometry",
+      "Logical presentation and internal language",
       [
         [
           "https://arxiv.org/abs/2111.03685v1",
           "Blechschmidt, Using the internal language of toposes in algebraic geometry, Parts II–III"
         ],
         [
-          "https://arxiv.org/abs/2307.00073",
-          "Cherubini–Coquand–Hutzler, A Foundation for Synthetic Algebraic Geometry"
-        ],
-        [
-          "https://arxiv.org/abs/2012.13850",
-          "Blechschmidt, Generalized spaces for constructive algebra"
-        ],
-        [
           "https://www.ingo-blechschmidt.eu/",
           "Blechschmidt, publications and research"
-        ],
-        [
-          "https://etale.site/",
-          "Aaron Mazel-Gee, research index (higher and derived context)"
         ]
       ]
     ],
@@ -8729,10 +9277,45 @@
       ]
     ]
   ],
+  "definitionGroups": {
+    "0051": [
+      "P000063",
+      "P000067"
+    ],
+    "03BS": [
+      "P000070",
+      "P000071",
+      "P000072",
+      "P000073"
+    ],
+    "01KK": [
+      "P000034",
+      "P000035",
+      "P000024",
+      "P000025"
+    ],
+    "08YG": [
+      "P000056",
+      "G000073"
+    ]
+  },
   "stacksIndex": {
     "revision": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "count": 21446,
-    "citedTagCount": 161,
-    "path": "stacks/tags.json"
+    "citedTagCount": 168,
+    "path": "stacks/tags.json",
+    "citations": "stacks/citations.json",
+    "definitions": "stacks/definitions.json"
+  },
+  "piBaseIndex": {
+    "revision": "2ea0ba9cdc7f465b5ad184d65912d9c3f01e1239",
+    "path": "pibase/corpus.json",
+    "counts": {
+      "properties": 249,
+      "theorems": 939,
+      "spaces": 227,
+      "traits": 2151,
+      "stacksLinks": 7
+    }
   }
 }

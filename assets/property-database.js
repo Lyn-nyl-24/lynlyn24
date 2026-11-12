@@ -7,7 +7,7 @@ const records = [...document.querySelectorAll('[data-record]')];
 const normalize = value => value.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replaceAll('π','pi');
 const searchable = records.map(record => [record,normalize(record.dataset.search),
   new Set(record.dataset.externalIds.toLowerCase().split(' ')),new Set(record.dataset.stacksTags.toLowerCase().split(' '))]);
-const search = byId('database-query'), kind = byId('database-kind'), topic = byId('database-topic');
+const search = byId('database-query'), kind = byId('database-kind'), topic = byId('database-topic'), role = byId('database-role');
 const filterPanel = search.closest('.property-filters');
 const resultCount = byId('database-results');
 const clearFilters = byId('database-clear');
@@ -29,6 +29,7 @@ function filter() {
   for (const [record,index,externalIds,stacksTags] of searchable) {
     record.hidden = (kind.value !== '' && kind.value !== record.dataset.kind)
       || (topic.value !== '' && topic.value !== record.dataset.topic && topic.value !== record.dataset.subject)
+      || (role.value !== '' && role.value !== record.dataset.role)
       || !terms.every(term => index.includes(term)) || !external.every(id => externalIds.has(id)) ||
       !stacks.every(id => stacksTags.has(id));
     if (!record.hidden) visible++;
@@ -36,7 +37,7 @@ function filter() {
   for (const cluster of clusters) cluster.hidden = !cluster.querySelector('[data-record]:not([hidden])');
   for (const section of sections) section.hidden = !section.querySelector('.property-cluster:not([hidden])');
   resultCount.textContent = visible === 0 ? 'No matching records.' : visible + ' matching records';
-  clearFilters.hidden = !(search.value || kind.value || topic.value);
+  clearFilters.hidden = !(search.value || kind.value || topic.value || role.value);
 }
 function revealHash() {
   const id = location.hash.slice(1);
@@ -45,7 +46,7 @@ function revealHash() {
   const record = byId(id);
   if (!record) return;
   if (record.hidden) {
-    search.value = kind.value = topic.value = '';
+    search.value = kind.value = topic.value = role.value = '';
     filter();
   }
   record.open = true;
@@ -55,8 +56,9 @@ filterPanel.hidden = false;
 search.addEventListener('input',filter);
 kind.addEventListener('change',filter);
 topic.addEventListener('change',filter);
+role.addEventListener('change',filter);
 clearFilters.addEventListener('click', () => {
-  search.value = kind.value = topic.value = '';
+  search.value = kind.value = topic.value = role.value = '';
   filter();
   search.focus();
 });

@@ -6,6 +6,7 @@
   --after: #725a10;
   --same: #654074;
   box-sizing: border-box;
+  width: 100%;
   max-width: 82rem;
   margin-inline: auto;
   padding: clamp(1.6rem, 4vw, 3.6rem) clamp(.9rem, 3.6vw, 3rem) 4rem;
@@ -67,12 +68,13 @@
 .topo-graph[data-graph="relative-topological"] .topo-board { max-width: 54rem; margin-inline: auto; }
 .topo-fitted .topo-board { min-width: 0 !important; }
 .topo-board .topo-node {
-  position: absolute; display: grid; place-items: center; box-sizing: border-box;
+  position: absolute; display: grid; grid-template: minmax(0,1fr) / minmax(0,1fr);
+  place-items: center; box-sizing: border-box;
   padding: .21em .31em; border: 1px solid var(--plate-line); border-radius: 3px;
   background: var(--paper); color: var(--ink);
   font: 650 var(--label-size, 1rem)/1.13 var(--sans); text-decoration: none; text-align: center;
 }
-.topo-board .topo-node-label { display: block; white-space: nowrap; }
+.topo-board .topo-node-label { display: block; min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 .topo-graph-sites .topo-node math, [data-graph="valuation-covers"] .topo-node math { font-size: 1.13em; }
 .topo-node:is(.topo-prior,.topo-current,.topo-later,.topo-equal) {
   color: var(--state-color);
@@ -212,6 +214,12 @@
 }
 .groth-controls select { width: 100%; min-width: 0; text-overflow: ellipsis; }
 .groth-controls button { cursor: pointer; }
+.groth-view-choices { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .35rem; }
+.groth-view-choices button[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: currentColor;
+  font-weight: 700;
+}
 .groth-legend {
   display: flex;
   flex-wrap: wrap;
@@ -221,8 +229,8 @@
   list-style: none;
   font: .78rem/1.4 var(--sans);
 }
-.groth-legend li { display: inline-flex; align-items: center; gap: .4rem; color: var(--groth-color); }
-.groth-legend span { width: 1.25rem; border-block-start: 2px solid currentColor; }
+.groth-legend :is(li,label) { display: inline-flex; align-items: center; gap: .4rem; color: var(--groth-color); }
+.groth-legend span { width: 1.25rem; flex-shrink: 0; border-block-start: 2px solid currentColor; }
 .groth-legend .groth-refinement span { border-block-start-style: dashed; }
 .groth-legend .groth-equivalence span { border-block-start: 4px double currentColor; }
 .groth-legend .groth-site span { border-block-start-style: dashed; }
@@ -232,8 +240,11 @@
 .groth-equivalence { --groth-color: var(--groth-violet); }
 .groth-cohomology { --groth-color: var(--accent); }
 .groth-construction { --groth-color: var(--groth-gold); }
+.groth-criterion { --groth-color: var(--groth-violet); }
+.groth-legend .groth-criterion span, .groth-criterion .groth-edge-line { stroke-dasharray: 8 3 2 3; border-block-start-style: dashed; }
 .groth-canvas {
   overflow: auto;
+  max-width: 100%;
   max-height: min(57vh, 34rem);
   border: 1px solid var(--soft-line);
   background: color-mix(in srgb, var(--paper) 97%, var(--ink));
@@ -243,6 +254,39 @@
   width: 100%;
   min-width: 52rem;
 }
+.groth-local-controls {
+  display: grid;
+  gap: .5rem;
+  margin-block: .85rem .55rem;
+  font: .85rem/1.4 var(--sans);
+}
+.groth-depth {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  font-weight: 650;
+}
+.groth-depth select {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--soft-line);
+  font: inherit;
+  padding: .35rem .55rem;
+}
+.groth-local-controls fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: .1rem .55rem .35rem;
+  border: 1px solid var(--soft-line);
+}
+.groth-local-controls legend { font-weight: 650; }
+.groth-local-controls .groth-legend { margin: 0; gap: .15rem .75rem; }
+.groth-local-controls input { accent-color: var(--accent); }
+.groth-local-controls label { cursor: pointer; }
+.groth-local-status { margin: 0; color: var(--muted); }
+.groth-local-canvas svg { width: auto; min-width: 0; }
+.groth-local-heading { fill: var(--muted); font: 700 12px/1 var(--sans); }
 .groth-group rect {
   fill: color-mix(in srgb, var(--paper) 95%, var(--ink));
   stroke: var(--soft-line);
@@ -312,87 +356,78 @@
 [data-graph="sites"] .topo-board [data-node="ldh"] { left:34.39655%; top:56.90608%; width:5.34483%; height:10.49724%; }
 [data-graph="sites"] .topo-board [data-node="h"] { left:92.58621%; top:70.71823%; width:5.34483%; height:10.49724%; }
 [data-graph="valuation-covers"] .topo-board { --label-size:2.23684cqi; }
-[data-graph="valuation-covers"] .topo-board [data-node="research-fpqc"] { left:11.64474%; top:13.88889%; width:8.28947%; height:21.11111%; }
+[data-graph="valuation-covers"] .topo-board [data-node="research-fpqc"] { left:11.43421%; top:13.88889%; width:8.71053%; height:21.11111%; }
 [data-graph="valuation-covers"] .topo-board [data-node="research-ph"] { left:11.64474%; top:63.88889%; width:8.28947%; height:21.11111%; }
 [data-graph="valuation-covers"] .topo-board [data-node="research-v"] { left:43.88158%; top:38.88889%; width:8.28947%; height:21.11111%; }
 [data-graph="valuation-covers"] .topo-board [data-node="research-arc"] { left:78.09211%; top:38.88889%; width:8.28947%; height:21.11111%; }
 [data-graph="relative-local"] .topo-board { --label-size:2.57576cqi; }
-[data-graph="relative-local"] .topo-board [data-node="rl-lfp"] { left:5.41667%; top:3.27103%; width:25.22727%; height:25.23364%; }
-[data-graph="relative-local"] .topo-board [data-node="rl-lft"] { left:65.79545%; top:3.27103%; width:17.50000%; height:25.23364%; }
-[data-graph="relative-local"] .topo-board [data-node="rl-etale"] { left:6.62879%; top:40.65421%; width:9.77273%; height:17.75701%; }
-[data-graph="relative-local"] .topo-board [data-node="rl-smooth"] { left:27.34848%; top:40.65421%; width:11.06061%; height:17.75701%; }
-[data-graph="relative-local"] .topo-board [data-node="rl-syntomic"] { left:51.66667%; top:40.65421%; width:13.63636%; height:17.75701%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-lfp"] { left:4.88864%; top:3.27103%; width:26.28333%; height:25.23364%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-lft"] { left:64.85530%; top:3.27103%; width:19.38030%; height:25.23364%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-etale"] { left:5.92045%; top:40.65421%; width:11.18939%; height:17.75701%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-smooth"] { left:25.76439%; top:40.65421%; width:14.22879%; height:17.75701%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-syntomic"] { left:50.08258%; top:40.65421%; width:16.80455%; height:17.75701%; }
 [data-graph="relative-local"] .topo-board [data-node="rl-flat"] { left:80.83333%; top:40.65421%; width:9.54545%; height:17.75701%; }
-[data-graph="relative-local"] .topo-board [data-node="rl-unramified"] { left:4.92424%; top:72.89720%; width:16.21212%; height:17.75701%; }
-[data-graph="relative-local"] .topo-board [data-node="rl-lci"] { left:53.56061%; top:69.15888%; width:21.36364%; height:25.23364%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-unramified"] { left:3.34015%; top:72.89720%; width:19.38030%; height:17.75701%; }
+[data-graph="relative-local"] .topo-board [data-node="rl-lci"] { left:52.13106%; top:69.15888%; width:24.22273%; height:25.23364%; }
 [data-graph="absolute-local"] .topo-board { --label-size:2.57576cqi; }
-[data-graph="absolute-local"] .topo-board [data-node="al-lnoeth"] { left:6.28788%; top:7.47664%; width:26.51515%; height:17.75701%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-lconn"] { left:61.47727%; top:7.47664%; width:25.22727%; height:17.75701%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-regular"] { left:6.85606%; top:40.18692%; width:12.34848%; height:17.75701%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-normal"] { left:39.01515%; top:40.18692%; width:11.06061%; height:17.75701%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-reduced"] { left:70.03788%; top:40.18692%; width:12.34848%; height:17.75701%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-lci"] { left:7.50000%; top:69.15888%; width:21.36364%; height:25.23364%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-gorenstein"] { left:41.59091%; top:72.89720%; width:16.21212%; height:17.75701%; }
-[data-graph="absolute-local"] .topo-board [data-node="al-cm"] { left:67.72727%; top:72.89720%; width:24.84848%; height:17.75701%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-lnoeth"] { left:9.76515%; top:3.73832%; width:19.56061%; height:25.23364%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-lconn"] { left:59.76439%; top:7.47664%; width:28.65303%; height:17.75701%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-regular"] { left:5.76136%; top:40.18692%; width:14.53788%; height:17.75701%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-normal"] { left:37.81742%; top:40.18692%; width:13.45606%; height:17.75701%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-reduced"] { left:68.55682%; top:40.18692%; width:15.31061%; height:17.75701%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-lci"] { left:6.07045%; top:69.15888%; width:24.22273%; height:25.23364%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-gorenstein"] { left:39.91667%; top:72.89720%; width:19.56061%; height:17.75701%; }
+[data-graph="absolute-local"] .topo-board [data-node="al-cm"] { left:66.23712%; top:72.89720%; width:27.82879%; height:17.75701%; }
 [data-graph="relative-global"] .topo-board { --label-size:2.57576cqi; }
-[data-graph="relative-global"] .topo-board [data-node="rg-affine"] { left:6.28788%; top:4.65753%; width:11.06061%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-quasiaffine"] { left:34.09091%; top:4.65753%; width:18.78788%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-finite"] { left:6.28788%; top:25.20548%; width:11.06061%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-projective"] { left:3.71212%; top:45.75342%; width:16.21212%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-quasiprojective"] { left:31.51515%; top:45.75342%; width:23.93939%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-qc"] { left:70.68182%; top:45.75342%; width:20.45455%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-proper"] { left:6.28788%; top:68.21918%; width:11.06061%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-separated"] { left:36.02273%; top:68.21918%; width:14.92424%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-qs"] { left:69.58333%; top:68.21918%; width:22.65152%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-ft"] { left:31.43939%; top:86.30137%; width:21.36364%; height:10.41096%; }
-[data-graph="relative-global"] .topo-board [data-node="rg-fp"] { left:70.15152%; top:84.10959%; width:18.78788%; height:14.79452%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-affine"] { left:5.38636%; top:4.65753%; width:12.86364%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-quasiaffine"] { left:32.03030%; top:4.65753%; width:22.90909%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-finite"] { left:5.77273%; top:25.20548%; width:12.09091%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-projective"] { left:2.42424%; top:45.75342%; width:18.78788%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-quasiprojective"] { left:29.06818%; top:45.75342%; width:28.83333%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-qc"] { left:67.93485%; top:45.75342%; width:25.94848%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-proper"] { left:5.00000%; top:68.21918%; width:13.63636%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-separated"] { left:34.15530%; top:68.21918%; width:18.65909%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-qs"] { left:66.55682%; top:68.21918%; width:28.70455%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-ft"] { left:30.20303%; top:86.30137%; width:23.83636%; height:10.41096%; }
+[data-graph="relative-global"] .topo-board [data-node="rg-fp"] { left:68.21970%; top:84.10959%; width:22.65152%; height:14.79452%; }
 [data-graph="absolute-global"] .topo-board { --label-size:2.57576cqi; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-irred"] { left:6.25000%; top:4.65753%; width:17.50000%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-connected"] { left:37.99242%; top:4.65753%; width:14.92424%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-local"] { left:4.65909%; top:30.13699%; width:9.77273%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-affine"] { left:25.37879%; top:30.13699%; width:11.06061%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-quasiaffine"] { left:46.21212%; top:30.13699%; width:18.78788%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-qc"] { left:73.10606%; top:30.13699%; width:20.45455%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-separated"] { left:48.14394%; top:55.06849%; width:14.92424%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-qs"] { left:72.00758%; top:55.06849%; width:22.65152%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-noeth"] { left:75.22727%; top:4.65753%; width:16.21212%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-integral"] { left:38.63636%; top:75.61644%; width:13.63636%; height:10.41096%; }
-[data-graph="absolute-global"] .topo-board [data-node="ag-spectral"] { left:73.48485%; top:75.61644%; width:13.63636%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-irred"] { left:5.28409%; top:4.65753%; width:19.43182%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-connected"] { left:36.12500%; top:4.65753%; width:18.65909%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-local"] { left:4.46591%; top:30.13699%; width:10.15909%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-affine"] { left:24.47727%; top:30.13699%; width:12.86364%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-quasiaffine"] { left:44.15152%; top:30.13699%; width:22.90909%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-qc"] { left:70.35909%; top:30.13699%; width:25.94848%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-separated"] { left:46.27652%; top:55.06849%; width:18.65909%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-qs"] { left:68.98106%; top:55.06849%; width:28.70455%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-noeth"] { left:73.55303%; top:4.65753%; width:19.56061%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-integral"] { left:37.86364%; top:75.61644%; width:15.18182%; height:10.41096%; }
+[data-graph="absolute-global"] .topo-board [data-node="ag-spectral"] { left:72.19697%; top:75.61644%; width:16.21212%; height:10.41096%; }
 [data-graph="relative-topological"] .topo-board { --label-size:2.57576cqi; }
-[data-graph="relative-topological"] .topo-board [data-node="re-fplfp"] { left:8.25758%; top:3.96825%; width:26.51515%; height:21.42857%; }
-[data-graph="relative-topological"] .topo-board [data-node="re-open"] { left:59.69697%; top:7.14286%; width:23.93939%; height:15.07937%; }
+[data-graph="relative-topological"] .topo-board [data-node="re-fplfp"] { left:6.35152%; top:3.96825%; width:30.32727%; height:21.42857%; }
+[data-graph="relative-topological"] .topo-board [data-node="re-open"] { left:58.04848%; top:7.14286%; width:27.23636%; height:15.07937%; }
 [data-graph="relative-topological"] .topo-board [data-node="re-homeo"] { left:8.40909%; top:38.49206%; width:28.03030%; height:21.42857%; }
-[data-graph="relative-topological"] .topo-board [data-node="re-closed"] { left:59.31818%; top:41.66667%; width:26.51515%; height:15.07937%; }
-[data-graph="relative-topological"] .topo-board [data-node="re-surj"] { left:7.80303%; top:75.00000%; width:16.21212%; height:15.07937%; }
-[data-graph="relative-topological"] .topo-board [data-node="re-radicial"] { left:42.15909%; top:71.82540%; width:17.50000%; height:21.42857%; }
-[data-graph="relative-topological"] .topo-board [data-node="re-integral"] { left:71.32576%; top:75.00000%; width:25.22727%; height:15.07937%; }
+[data-graph="relative-topological"] .topo-board [data-node="re-closed"] { left:62.73106%; top:38.49206%; width:19.68939%; height:21.42857%; }
+[data-graph="relative-topological"] .topo-board [data-node="re-surj"] { left:6.51515%; top:75.00000%; width:18.78788%; height:15.07937%; }
+[data-graph="relative-topological"] .topo-board [data-node="re-radicial"] { left:41.06439%; top:71.82540%; width:19.68939%; height:21.42857%; }
+[data-graph="relative-topological"] .topo-board [data-node="re-integral"] { left:75.36970%; top:71.82540%; width:17.13939%; height:21.42857%; }
 [data-graph="crystalline-prismatic"] .topo-board { --label-size:1.54545cqi; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-crys-big"] { left:10.47727%; top:4.39331%; width:13.59091%; height:11.29707%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-crys-small"] { left:42.36364%; top:4.39331%; width:14.36364%; height:11.29707%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-petit-zar"] { left:73.02273%; top:6.06695%; width:16.68182%; height:7.94979%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-prism-abs"] { left:10.86364%; top:29.49791%; width:12.81818%; height:11.29707%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-prism-rel"] { left:43.13636%; top:29.49791%; width:12.81818%; height:11.29707%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-prismatic"] { left:76.50000%; top:29.49791%; width:9.72727%; height:11.29707%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-crystalline"] { left:15.20455%; top:58.15900%; width:10.50000%; height:11.29707%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-padic-derham"] { left:41.59091%; top:59.83264%; width:15.90909%; height:7.94979%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-ht-forms"] { left:74.18182%; top:59.83264%; width:14.36364%; height:7.94979%; }
-[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-eta-etale"] { left:83.72727%; top:83.05439%; width:14.36364%; height:11.29707%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board { --label-size:1.60377cqi; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-site-gros-zar"] { left:8.11321%; top:9.64187%; width:14.90566%; height:10.46832%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-site-petit-zar"] { left:41.34434%; top:9.64187%; width:17.31132%; height:10.46832%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-syn-local-ring"] { left:75.77830%; top:9.64187%; width:17.31132%; height:10.46832%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-site-zar-lfp"] { left:8.11321%; top:41.32231%; width:14.90566%; height:14.87603%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-site-zar-fp"] { left:43.75000%; top:41.32231%; width:12.50000%; height:14.87603%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-found-syn-hott"] { left:78.18396%; top:41.32231%; width:12.50000%; height:14.87603%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-syn-internal-free"] { left:22.59434%; top:76.30854%; width:13.30189%; height:14.87603%; }
-[data-graph="synthetic-algebraic-geometry"] .topo-board [data-node="synthetic-algebraic-geometry-syn-external-free"] { left:78.58491%; top:76.30854%; width:11.69811%; height:14.87603%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-crys-big"] { left:9.83591%; top:4.39331%; width:14.87364%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-crys-small"] { left:41.68364%; top:4.39331%; width:15.72364%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-petit-zar"] { left:75.20182%; top:4.39331%; width:12.32364%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-prism-abs"] { left:10.00591%; top:29.49791%; width:14.53364%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-site-prism-rel"] { left:42.27864%; top:29.49791%; width:14.53364%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-prismatic"] { left:75.39500%; top:29.49791%; width:11.93727%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-crystalline"] { left:14.48591%; top:58.15900%; width:11.93727%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-padic-derham"] { left:43.57682%; top:58.15900%; width:11.93727%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-ht-forms"] { left:74.95455%; top:58.15900%; width:12.81818%; height:11.29707%; }
+[data-graph="crystalline-prismatic"] .topo-board [data-node="crystalline-prismatic-coh-eta-etale"] { left:82.40591%; top:83.05439%; width:17.00636%; height:11.29707%; }
 [data-graph="spectral-locales"] .topo-board { --label-size:1.70000cqi; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-ag-qcqs"] { left:9.72500%; top:7.72834%; width:11.55000%; height:8.89930%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-spectral"] { left:42.45000%; top:7.72834%; width:14.10000%; height:8.89930%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-found-coherent"] { left:76.02500%; top:7.72834%; width:14.95000%; height:8.89930%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-sober"] { left:9.72500%; top:34.42623%; width:11.55000%; height:8.89930%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-site-patch"] { left:43.72500%; top:34.42623%; width:11.55000%; height:8.89930%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-found-distributive"] { left:73.90000%; top:32.55269%; width:19.20000%; height:12.64637%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-profinite"] { left:42.02500%; top:59.71897%; width:14.95000%; height:8.89930%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-found-prime-spectrum"] { left:76.45000%; top:57.84543%; width:14.10000%; height:12.64637%; }
-[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-t1"] { left:9.30000%; top:82.90398%; width:12.40000%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-ag-qcqs"] { left:8.31400%; top:7.72834%; width:14.37200%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-spectral"] { left:41.10700%; top:7.72834%; width:16.78600%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-found-coherent"] { left:74.80950%; top:7.72834%; width:17.38100%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-sober"] { left:8.50950%; top:34.42623%; width:13.98100%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-site-patch"] { left:42.50950%; top:34.42623%; width:13.98100%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-found-distributive"] { left:72.89700%; top:32.55269%; width:21.20600%; height:12.64637%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-profinite"] { left:40.80950%; top:59.71897%; width:17.38100%; height:8.89930%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-found-prime-spectrum"] { left:74.71600%; top:57.84543%; width:17.56800%; height:12.64637%; }
+[data-graph="spectral-locales"] .topo-board [data-node="spectral-locales-sp-t1"] { left:8.46700%; top:82.90398%; width:14.06600%; height:8.89930%; }
