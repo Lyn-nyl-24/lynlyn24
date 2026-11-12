@@ -17,11 +17,60 @@
 }
 
 @font-face {
-  font-family: "TeX Gyre Termes Math";
-  src: url("./fonts/texgyretermes-math.otf") format("opentype");
+  font-family: "Latin Modern Math";
+  src: url("./fonts/latinmodern-math.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./fonts/lmroman10-regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./fonts/lmroman10-bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./fonts/lmroman10-italic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman";
+  src: url("./fonts/lmroman10-bolditalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Caps";
+  src: url("./fonts/lmromancaps10-regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Euler Script";
+  src: url("./fonts/Euler-Math.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+1D49C-1D4B5, U+212C, U+2130-2131, U+210B, U+2110, U+2112-2113, U+2133, U+211B;
 }
 
 :root {
@@ -41,7 +90,8 @@
   --reading-width: min(var(--page-width), 44rem);
   --reading-size: clamp(1.08rem, 1rem + .35vw, 1.24rem);
   --sans: "Noto Sans KR", Arial, sans-serif;
-  --serif: "Times New Roman", Times, "Liberation Serif", serif;
+  --serif: "Latin Modern Roman", "Times New Roman", Times, serif;
+  --math-font: "Latin Modern Math", math;
   --mono: "IBM Plex Mono", Consolas, monospace;
   font-family: var(--sans);
   background: var(--paper);
@@ -96,7 +146,7 @@ button, input { font: inherit; }
 }
 .site-header a, .site-footer a { color: inherit; text-decoration: none; }
 .wordmark { flex: none; font-size: 1.08rem; font-weight: 800; }
-.brand-initial { font-family: "TeX Gyre Termes Math", "Cambria Math", serif; font-weight: 400; }
+.brand-initial { font-family: var(--math-font); font-weight: 400; }
 .site-nav, .header-tools { display: flex; align-items: center; }
 .site-nav { gap: clamp(.7rem, 2vw, 1.6rem); font-size: 1rem; font-weight: 700; }
 .site-nav a { padding-block: .4rem; }
@@ -228,8 +278,10 @@ article.reading { inline-size: 100%; }
 article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var(--reading-width); margin-inline: auto; }
 .prose { margin-top: 1.6rem; line-height: 1.7; overflow-wrap: anywhere; }
 .note-body { font-family: var(--serif); font-size: var(--reading-size); }
-.prose math { font-family: "TeX Gyre Termes Math", math; font-size: 1em; }
-.prose table { width: 100%; border-collapse: collapse; margin-block: 1.25rem; font-size: .93em; }
+.prose math { font-family: var(--math-font); font-size: 1em; }
+.prose .math-euler-script { font-family: "Euler Script", var(--math-font); }
+.table-scroll { overflow-x: auto; margin-block: 1.25rem; }
+.prose table { width: 100%; border-collapse: collapse; font-size: .93em; overflow-wrap: normal; }
 .prose th, .prose td { padding: .28em .6em; border-bottom: 1px solid var(--soft-line); text-align: left; }
 .prose th { font-weight: 700; }
 .prose .align-center { text-align: center; }
@@ -238,14 +290,16 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .diagram-image { display: block; inline-size: 100%; block-size: auto; }
 .diagram-display {
   display: none;
+  flex: none;
   min-inline-size: 0;
-  margin: 0 0 .25rem;
+  margin: 0;
   border: 0;
   padding: 0;
   color: var(--muted);
   font: .75rem/1.35 var(--sans);
 }
 .diagram-options { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0 .35rem; }
+.site-header .diagram-options a { text-decoration: underline; }
 .diagram-segments { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 .diagram-segments label { position: relative; cursor: pointer; }
 .diagram-segments input { position: absolute; inline-size: 1px; block-size: 1px; margin: 0; opacity: 0; }
@@ -283,15 +337,18 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 @supports selector(:has(*)) {
   .diagram-display, .diagram-web-panel { display: block; }
   .diagram-svg-panel,
-  .diagram-scope:has(> .diagram-display input[value="svg"]:checked) .diagram-web-panel { display: none; }
-  .diagram-scope:has(> .diagram-display input[value="svg"]:checked) .diagram-svg-panel { display: block; }
+  .site-header:has(.diagram-display input[value="svg"]:checked) + main .diagram-web-panel { display: none; }
+  .site-header:has(.diagram-display input[value="svg"]:checked) + main .diagram-svg-panel { display: block; }
+}
+@media (max-width: 760px) {
+  .site-header:has(.diagram-display) { flex-wrap: wrap; row-gap: 0; }
+  .site-header .diagram-display { flex-basis: 100%; order: 4; }
 }
 .diagram-canvas { position: relative; container-type: inline-size; }
 .diagram-label { position: absolute; transform: translate(-50%, -50%) rotate(var(--label-angle, 0deg)); line-height: 1; white-space: nowrap; }
 .diagram-label .katex { display: block; }
-.diagram-label math { font-family: "TeX Gyre Termes Math", math; font-size: 1em; }
 .math-figure :is(.diagram-canvas, .diagram-svg-panel .diagram-image) {
-  inline-size: min(100%, 39rem); min-inline-size: 22rem; margin-inline: auto;
+  inline-size: min(100%, 39rem); margin-inline: auto;
 }
 :root[data-theme="dark"] .diagram-image { filter: invert(1); }
 .math-figure figcaption, .figure-key, .spectral-status {
@@ -308,14 +365,16 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .spectral-maps { margin: .2rem 0 .5rem; padding-inline-start: 1.2rem; font-size: .86rem; }
 .spectral-page details { font-size: .86rem; }
 .spectral-page summary { cursor: pointer; color: var(--accent); }
-.spectral-page table { margin-block: .4rem 0; font-size: .82rem; }
+.spectral-page .table-scroll { margin-block: .4rem 0; }
+.spectral-page table { font-size: .82rem; }
 .spectral-page th, .spectral-page td { padding: .18em .28em; }
 @media (max-width: 540px) { .spectral-pages { grid-template-columns: 1fr; } }
 .prose h2, .prose h3, .prose h4, .backlinks h2 { line-height: 1.3; scroll-margin-block-start: 5.5rem; }
 .prose h2 { margin: 2.15rem 0 .72rem; font-size: clamp(1.35rem, 1.1rem + .55vw, 1.7rem); }
+.note-body h2 { text-align: center; font-family: "Latin Modern Roman Caps", var(--serif); font-weight: 400; }
 .prose code { font: .9em var(--mono); padding: .15em .3em; background: var(--tint); }
 .prose pre, .display-math { max-width: 100%; overflow: auto; padding: .35rem .2rem; }
-.display-math { overflow-y: hidden; padding-block: .55rem; }
+.display-math { overflow-y: hidden; padding: .55rem 0; }
 .prose pre { background: var(--tint); padding: .9rem; }
 .prose pre code { padding: 0; }
 .math-block {
@@ -327,8 +386,11 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .math-block > :first-child { margin-block-start: 0; }
 .math-block > :last-child { margin-block-end: 0; }
 .math-block-title { line-height: 1.5; }
+.math-block:is(.math-theorem, .math-proposition, .math-lemma, .math-corollary) { font-style: italic; }
+.math-block-title { font-style: normal; }
 .math-proof { border-inline-start-color: var(--soft-line); }
-.math-proof > .math-block-title { color: var(--muted); }
+.math-proof > .math-block-title { color: var(--muted); font-style: italic; }
+.math-proof > .math-block-title strong { font-weight: 400; }
 .reference-link, .equation-number { color: var(--accent); font: .8rem/1.5 var(--mono); }
 .reference-link { margin-inline-start: .7rem; }
 .equation {
@@ -377,6 +439,8 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   .topic-link, .note-link { min-block-size: 2.25rem; }
   .reference-index .note-link { grid-template-columns: minmax(0, 1fr) minmax(5rem, 27%); }
   .math-block { padding-inline-start: .7rem; }
+  .prose th, .prose td { padding-inline: .2em; }
+  .display-math { font-size: .98em; }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -388,104 +452,104 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   :is(.theme-button, .menu-button):hover { background: var(--tint); color: var(--accent); }
 }
 
-[data-diagram="exact-rows"] [data-label="0"]{left:5.03859%;top:18.90471%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="1"]{left:26.84907%;top:18.127%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="2"]{left:38.68931%;top:12.44919%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="3"]{left:29.40585%;top:48.15527%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="4"]{left:49.3688%;top:18.86519%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="5"]{left:60.05892%;top:13.43373%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="6"]{left:51.29208%;top:48.99225%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="7"]{left:72.05784%;top:18.127%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="8"]{left:74.99251%;top:48.15527%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="9"]{left:94.9431%;top:18.90471%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="10"]{left:5.03859%;top:78.96128%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="11"]{left:26.94755%;top:78.18357%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="12"]{left:38.72584%;top:87.55078%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="13"]{left:49.5108%;top:79.02056%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="14"]{left:60.09545%;top:86.56626%;font-size:3.40231cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="15"]{left:72.15632%;top:78.18357%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="exact-rows"] [data-label="16"]{left:94.9431%;top:78.96128%;font-size:4.59771cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="0"]{left:3.65417%;top:14.83086%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="1"]{left:24.5906%;top:15.36627%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="2"]{left:49.67013%;top:15.95078%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="3"]{left:74.80933%;top:15.36627%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="4"]{left:48.57025%;top:47.19559%;font-size:2.46748cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="5"]{left:24.6205%;top:84.63371%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="6"]{left:49.70003%;top:85.21822%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="7"]{left:74.83923%;top:84.63371%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="snake-sequence"] [data-label="8"]{left:96.33255%;top:84.0983%;font-size:3.33443cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="0"]{left:4.82194%;top:20.90896%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="1"]{left:22.17141%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="2"]{left:41.5771%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="3"]{left:59.52716%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="4"]{left:77.22165%;top:21.39328%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="5"]{left:95.17806%;top:20.90896%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="6"]{left:41.67095%;top:74.01092%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="7"]{left:59.62101%;top:74.01092%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="8"]{left:77.3155%;top:74.01092%;font-size:3.76802cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="9"]{left:32.03665%;top:13.30062%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="10"]{left:51.67058%;top:13.30062%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="11"]{left:45.83091%;top:47.75917%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="12"]{left:67.68121%;top:13.30062%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="13"]{left:62.40923%;top:47.75917%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="14"]{left:81.47547%;top:47.75917%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="15"]{left:36.272%;top:40.14519%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="16"]{left:53.95215%;top:40.93541%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="17"]{left:50.76613%;top:81.2029%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="unrolled-exact-couple"] [data-label="18"]{left:72.28214%;top:38.7582%;font-size:2.78834cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="9"]{left:21.70912%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="10"]{left:21.70912%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="11"]{left:42.83502%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="12"]{left:42.90465%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="13"]{left:64.10018%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="14"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e0"] [data-label="15"]{left:39.44921%;top:30.36871%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="9"]{left:21.70912%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="10"]{left:21.70912%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="11"]{left:42.90465%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="12"]{left:64.10018%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="13"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e1"] [data-label="14"]{left:31.47153%;top:38.1322%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="9"]{left:21.70912%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="10"]{left:42.90465%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="11"]{left:64.10018%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="12"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e2"] [data-label="13"]{left:42.77723%;top:24.29727%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="0"]{left:21.69614%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="1"]{left:42.90932%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="2"]{left:64.09897%;top:92.40007%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="3"]{left:85.24157%;top:92.45681%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="4"]{left:6.97204%;top:72.41083%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="5"]{left:8.30117%;top:44.74305%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="6"]{left:8.32665%;top:17.07526%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="7"]{left:93.56086%;top:92.27854%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="8"]{left:8.28941%;top:7.66833%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="9"]{left:42.90465%;top:44.74306%;font-size:3.93543cqw;--label-angle:0deg;}
-[data-diagram="chart-n0006-filtered-example-e3"] [data-label="10"]{left:85.29572%;top:72.41084%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="0"]{left:4.88199%;top:18.35667%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="1"]{left:26.75083%;top:17.60321%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="2"]{left:38.32901%;top:12.26282%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="3"]{left:29.48848%;top:48.31233%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="4"]{left:49.49249%;top:17.86435%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="5"]{left:60.26515%;top:13.08019%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="6"]{left:51.61345%;top:48.74642%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="7"]{left:72.56423%;top:17.60321%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="8"]{left:75.80019%;top:48.31233%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="9"]{left:95.1135%;top:18.35667%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="10"]{left:4.88199%;top:79.67407%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="11"]{left:26.76666%;top:78.9206%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="12"]{left:38.2956%;top:87.7248%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="13"]{left:49.4548%;top:79.40739%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="14"]{left:60.23175%;top:86.8156%;font-size:3.35744cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="15"]{left:72.58005%;top:78.9206%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="exact-rows"] [data-label="16"]{left:95.1135%;top:79.67407%;font-size:4.53708cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="0"]{left:3.54924%;top:14.66041%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="1"]{left:24.42459%;top:15.2416%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="2"]{left:49.59288%;top:15.54316%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="3"]{left:75.05445%;top:15.2416%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="4"]{left:48.54429%;top:47.05064%;font-size:2.44088cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="5"]{left:24.43445%;top:84.85826%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="6"]{left:49.60274%;top:85.15981%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="7"]{left:75.06431%;top:84.85826%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="snake-sequence"] [data-label="8"]{left:96.44748%;top:84.27707%;font-size:3.29849cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="0"]{left:5.03749%;top:20.83735%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="1"]{left:22.54692%;top:20.37698%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="2"]{left:41.96646%;top:20.37698%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="3"]{left:59.63652%;top:20.37698%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="4"]{left:77.21882%;top:20.96686%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="5"]{left:94.9633%;top:20.83735%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="6"]{left:41.9718%;top:74.47445%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="7"]{left:59.64186%;top:74.47445%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="8"]{left:77.22417%;top:75.06433%;font-size:3.57596cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="9"]{left:32.25923%;top:12.71932%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="10"]{left:51.73152%;top:14.01978%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="11"]{left:45.8731%;top:47.70718%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="12"]{left:67.53139%;top:13.32793%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="13"]{left:61.951%;top:47.42544%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="14"]{left:81.076%;top:48.07936%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="15"]{left:36.2089%;top:40.36341%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="16"]{left:53.43891%;top:41.87956%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="17"]{left:50.90447%;top:83.5479%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="unrolled-exact-couple"] [data-label="18"]{left:71.95176%;top:39.49739%;font-size:2.64621cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="0"]{left:21.70202%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="1"]{left:42.9152%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="2"]{left:64.09308%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="3"]{left:85.28862%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="4"]{left:6.79604%;top:71.98586%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="5"]{left:8.31489%;top:44.74484%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="6"]{left:8.33253%;top:16.98792%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="7"]{left:93.6802%;top:92.14527%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="8"]{left:8.3706%;top:7.62016%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="9"]{left:21.54498%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="10"]{left:21.54498%;top:17.09102%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="11"]{left:42.75286%;top:44.68759%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="12"]{left:42.74051%;top:17.09102%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="13"]{left:63.93604%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="14"]{left:85.13157%;top:72.4266%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e0"] [data-label="15"]{left:39.4824%;top:30.34643%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="0"]{left:21.70202%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="1"]{left:42.9152%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="2"]{left:64.09308%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="3"]{left:85.28862%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="4"]{left:6.79604%;top:71.98586%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="5"]{left:8.31489%;top:44.74484%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="6"]{left:8.33253%;top:16.98792%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="7"]{left:93.6802%;top:92.14527%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="8"]{left:8.3706%;top:7.62016%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="9"]{left:21.54498%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="10"]{left:21.54498%;top:17.09102%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="11"]{left:42.74051%;top:44.68759%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="12"]{left:63.93604%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="13"]{left:85.13157%;top:72.4266%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e1"] [data-label="14"]{left:31.53718%;top:38.37944%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="0"]{left:21.70202%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="1"]{left:42.9152%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="2"]{left:64.09308%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="3"]{left:85.28862%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="4"]{left:6.79604%;top:71.98586%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="5"]{left:8.31489%;top:44.74484%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="6"]{left:8.33253%;top:16.98792%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="7"]{left:93.6802%;top:92.14527%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="8"]{left:8.3706%;top:7.62016%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="9"]{left:21.54498%;top:17.09102%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="10"]{left:42.74051%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="11"]{left:63.93604%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="12"]{left:85.13157%;top:72.4266%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e2"] [data-label="13"]{left:42.79148%;top:24.54536%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="0"]{left:21.70202%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="1"]{left:42.9152%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="2"]{left:64.09308%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="3"]{left:85.28862%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="4"]{left:6.79604%;top:71.98586%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="5"]{left:8.31489%;top:44.74484%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="6"]{left:8.33253%;top:16.98792%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="7"]{left:93.6802%;top:92.14527%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="8"]{left:8.3706%;top:7.62016%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="9"]{left:42.74051%;top:44.75882%;font-size:3.93543cqw;--label-angle:0deg;}
+[data-diagram="chart-n0006-filtered-example-e3"] [data-label="10"]{left:85.13157%;top:72.4266%;font-size:3.93543cqw;--label-angle:0deg;}
