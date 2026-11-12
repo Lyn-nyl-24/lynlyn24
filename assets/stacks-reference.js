@@ -2,6 +2,7 @@ const panel = document.querySelector('[data-stacks-index]');
 const query = document.getElementById('stacks-query');
 const kind = document.getElementById('stacks-kind');
 const chapter = document.getElementById('stacks-chapter');
+const section = document.getElementById('stacks-section');
 const coverage = document.getElementById('stacks-coverage');
 const status = document.getElementById('stacks-status');
 const matches = document.getElementById('stacks-matches');
@@ -28,7 +29,7 @@ function showMore() {
     link.append(make('code',row.tag));
     const text = make('div','');
     text.append(make('span',row.name,'stacks-name'),make('p',row.kind + ' · ' + row.chapterName +
-      (row.linked ? ' · reviewed catalogue link' : ''),'property-context'));
+      (row.reviewed ? ' · direct catalogue record' : row.linked ? ' · catalogue citation' : ''),'property-context'));
     item.append(link,text);
     matches.append(item);
   }
@@ -41,10 +42,11 @@ function showMore() {
 async function search() {
   const request = ++requestId;
   const input = normalize(query.value.trim());
+  const sectionTag = section.value.trim().toUpperCase();
   const terms = input.split(/[\s-]+/).filter(Boolean);
   matches.replaceChildren();
   more.hidden = true;
-  if (!terms.length && !kind.value && !chapter.value && !coverage.value) {
+  if (!terms.length && !kind.value && !chapter.value && !sectionTag && !coverage.value) {
     status.textContent = '';
     return;
   }
@@ -52,14 +54,17 @@ async function search() {
   try {
     const dataUrl = new URL(panel.dataset.stacksIndex, document.baseURI);
     index ??= import(dataUrl.href).then(({default: groups}) => groups.flatMap(([chapterKey,chapterName,rows]) =>
-      rows.map(([tag,kind,name,label,section,linked]) => ({
-        chapterKey,chapterName,tag,kind,name,linked,search:normalize([tag,kind,name,label,chapterName,section].join(' ')),
+      rows.map(([tag,kind,name,label,sectionName,linked,reviewed,sectionTag]) => ({
+        chapterKey,chapterName,tag,kind,name,linked,reviewed,sectionTag,
+        search:normalize([tag,kind,name,label,chapterName,sectionName].join(' ')),
       }))));
     const rows = await index;
     if (request !== requestId) return;
+    const covered = {reviewed:row => row.reviewed,pending:row => !row.reviewed,linked:row => row.linked,indexed:row => !row.linked};
     current = rows.filter(row => (!kind.value || kind.value === row.kind || kind.value === 'formal' && formal.has(row.kind)) &&
       (!chapter.value || chapter.value === row.chapterKey) &&
-      (!coverage.value || row.linked === (coverage.value === 'linked')) && terms.every(term => row.search.includes(term)));
+      (!sectionTag || row.sectionTag.startsWith(sectionTag)) &&
+      (!coverage.value || covered[coverage.value](row)) && terms.every(term => row.search.includes(term)));
     const exact = current.findIndex(row => row.tag.toLowerCase() === input);
     if (exact > 0) current.unshift(current.splice(exact,1)[0]);
     shown = 0;
@@ -73,10 +78,12 @@ panel.hidden = false;
 query.addEventListener('input',search);
 kind.addEventListener('change',search);
 chapter.addEventListener('change',search);
+section.addEventListener('input',search);
 coverage.addEventListener('change',search);
 more.addEventListener('click',showMore);
 const params = new URLSearchParams(location.search);
 for (const [key,select] of [['kind',kind],['chapter',chapter],['coverage',coverage]]) {
   if ([...select.options].some(option => option.value === params.get(key))) select.value = params.get(key);
 }
-if (kind.value || chapter.value || coverage.value) search();
+if (/^[A-Z0-9]{4}$/.test(params.get('section') ?? '')) section.value = params.get('section');
+if (kind.value || chapter.value || section.value || coverage.value) search();

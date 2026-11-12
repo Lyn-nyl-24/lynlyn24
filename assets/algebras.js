@@ -7,7 +7,7 @@ const definition = read('algebra-definition');
 const entries = new Map(data.entries.map(entry => [entry.id,entry]));
 const relations = new Map(data.relations.map(row => [row.id,row]));
 const lex = input => input.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
-const searchable = data.entries.map(row => [row,lex(row.name + ' ' + row.id)]);
+const searchable = data.entries.map(row => [row,lex([row.name,row.id,...(row.aliases ?? []),...row.sourceTags].join(' '))]);
 let visible = [], shown = 0, active = data.entries.find(row => row.name === 'Integral domain')?.id ??
   data.entries.find(row => data.incidence[row.id]?.length)?.id ?? data.entries[0]?.id;
 
