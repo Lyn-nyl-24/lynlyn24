@@ -691,6 +691,246 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 [data-diagram="ac-isomorphism-triangle"] [data-label="3"]{left:79.30205%;top:22.70793%;font-size:16.59321cqw;--label-angle:0deg;}
 [data-diagram="ac-isomorphism-triangle"] [data-label="4"]{left:86.6066%;top:50.71219%;font-size:12.27897cqw;--label-angle:0deg;}
 [data-diagram="ac-isomorphism-triangle"] [data-label="5"]{left:79.30205%;top:78.98256%;font-size:16.59321cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-01"]{--diagram-width:9.7317em;}
+[data-diagram="ac-diagram-p07-01"] [data-label="0"]{left:13.2445%;top:13.46965%;font-size:10.2757cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-01"] [data-label="1"]{left:85.85984%;top:13.0658%;font-size:10.2757cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-01"] [data-label="2"]{left:13.32513%;top:50.51497%;font-size:10.2757cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-01"] [data-label="3"]{left:49.26306%;top:50.51497%;font-size:10.2757cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-01"] [data-label="4"]{left:12.99682%;top:87.43549%;font-size:10.2757cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-02"]{--diagram-width:6.1907em;}
+[data-diagram="ac-diagram-p07-02"] [data-label="0"]{left:20.00446%;top:21.39577%;font-size:16.15334cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-02"] [data-label="1"]{left:77.77178%;top:20.75429%;font-size:16.15334cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-02"] [data-label="2"]{left:20.13121%;top:80.24021%;font-size:16.15334cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-03"]{--diagram-width:6.5604em;}
+[data-diagram="ac-diagram-p07-03"] [data-label="0"]{left:20.81994%;top:21.00684%;font-size:15.24298cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-03"] [data-label="1"]{left:78.58309%;top:21.00684%;font-size:15.24298cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p07-03"] [data-label="2"]{left:78.5768%;top:80.33103%;font-size:15.24298cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-01"]{--diagram-width:6.278em;}
+[data-diagram="ac-diagram-p08-01"] [data-label="0"]{left:21.84323%;top:20.1622%;font-size:15.9287cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-01"] [data-label="1"]{left:79.90286%;top:20.1622%;font-size:15.9287cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-01"] [data-label="2"]{left:21.65517%;top:79.59873%;font-size:15.9287cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-01"] [data-label="3"]{left:79.39393%;top:80.04198%;font-size:15.9287cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-02"]{--diagram-width:12.4956em;}
+[data-diagram="ac-diagram-p08-02"] [data-label="0"]{left:9.91081%;top:12.38609%;font-size:8.00284cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-02"] [data-label="1"]{left:49.57886%;top:49.60776%;font-size:8.00284cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-02"] [data-label="2"]{left:89.90285%;top:49.29332%;font-size:8.00284cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-02"] [data-label="3"]{left:49.57886%;top:87.46706%;font-size:8.00284cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p08-02"] [data-label="4"]{left:89.64716%;top:87.73936%;font-size:8.00284cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"]{--diagram-width:11.338em;}
+[data-diagram="ac-diagram-p09-01"] [data-label="0"]{left:12.44911%;top:12.51974%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"] [data-label="1"]{left:82.20213%;top:13.49512%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"] [data-label="2"]{left:12.43017%;top:50.34249%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"] [data-label="3"]{left:44.73908%;top:50.72194%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"] [data-label="4"]{left:82.02894%;top:51.67498%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"] [data-label="5"]{left:12.60336%;top:88.19447%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p09-01"] [data-label="6"]{left:82.29256%;top:88.19447%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"]{--diagram-width:11.338em;}
+[data-diagram="ac-diagram-p10-01"] [data-label="0"]{left:12.44911%;top:12.51974%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"] [data-label="1"]{left:82.20213%;top:13.49512%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"] [data-label="2"]{left:12.43017%;top:50.34249%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"] [data-label="3"]{left:44.73908%;top:50.72194%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"] [data-label="4"]{left:82.02894%;top:51.67498%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"] [data-label="5"]{left:12.60336%;top:88.19447%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-01"] [data-label="6"]{left:82.29256%;top:88.19447%;font-size:8.81987cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-03"]{--diagram-width:9.4562em;}
+[data-diagram="ac-diagram-p10-03"] [data-label="0"]{left:50.61692%;top:12.56826%;font-size:10.57507cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-03"] [data-label="1"]{left:13.37547%;top:49.61358%;font-size:10.57507cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-03"] [data-label="2"]{left:86.99035%;top:49.61358%;font-size:10.57507cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p10-03"] [data-label="3"]{left:50.35248%;top:87.03165%;font-size:10.57507cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p12-01"]{--diagram-width:13.3322em;}
+[data-diagram="ac-diagram-p12-01"] [data-label="0"]{left:37.2777%;top:9.90788%;font-size:7.50062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p12-01"] [data-label="1"]{left:65.25159%;top:37.47861%;font-size:7.50062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p12-01"] [data-label="2"]{left:91.07609%;top:37.47861%;font-size:7.50062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p12-01"] [data-label="3"]{left:37.09036%;top:64.20668%;font-size:7.50062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p12-01"] [data-label="4"]{left:9.29633%;top:91.02479%;font-size:7.50062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p13-04"]{--diagram-width:6.0094em;}
+[data-diagram="ac-diagram-p13-04"] [data-label="0"]{left:21.4483%;top:20.41401%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p13-04"] [data-label="1"]{left:79.86812%;top:20.41401%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p13-04"] [data-label="2"]{left:21.0472%;top:79.7927%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p13-04"] [data-label="3"]{left:79.52847%;top:79.7927%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p14-02"]{--diagram-width:7.5593em;}
+[data-diagram="ac-diagram-p14-02"] [data-label="0"]{left:27.31382%;top:21.85151%;font-size:13.22875cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p14-02"] [data-label="1"]{left:83.99579%;top:21.52159%;font-size:13.22875cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p14-02"] [data-label="2"]{left:26.98342%;top:80.9243%;font-size:13.22875cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p14-02"] [data-label="3"]{left:83.72577%;top:80.9243%;font-size:13.22875cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-01"]{--diagram-width:15.6444em;}
+[data-diagram="ac-diagram-p16-01"] [data-label="0"]{left:7.92238%;top:20.44894%;font-size:6.39207cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-01"] [data-label="1"]{left:42.75092%;top:84.581%;font-size:4.73013cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-01"] [data-label="2"]{left:30.07359%;top:20.25919%;font-size:6.39207cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-01"] [data-label="3"]{left:57.13116%;top:21.83753%;font-size:6.39207cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-01"] [data-label="4"]{left:87.95992%;top:21.83753%;font-size:6.39207cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-01"] [data-label="5"]{left:88.03782%;top:81.08627%;font-size:6.39207cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-02"]{--diagram-width:12.2044em;}
+[data-diagram="ac-diagram-p16-02"] [data-label="0"]{left:10.3636%;top:20.25919%;font-size:8.19379cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-02"] [data-label="1"]{left:45.04781%;top:21.83753%;font-size:8.19379cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-02"] [data-label="2"]{left:84.5662%;top:21.83753%;font-size:8.19379cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p16-02"] [data-label="3"]{left:84.66607%;top:81.08627%;font-size:8.19379cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"]{--diagram-width:13.9151em;}
+[data-diagram="ac-diagram-p17-01"] [data-label="0"]{left:9.65708%;top:19.66662%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="1"]{left:13.16939%;top:49.38037%;font-size:5.31796cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="2"]{left:36.23825%;top:19.96397%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="3"]{left:39.66494%;top:49.3138%;font-size:5.31796cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="4"]{left:63.13215%;top:19.96397%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="5"]{left:66.34787%;top:49.44067%;font-size:5.31796cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="6"]{left:89.94419%;top:19.96397%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="7"]{left:93.08133%;top:49.3355%;font-size:5.31796cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="8"]{left:9.50581%;top:79.4005%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="9"]{left:36.17176%;top:79.4005%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="10"]{left:62.97104%;top:79.59873%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p17-01"] [data-label="11"]{left:89.87418%;top:79.4005%;font-size:7.18643cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"]{--diagram-width:15.4469em;}
+[data-diagram="ac-diagram-p18-01"] [data-label="0"]{left:8.69946%;top:19.66662%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="1"]{left:11.86349%;top:49.38037%;font-size:4.79062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="2"]{left:29.09747%;top:19.96397%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="3"]{left:32.18436%;top:49.3138%;font-size:4.79062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="4"]{left:49.7772%;top:19.96397%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="5"]{left:52.67405%;top:49.44067%;font-size:4.79062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="6"]{left:70.38319%;top:19.96397%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="7"]{left:73.20924%;top:49.3355%;font-size:4.79062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="8"]{left:91.19843%;top:19.991%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="9"]{left:93.80467%;top:49.44345%;font-size:4.79062cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="10"]{left:8.56319%;top:79.4005%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="11"]{left:29.03758%;top:79.4005%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="12"]{left:49.63207%;top:79.59873%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="13"]{left:70.32011%;top:79.4005%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-01"] [data-label="14"]{left:91.06486%;top:79.4005%;font-size:6.47381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"]{--diagram-width:15.616em;}
+[data-diagram="ac-diagram-p18-03"] [data-label="0"]{left:27.3721%;top:6.95534%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="1"]{left:50.10935%;top:6.95534%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="2"]{left:72.73406%;top:6.95534%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="3"]{left:6.89047%;top:27.82161%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="4"]{left:27.11209%;top:28.07083%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="5"]{left:49.87167%;top:28.17627%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="6"]{left:72.5219%;top:28.10597%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="7"]{left:93.10315%;top:27.82161%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="8"]{left:6.89047%;top:49.64641%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="9"]{left:27.18354%;top:49.89562%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="10"]{left:49.94313%;top:50.00106%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="11"]{left:72.59335%;top:49.93077%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="12"]{left:93.10315%;top:49.64641%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="13"]{left:6.89047%;top:71.4712%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="14"]{left:27.20364%;top:71.76515%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="15"]{left:49.96322%;top:71.87059%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="16"]{left:72.61345%;top:71.8003%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="17"]{left:93.10315%;top:71.4712%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="18"]{left:27.3721%;top:93.04749%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="19"]{left:50.10935%;top:93.04749%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p18-03"] [data-label="20"]{left:72.73406%;top:93.04749%;font-size:6.40367cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-01"]{--diagram-width:6.0094em;}
+[data-diagram="ac-diagram-p19-01"] [data-label="0"]{left:20.71542%;top:20.41401%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-01"] [data-label="1"]{left:78.473%;top:20.2133%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-01"] [data-label="2"]{left:20.37576%;top:79.7927%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-01"] [data-label="3"]{left:78.93534%;top:79.7927%;font-size:16.64058cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-02"]{--diagram-width:8.3063em;}
+[data-diagram="ac-diagram-p19-02"] [data-label="0"]{left:16.66953%;top:20.10829%;font-size:12.039cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-02"] [data-label="1"]{left:16.57639%;top:78.79535%;font-size:12.039cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-02"] [data-label="2"]{left:72.37288%;top:79.34353%;font-size:12.039cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-03"]{--diagram-width:9.7289em;}
+[data-diagram="ac-diagram-p19-03"] [data-label="0"]{left:12.7394%;top:12.79241%;font-size:10.27862cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-03"] [data-label="1"]{left:49.51117%;top:50.12767%;font-size:10.27862cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-03"] [data-label="2"]{left:86.70311%;top:50.00189%;font-size:10.27862cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-03"] [data-label="3"]{left:49.38089%;top:87.33715%;font-size:10.27862cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-03"] [data-label="4"]{left:86.98869%;top:87.33715%;font-size:10.27862cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-04"]{--diagram-width:6.2889em;}
+[data-diagram="ac-diagram-p19-04"] [data-label="0"]{left:21.89395%;top:20.41401%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-04"] [data-label="1"]{left:79.42978%;top:20.2133%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-04"] [data-label="2"]{left:21.69241%;top:79.7927%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p19-04"] [data-label="3"]{left:79.87157%;top:79.7927%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-01"]{--diagram-width:6.2889em;}
+[data-diagram="ac-diagram-p20-01"] [data-label="0"]{left:21.89395%;top:20.41401%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-01"] [data-label="1"]{left:79.42978%;top:20.2133%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-01"] [data-label="2"]{left:21.69241%;top:79.7927%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-01"] [data-label="3"]{left:79.87157%;top:79.7927%;font-size:15.901cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-02"]{--diagram-width:5.8975em;}
+[data-diagram="ac-diagram-p20-02"] [data-label="0"]{left:20.99903%;top:20.41401%;font-size:16.95645cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-02"] [data-label="1"]{left:79.57868%;top:20.41401%;font-size:16.95645cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-02"] [data-label="2"]{left:20.78598%;top:79.7927%;font-size:16.95645cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p20-02"] [data-label="3"]{left:79.50804%;top:79.7927%;font-size:16.95645cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p21-02"]{--diagram-width:9.3626em;}
+[data-diagram="ac-diagram-p21-02"] [data-label="0"]{left:50.50552%;top:12.66663%;font-size:10.6808cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p21-02"] [data-label="1"]{left:87.20375%;top:12.47797%;font-size:10.6808cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p21-02"] [data-label="2"]{left:13.3283%;top:50.00189%;font-size:10.6808cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p21-02"] [data-label="3"]{left:50.68871%;top:50.00189%;font-size:10.6808cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p21-02"] [data-label="4"]{left:13.43397%;top:87.3543%;font-size:10.6808cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"]{--diagram-width:16.4305em;}
+[data-diagram="ac-diagram-p22-04"] [data-label="0"]{left:27.34601%;top:19.66662%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="1"]{left:30.09565%;top:49.38037%;font-size:4.50381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="2"]{left:49.85774%;top:19.96397%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="3"]{left:52.45633%;top:49.44903%;font-size:4.50381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="4"]{left:72.63431%;top:19.96397%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="5"]{left:75.17096%;top:49.38037%;font-size:4.50381cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="6"]{left:93.44504%;top:20.31538%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="7"]{left:6.5489%;top:80.39339%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="8"]{left:27.2179%;top:79.4005%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="9"]{left:49.80142%;top:79.4005%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p22-04"] [data-label="10"]{left:72.49787%;top:79.59873%;font-size:6.08623cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-01"]{--diagram-width:10.1319em;}
+[data-diagram="ac-diagram-p24-01"] [data-label="0"]{left:13.26295%;top:19.66662%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-01"] [data-label="1"]{left:49.76929%;top:19.96397%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-01"] [data-label="2"]{left:86.70512%;top:19.96397%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-01"] [data-label="3"]{left:13.0552%;top:79.4005%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-01"] [data-label="4"]{left:49.67797%;top:79.4005%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-01"] [data-label="5"]{left:86.48385%;top:79.59873%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-02"]{--diagram-width:10.1319em;}
+[data-diagram="ac-diagram-p24-02"] [data-label="0"]{left:13.26295%;top:19.66662%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-02"] [data-label="1"]{left:49.76929%;top:19.96397%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-02"] [data-label="2"]{left:86.70512%;top:19.96397%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-02"] [data-label="3"]{left:13.0552%;top:79.4005%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-02"] [data-label="4"]{left:49.67797%;top:79.4005%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-02"] [data-label="5"]{left:86.48385%;top:79.59873%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"]{--diagram-width:10.1319em;}
+[data-diagram="ac-diagram-p24-03"] [data-label="0"]{left:13.26295%;top:23.43971%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="1"]{left:31.41038%;top:15.91053%;font-size:7.30364cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="2"]{left:49.76929%;top:23.7231%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="3"]{left:68.21133%;top:17.49149%;font-size:7.30364cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="4"]{left:86.70512%;top:23.7231%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="5"]{left:13.0552%;top:80.36801%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="6"]{left:31.21431%;top:72.407%;font-size:7.30364cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="7"]{left:49.67797%;top:80.36801%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="8"]{left:67.98791%;top:72.407%;font-size:7.30364cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-03"] [data-label="9"]{left:86.48385%;top:80.55694%;font-size:9.86978cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-04"]{--diagram-width:12.5467em;}
+[data-diagram="ac-diagram-p24-04"] [data-label="0"]{left:15.66825%;top:20.43895%;font-size:7.97023cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-04"] [data-label="1"]{left:45.87292%;top:18.80843%;font-size:7.97023cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-04"] [data-label="2"]{left:80.15945%;top:20.3465%;font-size:7.97023cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-04"] [data-label="3"]{left:15.53958%;top:79.24005%;font-size:7.97023cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-04"] [data-label="4"]{left:45.79918%;top:77.51707%;font-size:7.97023cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p24-04"] [data-label="5"]{left:80.0561%;top:79.24005%;font-size:7.97023cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"]{--diagram-width:13.0185em;}
+[data-diagram="ac-diagram-p25-01"] [data-label="0"]{left:10.32221%;top:23.43971%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="1"]{left:23.29797%;top:15.91053%;font-size:5.68423cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="2"]{left:36.43833%;top:23.7231%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="3"]{left:49.64338%;top:17.49149%;font-size:5.68423cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="4"]{left:62.88871%;top:23.7231%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="5"]{left:75.98434%;top:17.14213%;font-size:5.68423cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="6"]{left:89.2516%;top:23.7231%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="7"]{left:10.16053%;top:80.36801%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="8"]{left:23.14538%;top:72.407%;font-size:5.68423cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="9"]{left:36.36726%;top:80.36801%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="10"]{left:49.46949%;top:72.407%;font-size:5.68423cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="11"]{left:62.71651%;top:80.55694%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="12"]{left:75.788%;top:73.57848%;font-size:5.68423cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-01"] [data-label="13"]{left:89.17676%;top:80.36801%;font-size:7.6814cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"]{--diagram-width:15.3275em;}
+[data-diagram="ac-diagram-p25-02"] [data-label="0"]{left:8.9037%;top:18.80843%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="1"]{left:35.99481%;top:20.3465%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="2"]{left:67.24537%;top:18.80843%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="3"]{left:91.2117%;top:18.80843%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="4"]{left:8.84333%;top:77.51707%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="5"]{left:35.9102%;top:79.24005%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="6"]{left:67.11182%;top:77.60953%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p25-02"] [data-label="7"]{left:91.06544%;top:77.70198%;font-size:6.52422cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"]{--diagram-width:15.266em;}
+[data-diagram="ac-diagram-p26-03"] [data-label="0"]{left:7.04847%;top:21.28636%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="1"]{left:27.5278%;top:20.30556%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="2"]{left:49.26728%;top:20.6455%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="3"]{left:71.4833%;top:20.30556%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="4"]{left:92.94501%;top:21.28636%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="5"]{left:7.04847%;top:80.6323%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="6"]{left:27.55065%;top:79.6515%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="7"]{left:49.21285%;top:80.28517%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="8"]{left:71.50615%;top:79.6515%;font-size:6.5505cqw;--label-angle:0deg;}
+[data-diagram="ac-diagram-p26-03"] [data-label="9"]{left:92.94501%;top:80.6323%;font-size:6.5505cqw;--label-angle:0deg;}
 [data-diagram="chart-n0006-filtered-example-e0"]{--diagram-width:25.4102em;}
 [data-diagram="chart-n0006-filtered-example-e0"] [data-label="0"]{left:21.70202%;top:92.27402%;font-size:3.93543cqw;--label-angle:0deg;}
 [data-diagram="chart-n0006-filtered-example-e0"] [data-label="1"]{left:42.9152%;top:92.18488%;font-size:3.93543cqw;--label-angle:0deg;}
