@@ -115,6 +115,8 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 .note-comments {
+  inline-size: var(--reading-width);
+  margin-inline: auto;
   margin-block: 2.5rem 0;
   padding-block: .85rem 0;
   border-block-start: 1px solid var(--soft-line);
