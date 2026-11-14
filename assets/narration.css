@@ -1,0 +1,77 @@
+article.reading > .note-narration { inline-size: var(--reading-width); margin-inline: auto; }
+.note-narration {
+  --player-track: color-mix(in srgb, var(--ink) 24%, transparent);
+  margin-block: 1.35rem 0;
+  font-family: var(--sans);
+}
+.narration-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .35rem 1rem; }
+.narration-heading h2 { margin: 0; font-size: 1rem; font-weight: 780; letter-spacing: -.025em; }
+.narration-heading a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2rem;
+}
+.narration-heading a, .narration-play, .narration-options select, .play-chapter {
+  color: var(--accent);
+  font: 700 .75rem/1.35 var(--sans);
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+.note-narration audio { display: block; inline-size: min(100%, 29rem); }
+.narration-controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: clamp(.6rem, 2.5vw, 1rem); margin-block: .25rem .5rem; }
+.narration-play, .play-chapter {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.narration-play { min-inline-size: 3rem; min-block-size: 2.75rem; text-align: start; }
+.narration-play:hover, .play-chapter:hover { text-decoration-thickness: 2px; }
+.narration-slider { position: relative; display: grid; align-items: center; min-block-size: 2.75rem; }
+.narration-slider progress { appearance: none; border: 0; border-radius: 1rem; overflow: hidden; inline-size: 100%; block-size: .18rem; background: var(--player-track); color: var(--accent); }
+.narration-slider progress::-webkit-progress-bar { background: transparent; }
+.narration-slider progress::-webkit-progress-value { border-radius: 1rem; background: var(--accent); }
+.narration-slider progress::-moz-progress-bar { border-radius: 1rem; background: var(--accent); }
+.narration-slider input { position: absolute; inset: 0; appearance: none; inline-size: 100%; block-size: 100%; margin: 0; border-radius: .5rem; background: transparent; cursor: pointer; }
+.narration-slider input::-webkit-slider-thumb { appearance: none; inline-size: .65rem; block-size: .65rem; border: 1px solid var(--accent); border-radius: 50%; background: var(--paper); }
+.narration-slider input::-moz-range-thumb { inline-size: .65rem; block-size: .65rem; border: 1px solid var(--accent); border-radius: 50%; background: var(--paper); }
+.narration-track-details { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: baseline; gap: .4rem; color: var(--muted); font-size: .72rem; }
+.narration-time { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.narration-chapter { color: var(--accent); text-align: center; overflow-wrap: anywhere; }
+.narration-options { position: relative; color: var(--accent); }
+.narration-options select {
+  appearance: none;
+  min-block-size: 2.75rem;
+  padding-inline: .35rem 1.05rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.narration-options select option { background: var(--paper); color: var(--ink); }
+.narration-options select:focus-visible { outline-offset: -2px; }
+.narration-options::after {
+  content: "";
+  position: absolute;
+  inset-block-start: calc(50% - .22rem);
+  inset-inline-end: .32rem;
+  inline-size: .32rem;
+  block-size: .32rem;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.narration-credit, .narration-error { color: var(--muted); font: .8rem/1.5 var(--sans); margin-block: .45rem .1rem; }
+.narration-credit { font-size: .74rem; }
+.narration-error { color: var(--accent); }
+.play-chapter { min-inline-size: 1.85rem; min-block-size: 1.65rem; }
+.play-chapter[aria-current], .note-body .narrating { text-decoration: underline 2px var(--accent); text-underline-offset: .22em; }
+@media (max-width: 540px) {
+  .narration-chapter { grid-column: 1 / -1; grid-row: 2; text-align: start; }
+  .narration-track-details > :last-child { grid-column: 3; grid-row: 1; }
+}
+@media (forced-colors: active) {
+  .narration-slider progress { display: none; }
+  .narration-slider input { appearance: auto; }
+}
