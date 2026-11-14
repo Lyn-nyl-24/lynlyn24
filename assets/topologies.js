@@ -169,6 +169,12 @@
   const canvas = diagram.querySelector('[data-groth-canvas]');
   const topicSelect = diagram.querySelector('[data-groth-topics]');
   const nodeSelect = diagram.querySelector('[data-groth-nodes]');
+  const find = diagram.querySelector('[data-groth-find]');
+  const placeholder = nodeSelect.options[0];
+  const normalized = input => input.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
+  const nodeGroups = [...nodeSelect.querySelectorAll('optgroup')].map(group => ({
+    label:group.label, options:[...group.children].map(option => ({option,text:normalized(option.dataset.search)})),
+  }));
   const passport = diagram.querySelector('[data-groth-passport]');
   const controls = diagram.querySelector('.groth-controls');
   const legend = diagram.querySelector('.groth-legend');
@@ -430,12 +436,33 @@
     const group = document.getElementById(topicSelect.value);
     if (group) panTo(group);
   });
+  function filterNodes() {
+    const words = normalized(find.value).split(/\s+/).filter(Boolean);
+    const groups = [];
+    let count = 0;
+    for (const {label,options} of nodeGroups) {
+      const matches = options.filter(({text}) => words.every(word => text.includes(word)));
+      if (!matches.length) continue;
+      count += matches.length;
+      const group = document.createElement('optgroup');
+      group.label = label;
+      group.append(...matches.map(({option}) => option));
+      groups.push(group);
+    }
+    placeholder.textContent = count ? 'Choose a record' : 'No matching concepts';
+    nodeSelect.replaceChildren(placeholder,...groups);
+    nodeSelect.value = local ? localRoot : nodes.has(currentId) ? currentId : '';
+    if (nodeSelect.selectedIndex < 0) nodeSelect.selectedIndex = 0;
+    nodeSelect.disabled = !count;
+  }
+  find.addEventListener('input',filterNodes);
   nodeSelect.addEventListener('change',() => {
     if (nodeSelect.value) display(nodeSelect.value,{pan:true,historyMode:'push'});
   });
   function clear() {
     display('');
-    topicSelect.value = '';
+    topicSelect.value = find.value = '';
+    filterNodes();
     if (/^#groth-(node|relation)-/.test(location.hash)) history.replaceState(null,'','#grothendieck-toposes');
   }
   diagram.querySelector('[data-groth-clear]').addEventListener('click',clear);

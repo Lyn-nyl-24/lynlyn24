@@ -33,7 +33,7 @@ function batch() {
 }
 function show(preferred) {
   const entry = entries.get(active);
-  const eligible = (data.incidence[active] ?? []).filter(id => !kind.value || relations.get(id).kind === kind.value);
+  const eligible = (data.incidence[active] ?? []).filter(id => !kind.value || relations.get(id).style === kind.value);
   visible = preferred ? [preferred,...eligible.filter(id => id !== preferred)] : eligible;
   status.textContent = entry ? entry.name + ' · ' + visible.length + (visible.length === 1 ? ' adjacent relation' : ' adjacent relations') :
     'No matching concepts';

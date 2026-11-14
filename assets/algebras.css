@@ -205,13 +205,12 @@
 .algebra-atlas #algebra-graph > p { margin-block: .45rem .9rem; }
 .algebra-atlas #algebra-status { min-height: 1.35rem; }
 .algebra-output { margin-block: .75rem; }
-.algebra-definition { background: var(--tint); padding: .5rem .9rem; border-inline-start: 2px solid var(--accent); overflow-wrap: anywhere; }
 .algebra-definition h3 { margin: .1rem 0 .45rem; }
 .algebra-definition p { margin-block: .36rem; }
 .algebra-card { border-block-start: 1px solid var(--line); padding-block: .95rem; min-width: 0; overflow-wrap: anywhere; }
 .algebra-card h3 { margin: .2rem 0 .55rem; font-size: clamp(1.05rem,2.2vw,1.28rem); line-height: 1.34; }
 .algebra-card p { margin-block: .42rem .75rem; }
-.algebra-card .algebra-type { color: var(--muted); font: 700 .73rem/1.35 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
+.algebra-card .algebra-type { color: var(--relation-color); font: 700 .75rem/1.35 var(--sans); }
 .algebra-sequent { display: grid; grid-template-columns: minmax(0,1fr) 1.15rem auto 1.15rem minmax(0,1fr); align-items: center; margin-block: .6rem .75rem; }
 .algebra-sequent.algebra-related { grid-template-columns: minmax(0,1fr) 1.15rem auto; }
 .algebra-lane { display: flex; align-items: stretch; flex-direction: column; gap: .28rem; border: 1px solid var(--property-rule); padding: .43rem .48rem; min-width: 0; }
@@ -219,8 +218,8 @@
 .algebra-node { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .12rem .4rem; min-width: 0; padding: .16rem .25rem; font-size: .84rem; }
 .algebra-node[aria-current=true] { background: var(--tint); text-decoration-thickness: 2px; }
 .algebra-node code { font-size: .7rem; color: var(--muted); }
-.algebra-stroke { text-align: center; color: var(--muted); }
-.algebra-relation-code { border: 1px solid var(--property-rule); padding: .24rem .48rem; color: var(--accent); font: 750 .78rem/1.5 var(--mono); }
+.algebra-stroke { text-align: center; color: var(--relation-color); }
+.algebra-relation-code { border: 1px solid var(--atlas-line); border-radius: var(--atlas-radius); padding: .24rem .48rem; color: var(--relation-color); font: 750 .78rem/1.5 var(--mono); }
 .algebra-card[data-algebra-kind=equivalence] .algebra-stroke { font-weight: 800; color: var(--accent); }
 .algebra-card[data-algebra-kind=example] .algebra-sequent { border-inline-start: 2px dotted var(--line); padding-inline-start: .3rem; }
 .algebra-index-ref, .algebra-links { font-size: .78rem; }
@@ -236,3 +235,78 @@
   .algebra-relation-code { justify-self: center; }
   .algebra-branches { grid-template-columns: minmax(0,1fr); gap: .25rem; }
 }
+
+.atlas-workspace {
+  --atlas-line: color-mix(in srgb, var(--paper) 78%, var(--ink));
+  --atlas-surface: color-mix(in srgb, var(--paper) 96%, var(--ink));
+  --atlas-selected: color-mix(in srgb, var(--paper) 89%, var(--accent));
+  --atlas-site: #275b6f;
+  --atlas-equivalence: #654074;
+  --atlas-construction: #725a10;
+  --atlas-control-height: 2.65rem;
+  --atlas-radius: .25rem;
+}
+[data-theme="dark"] .atlas-workspace {
+  --atlas-site: #a2d9ed;
+  --atlas-equivalence: #e4b6f3;
+  --atlas-construction: #efcf75;
+}
+.atlas-workspace [hidden] { display: none !important; }
+.atlas-workspace .atlas-hero {
+  padding-block-end: 1rem;
+  border-block-end: 1px solid var(--atlas-line);
+}
+.atlas-workspace .atlas-hero h1 {
+  font: 900 clamp(2.75rem, 1.65rem + 5vw, 6rem)/1.04 var(--sans);
+  letter-spacing: -.055em;
+}
+.atlas-hero .lede { margin-block-start: .6rem; max-inline-size: 64ch; }
+.atlas-trail { margin: 0 0 .5rem; color: var(--muted); font: .82rem/1.4 var(--sans); }
+.atlas-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.2rem;
+  margin-block-start: .8rem;
+  align-items: baseline;
+  font: 700 .85rem/1.5 var(--sans);
+}
+.atlas-nav a { text-decoration-color: var(--atlas-line); }
+.atlas-nav a:hover { text-decoration-color: currentColor; }
+.atlas-workspace .atlas-controls :is(button,select,input[type="search"],input[type="text"]),
+.atlas-workspace button.atlas-controls {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  min-block-size: var(--atlas-control-height);
+  border: 1px solid var(--atlas-line);
+  border-radius: var(--atlas-radius);
+  padding: .35rem .6rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+.atlas-controls button:enabled, button.atlas-controls:enabled { cursor: pointer; }
+.atlas-workspace .atlas-controls button[aria-pressed="true"] {
+  background: var(--atlas-selected);
+  color: var(--accent);
+  border-color: currentColor;
+}
+.atlas-panel {
+  min-inline-size: 0;
+  padding: .7rem clamp(.7rem,2vw,1.2rem);
+  border-inline-start: 2px solid var(--accent);
+  background: var(--atlas-surface);
+  overflow-wrap: anywhere;
+}
+.atlas-workspace :is(.atlas-panel,.algebra-card,.property-record-body) math { font-family: var(--math-font); }
+.atlas-math {
+  display: inline-block;
+  max-inline-size: 100%;
+  overflow: auto;
+  vertical-align: middle;
+}
+.atlas-workspace [data-relation-style] { --relation-color: var(--ink); }
+.atlas-workspace [data-relation-style="equivalence"], .atlas-workspace [data-relation-style="criterion"] { --relation-color: var(--atlas-equivalence); }
+.atlas-workspace [data-relation-style="site"] { --relation-color: var(--atlas-site); }
+.atlas-workspace [data-relation-style="construction"] { --relation-color: var(--atlas-construction); }
+.atlas-workspace [data-relation-style="cohomology"], .atlas-workspace [data-relation-style="example"] { --relation-color: var(--accent); }

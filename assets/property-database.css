@@ -197,3 +197,78 @@
   .property-check-add { grid-template-columns: minmax(0,1fr) auto; }
   .property-check-add label:first-child { grid-column: 1 / -1; }
 }
+
+.atlas-workspace {
+  --atlas-line: color-mix(in srgb, var(--paper) 78%, var(--ink));
+  --atlas-surface: color-mix(in srgb, var(--paper) 96%, var(--ink));
+  --atlas-selected: color-mix(in srgb, var(--paper) 89%, var(--accent));
+  --atlas-site: #275b6f;
+  --atlas-equivalence: #654074;
+  --atlas-construction: #725a10;
+  --atlas-control-height: 2.65rem;
+  --atlas-radius: .25rem;
+}
+[data-theme="dark"] .atlas-workspace {
+  --atlas-site: #a2d9ed;
+  --atlas-equivalence: #e4b6f3;
+  --atlas-construction: #efcf75;
+}
+.atlas-workspace [hidden] { display: none !important; }
+.atlas-workspace .atlas-hero {
+  padding-block-end: 1rem;
+  border-block-end: 1px solid var(--atlas-line);
+}
+.atlas-workspace .atlas-hero h1 {
+  font: 900 clamp(2.75rem, 1.65rem + 5vw, 6rem)/1.04 var(--sans);
+  letter-spacing: -.055em;
+}
+.atlas-hero .lede { margin-block-start: .6rem; max-inline-size: 64ch; }
+.atlas-trail { margin: 0 0 .5rem; color: var(--muted); font: .82rem/1.4 var(--sans); }
+.atlas-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.2rem;
+  margin-block-start: .8rem;
+  align-items: baseline;
+  font: 700 .85rem/1.5 var(--sans);
+}
+.atlas-nav a { text-decoration-color: var(--atlas-line); }
+.atlas-nav a:hover { text-decoration-color: currentColor; }
+.atlas-workspace .atlas-controls :is(button,select,input[type="search"],input[type="text"]),
+.atlas-workspace button.atlas-controls {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  min-block-size: var(--atlas-control-height);
+  border: 1px solid var(--atlas-line);
+  border-radius: var(--atlas-radius);
+  padding: .35rem .6rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+.atlas-controls button:enabled, button.atlas-controls:enabled { cursor: pointer; }
+.atlas-workspace .atlas-controls button[aria-pressed="true"] {
+  background: var(--atlas-selected);
+  color: var(--accent);
+  border-color: currentColor;
+}
+.atlas-panel {
+  min-inline-size: 0;
+  padding: .7rem clamp(.7rem,2vw,1.2rem);
+  border-inline-start: 2px solid var(--accent);
+  background: var(--atlas-surface);
+  overflow-wrap: anywhere;
+}
+.atlas-workspace :is(.atlas-panel,.algebra-card,.property-record-body) math { font-family: var(--math-font); }
+.atlas-math {
+  display: inline-block;
+  max-inline-size: 100%;
+  overflow: auto;
+  vertical-align: middle;
+}
+.atlas-workspace [data-relation-style] { --relation-color: var(--ink); }
+.atlas-workspace [data-relation-style="equivalence"], .atlas-workspace [data-relation-style="criterion"] { --relation-color: var(--atlas-equivalence); }
+.atlas-workspace [data-relation-style="site"] { --relation-color: var(--atlas-site); }
+.atlas-workspace [data-relation-style="construction"] { --relation-color: var(--atlas-construction); }
+.atlas-workspace [data-relation-style="cohomology"], .atlas-workspace [data-relation-style="example"] { --relation-color: var(--accent); }
