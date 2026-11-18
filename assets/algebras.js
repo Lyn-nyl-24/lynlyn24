@@ -9,7 +9,7 @@ const relations = new Map(data.relations.map(row => [row.id,row]));
 const lex = input => input.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
 const index = rows => rows.map(row => [row,lex([row.name,row.id,...(row.aliases ?? []),...row.sourceTags].join(' '))]);
 const indexedEntries = index(data.entries), indexedRelations = index(data.relations);
-let visible = [], shown = 0, active = data.entries.find(row => row.name === 'Integral domain')?.id ??
+let visible = [], shown = 0, active = data.initial ??
   data.entries.find(row => data.incidence[row.id]?.length)?.id ?? data.entries[0]?.id;
 
 function options(preferred) {

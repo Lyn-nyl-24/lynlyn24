@@ -57,7 +57,12 @@
     "ramification-solution": "Ramification data",
     "ring-index": "Rings with a fixed integer index",
     "module-index": "Modules with a fixed integer index",
-    "ring-presentation": "Specified ring presentations"
+    "ring-presentation": "Specified ring presentations",
+    "scheme-morphism-point": "Scheme morphisms with a specified source point",
+    "relative-qc-module": "Quasi-coherent modules relative to a scheme morphism",
+    "relative-qc-module-point": "Relative quasi-coherent modules with a specified source point",
+    "affine-scheme-morphism": "Morphisms between affine schemes",
+    "scheme-over-field": "Schemes over a specified field"
   },
   "entries": [
     {
@@ -772,11 +777,26 @@
         [
           "https://stacks.math.columbia.edu/tag/02GH",
           "Stacks 02GH · étale morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 18.34 and Theorem 18.44, including local finite presentation"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02GI",
+          "Stacks 02GI · common source definition"
         ]
       ],
       "diagram": "top-rl-etale",
       "role": "predicate",
       "id": "P000003",
+      "definitionTag": "02GI",
+      "definitionTags": [
+        "02GI"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -792,11 +812,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01V4",
           "Stacks 01V4 · smooth morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Corollary 18.57(i),(iv), geometrically regular fibres"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01V5",
+          "Stacks 01V5 · common source definition"
         ]
       ],
       "diagram": "top-rl-smooth",
       "role": "predicate",
       "id": "P000004",
+      "definitionTag": "01V5",
+      "definitionTags": [
+        "01V5"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -816,11 +851,26 @@
         [
           "https://stacks.math.columbia.edu/tag/00SL",
           "Stacks 00SL · syntomic ring maps"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52(i)–(ii), flatness and the fibre criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · common source definition"
         ]
       ],
       "diagram": "top-rl-syntomic",
       "role": "predicate",
       "id": "P000005",
+      "definitionTag": "01UC",
+      "definitionTags": [
+        "01UC"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -831,16 +881,31 @@
       "name": "Flat",
       "aliases": [],
       "kind": "property",
-      "definition": "For every $x\\in X$ the local ring $\\mathcal O_{X,x}$ is flat over O at $f(x)$. Equivalently on affine charts, tensoring with the coordinate algebra is exact.",
+      "definition": "For a morphism $f:X\\to Y$ and every $x\\in X$, the stalk $\\mathcal O_{X,x}$ is flat as an $\\mathcal O_{Y,f(x)}$-module. On affine charts this is equivalent to exactness of extension of scalars along the coordinate ring map.",
       "refs": [
         [
           "https://stacks.math.columbia.edu/tag/01U2",
           "Stacks 01U2 · flat morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 14.1(1),(3), stalks of the structure sheaf"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · common source definition"
         ]
       ],
       "diagram": "top-rl-flat",
       "role": "predicate",
       "id": "P000006",
+      "definitionTag": "01U3",
+      "definitionTags": [
+        "01U3"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -856,11 +921,26 @@
         [
           "https://stacks.math.columbia.edu/tag/02G3",
           "Stacks 02G3 · unramified morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 18.22 and Proposition 18.29(i)–(iii), assuming local finite type"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · common source definition"
         ]
       ],
       "diagram": "top-rl-unramified",
       "role": "predicate",
       "id": "P000007",
+      "definitionTag": "02G4",
+      "definitionTags": [
+        "02G4"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -876,11 +956,26 @@
         [
           "https://stacks.math.columbia.edu/tag/069F",
           "Stacks 069F · local complete intersection morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definitions 19.10 and 19.37, Koszul regularity in the local factorization"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/069F",
+          "Stacks 069F · common source definition"
         ]
       ],
       "diagram": "top-rl-lci",
       "role": "predicate",
       "id": "P000008",
+      "definitionTag": "069F",
+      "definitionTags": [
+        "069F"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -896,6 +991,14 @@
         [
           "https://stacks.math.columbia.edu/tag/01OU",
           "Stacks 01OU · Noetherian schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.26"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01OV",
+          "Stacks 01OV · common source definition"
         ]
       ],
       "diagram": "top-al-lnoeth",
@@ -910,6 +1013,13 @@
         }
       ],
       "id": "P000009",
+      "definitionTag": "01OV",
+      "definitionTags": [
+        "01OV"
+      ],
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -998,12 +1108,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01IZ",
           "Stacks 01IZ · reduced schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=77",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.13 and Proposition 8.15, affine-local criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01J0",
+          "Stacks 01J0 · numbered source statement"
         ]
       ],
       "diagram": "top-al-reduced",
       "role": "predicate",
       "id": "P000013",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=77"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01J0"
+      ]
     },
     {
       "key": "al-lci",
@@ -1022,11 +1146,18 @@
         [
           "https://stacks.math.columbia.edu/tag/0AWV",
           "Stacks 0AWV · Gorenstein schemes"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Proposition 19.49(1), completion of a Noetherian local ring"
         ]
       ],
       "diagram": "top-al-lci",
       "role": "predicate",
       "id": "P000014",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -1042,12 +1173,26 @@
         [
           "https://stacks.math.columbia.edu/tag/0AWV",
           "Stacks 0AWV · Gorenstein schemes"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_10",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 25.123, the stalk criterion for a locally Noetherian scheme"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0AWW",
+          "Stacks 0AWW · numbered source statement"
         ]
       ],
       "diagram": "top-al-gorenstein",
       "role": "predicate",
       "id": "P000015",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_10"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "0AWW"
+      ]
     },
     {
       "key": "al-cm",
@@ -1082,12 +1227,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01S5",
           "Stacks 01S5 · affine morphisms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=47",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Proposition 4.36(i), the affine base-change test"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01S6",
+          "Stacks 01S6 · numbered source statement"
         ]
       ],
       "diagram": "top-rg-affine",
       "role": "predicate",
       "id": "P000017",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=47"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01S6"
+      ]
     },
     {
       "key": "rg-quasiaffine",
@@ -1102,12 +1261,19 @@
         [
           "https://stacks.math.columbia.edu/tag/01SM",
           "Stacks 01SM · quasi-affine morphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01SK",
+          "Stacks 01SK · numbered source statement"
         ]
       ],
       "diagram": "top-rg-quasiaffine",
       "role": "predicate",
       "id": "P000018",
-      "logicDomain": "morphism"
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01SK"
+      ]
     },
     {
       "key": "rg-finite",
@@ -1206,12 +1372,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01K3",
           "Stacks 01K3 · quasi-compact morphisms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Proposition 7.39, inverse images of affine opens"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K3",
+          "Stacks 01K3 · numbered source statement"
         ]
       ],
       "diagram": "top-rg-qc",
       "role": "predicate",
       "id": "P000022",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01K3"
+      ]
     },
     {
       "key": "rg-proper",
@@ -1226,12 +1406,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01W0",
           "Stacks 01W0 · proper morphisms"
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=25",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Definition 12.55, p. 348. Properness requires finite type, separatedness and universal closedness."
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01W1",
+          "Stacks 01W1 · numbered source statement"
         ]
       ],
       "diagram": "top-rg-proper",
       "role": "compound",
       "id": "P000023",
+      "checkedReferences": [
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=25"
+      ],
       "logicDomain": "morphism",
+      "sourceTags": [
+        "01W1"
+      ],
       "expression": {
         "and": [
           "P000024",
@@ -1255,6 +1449,14 @@
           "Stacks 01KH · separation axioms"
         ],
         [
+          "https://doi.org/10.1007/978-3-658-30733-2_10",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition and Proposition 9.7(i), diagonal criterion"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 7.25"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/01KK",
           "Stacks 01KK · common source definition"
         ]
@@ -1265,6 +1467,10 @@
       "definitionTag": "01KK",
       "definitionTags": [
         "01KK"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_10",
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67"
       ],
       "logicDomain": "morphism"
     },
@@ -1283,6 +1489,10 @@
           "Stacks 01KH · separation axioms"
         ],
         [
+          "https://doi.org/10.1007/978-3-658-30733-2_11",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 10.22, quasi-compact diagonal"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/01KK",
           "Stacks 01KK · common source definition"
         ]
@@ -1293,6 +1503,9 @@
       "definitionTag": "01KK",
       "definitionTags": [
         "01KK"
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_11"
       ],
       "logicDomain": "morphism"
     },
@@ -1444,12 +1657,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01II",
           "Stacks 01II · schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=12",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 2.20, affine schemes in the functor-of-points description"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01HW",
+          "Stacks 01HW · numbered source statement"
         ]
       ],
       "diagram": "top-ag-affine",
       "role": "predicate",
       "id": "P000031",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=12"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01HW"
+      ]
     },
     {
       "key": "ag-quasiaffine",
@@ -1464,12 +1691,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01P5",
           "Stacks 01P5 · quasi-affine schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=20",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 2.63, an open defined by finitely many principal opens"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01P6",
+          "Stacks 01P6 · numbered source statement"
         ]
       ],
       "diagram": "top-ag-quasiaffine",
       "role": "predicate",
       "id": "P000032",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=20"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01P6"
+      ]
     },
     {
       "key": "ag-qc",
@@ -1484,6 +1725,10 @@
         [
           "https://stacks.math.columbia.edu/tag/01K3",
           "Stacks 01K3 · quasi-compact morphisms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Proposition 7.37, finite subcovers of an affine cover"
         ]
       ],
       "diagram": "top-ag-qc",
@@ -1498,6 +1743,9 @@
         }
       ],
       "id": "P000033",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -1513,6 +1761,14 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 7.25 applied over Spec ℤ"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_10",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition and Proposition 9.7(i), diagonal criterion"
         ],
         [
           "https://stacks.math.columbia.edu/tag/01KK",
@@ -1535,6 +1791,10 @@
       "definitionTags": [
         "01KK"
       ],
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67",
+        "https://doi.org/10.1007/978-3-658-30733-2_10"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -1550,6 +1810,14 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_8",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 7.21, intersections of affine opens"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Proposition 7.38"
         ],
         [
           "https://stacks.math.columbia.edu/tag/01KK",
@@ -1572,6 +1840,10 @@
       "definitionTags": [
         "01KK"
       ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_8",
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -1587,6 +1859,18 @@
         [
           "https://stacks.math.columbia.edu/tag/01OU",
           "Stacks 01OU · Noetherian schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.26"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Proposition 7.37, finite affine subcovers"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01OV",
+          "Stacks 01OV · common source definition"
         ]
       ],
       "diagram": "top-ag-noeth",
@@ -1601,6 +1885,14 @@
         }
       ],
       "id": "P000036",
+      "definitionTag": "01OV",
+      "definitionTags": [
+        "01OV"
+      ],
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78",
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69"
+      ],
       "logicDomain": "scheme",
       "expression": {
         "and": [
@@ -1622,12 +1914,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01OJ",
           "Stacks 01OJ · integral schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=80",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.43 and Example 8.44"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01OK",
+          "Stacks 01OK · numbered source statement"
         ]
       ],
       "diagram": "top-ag-integral",
       "role": "compound",
       "id": "P000037",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=80"
+      ],
       "logicDomain": "scheme",
+      "sourceTags": [
+        "01OK"
+      ],
       "expression": {
         "and": [
           "P000013",
@@ -1707,11 +2013,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01UA",
           "Stacks 01UA · flat morphisms locally of finite presentation are universally open"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 5.32 and Proposition 5.33(i), after arbitrary base change"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U0",
+          "Stacks 01U0 · common source definition"
         ]
       ],
       "diagram": "top-re-open",
       "role": "predicate",
       "id": "P000040",
+      "definitionTag": "01U0",
+      "definitionTags": [
+        "01U0"
+      ],
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -1727,12 +2048,26 @@
         [
           "https://stacks.math.columbia.edu/tag/04DC",
           "Stacks 04DC · universal homeomorphisms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 5.32 and Proposition 5.33(i), after arbitrary base change"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/04DD",
+          "Stacks 04DD · numbered source statement"
         ]
       ],
       "diagram": "top-re-homeo",
       "role": "predicate",
       "id": "P000041",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "04DD"
+      ]
     },
     {
       "key": "re-closed",
@@ -1747,12 +2082,26 @@
         [
           "https://stacks.math.columbia.edu/tag/01W0",
           "Stacks 01W0 · proper morphisms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 5.32 and Proposition 5.33(i), after arbitrary base change"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01KB",
+          "Stacks 01KB · numbered source statement"
         ]
       ],
       "diagram": "top-re-closed",
       "role": "predicate",
       "id": "P000042",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01KB"
+      ]
     },
     {
       "key": "re-surj",
@@ -1791,11 +2140,31 @@
         [
           "https://stacks.math.columbia.edu/tag/01S2",
           "Stacks 01S2 · radicial morphisms"
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_5.pdf#page=17",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Proposition 4.35, p. 111. Universal injectivity is equivalent to injectivity on points and purely inseparable extensions of all residue fields."
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 5.32 and Proposition 5.33(i), after arbitrary base change"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01S3",
+          "Stacks 01S3 · common source definition"
         ]
       ],
       "diagram": "top-re-radicial",
       "role": "predicate",
       "id": "P000044",
+      "definitionTag": "01S3",
+      "definitionTags": [
+        "01S3"
+      ],
+      "checkedReferences": [
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_5.pdf#page=17",
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=55"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -1845,6 +2214,10 @@
         [
           "https://stacks.math.columbia.edu/tag/094L",
           "Stacks 094L · the space of a qcqs scheme is spectral"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Propositions 7.37–7.38 and Remark 7.40"
         ]
       ],
       "role": "compound",
@@ -1858,6 +2231,9 @@
         }
       ],
       "id": "P000046",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=69"
+      ],
       "logicDomain": "scheme",
       "expression": {
         "and": [
@@ -2274,6 +2650,10 @@
           "Stacks 08YF · spectral spaces and the constructible topology"
         ],
         [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=24",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Definition 1.1.5. The four spectral axioms include unique generic points for nonempty irreducible closed sets."
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/08YG",
           "Stacks 08YG · common source definition"
         ]
@@ -2292,6 +2672,9 @@
       "definitionTag": "08YG",
       "definitionTags": [
         "08YG"
+      ],
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=24"
       ],
       "logicDomain": "space",
       "diagrams": [
@@ -2813,11 +3196,18 @@
         [
           "https://stacks.math.columbia.edu/tag/02NH",
           "Stacks 02NH · finite fibres and quasi-finiteness"
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=7",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Definition 12.14, p. 330. A finite-type morphism is quasi-finite precisely when all its fibres have finitely many points."
         ]
       ],
       "subject": "morphism",
       "role": "predicate",
       "id": "P000560",
+      "checkedReferences": [
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=7"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -3975,6 +4365,10 @@
         [
           "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
           "Hochster, Prime ideal structure in commutative rings (1969)"
+        ],
+        [
+          "https://arxiv.org/pdf/2306.06745v2#page=4",
+          "Bezhanishvili & Melzer, Algebraic frames in Priestley duality, Definitions 2.1, 2.3 and 2.5(1). A coherent frame is algebraic, its compact elements are closed under binary meets, and its top is compact."
         ]
       ],
       "aliases": [
@@ -3992,6 +4386,9 @@
         }
       ],
       "id": "G000071",
+      "checkedReferences": [
+        "https://arxiv.org/pdf/2306.06745v2#page=4"
+      ],
       "logicDomain": null,
       "diagrams": [
         {
@@ -4044,6 +4441,10 @@
           "Stacks 08YG · spectral spaces and spectral maps"
         ],
         [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=35",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, §1.3, immediately before Proposition 1.3.6. Between spectral spaces, inverse images of quasi-compact opens must be quasi-compact open."
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/08YG",
           "Stacks 08YG · common source definition"
         ]
@@ -4054,6 +4455,9 @@
       "definitionTag": "08YG",
       "definitionTags": [
         "08YG"
+      ],
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=35"
       ],
       "logicDomain": null
     },
@@ -5805,6 +6209,680 @@
       "role": "predicate",
       "id": "P000075",
       "logicDomain": "algebraic-space"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-flat-at",
+      "subject": "scheme-morphism-point",
+      "name": "Flat at a specified source point",
+      "definition": "Writing $s=f(x)$, the stalk homomorphism $\\mathcal O_{S,s}\\to\\mathcal O_{X,x}$ makes $\\mathcal O_{X,x}$ a flat $\\mathcal O_{S,s}$-module.",
+      "sourceTag": "01U3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Definition 14.1(1),(3), stalkwise relative flatness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "role": "predicate",
+      "id": "P000756",
+      "definitionTag": "01U3",
+      "definitionTags": [
+        "01U3"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Relative quasi-coherent modules with a specified source point",
+      "kind": "property",
+      "key": "smx-qc-flat-at",
+      "subject": "relative-qc-module-point",
+      "name": "Quasi-coherent module flat over the base at a specified point",
+      "definition": "Given $f:X\\to S$, $x\\in X$ and a quasi-coherent $\\mathcal O_X$-module $\\mathcal F$, its stalk $\\mathcal F_x$ is flat over $\\mathcal O_{S,f(x)}$ via the stalk homomorphism.",
+      "sourceTag": "01U3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Definition 14.1(1),(3), stalkwise relative flatness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "role": "predicate",
+      "id": "P000757",
+      "definitionTag": "01U3",
+      "definitionTags": [
+        "01U3"
+      ],
+      "logicDomain": "relative-qc-module-point"
+    },
+    {
+      "topic": "Quasi-coherent modules relative to a scheme morphism",
+      "kind": "property",
+      "key": "smx-qc-flat",
+      "subject": "relative-qc-module",
+      "name": "Quasi-coherent module flat over the base",
+      "definition": "For the specified $f:X\\to S$ and quasi-coherent $\\mathcal O_X$-module $\\mathcal F$, the module $\\mathcal F_x$ is flat over $\\mathcal O_{S,f(x)}$ for every $x\\in X$.",
+      "sourceTag": "01U3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Definition 14.1(1),(3), stalkwise relative flatness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "role": "predicate",
+      "id": "P000758",
+      "definitionTag": "01U3",
+      "definitionTags": [
+        "01U3"
+      ],
+      "logicDomain": "relative-qc-module"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-syntomic-at",
+      "subject": "scheme-morphism-point",
+      "name": "Syntomic at a specified source point",
+      "definition": "For $f:X\\to S$ and $x\\in X$, there exist affine opens $x\\in U=\\operatorname{Spec}B\\subseteq X$ and $V=\\operatorname{Spec}A\\subseteq S$ with $f(U)\\subseteq V$ such that $A\\to B$ is flat and finitely presented and $B\\otimes_A\\kappa(\\mathfrak p)$ is a local complete intersection over $\\kappa(\\mathfrak p)$ for every $\\mathfrak p\\in\\operatorname{Spec}A$.",
+      "sourceTag": "01UC",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00SL",
+          "Stacks 00SL · syntomic ring map"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "role": "predicate",
+      "id": "P000759",
+      "definitionTag": "01UC",
+      "definitionTags": [
+        "01UC"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Schemes over a specified field",
+      "kind": "property",
+      "key": "smx-lci-over-field",
+      "subject": "scheme-over-field",
+      "name": "Local complete intersection over a specified field",
+      "definition": "For the specified field $k$ and structure morphism $X\\to\\operatorname{Spec}k$, this morphism is syntomic. Equivalently $X$ is locally of finite type over $k$ and every point has an affine open neighbourhood whose coordinate algebra is a global complete intersection over $k$. The local finite type condition is part of the latter formulation.",
+      "sourceTag": "01UC",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UG",
+          "Stacks 01UG · criterion for schemes locally of finite type over a field"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00S9",
+          "Stacks 00S9 · finite type algebras over a field"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "role": "predicate",
+      "id": "P000760",
+      "definitionTag": "01UC",
+      "definitionTags": [
+        "01UC"
+      ],
+      "logicDomain": "scheme-over-field"
+    },
+    {
+      "topic": "Morphisms between affine schemes",
+      "kind": "property",
+      "key": "smx-standard-syntomic",
+      "subject": "affine-scheme-morphism",
+      "name": "Standard syntomic morphism between affine schemes",
+      "definition": "The affine morphism is isomorphic to $\\operatorname{Spec}B\\to\\operatorname{Spec}A$ for one presentation $B=A[t_1,\\ldots,t_n]/(g_1,\\ldots,g_c)$ such that each nonempty fibre has Krull dimension $n-c$. This is a global relative complete intersection presentation.",
+      "sourceTag": "01UC",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00SP",
+          "Stacks 00SP · global relative complete intersection"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00SW",
+          "Stacks 00SW · properties of such presentations"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000761",
+      "definitionTag": "01UC",
+      "definitionTags": [
+        "01UC"
+      ],
+      "logicDomain": "affine-scheme-morphism"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-smooth-at",
+      "subject": "scheme-morphism-point",
+      "name": "Smooth at a specified source point",
+      "definition": "For $f:X\\to S$ and $x\\in X$, there exist affine opens $x\\in U=\\operatorname{Spec}B\\subseteq X$ and $V=\\operatorname{Spec}A\\subseteq S$ with $f(U)\\subseteq V$ such that $B$ is a smooth $A$-algebra. One may shrink $U$ about $x$ until the resulting affine morphism has a standard smooth presentation over an affine target neighbourhood.",
+      "sourceTag": "01V5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01V5",
+          "Stacks 01V5 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00T2",
+          "Stacks 00T2 · smooth ring maps"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01V7",
+          "Stacks 01V7 · local standard smooth presentation"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, §18.10 and Theorem 18.56, smoothness at a source point"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01V5",
+          "Stacks 01V5 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000762",
+      "definitionTag": "01V5",
+      "definitionTags": [
+        "01V5"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Morphisms between affine schemes",
+      "kind": "property",
+      "key": "smx-standard-smooth",
+      "subject": "affine-scheme-morphism",
+      "name": "Standard smooth morphism between affine schemes",
+      "definition": "The affine morphism is isomorphic to $\\operatorname{Spec}B\\to\\operatorname{Spec}A$ for a presentation $B=A[t_1,\\ldots,t_n]/(g_1,\\ldots,g_c)$, $0\\leq c\\leq n$, in which the image of $\\det(\\partial g_i/\\partial t_j)_{1\\le i,j\\le c}$ is a unit in $B$ after a choice of variable ordering. The empty determinant is one.",
+      "sourceTag": "01V5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01V5",
+          "Stacks 01V5 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00T6",
+          "Stacks 00T6 · standard smooth presentation"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01V5",
+          "Stacks 01V5 · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000763",
+      "definitionTag": "01V5",
+      "definitionTags": [
+        "01V5"
+      ],
+      "logicDomain": "affine-scheme-morphism"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-unramified-at",
+      "subject": "scheme-morphism-point",
+      "name": "Unramified at a specified source point",
+      "definition": "For $f:X\\to S$ and $x\\in X$, there exist affine opens $x\\in U=\\operatorname{Spec}B\\subseteq X$ and $V=\\operatorname{Spec}A\\subseteq S$ with $f(U)\\subseteq V$ such that $B$ is of finite type over $A$ and $\\Omega_{B/A}=0$.",
+      "sourceTag": "02G4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00UT",
+          "Stacks 00UT · unramified algebra"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.22 and Proposition 18.29, including the finite type convention"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000764",
+      "definitionTag": "02G4",
+      "definitionTags": [
+        "02G4"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-g-unramified-at",
+      "subject": "scheme-morphism-point",
+      "name": "G-unramified at a specified source point",
+      "definition": "For $f:X\\to S$ and $x\\in X$, there exist affine opens $x\\in U=\\operatorname{Spec}B\\subseteq X$ and $V=\\operatorname{Spec}A\\subseteq S$ with $f(U)\\subseteq V$ such that $B$ is of finite presentation over $A$ and $\\Omega_{B/A}=0$.",
+      "sourceTag": "02G4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00UT",
+          "Stacks 00UT · G-unramified algebra"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, discussion after Definition 18.22, EGA’s finite presentation convention"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000765",
+      "definitionTag": "02G4",
+      "definitionTags": [
+        "02G4"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-g-unramified",
+      "subject": "morphism",
+      "name": "G-unramified morphism",
+      "definition": "At every $x\\in X$, the specified $f:X\\to S$ admits affine source and target neighbourhoods on which the coordinate algebra is finitely presented with vanishing relative differentials.",
+      "sourceTag": "02G4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02G5",
+          "Stacks 02G5 · locally finitely presented with vanishing differentials"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, discussion after Definition 18.22, EGA’s finite presentation convention"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000766",
+      "definitionTag": "02G4",
+      "definitionTags": [
+        "02G4"
+      ],
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-zero-differentials",
+      "subject": "morphism",
+      "name": "Vanishing sheaf of relative differentials",
+      "definition": "For $f:X\\to S$ the sheaf $\\Omega^1_{X/S}$ is zero. On any compatible pair of affine opens $\\operatorname{Spec}B\\subseteq X$, $\\operatorname{Spec}A\\subseteq S$, its restriction to $\\operatorname{Spec}B$ corresponds to $\\Omega_{B/A}$.",
+      "sourceTag": "02G5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G5",
+          "Stacks 02G5 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.22 and Proposition 18.29, including the finite type convention"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000767",
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-etale-at",
+      "subject": "scheme-morphism-point",
+      "name": "Étale at a specified source point",
+      "definition": "For $f:X\\to S$ and $x\\in X$, there exist affine opens $x\\in U=\\operatorname{Spec}B\\subseteq X$ and $V=\\operatorname{Spec}A\\subseteq S$ with $f(U)\\subseteq V$ such that $B$ is an étale $A$-algebra, equivalently a finitely presented, flat $A$-algebra with $\\Omega_{B/A}=0$.",
+      "sourceTag": "02GI",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GI",
+          "Stacks 02GI · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00U1",
+          "Stacks 00U1 · étale algebras"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/08WD",
+          "Stacks 08WD · flat and finitely presented with zero differentials"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.34, étaleness on an open neighbourhood"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02GI",
+          "Stacks 02GI · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000768",
+      "definitionTag": "02GI",
+      "definitionTags": [
+        "02GI"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Morphisms between affine schemes",
+      "kind": "property",
+      "key": "smx-standard-etale",
+      "subject": "affine-scheme-morphism",
+      "name": "Standard étale morphism between affine schemes",
+      "definition": "The affine morphism is isomorphic to $\\operatorname{Spec}((A[t]/(g))_h)\\to\\operatorname{Spec}A$, where $g,h\\in A[t]$, $g$ is monic and the image of its formal derivative $g'$ is a unit after localization at $h$.",
+      "sourceTag": "02GI",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GI",
+          "Stacks 02GI · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00UB",
+          "Stacks 00UB · standard étale ring map"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.39, the monic polynomial and invertible derivative"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02GI",
+          "Stacks 02GI · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "role": "predicate",
+      "id": "P000769",
+      "definitionTag": "02GI",
+      "definitionTags": [
+        "02GI"
+      ],
+      "logicDomain": "affine-scheme-morphism"
+    },
+    {
+      "topic": "Scheme morphisms with a specified source point",
+      "kind": "property",
+      "key": "smx-lci-at",
+      "subject": "scheme-morphism-point",
+      "name": "Local complete intersection at a specified source point",
+      "definition": "The morphism is of finite type at $x$ and its restriction to some open neighbourhood $U$ of $x$ factors as $U\\hookrightarrow P\\to S$, with the first map a Koszul-regular immersion and the second smooth. The source calls this being Koszul at $x$. Koszul regularity means that suitable local defining sequences have zero positive Koszul homology.",
+      "sourceTag": "069F",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/069F",
+          "Stacks 069F · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definitions 19.10 and 19.37, Koszul acyclicity and smooth factorization"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/069F",
+          "Stacks 069F · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "role": "predicate",
+      "id": "P000770",
+      "definitionTag": "069F",
+      "definitionTags": [
+        "069F"
+      ],
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-open",
+      "subject": "morphism",
+      "name": "Open morphism",
+      "definition": "The image under $f:X\\to S$ of every Zariski open subset of $X$ is open in $S$.",
+      "sourceTag": "01U0",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U0",
+          "Stacks 01U0 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U0",
+          "Stacks 01U0 · common source definition"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000771",
+      "definitionTag": "01U0",
+      "definitionTags": [
+        "01U0"
+      ],
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-injective-points",
+      "subject": "morphism",
+      "name": "Injective on underlying points",
+      "definition": "For $f:X\\to S$ and any $x_1,x_2\\in X$, equality $f(x_1)=f(x_2)$ implies $x_1=x_2$.",
+      "sourceTag": "01S3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S3",
+          "Stacks 01S3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_5",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Proposition 4.35, injectivity and purely inseparable residue extensions"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_5"
+      ],
+      "role": "predicate",
+      "id": "P000772",
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-pure-residues",
+      "subject": "morphism",
+      "name": "Purely inseparable residue extensions everywhere",
+      "definition": "For every $x\\in X$ the field extension $\\kappa(f(x))\\to\\kappa(x)$ is purely inseparable. In positive characteristic each element has some $p$-power in the smaller field. In characteristic zero the extension is trivial.",
+      "sourceTag": "01S3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S3",
+          "Stacks 01S3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_5",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Proposition 4.35, injectivity and purely inseparable residue extensions"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_5"
+      ],
+      "role": "predicate",
+      "id": "P000773",
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-radicial",
+      "subject": "morphism",
+      "name": "Radicial morphism",
+      "definition": "The underlying map of points is injective and every residue extension $\\kappa(x)/\\kappa(f(x))$ is purely inseparable.",
+      "sourceTag": "01S3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S3",
+          "Stacks 01S3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_5",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Proposition 4.35, injectivity and purely inseparable residue extensions"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01S3",
+          "Stacks 01S3 · common source definition"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_5"
+      ],
+      "role": "predicate",
+      "id": "P000774",
+      "definitionTag": "01S3",
+      "definitionTags": [
+        "01S3"
+      ],
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-field-points",
+      "subject": "morphism",
+      "name": "Injective on points valued in every field",
+      "definition": "For every field $K$, composition with $f$ induces an injective function $X(K)\\to S(K)$, where $X(K)=\\operatorname{Hom}(\\operatorname{Spec}K,X)$.",
+      "sourceTag": "01S4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · numbered Stacks Project source"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000775",
+      "logicDomain": "morphism"
+    },
+    {
+      "topic": "Morphisms of schemes",
+      "kind": "property",
+      "key": "smx-diagonal-surjective",
+      "subject": "morphism",
+      "name": "Surjective diagonal",
+      "definition": "The diagonal $\\Delta_f:X\\to X\\times_S X$ is surjective on underlying points.",
+      "sourceTag": "01S4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · numbered Stacks Project source"
+        ]
+      ],
+      "role": "predicate",
+      "id": "P000776",
+      "logicDomain": "morphism"
     },
     {
       "topic": "Basic ring properties",
@@ -7648,6 +8726,10 @@
           "Stacks 0518 · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=52",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Definition 12.2 (finite free presentation)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/0518",
           "Stacks 0518 · common source definition"
         ]
@@ -7656,6 +8738,9 @@
       "definitionTag": "0518",
       "definitionTags": [
         "0518"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=52"
       ],
       "logicDomain": "module"
     },
@@ -7797,9 +8882,16 @@
         [
           "https://stacks.math.columbia.edu/tag/05CE",
           "Stacks 05CE · source and definition"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=51",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Definition 12.1 and its exact Hom characterization"
         ]
       ],
       "id": "P000149",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=51"
+      ],
       "logicDomain": "module",
       "sourceTags": [
         "05CE"
@@ -7913,6 +9005,10 @@
           "Stacks 00HB · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=45",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §11, p. 45 (exactness of tensor)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/00HB",
           "Stacks 00HB · common source definition"
         ]
@@ -7921,6 +9017,9 @@
       "definitionTag": "00HB",
       "definitionTags": [
         "00HB"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=45"
       ],
       "logicDomain": "module"
     },
@@ -7938,6 +9037,10 @@
           "Stacks 00HB · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=45",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 11.7 and Remark 11.8 (preservation and reflection of exactness)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/00HB",
           "Stacks 00HB · common source definition"
         ]
@@ -7946,6 +9049,9 @@
       "definitionTag": "00HB",
       "definitionTags": [
         "00HB"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=45"
       ],
       "logicDomain": "module"
     },
@@ -8268,9 +9374,16 @@
         [
           "https://stacks.math.columbia.edu/tag/07JZ",
           "Stacks 07JZ · source and definition"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=47",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 11.14 (localization as scalar extension at a multiplicative subset)"
         ]
       ],
       "id": "G000149",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=47"
+      ],
       "logicDomain": null,
       "sourceTags": [
         "07JZ"
@@ -9168,6 +10281,10 @@
           "Stacks 00F3 · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=3",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §1, p. 3 (finite algebra generators)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/00F3",
           "Stacks 00F3 · common source definition"
         ]
@@ -9176,6 +10293,9 @@
       "definitionTag": "00F3",
       "definitionTags": [
         "00F3"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=3"
       ],
       "logicDomain": "ring-map"
     },
@@ -9193,6 +10313,10 @@
           "Stacks 00F3 · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=3",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §1, p. 3 (finitely many polynomial generators and defining relations)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/00F3",
           "Stacks 00F3 · common source definition"
         ]
@@ -9201,6 +10325,9 @@
       "definitionTag": "00F3",
       "definitionTags": [
         "00F3"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=3"
       ],
       "logicDomain": "ring-map"
     },
@@ -9216,9 +10343,16 @@
         [
           "https://stacks.math.columbia.edu/tag/0563",
           "Stacks 0563 · source and definition"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=3",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §1, p. 3 (module-finiteness of a ring map)"
         ]
       ],
       "id": "P000203",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=3"
+      ],
       "logicDomain": "ring-map",
       "sourceTags": [
         "0563"
@@ -9322,6 +10456,10 @@
           "Stacks 00HB · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=44",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §11, p. 44 (flatness of the target as a module)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/00HB",
           "Stacks 00HB · common source definition"
         ]
@@ -9330,6 +10468,9 @@
       "definitionTag": "00HB",
       "definitionTags": [
         "00HB"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=44"
       ],
       "logicDomain": "ring-map"
     },
@@ -9347,6 +10488,10 @@
           "Stacks 00HB · source and definition"
         ],
         [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=44",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §11, p. 44 (faithful flatness of the target as a module)"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/00HB",
           "Stacks 00HB · common source definition"
         ]
@@ -9355,6 +10500,9 @@
       "definitionTag": "00HB",
       "definitionTags": [
         "00HB"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=44"
       ],
       "logicDomain": "ring-map"
     },
@@ -10631,10 +11779,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030Z",
           "Stacks 030Z · source definition"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Definition 2.23, the positive characteristic clause"
         ]
       ],
       "role": "predicate",
       "id": "P000256",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33"
+      ],
       "logicDomain": "field"
     },
     {
@@ -10790,10 +11945,17 @@
         [
           "https://stacks.math.columbia.edu/tag/09HX",
           "Stacks 09HX · source definition"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=26",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Exercise 1-3(e), finite subgroups of the multiplicative group of a field"
         ]
       ],
       "role": "predicate",
       "id": "P000263",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=26"
+      ],
       "logicDomain": "field"
     },
     {
@@ -11384,6 +12546,10 @@
           "Stacks 09H1 · source definition"
         ],
         [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=61",
+          "J. S. Milne, Fields and Galois Theory, v5.10, §5, the definition preceding Theorem 5.1, for an algebraic element"
+        ],
+        [
           "https://stacks.math.columbia.edu/tag/09H1",
           "Stacks 09H1 · common source definition"
         ]
@@ -11393,6 +12559,9 @@
       "definitionTag": "09H1",
       "definitionTags": [
         "09H1"
+      ],
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=61"
       ],
       "logicDomain": "field-element"
     },
@@ -20574,9 +21743,16 @@
         [
           "https://stacks.math.columbia.edu/tag/0G3E",
           "Stacks 0G3E · numbered source"
+        ],
+        [
+          "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=4",
+          "B. Bhatt, Prismatic cohomology, Lecture III, §2, property (1) (left adjoint for a finitely generated ideal)"
         ]
       ],
       "id": "G000275",
+      "checkedReferences": [
+        "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=4"
+      ],
       "logicDomain": null
     },
     {
@@ -23366,12 +24542,19 @@
         [
           "https://stacks.math.columbia.edu/tag/02GH",
           "Stacks 02GH · étale morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 18.34 and Theorem 18.44, including local finite presentation"
         ]
       ],
       "ambient": "Local properties of a morphism $f\\colon X\\to Y$; the definitions are checked in neighbourhoods of source and target points.",
       "diagram": "edge-relative-local-rl-etale-rl-smooth",
       "name": "Étale ⇒ Smooth",
       "id": "T000033",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -23389,12 +24572,19 @@
         [
           "https://stacks.math.columbia.edu/tag/02GH",
           "Stacks 02GH · étale morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 18.34 and Theorem 18.44, including local finite presentation"
         ]
       ],
       "ambient": "Local properties of a morphism $f\\colon X\\to Y$; the definitions are checked in neighbourhoods of source and target points.",
       "diagram": "edge-relative-local-rl-etale-rl-unramified",
       "name": "Étale ⇒ Unramified",
       "id": "T000034",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -23412,13 +24602,27 @@
         [
           "https://stacks.math.columbia.edu/tag/01UB",
           "Stacks 01UB · syntomic morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 19.51, paragraph following the definition"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01VD",
+          "Stacks 01VD · numbered source statement"
         ]
       ],
       "ambient": "Local properties of a morphism $f\\colon X\\to Y$; the definitions are checked in neighbourhoods of source and target points.",
       "diagram": "edge-relative-local-rl-smooth-rl-syntomic",
       "name": "Smooth ⇒ Syntomic",
       "id": "T000035",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01VD"
+      ]
     },
     {
       "key": "edge-relative-local-rl-syntomic-rl-flat",
@@ -23435,13 +24639,27 @@
         [
           "https://stacks.math.columbia.edu/tag/01UB",
           "Stacks 01UB · syntomic morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52(i)–(ii), flatness and the fibre criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UL",
+          "Stacks 01UL · numbered source statement"
         ]
       ],
       "ambient": "Local properties of a morphism $f\\colon X\\to Y$; the definitions are checked in neighbourhoods of source and target points.",
       "diagram": "edge-relative-local-rl-syntomic-rl-flat",
       "name": "Syntomic ⇒ Flat",
       "id": "T000036",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01UL"
+      ]
     },
     {
       "key": "edge-relative-local-rl-syntomic-rl-lci",
@@ -23458,12 +24676,19 @@
         [
           "https://stacks.math.columbia.edu/tag/069K",
           "Stacks 069K · syntomic if and only if flat and local complete intersection"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52(i)–(ii), flatness and the fibre criterion"
         ]
       ],
       "ambient": "Local properties of a morphism $f\\colon X\\to Y$; the definitions are checked in neighbourhoods of source and target points.",
       "diagram": "edge-relative-local-rl-syntomic-rl-lci",
       "name": "Syntomic ⇒ Local complete intersection",
       "id": "T000037",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -23481,13 +24706,27 @@
         [
           "https://stacks.math.columbia.edu/tag/01UB",
           "Stacks 01UB · syntomic morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52(i)–(ii), flatness and the fibre criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01UK",
+          "Stacks 01UK · numbered source statement"
         ]
       ],
       "ambient": "Local properties of a morphism $f\\colon X\\to Y$; the definitions are checked in neighbourhoods of source and target points.",
       "diagram": "edge-relative-local-rl-syntomic-rl-lfp",
       "name": "Syntomic ⇒ Locally of finite presentation",
       "id": "T000038",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01UK"
+      ]
     },
     {
       "key": "edge-relative-local-rl-unramified-rl-lft",
@@ -23529,10 +24768,17 @@
         [
           "https://stacks.math.columbia.edu/tag/02GH",
           "Stacks 02GH · étale morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 18.34 and Theorem 18.44, including local finite presentation"
         ]
       ],
       "name": "Flat ∧ Unramified ∧ Locally of finite presentation ⇔ Étale",
       "id": "T000040",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -23551,11 +24797,25 @@
         [
           "https://stacks.math.columbia.edu/tag/069K",
           "Stacks 069K · syntomic if and only if flat and local complete intersection"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52(i)–(ii), flatness and the fibre criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/069K",
+          "Stacks 069K · numbered source statement"
         ]
       ],
       "name": "Flat ∧ Local complete intersection ⇔ Syntomic",
       "id": "T000981",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "069K"
+      ]
     },
     {
       "key": "edge-absolute-local-al-lnoeth-al-lconn",
@@ -23895,12 +25155,19 @@
         [
           "https://stacks.math.columbia.edu/tag/01W0",
           "Stacks 01W0 · proper morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_13",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 12.55, the three conditions for properness"
         ]
       ],
       "ambient": "Properties of $f\\colon X\\to Y$ with conditions on full inverse images, the diagonal, or all base changes.",
       "diagram": "edge-relative-global-rg-proper-rg-separated",
       "name": "Proper ⇒ Separated",
       "id": "T000055",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_13"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -23918,12 +25185,24 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_11",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 10.22, quasi-compact diagonal"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=68",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Example 7.35(i)"
         ]
       ],
       "ambient": "Properties of $f\\colon X\\to Y$ with conditions on full inverse images, the diagonal, or all base changes.",
       "diagram": "edge-relative-global-rg-separated-rg-qs",
       "name": "Separated ⇒ Quasi-separated",
       "id": "T000056",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_11",
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=68"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -24011,11 +25290,25 @@
         [
           "https://stacks.math.columbia.edu/tag/01W0",
           "Stacks 01W0 · proper morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_13",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 12.55, the three conditions for properness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01W1",
+          "Stacks 01W1 · numbered source statement"
         ]
       ],
       "name": "Separated ∧ Of finite type ∧ Universally closed ⇔ Proper",
       "id": "T000060",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_13"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "01W1"
+      ]
     },
     {
       "key": "edge-absolute-global-ag-irred-ag-connected",
@@ -24101,12 +25394,19 @@
         [
           "https://stacks.math.columbia.edu/tag/01P5",
           "Stacks 01P5 · quasi-affine schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=68",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Example 7.36(i), with the convention of Definition 2.63"
         ]
       ],
       "ambient": "Properties of X itself. For separatedness, the base of the structure morphism is $\\operatorname{Spec}\\mathbb Z$.",
       "diagram": "edge-absolute-global-ag-quasiaffine-ag-qc",
       "name": "Quasi-affine ⇒ Quasi-compact",
       "id": "T000064",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=68"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -24124,12 +25424,19 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · separation axioms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Example 7.29(ii)"
         ]
       ],
       "ambient": "Properties of X itself. For separatedness, the base of the structure morphism is $\\operatorname{Spec}\\mathbb Z$.",
       "diagram": "edge-absolute-global-ag-quasiaffine-ag-separated",
       "name": "Quasi-affine ⇒ Separated",
       "id": "T000065",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -24170,12 +25477,19 @@
         [
           "https://stacks.math.columbia.edu/tag/01OU",
           "Stacks 01OU · Noetherian schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.26"
         ]
       ],
       "ambient": "Properties of X itself. For separatedness, the base of the structure morphism is $\\operatorname{Spec}\\mathbb Z$.",
       "diagram": "edge-absolute-global-ag-noeth-ag-qc",
       "name": "Noetherian ⇒ Quasi-compact",
       "id": "T000067",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78"
+      ],
       "logicDomain": "scheme"
     },
     {
@@ -24240,11 +25554,25 @@
         [
           "https://stacks.math.columbia.edu/tag/01OU",
           "Stacks 01OU · Noetherian schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.26"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01OV",
+          "Stacks 01OV · numbered source statement"
         ]
       ],
       "name": "Locally Noetherian ∧ Quasi-compact ⇔ Noetherian",
       "id": "T000070",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=78"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01OV"
+      ]
     },
     {
       "key": "formula-absolute-global-ag-integral",
@@ -24262,11 +25590,25 @@
         [
           "https://stacks.math.columbia.edu/tag/01OJ",
           "Stacks 01OJ · integral schemes"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=80",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Definition 8.43 and Example 8.44"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01ON",
+          "Stacks 01ON · numbered source statement"
         ]
       ],
       "name": "Reduced ∧ Irreducible ⇔ Integral",
       "id": "T000071",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=80"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01ON"
+      ]
     },
     {
       "key": "formula-absolute-global-ag-spectral",
@@ -24751,12 +26093,19 @@
         [
           "https://topology.pi-base.org/theorems/T000531",
           "π-Base T000531 · Stone spaces are spectral"
+        ],
+        [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=35",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Theorem 1.3.4. Hausdorff spectral spaces are exactly the Boolean spaces."
         ]
       ],
       "kind": "equivalence",
       "subject": "space",
       "name": "Spectral space ∧ Hausdorff space ⇔ Profinite space",
       "id": "T000088",
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=35"
+      ],
       "logicDomain": "space"
     },
     {
@@ -24789,6 +26138,10 @@
         [
           "https://topology.pi-base.org/theorems/T000531",
           "π-Base T000531 · Stone spaces are spectral"
+        ],
+        [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=40",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Proposition 1.3.20. A space is Boolean exactly when it is spectral and all its points are closed."
         ]
       ],
       "kind": "equivalence",
@@ -24798,6 +26151,9 @@
       "hypotheses": "Let $X$ be spectral, with its original topology.",
       "statement": "$X$ is $T_1$ exactly when it is profinite. In this case the original topology is also Hausdorff and agrees with the patch topology.",
       "id": "T000089",
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=40"
+      ],
       "logicDomain": "space",
       "diagrams": [
         {
@@ -24926,12 +26282,19 @@
         [
           "https://stacks.math.columbia.edu/tag/01S5",
           "Stacks 01S5 · affine morphisms"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Example 7.29(ii), relative affine morphisms"
         ]
       ],
       "kind": "implies",
       "subject": "morphism",
       "name": "Affine ⇒ Separated",
       "id": "T000094",
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=67"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -25204,13 +26567,27 @@
         [
           "https://stacks.math.columbia.edu/tag/01KH",
           "Stacks 01KH · quasi-separated schemes and morphisms"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_8",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 7.21 and the paragraph following it, locally Noetherian schemes"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01OY",
+          "Stacks 01OY · numbered source statement"
         ]
       ],
       "kind": "implies",
       "subject": "scheme",
       "name": "Locally Noetherian ⇒ Quasi-separated",
       "id": "T000096",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_8"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01OY"
+      ]
     },
     {
       "key": "md-fpqc-and",
@@ -25517,13 +26894,27 @@
         [
           "https://stacks.math.columbia.edu/tag/02GP",
           "Stacks 02GP · open immersions are étale"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry II, Remark 18.35, open immersions"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02GP",
+          "Stacks 02GP · numbered source statement"
         ]
       ],
       "kind": "implies",
       "subject": "morphism",
       "name": "Open immersion ⇒ Étale",
       "id": "T001294",
-      "logicDomain": "morphism"
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "logicDomain": "morphism",
+      "sourceTags": [
+        "02GP"
+      ]
     },
     {
       "key": "md-open-immersion",
@@ -25610,12 +27001,19 @@
         [
           "https://stacks.math.columbia.edu/tag/035C",
           "Stacks 035C · closed immersions are finite"
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=6",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Proposition 12.11(1), p. 329. Every closed immersion is finite."
         ]
       ],
       "kind": "implies",
       "subject": "morphism",
       "name": "Closed immersion ⇒ Finite",
       "id": "T001298",
+      "checkedReferences": [
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=6"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -25665,12 +27063,24 @@
         [
           "https://stacks.math.columbia.edu/tag/01L4",
           "Stacks 01L4 · monomorphisms are separated"
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=8",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Proposition 12.17(1), p. 331. A quasi-compact immersion is quasi-finite."
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_10.pdf#page=5",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Proposition 9.13(1), p. 234. Every monomorphism, in particular every immersion, is separated."
         ]
       ],
       "kind": "implies",
       "subject": "morphism",
       "name": "Quasi-compact immersion ⇒ Separated and quasi-finite",
       "id": "T001300",
+      "checkedReferences": [
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=8",
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_10.pdf#page=5"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -26015,12 +27425,19 @@
         [
           "https://stacks.math.columbia.edu/tag/02NH",
           "Stacks 02NH · finite fibres and quasi-finiteness"
+        ],
+        [
+          "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=41",
+          "Görtz & Wedhorn, Algebraic Geometry I: Schemes, 2nd ed., Corollary 12.91, p. 364. For a separated quasi-finite morphism, the canonical map to the relative spectrum of its direct-image structure sheaf is a quasi-compact open immersion."
         ]
       ],
       "kind": "implies",
       "subject": "morphism",
       "name": "Separated and quasi-finite ⇒ Quasi-affine of finite type",
       "id": "T001314",
+      "checkedReferences": [
+        "https://link.springer.com/content/pdf/10.1007/978-3-658-30733-2_13.pdf#page=41"
+      ],
       "logicDomain": "morphism"
     },
     {
@@ -26459,13 +27876,27 @@
         [
           "https://stacks.math.columbia.edu/tag/01OZ",
           "Stacks 01OZ · the underlying space of a Noetherian scheme"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=79",
+          "M. Hoyois, Algebraic Geometry, 23 September 2026, Remark 8.34, topology of a Noetherian scheme"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01OZ",
+          "Stacks 01OZ · numbered source statement"
         ]
       ],
       "kind": "implies",
       "subject": "scheme",
       "name": "Noetherian ⇒ Noetherian underlying space",
       "id": "T000123",
-      "logicDomain": "scheme"
+      "checkedReferences": [
+        "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=79"
+      ],
+      "logicDomain": "scheme",
+      "sourceTags": [
+        "01OZ"
+      ]
     },
     {
       "key": "pointset-scheme-top-noeth",
@@ -27160,6 +28591,378 @@
       "name": "Finite locally free module on a crystalline site ⇒ Quasi-coherent module on a crystalline site",
       "id": "T000986",
       "logicDomain": "crystalline-module"
+    },
+    {
+      "key": "smx-universal-open-is-open",
+      "kind": "implies",
+      "name": "Universal openness implies openness",
+      "requires": [
+        "P000040"
+      ],
+      "concludes": [
+        "P000771"
+      ],
+      "proof": "Take the identity as the base change.",
+      "sourceTag": "01U0",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U0",
+          "Stacks 01U0 · numbered Stacks Project source"
+        ]
+      ],
+      "subject": "morphism",
+      "id": "T002941",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-radicial-components",
+      "kind": "equivalence",
+      "name": "Pointwise decomposition of the radicial condition",
+      "requires": [
+        "P000772",
+        "P000773"
+      ],
+      "concludes": [
+        "P000774"
+      ],
+      "proof": "These are the two jointly necessary and sufficient conditions in the residue-field definition.",
+      "sourceTag": "01S3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S3",
+          "Stacks 01S3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_5",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Proposition 4.35, injectivity and purely inseparable residue extensions"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_5"
+      ],
+      "subject": "morphism",
+      "id": "T002942",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-radicial-universal-injectivity",
+      "kind": "equivalence",
+      "name": "Radiciality characterizes universal injectivity",
+      "requires": [
+        "P000774"
+      ],
+      "concludes": [
+        "P000044"
+      ],
+      "proof": "Universal injectivity rules out distinct geometric lifts, including those arising from a nontrivial separable residue extension. Conversely, pure inseparability forces uniqueness of a common field-valued lift over the unique possible image point.",
+      "sourceTag": "01S4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_5",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Proposition 4.35, injectivity and purely inseparable residue extensions"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_5"
+      ],
+      "subject": "morphism",
+      "id": "T002943",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-injectivity-field-test",
+      "kind": "equivalence",
+      "name": "Testing universal injectivity on field-valued points",
+      "requires": [
+        "P000775"
+      ],
+      "concludes": [
+        "P000044"
+      ],
+      "proof": "Two points in a base change above the same point may be tested over a common field receiving their residue fields. Conversely the field-valued test follows from the radicial criterion and uniqueness of embeddings of purely inseparable extensions over the base field.",
+      "sourceTag": "01S4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · numbered Stacks Project source"
+        ]
+      ],
+      "subject": "morphism",
+      "id": "T002944",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-injectivity-diagonal",
+      "kind": "equivalence",
+      "name": "Universal injectivity and surjectivity of the diagonal",
+      "requires": [
+        "P000776"
+      ],
+      "concludes": [
+        "P000044"
+      ],
+      "proof": "Universal injectivity makes the first projection $X\\times_S X\\to X$ injective, so its section is surjective. Conversely, surjectivity of the diagonal persists after base change. Any two source points over the same target point determine a point of the fibre product after choosing a common extension of their residue fields, so surjectivity forces the two points to agree.",
+      "sourceTag": "01S4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · numbered Stacks Project source"
+        ]
+      ],
+      "subject": "morphism",
+      "id": "T002945",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-unramified-global-omega",
+      "kind": "equivalence",
+      "name": "Differential criterion for an unramified scheme morphism",
+      "requires": [
+        "P000002",
+        "P000767"
+      ],
+      "concludes": [
+        "P000007"
+      ],
+      "proof": "On affine charts unramified algebras are precisely finite type algebras with zero relative differentials.",
+      "sourceTag": "02G5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G5",
+          "Stacks 02G5 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.22 and Proposition 18.29, including the finite type convention"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "subject": "morphism",
+      "id": "T002946",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-g-unramified-global-omega",
+      "kind": "equivalence",
+      "name": "Differential criterion for a G-unramified scheme morphism",
+      "requires": [
+        "P000001",
+        "P000767"
+      ],
+      "concludes": [
+        "P000766"
+      ],
+      "proof": "Finite presentation and the vanishing of relative differentials can both be tested on affine charts.",
+      "sourceTag": "02G5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G5",
+          "Stacks 02G5 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, discussion after Definition 18.22, EGA’s finite presentation convention"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "subject": "morphism",
+      "id": "T002947",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-g-unramified-global",
+      "kind": "implies",
+      "name": "G-unramified morphisms are unramified",
+      "requires": [
+        "P000766"
+      ],
+      "concludes": [
+        "P000007"
+      ],
+      "proof": "Every finitely presented algebra is of finite type. The same affine charts have zero relative differentials.",
+      "sourceTag": "02G5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G5",
+          "Stacks 02G5 · numbered Stacks Project source"
+        ]
+      ],
+      "subject": "morphism",
+      "id": "T002948",
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "smx-g-unramified-point",
+      "kind": "implies",
+      "name": "G-unramified at a point implies unramified there",
+      "requires": [
+        "P000765"
+      ],
+      "concludes": [
+        "P000764"
+      ],
+      "proof": "The finitely presented algebra on a witnessing chart is also of finite type.",
+      "sourceTag": "02G4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00UT",
+          "Stacks 00UT · the two algebra definitions"
+        ]
+      ],
+      "subject": "scheme-morphism-point",
+      "id": "T002949",
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "key": "smx-etale-smooth-unramified-at",
+      "kind": "equivalence",
+      "name": "Pointwise étale criterion by smoothness and unramifiedness",
+      "requires": [
+        "P000762",
+        "P000764"
+      ],
+      "concludes": [
+        "P000768"
+      ],
+      "proof": "After shrinking affine charts about the same point, the smooth and unramified conditions give an étale algebra. The two converse implications hold at each étale point.",
+      "sourceTag": "02GK",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GK",
+          "Stacks 02GK · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.34, étaleness on an open neighbourhood"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "subject": "scheme-morphism-point",
+      "id": "T002950",
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "key": "smx-etale-g-unramified-at",
+      "kind": "implies",
+      "name": "An étale point is G-unramified",
+      "requires": [
+        "P000768"
+      ],
+      "concludes": [
+        "P000765"
+      ],
+      "proof": "An étale coordinate algebra on an affine chart about the point is finitely presented with vanishing relative differentials.",
+      "sourceTag": "08WD",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/08WD",
+          "Stacks 08WD · numbered Stacks Project source"
+        ]
+      ],
+      "subject": "scheme-morphism-point",
+      "id": "T002951",
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "key": "smx-smooth-syntomic-at",
+      "kind": "implies",
+      "name": "A smooth point is syntomic",
+      "requires": [
+        "P000762"
+      ],
+      "concludes": [
+        "P000759"
+      ],
+      "proof": "On a smooth affine chart the induced morphism is syntomic, giving the required chart at the original point.",
+      "sourceTag": "01VD",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01VD",
+          "Stacks 01VD · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "subject": "scheme-morphism-point",
+      "id": "T002952",
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "key": "smx-syntomic-flat-at",
+      "kind": "implies",
+      "name": "A syntomic point is flat",
+      "requires": [
+        "P000759"
+      ],
+      "concludes": [
+        "P000756"
+      ],
+      "proof": "The local stalk map at the point is flat by the local criterion for syntomicity.",
+      "sourceTag": "01UE",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UE",
+          "Stacks 01UE · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "subject": "scheme-morphism-point",
+      "id": "T002953",
+      "logicDomain": "scheme-morphism-point"
+    },
+    {
+      "key": "smx-syntomic-lci-at",
+      "kind": "implies",
+      "name": "A syntomic point is a local complete intersection point",
+      "requires": [
+        "P000759"
+      ],
+      "concludes": [
+        "P000770"
+      ],
+      "proof": "A syntomic open neighbourhood is a local complete intersection over its target neighbourhood. Composing its smooth factor with the open immersion of the target neighbourhood preserves smoothness over the original target.",
+      "sourceTag": "069K",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/069K",
+          "Stacks 069K · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definitions 19.10 and 19.37, Koszul acyclicity and smooth factorization"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "subject": "scheme-morphism-point",
+      "id": "T002954",
+      "logicDomain": "scheme-morphism-point"
     },
     {
       "subject": "ring",
@@ -30208,10 +32011,17 @@
         [
           "https://stacks.math.columbia.edu/tag/0518",
           "Stacks 0518 · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=52",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Definition 12.2 (the finite set of module generators in a presentation)"
         ]
       ],
       "name": "Finitely presented module ⇒ Finite module",
       "id": "T000184",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=52"
+      ],
       "logicDomain": "module"
     },
     {
@@ -30253,10 +32063,17 @@
         [
           "https://stacks.math.columbia.edu/tag/05CE",
           "Stacks 05CE · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=51",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §12, following Definition 12.1 (arbitrary direct sums of copies of the ring)"
         ]
       ],
       "name": "Free module ⇒ Projective module",
       "id": "T000185",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=51"
+      ],
       "logicDomain": "module"
     },
     {
@@ -30274,10 +32091,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00HB",
           "Stacks 00HB · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=45",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Example 11.3 (arbitrary free modules)"
         ]
       ],
       "name": "Free module ⇒ Flat module",
       "id": "T000186",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=45"
+      ],
       "logicDomain": "module"
     },
     {
@@ -30317,10 +32141,17 @@
         [
           "https://stacks.math.columbia.edu/tag/05CF",
           "Stacks 05CF · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=51",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §12, following Definition 12.1 (free summands of arbitrary rank characterize projectives)"
         ]
       ],
       "name": "Projective module ⇔ Direct summand of a free module",
       "id": "T000188",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=51"
+      ],
       "logicDomain": "module",
       "sourceTags": [
         "05CF"
@@ -30365,10 +32196,17 @@
         [
           "https://stacks.math.columbia.edu/tag/059Z",
           "Stacks 059Z · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=53",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Theorem 12.6, proof of (a) ⇒ (d), using Example 11.3 for arbitrary direct summands"
         ]
       ],
       "name": "Projective module ⇒ Flat module",
       "id": "T000189",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=53"
+      ],
       "logicDomain": "module"
     },
     {
@@ -30413,10 +32251,17 @@
         [
           "https://stacks.math.columbia.edu/tag/058R",
           "Stacks 058R · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=53",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Theorem 12.6(a),(d) (finite projectivity and flat finite presentation)"
         ]
       ],
       "name": "Finitely presented module ∧ Flat module ⇔ Finite projective module",
       "id": "T000191",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=53"
+      ],
       "logicDomain": "module",
       "sourceTags": [
         "00NX"
@@ -30437,10 +32282,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00NX",
           "Stacks 00NX · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=53",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §12, immediately before Theorem 12.6 (summands of finite free modules)"
         ]
       ],
       "name": "Finite projective module ⇔ Direct summand of a finite free module",
       "id": "T000192",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=53"
+      ],
       "logicDomain": "module"
     },
     {
@@ -30458,10 +32310,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00NX",
           "Stacks 00NX · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=53",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Theorem 12.6(a),(c) (finite free trivializations on a principal open cover)"
         ]
       ],
       "name": "Finite projective module ⇔ Finite locally free module",
       "id": "T000193",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=53"
+      ],
       "logicDomain": "module"
     },
     {
@@ -30796,10 +32655,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00HT",
           "Stacks 00HT · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=48",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 11.16 (testing at every maximal ideal)"
         ]
       ],
       "name": "Flat module ⇔ Flatness at every maximal ideal",
       "id": "T000206",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=48"
+      ],
       "logicDomain": "module",
       "sourceTags": [
         "00HT"
@@ -32060,10 +33926,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00HQ",
           "Stacks 00HQ · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=48",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Propositions 11.18–11.19 (surjectivity on spectra for a flat map)"
         ]
       ],
       "name": "Flat ring map ∧ Ring map surjective on spectra ⇔ Faithfully flat ring map",
       "id": "T000244",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=48"
+      ],
       "logicDomain": "ring-map",
       "sourceTags": [
         "00HQ"
@@ -32105,10 +33978,17 @@
         [
           "https://stacks.math.columbia.edu/tag/05CK",
           "Stacks 05CK · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=47",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 11.12 (injectivity and the equalizer for a faithfully flat map)"
         ]
       ],
       "name": "Faithfully flat ring map ⇒ Injective ring map",
       "id": "T000246",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=47"
+      ],
       "logicDomain": "ring-map"
     },
     {
@@ -32126,10 +34006,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00HS",
           "Stacks 00HS · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=49",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 11.20 (lifting a specialization downwards along a flat homomorphism)"
         ]
       ],
       "name": "Flat ring map ⇒ Going down for prime ideals",
       "id": "T000496",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=49"
+      ],
       "logicDomain": "ring-map",
       "sourceTags": [
         "00HS"
@@ -32295,10 +34182,17 @@
         [
           "https://stacks.math.columbia.edu/tag/00HT",
           "Stacks 00HT · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=47",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 11.14 (flatness at an arbitrary multiplicative subset)"
         ]
       ],
       "name": "Localization map ⇒ Flat ring map",
       "id": "T000253",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=47"
+      ],
       "logicDomain": "ring-map",
       "sourceTags": [
         "00HT"
@@ -33334,10 +35228,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030Z",
           "Stacks 030Z · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Definition 2.23 and Proposition 2.24"
         ]
       ],
       "name": "Characteristic zero ⇒ Perfect field",
       "id": "T000289",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33"
+      ],
       "logicDomain": "field"
     },
     {
@@ -33355,10 +35256,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030Z",
           "Stacks 030Z · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Definition 2.23 and Proposition 2.24 in characteristic p"
         ]
       ],
       "name": "Positive characteristic with surjective Frobenius ⇒ Perfect field",
       "id": "T000290",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33"
+      ],
       "logicDomain": "field"
     },
     {
@@ -33380,10 +35288,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030Z",
           "Stacks 030Z · Frobenius criterion"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Example 2.25(a), surjectivity of Frobenius by finiteness"
         ]
       ],
       "name": "Finite field ⇒ Positive characteristic with surjective Frobenius",
       "id": "T000291",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33"
+      ],
       "logicDomain": "field"
     },
     {
@@ -33631,10 +35546,17 @@
         [
           "https://stacks.math.columbia.edu/tag/09H1",
           "Stacks 09H1 · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=61",
+          "J. S. Milne, Fields and Galois Theory, v5.10, §5, the algebraicity hypothesis of the separability definition preceding Theorem 5.1"
         ]
       ],
       "name": "Separable algebraic element ⇒ Algebraic element",
       "id": "T000301",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=61"
+      ],
       "logicDomain": "field-element"
     },
     {
@@ -34234,10 +36156,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030N",
           "Stacks 030N · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=61",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Theorem 5.1, the finite separable case"
         ]
       ],
       "name": "Finite field extension ∧ Separable algebraic extension ⇒ Simple field extension",
       "id": "T000325",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=61"
+      ],
       "logicDomain": "field-extension",
       "sourceTags": [
         "030N"
@@ -34259,10 +36188,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030N",
           "Stacks 030N · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=62",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Proposition 5.3, simple algebraic extensions"
         ]
       ],
       "name": "Finite field extension ∧ Simple field extension ⇒ Finitely many intermediate fields",
       "id": "T000326",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=62"
+      ],
       "logicDomain": "field-extension",
       "sourceTags": [
         "030N"
@@ -34284,10 +36220,17 @@
         [
           "https://stacks.math.columbia.edu/tag/030N",
           "Stacks 030N · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=63",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Remark 5.4, finite extensions with finitely many intermediate fields"
         ]
       ],
       "name": "Finite field extension ∧ Finitely many intermediate fields ⇒ Simple field extension",
       "id": "T000327",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=63"
+      ],
       "logicDomain": "field-extension",
       "sourceTags": [
         "030N"
@@ -34566,10 +36509,17 @@
         [
           "https://stacks.math.columbia.edu/tag/09HY",
           "Stacks 09HY · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=53",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Proposition 4.19 and its proof by a generator of the target multiplicative group"
         ]
       ],
       "name": "Finite target field ⇒ Finite base field ∧ Finite field extension ∧ Simple field extension",
       "id": "T000339",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=53"
+      ],
       "logicDomain": "field-extension"
     },
     {
@@ -35149,9 +37099,16 @@
         [
           "https://stacks.math.columbia.edu/tag/05CK",
           "Stacks 05CK · numbered source"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=46",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 11.11 (injectivity of the unit on every module)"
         ]
       ],
       "id": "T000857",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=46"
+      ],
       "logicDomain": "ring-map"
     },
     {
@@ -38467,9 +40424,21 @@
         [
           "https://stacks.math.columbia.edu/tag/058G",
           "Stacks 058G · Numbered Stacks Project source"
+        ],
+        [
+          "https://www.numdam.org/article/BSMF_1969__97__81_0.pdf#page=5",
+          "D. Lazard, Autour de la platitude, Chapter I, Theorem 1.2(i)–(iii), pp. 84–85 (flat modules as filtered colimits of finite free modules)"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=45",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Example 11.6 (Lazard’s theorem)"
         ]
       ],
       "id": "T001691",
+      "checkedReferences": [
+        "https://www.numdam.org/article/BSMF_1969__97__81_0.pdf#page=5",
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=45"
+      ],
       "logicDomain": "module"
     },
     {
@@ -39045,9 +41014,16 @@
         [
           "https://stacks.math.columbia.edu/tag/091T",
           "Stacks 091T · numbered source"
+        ],
+        [
+          "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=5",
+          "B. Bhatt, Prismatic cohomology, Lecture III, §2, property (5) (derived completeness and adic separatedness for a finitely generated ideal)"
         ]
       ],
       "id": "T002101",
+      "checkedReferences": [
+        "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=5"
+      ],
       "logicDomain": "module-ideal-pair"
     },
     {
@@ -41138,9 +43114,16 @@
         [
           "https://stacks.math.columbia.edu/tag/00HQ",
           "Stacks 00HQ · faithful flatness criterion"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=49",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 11.20, proof using Proposition 11.18 (a flat local homomorphism is faithfully flat)"
         ]
       ],
       "id": "T000593",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=49"
+      ],
       "logicDomain": "ring-map",
       "sourceTags": [
         "00HR"
@@ -41253,9 +43236,16 @@
         [
           "https://stacks.math.columbia.edu/tag/08YF",
           "Stacks 08YF · spectral spaces and the constructible topology"
+        ],
+        [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=49",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Theorem 1.5.4(i). A subset of a spectral space is closed precisely when it is patch closed and stable under specialization."
         ]
       ],
-      "id": "T000099"
+      "id": "T000099",
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=49"
+      ]
     },
     {
       "subject": "site",
@@ -41416,12 +43406,19 @@
         [
           "https://stacks.math.columbia.edu/tag/08YG",
           "Stacks 08YG · definition of a spectral space"
+        ],
+        [
+          "https://arxiv.org/pdf/2306.06745v2#page=17",
+          "Bezhanishvili & Melzer, Algebraic frames in Priestley duality, Corollary 5.9, with the categories of §2. Spectral spaces with spectral maps are dual to coherent frames with compact-element-preserving frame maps."
         ]
       ],
       "relation": "equivalence",
       "hypotheses": "Use classical prime ideal separation, spectral spaces with spectral maps, and coherent locales with maps whose inverse image preserves compact opens.",
       "statement": "Taking the locale of opens and taking the space of points give mutually quasi-inverse covariant functors between spectral spaces and coherent locales. Passing to frames of opens instead gives a duality. The compact elements of each frame are the quasi-compact opens of its spectrum.",
       "id": "T000105",
+      "checkedReferences": [
+        "https://arxiv.org/pdf/2306.06745v2#page=17"
+      ],
       "diagrams": [
         {
           "anchor": "edge-spectral-locales-coherent-stone",
@@ -41448,9 +43445,16 @@
         [
           "https://stacks.math.columbia.edu/tag/08YF",
           "Stacks 08YF · spectral spaces and the constructible topology"
+        ],
+        [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=44",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Theorem 1.4.3(i)–(ii) and §1.4.5. Inversion exchanges quasi-compact opens with their complements, preserves the patch topology and is involutive."
         ]
       ],
-      "id": "T000106"
+      "id": "T000106",
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=44"
+      ]
     },
     {
       "subject": "site",
@@ -42046,9 +44050,16 @@
         [
           "https://stacks.math.columbia.edu/tag/0901",
           "Stacks 0901 · constructible topology of a spectral space"
+        ],
+        [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=36",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Definition 1.3.11 and Proposition 1.3.13(i). Quasi-compact opens and their complements generate the patch topology on the same set."
         ]
       ],
       "id": "T000136",
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=36"
+      ],
       "diagrams": [
         {
           "anchor": "edge-spectral-locales-spectral-to-patch",
@@ -42077,9 +44088,16 @@
         [
           "https://stacks.math.columbia.edu/tag/08ZY",
           "Stacks 08ZY · characterization of profinite spaces"
+        ],
+        [
+          "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=37",
+          "Dickmann, Schwartz & Tressl, Spectral Spaces, Theorem 1.3.14. For every spectral space the patch space is Boolean, hence compact Hausdorff with a clopen basis."
         ]
       ],
       "id": "T000137",
+      "checkedReferences": [
+        "https://api.pageplace.de/preview/DT0400.9781108609586_A36703407/preview-9781108609586_A36703407.pdf#page=37"
+      ],
       "diagrams": [
         {
           "anchor": "edge-spectral-locales-patch-to-profinite",
@@ -42112,9 +44130,16 @@
         [
           "https://doi.org/10.1090/S0002-9947-1969-0251026-X",
           "Hochster, Prime ideal structure in commutative rings, Theorem 6"
+        ],
+        [
+          "https://arxiv.org/pdf/2306.06745v2#page=21",
+          "Bezhanishvili & Melzer, Algebraic frames in Priestley duality, Remark 5.21. The compact elements form a bounded distributive lattice, and its ideal frame reconstructs the coherent frame."
         ]
       ],
       "id": "T000138",
+      "checkedReferences": [
+        "https://arxiv.org/pdf/2306.06745v2#page=21"
+      ],
       "diagrams": [
         {
           "anchor": "edge-spectral-locales-locale-lattice",
@@ -43221,6 +45246,390 @@
       "id": "T000174"
     },
     {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-flat-at",
+      "relation": "criterion",
+      "related": [
+        "P000756",
+        "P000006"
+      ],
+      "name": "Testing flatness at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, flatness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, flatness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "01U3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Definition 14.1(1),(3), stalkwise relative flatness"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "id": "T002955"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-syntomic-at",
+      "relation": "criterion",
+      "related": [
+        "P000759",
+        "P000005"
+      ],
+      "name": "Testing syntomicity at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, syntomicity is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, syntomicity is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "01UC",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UC",
+          "Stacks 01UC · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "id": "T002956"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-smooth-at",
+      "relation": "criterion",
+      "related": [
+        "P000762",
+        "P000004"
+      ],
+      "name": "Testing smoothness at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, smoothness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, smoothness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "01V5",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01V5",
+          "Stacks 01V5 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, §18.10 and Theorem 18.56, smoothness at a source point"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "id": "T002957"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-unramified-at",
+      "relation": "criterion",
+      "related": [
+        "P000764",
+        "P000007"
+      ],
+      "name": "Testing unramifiedness at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, unramifiedness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, unramifiedness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "02G4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.22 and Proposition 18.29, including the finite type convention"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "id": "T002958"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-g-unramified-at",
+      "relation": "criterion",
+      "related": [
+        "P000765",
+        "P000766"
+      ],
+      "name": "Testing G-unramifiedness at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, G-unramifiedness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, G-unramifiedness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "02G4",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02G4",
+          "Stacks 02G4 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, discussion after Definition 18.22, EGA’s finite presentation convention"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "id": "T002959"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-etale-at",
+      "relation": "criterion",
+      "related": [
+        "P000768",
+        "P000003"
+      ],
+      "name": "Testing étaleness at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, étaleness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, étaleness is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "02GI",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GI",
+          "Stacks 02GI · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.34, étaleness on an open neighbourhood"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "id": "T002960"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-all-points-lci-at",
+      "relation": "criterion",
+      "related": [
+        "P000770",
+        "P000008"
+      ],
+      "name": "Testing the local complete intersection condition at every source point",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "For $f$, the local complete intersection condition is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "proof": "For $f$, the local complete intersection condition is equivalent to requiring the corresponding pointwise condition at every $x\\in X$.",
+      "sourceTag": "069F",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/069F",
+          "Stacks 069F · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definitions 19.10 and 19.37, Koszul acyclicity and smooth factorization"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "id": "T002961"
+    },
+    {
+      "subject": "relative-qc-module",
+      "kind": "comparison",
+      "key": "smx-relative-flat-all-points",
+      "relation": "criterion",
+      "related": [
+        "P000757",
+        "P000758"
+      ],
+      "name": "Testing relative flatness of a quasi-coherent module",
+      "hypotheses": "Fix $f:X\\to S$ and a quasi-coherent $\\mathcal O_X$-module $\\mathcal F$.",
+      "statement": "The sheaf is flat over $S$ exactly when its stalk at each $x$ is flat over the corresponding target local ring.",
+      "proof": "The sheaf is flat over $S$ exactly when its stalk at each $x$ is flat over the corresponding target local ring.",
+      "sourceTag": "01U3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Definition 14.1(1),(3), stalkwise relative flatness"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "id": "T002962"
+    },
+    {
+      "subject": "morphism",
+      "kind": "comparison",
+      "key": "smx-structure-sheaf-flatness",
+      "relation": "criterion",
+      "related": [
+        "P000006",
+        "P000758",
+        "P000756",
+        "P000757"
+      ],
+      "name": "Relative flatness of the structure sheaf",
+      "hypotheses": "Fix a morphism $f:X\\to S$ of schemes. Pointwise assertions use the same $f$ and range over the points $x$ of its source.",
+      "statement": "Taking $\\mathcal F=\\mathcal O_X$ identifies sheaf-flatness over $S$ at $x$ with flatness of $f$ at $x$. Quantifying over $x$ identifies relative flatness of the structure sheaf with flatness of $f$.",
+      "proof": "Taking $\\mathcal F=\\mathcal O_X$ identifies sheaf-flatness over $S$ at $x$ with flatness of $f$ at $x$. Quantifying over $x$ identifies relative flatness of the structure sheaf with flatness of $f$.",
+      "sourceTag": "01U3",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "Görtz–Wedhorn, Algebraic Geometry I, 2nd ed., Definition 14.1(1),(3), stalkwise relative flatness"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "id": "T002963"
+    },
+    {
+      "subject": "scheme-morphism-point",
+      "kind": "comparison",
+      "key": "smx-chart-syntomic-at",
+      "relation": "criterion",
+      "related": [
+        "P000759",
+        "P000761"
+      ],
+      "name": "Standard affine chart at a syntomic point",
+      "hypotheses": "Fix $x\\in X$ for a morphism $f:X\\to S$ and any affine open $V\\subseteq S$ containing $f(x)$.",
+      "statement": "The morphism is syntomic at $x$ exactly when there exists an affine open $x\\in U\\subseteq X$ with $f(U)\\subseteq V$ for which $U\\to V$ is standard syntomic.",
+      "proof": "The morphism is syntomic at $x$ exactly when there exists an affine open $x\\in U\\subseteq X$ with $f(U)\\subseteq V$ for which $U\\to V$ is standard syntomic.",
+      "sourceTag": "01UE",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UE",
+          "Stacks 01UE · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "id": "T002964"
+    },
+    {
+      "subject": "scheme-morphism-point",
+      "kind": "comparison",
+      "key": "smx-chart-smooth-at",
+      "relation": "criterion",
+      "related": [
+        "P000762",
+        "P000763"
+      ],
+      "name": "Standard affine chart at a smooth point",
+      "hypotheses": "Fix $x\\in X$ for a morphism $f:X\\to S$ and any affine open $V\\subseteq S$ containing $f(x)$.",
+      "statement": "The morphism is smooth at $x$ exactly when there exists an affine open $x\\in U\\subseteq X$ with $f(U)\\subseteq V$ for which $U\\to V$ is standard smooth.",
+      "proof": "The morphism is smooth at $x$ exactly when there exists an affine open $x\\in U\\subseteq X$ with $f(U)\\subseteq V$ for which $U\\to V$ is standard smooth.",
+      "sourceTag": "01V7",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01V7",
+          "Stacks 01V7 · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, §18.10 and Theorem 18.56, smoothness at a source point"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "id": "T002965"
+    },
+    {
+      "subject": "scheme-morphism-point",
+      "kind": "comparison",
+      "key": "smx-chart-etale-at",
+      "relation": "criterion",
+      "related": [
+        "P000768",
+        "P000769"
+      ],
+      "name": "Standard affine chart at a étale point",
+      "hypotheses": "Fix $x\\in X$ for a morphism $f:X\\to S$ and any affine open $V\\subseteq S$ containing $f(x)$.",
+      "statement": "The morphism is étale at $x$ exactly when there exists an affine open $x\\in U\\subseteq X$ with $f(U)\\subseteq V$ for which $U\\to V$ is standard étale.",
+      "proof": "The morphism is étale at $x$ exactly when there exists an affine open $x\\in U\\subseteq X$ with $f(U)\\subseteq V$ for which $U\\to V$ is standard étale.",
+      "sourceTag": "02GT",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GT",
+          "Stacks 02GT · numbered Stacks Project source"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_3",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 18.39, the monic polynomial and invertible derivative"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_3"
+      ],
+      "id": "T002966"
+    },
+    {
+      "subject": "scheme-over-field",
+      "kind": "comparison",
+      "key": "smx-field-lci-charts",
+      "relation": "criterion",
+      "related": [
+        "P000760",
+        "P000761",
+        "P000005"
+      ],
+      "name": "Affine charts for a local complete intersection over a field",
+      "hypotheses": "Let $k$ be a field and $X$ locally of finite type over $k$. Use the specified structure map $X\\to\\operatorname{Spec}k$.",
+      "statement": "The structure map is syntomic exactly when every source point lies in an affine open with a global complete intersection coordinate algebra over $k$. Equivalently every local ring is a complete intersection over $k$ in the sense of Stacks Definition 00SD.",
+      "proof": "The structure map is syntomic exactly when every source point lies in an affine open with a global complete intersection coordinate algebra over $k$. Equivalently every local ring is a complete intersection over $k$ in the sense of Stacks Definition 00SD.",
+      "sourceTag": "01UG",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01UG",
+          "Stacks 01UG · numbered Stacks Project source"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00SD",
+          "Stacks 00SD · local ring essentially of finite type over a field"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-43031-3_4",
+          "Görtz–Wedhorn, Algebraic Geometry II, Definition 19.51 and Proposition 19.52, local factorizations and fibres"
+        ]
+      ],
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-43031-3_4"
+      ],
+      "id": "T002967"
+    },
+    {
       "subject": "ring",
       "kind": "comparison",
       "key": "ar-localization-regular",
@@ -43524,9 +45933,16 @@
         [
           "https://stacks.math.columbia.edu/tag/00HJ",
           "Stacks 00HJ · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=46",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 11.9 (flatness after faithfully flat scalar extension)"
         ]
       ],
       "id": "T000522",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=46"
+      ],
       "sourceTags": [
         "00HJ"
       ]
@@ -43552,9 +45968,21 @@
         [
           "https://stacks.math.columbia.edu/tag/0518",
           "Stacks 0518 · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=46",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 11.10 (finite generation descends)"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=52",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 12.4 (finite presentation descends)"
         ]
       ],
-      "id": "T000523"
+      "id": "T000523",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=46",
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=52"
+      ]
     },
     {
       "subject": "module",
@@ -43582,9 +46010,26 @@
         [
           "https://stacks.math.columbia.edu/tag/058R",
           "Stacks 058R · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=46",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 11.9 (descent of flatness)"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=52",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Corollary 12.4 (descent of finite presentation)"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=53",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Theorem 12.6(a),(d) (the finite projectivity criterion)"
         ]
       ],
-      "id": "T000524"
+      "id": "T000524",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=46",
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=52",
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=53"
+      ]
     },
     {
       "subject": "module",
@@ -43943,9 +46388,16 @@
         [
           "https://stacks.math.columbia.edu/tag/00HB",
           "Stacks 00HB · original statement"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=44",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, §11, p. 44 (ring-map and underlying-module definitions)"
         ]
       ],
-      "id": "T000538"
+      "id": "T000538",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=44"
+      ]
     },
     {
       "subject": "ring-map",
@@ -44114,9 +46566,16 @@
         [
           "https://stacks.math.columbia.edu/tag/030Z",
           "Stacks 030Z · source result"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33",
+          "J. S. Milne, Fields and Galois Theory, v5.10, Definition 2.23 and Proposition 2.24, the characteristic criterion"
         ]
       ],
       "id": "T000349",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=33"
+      ],
       "sourceTags": [
         "030Z"
       ]
@@ -46318,9 +48777,16 @@
         [
           "https://stacks.math.columbia.edu/tag/00CS",
           "Stacks 00CS · numbered source"
+        ],
+        [
+          "https://www.jmilne.org/math/xnotes/CA.pdf#page=22",
+          "J. S. Milne, A Primer of Commutative Algebra, v4.03, Proposition 5.11 (exactness of localization for arbitrary modules)"
         ]
       ],
-      "id": "T000860"
+      "id": "T000860",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/xnotes/CA.pdf#page=22"
+      ]
     },
     {
       "subject": "ring-map",
@@ -77734,9 +80200,16 @@
         [
           "https://stacks.math.columbia.edu/tag/09B9",
           "Stacks 09B9 · numbered source"
+        ],
+        [
+          "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=4",
+          "B. Bhatt, Prismatic cohomology, Lecture III, §2, property (2), module case (ordinary quotient by a finitely generated ideal)"
         ]
       ],
-      "id": "T002314"
+      "id": "T002314",
+      "checkedReferences": [
+        "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=4"
+      ]
     },
     {
       "subject": "complex-ideal-pair",
@@ -77980,9 +80453,16 @@
         [
           "https://stacks.math.columbia.edu/tag/0G1U",
           "Stacks 0G1U · numbered source"
+        ],
+        [
+          "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=4",
+          "B. Bhatt, Prismatic cohomology, Lecture III, §2, property (2) (derived Nakayama for complexes at a finitely generated ideal)"
         ]
       ],
-      "id": "T002325"
+      "id": "T002325",
+      "checkedReferences": [
+        "https://www.math.ias.edu/~bhatt/teaching/prismatic-columbia/lecture3-prisms.pdf#page=4"
+      ]
     },
     {
       "subject": "complex-ideal-pair",
@@ -93496,6 +95976,72 @@
       "logicDomain": "space"
     },
     {
+      "key": "complex-real-spectra",
+      "subject": "morphism",
+      "name": "An injective map of spectra with two points after base change",
+      "proof": "Both $\\operatorname{Spec}\\mathbb C$ and $\\operatorname{Spec}\\mathbb R$ have one point. The residue extension is separable of degree two. Base change to $\\mathbb C$ gives $\\mathbb C\\otimes_{\\mathbb R}\\mathbb C\\cong\\mathbb C\\times\\mathbb C$, with the two factors indexed by the identity and complex conjugation. Both source points map to the unique target point.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · criteria for universal injectivity"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0CKN",
+          "Stacks 0CKN · splitting a finite separable extension after scalar extension"
+        ],
+        [
+          "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=107",
+          "J. S. Milne, Fields and Galois Theory, v5.10, proof of Proposition 8.6(c) ⇒ (a), applied to the two roots of the minimal polynomial of i"
+        ]
+      ],
+      "has": [
+        "P000772",
+        "P000019",
+        "P000043"
+      ],
+      "lacks": [
+        "P000044",
+        "P000773"
+      ],
+      "id": "X000105",
+      "checkedReferences": [
+        "https://www.jmilne.org/math/CourseNotes/FT.pdf#page=107"
+      ],
+      "logicDomain": "morphism"
+    },
+    {
+      "key": "flat-on-one-component",
+      "subject": "morphism",
+      "name": "A finite surjective morphism flat on just one component",
+      "proof": "Fix a prime $p$. The map $\\mathbb Z\\to\\mathbb Z\\times\\mathbb F_p$ induces a finite surjective morphism. On the first component it is the identity. At the point of the second component the local ring map is $\\mathbb Z_{(p)}\\to\\mathbb F_p$. Multiplication by $p$ is injective on $\\mathbb Z_{(p)}$. Tensoring with $\\mathbb F_p$ turns this injection into the zero endomorphism of a nonzero module. Thus flatness holds at every source point of the first component and fails at the point of the second.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · flatness at a point and at every point"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/00HD",
+          "Stacks 00HD · flat modules preserve injections"
+        ],
+        [
+          "https://doi.org/10.1007/978-3-658-30733-2_15",
+          "U. Görtz and T. Wedhorn, Algebraic Geometry I, second edition, Definition 14.1(1),(3), testing the two local ring maps independently"
+        ]
+      ],
+      "has": [
+        "P000019",
+        "P000043"
+      ],
+      "lacks": [
+        "P000006"
+      ],
+      "id": "X000106",
+      "checkedReferences": [
+        "https://doi.org/10.1007/978-3-658-30733-2_15"
+      ],
+      "logicDomain": "morphism"
+    },
+    {
       "key": "empty-connected-conventions",
       "subject": "space",
       "name": "Connectedness conventions on the empty space",
@@ -93974,7 +96520,12 @@
       "classical-cover",
       "qcqs-cover",
       "site",
-      "big-covering-sieve"
+      "big-covering-sieve",
+      "scheme-morphism-point",
+      "relative-qc-module",
+      "relative-qc-module-point",
+      "affine-scheme-morphism",
+      "scheme-over-field"
     ]
   },
   "diagrams": [
@@ -94274,14 +96825,58 @@
       "P000073"
     ],
     "01KK": [
-      "P000034",
-      "P000035",
       "P000024",
-      "P000025"
+      "P000025",
+      "P000034",
+      "P000035"
     ],
     "08YG": [
       "P000056",
       "G000073"
+    ],
+    "01U0": [
+      "P000771",
+      "P000040"
+    ],
+    "01U3": [
+      "P000756",
+      "P000757",
+      "P000006",
+      "P000758"
+    ],
+    "01UC": [
+      "P000759",
+      "P000005",
+      "P000760",
+      "P000761"
+    ],
+    "01V5": [
+      "P000762",
+      "P000004",
+      "P000763"
+    ],
+    "02G4": [
+      "P000764",
+      "P000765",
+      "P000007",
+      "P000766"
+    ],
+    "02GI": [
+      "P000768",
+      "P000003",
+      "P000769"
+    ],
+    "01S3": [
+      "P000044",
+      "P000774"
+    ],
+    "069F": [
+      "P000770",
+      "P000008"
+    ],
+    "01OV": [
+      "P000009",
+      "P000036"
     ],
     "004S": [
       "P000562",
@@ -94758,12 +97353,82 @@
       "P000315"
     ]
   },
+  "definitionClauses": {
+    "01U0": [
+      "P000771",
+      "P000040"
+    ],
+    "01U3": [
+      "P000756",
+      "P000757",
+      "P000006",
+      "P000758"
+    ],
+    "01UC": [
+      "P000759",
+      "P000005",
+      "P000760",
+      "P000761"
+    ],
+    "01V5": [
+      "P000762",
+      "P000004",
+      "P000763"
+    ],
+    "02G4": [
+      "P000764",
+      "P000765",
+      "P000007",
+      "P000766"
+    ],
+    "02GI": [
+      "P000768",
+      "P000003",
+      "P000769"
+    ],
+    "01S3": [
+      "P000044",
+      "P000774"
+    ],
+    "069F": [
+      "P000770",
+      "P000008"
+    ],
+    "01OV": [
+      "P000009",
+      "P000036"
+    ],
+    "01KK": [
+      "P000024",
+      "P000025",
+      "P000034",
+      "P000035"
+    ],
+    "004S": [
+      "P000562",
+      "G000247"
+    ],
+    "01WH": [
+      "P000045",
+      "P000019"
+    ],
+    "01W8": [
+      "P000020",
+      "P000471",
+      "P000472"
+    ],
+    "01VW": [
+      "P000021",
+      "P000473",
+      "P000474"
+    ]
+  },
   "recordIndex": "record-index.json",
   "stacksIndex": {
     "revision": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "count": 21446,
-    "citedTagCount": 2790,
-    "directTagCount": 2541,
+    "citedTagCount": 2809,
+    "directTagCount": 2575,
     "path": "stacks/tags.json",
     "citations": "stacks/citations.json",
     "definitions": "stacks/definitions.json",

@@ -10,8 +10,10 @@ const searchable = records.map(record => [record,normalize(record.dataset.search
   new Set(record.dataset.directTags.toLowerCase().split(' '))]);
 const search = byId('database-query'), kind = byId('database-kind'), topic = byId('database-topic'), role = byId('database-role');
 const discipline = byId('database-discipline');
+const evidence = byId('database-evidence');
 const initial = new URLSearchParams(location.search);
 if (['algebras','topologies'].includes(initial.get('discipline'))) discipline.value = initial.get('discipline');
+if (['one','multiple','checked'].includes(initial.get('evidence'))) evidence.value = initial.get('evidence');
 const filterPanel = search.closest('.property-filters');
 const resultCount = byId('database-results');
 const clearFilters = byId('database-clear');
@@ -39,6 +41,9 @@ function filter() {
       || (topic.value !== '' && topic.value !== record.dataset.topic && topic.value !== record.dataset.subject)
       || (role.value !== '' && role.value !== record.dataset.role)
       || (discipline.value !== '' && discipline.value !== record.dataset.discipline)
+      || (evidence.value === 'one' && record.dataset.referenceCount !== '1')
+      || (evidence.value === 'multiple' && record.dataset.referenceCount === '1')
+      || (evidence.value === 'checked' && !record.hasAttribute('data-checked-passage'))
       || !terms.every(term => index.includes(term)) || !external.every(id => externalIds.has(id)) ||
       !stacks.every(id => stacksTags.has(id)) || !direct.every(id => directTags.has(id));
     if (!record.hidden) visible++;
@@ -46,7 +51,7 @@ function filter() {
   for (const cluster of clusters) cluster.hidden = !cluster.querySelector('[data-record]:not([hidden])');
   for (const section of sections) section.hidden = !section.querySelector('.property-cluster:not([hidden])');
   resultCount.textContent = visible === 0 ? 'No matching records.' : visible + ' matching records';
-  clearFilters.hidden = !(search.value || kind.value || topic.value || role.value || discipline.value);
+  clearFilters.hidden = !(search.value || kind.value || topic.value || role.value || discipline.value || evidence.value);
 }
 function revealHash() {
   const id = location.hash.slice(1);
@@ -55,7 +60,7 @@ function revealHash() {
   const record = byId(id);
   if (!record) return;
   if (record.hidden) {
-    search.value = kind.value = topic.value = role.value = discipline.value = '';
+    search.value = kind.value = topic.value = role.value = discipline.value = evidence.value = '';
     filter();
   }
   record.open = true;
@@ -67,8 +72,9 @@ kind.addEventListener('change',filter);
 topic.addEventListener('change',filter);
 role.addEventListener('change',filter);
 discipline.addEventListener('change',filter);
+evidence.addEventListener('change',filter);
 clearFilters.addEventListener('click', () => {
-  search.value = kind.value = topic.value = role.value = discipline.value = '';
+  search.value = kind.value = topic.value = role.value = discipline.value = evidence.value = '';
   filter();
   search.focus();
 });
