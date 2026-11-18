@@ -31,10 +31,19 @@ function initializeMap(root) {
   const stage = find('[data-um-stage]'), svg = stage.querySelector('svg');
   const nodeSelect = find('[data-um-node]'), relationSelect = find('[data-um-relation]');
   const inspector = find('[data-um-inspect]'), content = find('[data-um-record]');
-  const nodes = new Map([...svg.querySelectorAll('[data-node]')].map(el => [el.dataset.node,el]));
-  const edges = new Map([...svg.querySelectorAll('[data-edge]')].map(el => [el.dataset.edge,el]));
+  const nodes = new Map(), edges = new Map();
+  const names = new Map(model.nodes.map(n => [n.key,n.name]));
   const relations = new Map(model.relations.map(r => [r.id,r]));
   const incident = row => [...new Set([...row.from,...row.to,...row.participants])];
+  const byObject = new Map(model.nodes.map(n=>[n.key,[]]));
+  for (const r of model.relations) for (const k of incident(r)) byObject.get(k).push(r.id);
+  for (const el of svg.querySelectorAll('[data-members]'))
+    for (const key of el.dataset.members.split(' ')) nodes.set(key,el);
+  for (const el of svg.querySelectorAll('[data-records]'))
+    for (const id of el.dataset.records.split(' ')) edges.set(id,el);
+  let origin=null;
+  const back=find('[data-um-back]');
+  const recordFor=(type,key)=>document.getElementById('unified-'+type+'-'+key);
   const box = svg.viewBox.baseVal, width = box.width, height = box.height;
   const limit = (v,min,max) => Math.max(min,Math.min(max,v));
   let scale = 1, centre = {x:width/2,y:height/2}, selection;
@@ -60,63 +69,152 @@ function initializeMap(root) {
   const overlay = svg.querySelector('[data-um-trace]');
   function clearMarks() {
     overlay.replaceChildren();
-    for(const el of svg.querySelectorAll('.topo-current,.topo-later,.topo-prior,.um-related,.um-chosen'))
-      el.classList.remove('topo-current','topo-later','topo-prior','um-related','um-chosen');
+    for(const el of svg.querySelectorAll('.um-edge[tabindex="-1"]'))el.removeAttribute('tabindex');
+    for(const el of svg.querySelectorAll('.um-active,.topo-current,.topo-later,.topo-prior,.um-related,.um-chosen'))
+      el.classList.remove('um-active','topo-current','topo-later','topo-prior','um-related','um-chosen');
+    svg.classList.remove('um-focused');
   }
-  function trace(edge) {
-    if (!edge) return;
-    const group=document.createElementNS(svg.namespaceURI,'g');
-    group.setAttribute('class',edge.getAttribute('class')+' um-chosen');
-    for(const shape of edge.querySelectorAll(':scope > .um-line,:scope > .um-mark')) group.append(shape.cloneNode(true));
-    overlay.append(group);
-  }
-  function select(type,key,locate=false) {
-    const isNode=type==='node', el=(isNode?nodes:edges).get(key);
-    if(!el)return;
-    const record=document.getElementById('unified-'+type+'-'+key);
-    if(!record)return;
-    clearMarks(); selection=el;
-    nodeSelect.value=isNode?key:''; relationSelect.value=isNode?'':key;
-    if(isNode) {
-      for(const [k,state] of selectionStates(model.relations,key,nodes.keys())) nodes.get(k).classList.add('topo-'+state);
-      for(const row of model.relations) if(incident(row).includes(key))trace(edges.get(row.id));
-    } else {
-      el.classList.add('um-chosen');trace(el);
-      for(const k of incident(relations.get(key)))nodes.get(k).classList.add('um-related');
-    }
-    const heading=document.createElement('strong');
-    heading.textContent=record.parentElement.querySelector('summary').textContent;
-    const hypothesis=[...record.children].find(p=>p.querySelector(':scope > strong')?.textContent==='Hypotheses.');
-    const detail=hypothesis ?? (isNode?record.children[1]:record.firstElementChild);
-    const paragraph=document.createElement('p');
-    paragraph.textContent=detail?.textContent ?? '';
-    const links=document.createElement('p'),permalink=document.createElement('a');
-    permalink.href='#'+record.id;permalink.textContent='Full record';
-    links.append(permalink);
-    const seen=new Set();
-    for(const a of record.querySelectorAll('a[href^="https://"]')){
-      if(seen.has(a.href))continue;
-      seen.add(a.href); links.append(' · ',a.cloneNode(true));
-    }
-    content.replaceChildren(heading,paragraph,links);inspector.hidden=false;
-    find('[data-um-status]').textContent=heading.textContent;
-    if(locate) {
-      if(isNode) camera(readingScale(),centreOf(el));
-      else {
-        const boxes=[el,...incident(relations.get(key)).map(k=>nodes.get(k))].map(a=>a.getBBox());
-        const x=Math.min(...boxes.map(r=>r.x)), y=Math.min(...boxes.map(r=>r.y));
-        const w=Math.max(...boxes.map(r=>r.x+r.width))-x, h=Math.max(...boxes.map(r=>r.y+r.height))-y;
-        camera(Math.min(readingScale(),width/(w+42),height/(h+42)),{x:x+w/2,y:y+h/2});
+  function illuminate(ids) {
+    clearMarks();
+    svg.classList.add('um-focused');
+    const activeEdges=new Set(ids.map(id=>edges.get(id)));
+    for(const el of svg.querySelectorAll('a.um-edge'))if(!activeEdges.has(el))el.setAttribute('tabindex','-1');
+    for(const edge of activeEdges) {
+      edge.classList.add('um-active');
+      const group=document.createElementNS(svg.namespaceURI,'g');
+      group.setAttribute('class',edge.getAttribute('class')+' um-traced');
+      if(ids.length===1)group.classList.add('um-chosen');
+      for(const shape of edge.querySelectorAll(':scope > .um-line,:scope > .um-mark,:scope > .um-source-condition')){
+        if(shape.matches('path')){
+          const casing=document.createElementNS(svg.namespaceURI,'path');
+          casing.setAttribute('d',shape.getAttribute('d'));casing.setAttribute('class','um-casing');
+          group.append(casing);
+        }
+        group.append(shape.cloneNode(true));
       }
+      overlay.append(group);
     }
+    const keys=new Set(ids.flatMap(id=>incident(relations.get(id))));
+    for(const k of keys)nodes.get(k).classList.add('um-active');
+    return keys;
+  }
+  function element(tag,text) {
+    const el=document.createElement(tag);
+    if(text!==undefined)el.textContent=text;
+    return el;
+  }
+  function link(href,label) {
+    const a=element('a',label);a.setAttribute('href',href);return a;
+  }
+  function chooseRows(ids) {
+    const list=element('ul');list.className='um-choices';
+    for(const id of ids){
+      const li=element('li'),button=element('button',relations.get(id).label);
+      button.type='button';button.dataset.umChoice=id;li.append(button);list.append(li);
+    }
+    return list;
+  }
+  function openPanel(title,parts) {
+    const heading=element('h4',title);
+    heading.tabIndex=-1;
+    content.replaceChildren(heading,...parts);
+    inspector.hidden=false;
+    back.hidden=!origin || selection===origin.el && !relationSelect.value;
+    inspector.scrollTop=0;
+    find('[data-um-status]').textContent=title;
+  }
+  function selectNode(key,locate=false,whole=false) {
+    const el=nodes.get(key);
+    const keys=whole?el.dataset.members.split(' '):[key];
+    origin={key,keys,el,whole};
+    const ids=[...new Set(keys.flatMap(k=>byObject.get(k)))];
+    const adjacent=illuminate(ids);
+    el.classList.add('um-active','topo-current');
+    if(keys.length===1)for(const [k,state] of selectionStates(model.relations,key,adjacent)){
+      if(nodes.get(k)!==el)nodes.get(k).classList.add('topo-'+state);
+    }
+    selection=el;nodeSelect.value=key;relationSelect.value='';
+    const parts=[element('p',ids.length?ids.length+' connected relations':'No direct relation is recorded here.')];
+    if(keys.length>1 && el.dataset.groupNote)parts.unshift(element('p',el.dataset.groupNote));
+    if(ids.length)parts.push(chooseRows(ids));
+    const definitions=element('p');
+    for(const k of keys){
+      if(definitions.childNodes.length)definitions.append(' · ');
+      definitions.append(link('#unified-node-'+k,keys.length===1?'Definition and references':names.get(k)));
+    }
+    parts.push(definitions);
+    openPanel(keys.length===1?names.get(key):el.getAttribute('aria-label'),parts);
+    if(locate)camera(readingScale(),centreOf(el));
+    origin.camera={scale,point:{...centre},scrollY:window.scrollY};
+  }
+  function locateRelation(el,keys) {
+    const boxes=[el,...keys.map(k=>nodes.get(k))].map(a=>a.getBBox());
+    const x=Math.min(...boxes.map(r=>r.x)), y=Math.min(...boxes.map(r=>r.y));
+    const w=Math.max(...boxes.map(r=>r.x+r.width))-x, h=Math.max(...boxes.map(r=>r.y+r.height))-y;
+    const point={x:x+w/2,y:y+h/2};
+    const top=Math.max(0,document.querySelector('.site-header')?.getBoundingClientRect().bottom??0)+12;
+    const bottom=window.innerHeight-inspector.getBoundingClientRect().height-14;
+    const available=Math.max(80,bottom-top);
+    const units=width/svg.getBoundingClientRect().width;
+    camera(Math.min(readingScale(),width/(w+42),available*units/(h+42)),point);
+    const middle=new DOMPoint(point.x,point.y).matrixTransform(svg.getScreenCTM());
+    window.scrollBy(0,middle.y-(top+available/2));
+  }
+  function selectRelation(id,locate=false) {
+    const row=relations.get(id),el=edges.get(id),record=recordFor('relation',id);
+    const keys=illuminate([id]);
+    selection=el;el.classList.add('um-chosen');relationSelect.value=id;
+    for(const k of keys)nodes.get(k).classList.add('um-related');
+    // Copy the rendered mathematical markup and keep every source, including
+    // local reading links and database records. The original anchors stay put.
+    const hyp=[...record.children].find(p=>p.querySelector(':scope > strong')?.textContent==='Hypotheses.');
+    const first=record.querySelector(':scope > section > p');
+    const parts=[hyp ? hyp.cloneNode(true) : element('p','No additional hypothesis is recorded.')];
+    const refs=element('p');refs.className='um-sources';
+    const seen=new Set();
+    for(const a of record.querySelectorAll(':scope > section a[href]')){
+      if(seen.has(a.href))continue;
+      seen.add(a.href);refs.append(a.cloneNode(true));
+    }
+    if(seen.size)parts.push(refs);
+    for(const p of record.querySelectorAll(':scope > p'))if(p!==hyp)parts.push(p.cloneNode(true));
+    if(first)parts.push(first.cloneNode(true));
+    parts.push(link('#'+record.id,'Full record'));
+    openPanel(row.label,parts);
+    if(locate)locateRelation(el,[...keys]);
+  }
+  function choosePath(el) {
+    const members=el.dataset.records.split(' ');
+    const ids=origin?members.filter(id=>origin.keys.some(k=>incident(relations.get(id)).includes(k))):members;
+    if(ids.length===1){selectRelation(ids[0]);return;}
+    if(!ids.length)return;
+    illuminate(ids);selection=el;relationSelect.value='';
+    openPanel('Shared path · '+ids.length+' relations',[chooseRows(ids)]);
+    back.hidden=!origin;
   }
   function clear() {
-    clearMarks(); selection=null;nodeSelect.value=relationSelect.value='';
+    clearMarks(); origin=null;selection=null;nodeSelect.value=relationSelect.value='';
     inspector.hidden=true;content.replaceChildren();
     find('[data-um-status]').textContent=model.nodes.length+' objects · '+model.relations.length+' relations';
   }
-  for(const [el,type] of [[nodeSelect,'node'],[relationSelect,'relation']])
-    el.addEventListener('change',()=>el.value?select(type,el.value,true):clear());
+  nodeSelect.addEventListener('change',()=>nodeSelect.value?selectNode(nodeSelect.value,true):clear());
+  relationSelect.addEventListener('change',()=>{
+    if(!relationSelect.value){clear();return;}
+    origin=null;nodeSelect.value='';selectRelation(relationSelect.value,true);
+  });
+  content.addEventListener('click',e=>{
+    const choice=e.target.closest('[data-um-choice]');
+    if(choice){selectRelation(choice.dataset.umChoice,true);content.querySelector('h4').focus({preventScroll:true});}
+    else if(e.target.closest('a[href^="#unified-"]')&&!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&!e.altKey)setTimeout(clear,0);
+  });
+  back.addEventListener('click',()=>{
+    if(!origin)return;
+    const saved=origin.camera;
+    selectNode(origin.key,false,origin.whole);
+    camera(saved.scale,saved.point);window.scrollTo(0,saved.scrollY);origin.camera=saved;
+    content.querySelector('h4').focus({preventScroll:true});
+  });
+  inspector.addEventListener('keydown',e=>{if(e.key==='Escape'){clear();stage.focus({preventScroll:true});}});
   find('[data-um-clear]').addEventListener('click',()=>{clear();stage.focus({preventScroll:true});});
   find('[data-um-in]').addEventListener('click',()=>zoom(1.6));
   find('[data-um-out]').addEventListener('click',()=>zoom(1/1.6));
@@ -171,10 +269,11 @@ function initializeMap(root) {
     const a=e.target.closest('a[data-node],a[data-edge]');
     if(!a)return;
     e.preventDefault();
-    select(a.hasAttribute('data-node')?'node':'relation',a.dataset.node??a.dataset.edge);
+    if(a.hasAttribute('data-node'))selectNode(a.dataset.node,false,true);
+    else choosePath(a);
   });
   function disclose(hash) {
-    if(!/^#(?:unified-(?:node|relation)-|top-morphisms-|edge-morphisms-)/.test(hash))return;
+    if(!/^#(?:unified-(?:node|relation|route|group)-|top-morphisms-|edge-morphisms-)/.test(hash))return;
     const el=document.getElementById(hash.slice(1));
     for(let parent=el?.closest('details');parent;parent=parent.parentElement.closest('details'))parent.open=true;
   }
