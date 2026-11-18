@@ -117,10 +117,12 @@ if (pi) {
   }
   function showTarget() {
     const id = location.hash.slice(1);
-    const target = /^[PTS]\d{6}$/.test(id) && document.getElementById(id);
-    if (!target?.matches?.('[data-pi-row]')) return;
-    if (target.hidden) { input.value = ''; linked.value = ''; filter(); }
-    target.open = true;
+    const target = /^(?:[PTS]\d{6}|S\d{6}-P\d{6})$/.test(id) && document.getElementById(id);
+    const record = target && target.closest('[data-pi-row]');
+    if (!record) return;
+    if (record.hidden) { input.value = ''; linked.value = ''; filter(); }
+    record.open = true;
+    if (target !== record) target.querySelector('details').open = true;
     target.scrollIntoView({block:'nearest'});
   }
   pi.hidden = false;

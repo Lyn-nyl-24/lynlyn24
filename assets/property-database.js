@@ -1,4 +1,4 @@
-import { createDeduction, opposite } from './property-deduction-5318cdd3b02bb71f.js';
+import { createDeduction, opposite } from './property-deduction-0c160233a10aea24.js';
 
 const byId = id => document.getElementById(id);
 const data = JSON.parse(byId('property-data').content.textContent);
@@ -6,7 +6,8 @@ const entries = new Map(data.entries.map(entry => [entry.id,entry]));
 const records = [...document.querySelectorAll('[data-record]')];
 const normalize = value => value.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replaceAll('π','pi');
 const searchable = records.map(record => [record,normalize(record.dataset.search),
-  new Set(record.dataset.externalIds.toLowerCase().split(' ')),new Set(record.dataset.stacksTags.toLowerCase().split(' '))]);
+  new Set(record.dataset.externalIds.toLowerCase().split(' ')),new Set(record.dataset.stacksTags.toLowerCase().split(' ')),
+  new Set(record.dataset.directTags.toLowerCase().split(' '))]);
 const search = byId('database-query'), kind = byId('database-kind'), topic = byId('database-topic'), role = byId('database-role');
 const discipline = byId('database-discipline');
 const initial = new URLSearchParams(location.search);
@@ -20,7 +21,11 @@ const sections = [...document.querySelectorAll('.property-group')];
 function filter() {
   const external = [];
   const stacks = [];
-  const query = normalize(search.value).replace(/\bstacks[:\s]+([0-9][a-z0-9]{3})\b/g,(_,id) => {
+  const direct = [];
+  const query = normalize(search.value).replace(/\bdirect:([a-z0-9]{4})\b/g,(_,id) => {
+    direct.push(id);
+    return ' ';
+  }).replace(/\bstacks[:\s]+([a-z0-9]{4})\b/g,(_,id) => {
     stacks.push(id);
     return ' ';
   }).replace(/\bpi[- ]?base[:\s]+([pts]\d{6})\b/g,(_,id) => {
@@ -29,13 +34,13 @@ function filter() {
   });
   const terms = query.trim().split(/\s+/).filter(Boolean);
   let visible = 0;
-  for (const [record,index,externalIds,stacksTags] of searchable) {
+  for (const [record,index,externalIds,stacksTags,directTags] of searchable) {
     record.hidden = (kind.value !== '' && kind.value !== record.dataset.kind)
       || (topic.value !== '' && topic.value !== record.dataset.topic && topic.value !== record.dataset.subject)
       || (role.value !== '' && role.value !== record.dataset.role)
       || (discipline.value !== '' && discipline.value !== record.dataset.discipline)
       || !terms.every(term => index.includes(term)) || !external.every(id => externalIds.has(id)) ||
-      !stacks.every(id => stacksTags.has(id));
+      !stacks.every(id => stacksTags.has(id)) || !direct.every(id => directTags.has(id));
     if (!record.hidden) visible++;
   }
   for (const cluster of clusters) cluster.hidden = !cluster.querySelector('[data-record]:not([hidden])');
@@ -75,7 +80,14 @@ document.addEventListener('click',event => {
 filter();
 revealHash();
 
-const deduction = createDeduction(data.theorems,data.examples,data.entries);
+const theories = new Map();
+function theory(subject) {
+  if (!theories.has(subject)) {
+    const local = records => records.filter(row => row.subject === subject);
+    theories.set(subject,createDeduction(local(data.theorems),local(data.examples),local(data.entries).filter(row => row.executable)));
+  }
+  return theories.get(subject);
+}
 const domain = byId('database-domain'), premise = byId('database-premise'), goal = byId('database-goal');
 if ([...domain.options].some(option => option.value === initial.get('domain'))) domain.value = initial.get('domain');
 const premiseValue = byId('database-premise-value'), goalValue = byId('database-goal-value');
@@ -153,7 +165,7 @@ function proofTrace(result) {
 }
 check.addEventListener('click',() => {
   const target = goalValue.value + goal.value;
-  const result = deduction.query([...assumptions],target);
+  const result = theory(domain.value).query([...assumptions],target);
   const summary = make('p');
   if (result.status === 'proved') {
     summary.append(make('strong',result.temporary ? 'Proved by refutation. ' : 'Proved. '),anchor(target),
@@ -163,7 +175,9 @@ check.addEventListener('click',() => {
     const example = data.examples.find(example => example.id === result.example);
     summary.append(make('strong','Counterexample. '),anchor(example.id,example.name),
       ' satisfies the selected hypotheses and has the opposite of the proposed conclusion: ',anchor(opposite(target)),'.');
-    output.replaceChildren(summary);
+    const grounds = make('p','Recorded on this example: ');
+    appendPremises(grounds,result.givens);
+    output.replaceChildren(summary,grounds,...proofTrace(result));
   } else if (result.status === 'inconsistent') {
     summary.append(make('strong','Incompatible hypotheses. '),'The selected hypotheses contradict a recorded rule or each other.');
     output.replaceChildren(summary,...proofTrace(result));

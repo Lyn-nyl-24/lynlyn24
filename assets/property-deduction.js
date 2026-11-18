@@ -12,7 +12,7 @@ const unsigned = literal => literal.startsWith('~') ? literal.slice(1) : literal
  * Store posting lists keyed by the literal that would falsify a clause member.
  */
 export function createDeduction(theorems, examples = [], entries = []) {
-  const domains = new Map(entries.map(({id,subject}) => [id,subject]));
+  const domains = new Map(entries.map(entry => [entry.id,Object.hasOwn(entry,'logicDomain') ? entry.logicDomain : entry.subject]));
   const clauses = [], whenFalse = new Map(), units = [];
   const add = (id,premises,results) => {
     for (const conclusion of results) {
@@ -112,8 +112,11 @@ export function createDeduction(theorems, examples = [], entries = []) {
     if (conflict) return {status:'inconsistent',...explain(facts,conflict.premises),conflict};
     if (facts.has(goal)) return {status:'proved', method:'direct', ...explain(facts,[goal])};
     const negated = opposite(goal);
-    const found = witnessIndex.get(negated)?.find(({facts:known}) => assumptions.every(id => known.has(id)));
-    if (found) return {status:'counterexample',example:found.example.id};
+    const tests = [...new Set([negated,...assumptions])];
+    const shortest = tests.reduce((best,id) =>
+      (witnessIndex.get(id)?.length ?? 0) < (witnessIndex.get(best)?.length ?? 0) ? id : best);
+    const found = witnessIndex.get(shortest)?.find(({facts:known}) => tests.every(id => known.has(id)));
+    if (found) return {status:'counterexample',example:found.example.id,...explain(found.facts,tests)};
     if (facts.has(negated)) return {status:'opposite',...explain(facts,[negated])};
 
     // Refute the opposite of the goal. Unit refutation is complete for Horn CNF

@@ -234,6 +234,29 @@
 }
 .atlas-nav a { text-decoration-color: var(--atlas-line); }
 .atlas-nav a:hover { text-decoration-color: currentColor; }
+.atlas-nav [aria-current="page"] { color: var(--ink); text-decoration-thickness: .13em; }
+.atlas-evidence { margin-block: .8rem; padding-block-start: .45rem; border-block-start: 1px solid var(--atlas-line); }
+.atlas-evidence h4 { margin: .25rem 0; font: 700 .82rem/1.45 var(--sans); }
+.atlas-evidence ul { list-style: none; padding: 0; margin: 0; }
+.atlas-evidence li { padding-block: .16rem; font-size: .86rem; line-height: 1.5; overflow-wrap: anywhere; }
+.atlas-evidence small { display: inline-block; color: var(--muted); margin-inline-start: .3rem; }
+.atlas-workspace .stacks-row-links { line-height: 1.65; }
+.pi-display-math { display: block; max-inline-size: 100%; overflow-x: auto; }
+.atlas-workspace :is(.property-record-body,.algebra-definition,.algebra-card,.topo-passport,.atlas-panel)
+  :is(p,dd,li):has(math) { max-inline-size: 100%; overflow-x: auto; }
+.pi-source-text { overflow-wrap: anywhere; }
+.pi-source-text :is(li,p,blockquote) { max-inline-size: 100%; }
+.atlas-workspace .atlas-hero h1 { overflow-wrap: anywhere; }
+.coverage-label { display: none; }
+@media (max-width: 40rem) {
+  .coverage-sections { max-block-size: 33rem; overscroll-behavior: contain; }
+  .coverage-sections table { min-inline-size: 0; }
+  .coverage-sections thead { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); }
+  .coverage-sections tbody tr { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .4rem .75rem; border-block-start: 1px solid var(--atlas-line); padding-block: .6rem; }
+  .coverage-sections tbody th { grid-column: 1 / -1; }
+  .coverage-sections tbody :is(th,td) { border: 0; padding: 0; text-align: start; }
+  .coverage-sections .coverage-label { display: block; color: var(--muted); font-size: .7rem; }
+}
 .atlas-workspace .atlas-controls :is(button,select,input[type="search"],input[type="text"]),
 .atlas-workspace button.atlas-controls {
   box-sizing: border-box;

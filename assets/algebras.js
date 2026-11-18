@@ -7,40 +7,85 @@ const definition = read('algebra-definition');
 const entries = new Map(data.entries.map(entry => [entry.id,entry]));
 const relations = new Map(data.relations.map(row => [row.id,row]));
 const lex = input => input.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
-const searchable = data.entries.map(row => [row,lex([row.name,row.id,...(row.aliases ?? []),...row.sourceTags].join(' '))]);
+const index = rows => rows.map(row => [row,lex([row.name,row.id,...(row.aliases ?? []),...row.sourceTags].join(' '))]);
+const indexedEntries = index(data.entries), indexedRelations = index(data.relations);
 let visible = [], shown = 0, active = data.entries.find(row => row.name === 'Integral domain')?.id ??
   data.entries.find(row => data.incidence[row.id]?.length)?.id ?? data.entries[0]?.id;
 
-function options() {
+function options(preferred) {
   const terms = lex(find.value.trim()).split(/\s+/).filter(Boolean);
-  const rows = searchable.filter(([entry,text]) => (!domain.value || entry.subject === domain.value) &&
-    terms.every(term => text.includes(term))).map(([entry]) => entry);
-  const kept = rows.some(row => row.id === active);
-  if (!kept) active = rows[0]?.id;
-  focus.replaceChildren(...rows.map(({id,name}) => new Option(name + ' · ' + id,id,id === active,id === active)));
-  focus.disabled = !rows.length;
+  const matches = rows => rows.filter(([row,text]) => (!domain.value || row.subject === domain.value) &&
+    terms.every(term => text.includes(term))).map(([row]) => row);
+  const concepts = matches(indexedEntries);
+  const results = terms.length ? matches(indexedRelations).filter(row => !kind.value || row.style === kind.value) : [];
+  const groups = [];
+  for (const [label,items] of [['Concepts',concepts],['Relations and witnesses',results]]) {
+    if (!items.length) continue;
+    const group = document.createElement('optgroup');
+    group.label = label;
+    group.append(...items.map(({id,name}) => new Option(name + ' · ' + id,id)));
+    groups.push(group);
+  }
+  const previous = preferred ?? focus.value;
+  focus.replaceChildren(...groups);
+  if ([...focus.options].some(option => option.value === previous)) focus.value = previous;
+  focus.disabled = groups.length === 0;
+  followFocus();
 }
-function batch() {
-  for (const id of visible.slice(shown,shown + 12)) {
-    const fragment = read('algebra-card-' + id).content.cloneNode(true);
-    for (const node of fragment.querySelectorAll('.algebra-node')) {
+function followFocus() {
+  const row = relations.get(focus.value);
+  if (row) active = row.endpoints.includes(active) ? active : row.endpoints[0];
+  else active = focus.value || undefined;
+  return row?.id;
+}
+let generation = 0;
+const pages = new Map();
+async function fragment(id) {
+  const path = data.pages[id.slice(0,-2)];
+  try {
+    if (!pages.has(path)) pages.set(path,import(new URL(path,document.baseURI).href));
+    const {default:records} = await pages.get(path);
+    const template = document.createElement('template');
+    template.innerHTML = records[id];
+    return template.content;
+  } catch {
+    pages.delete(path);
+    const link = document.createElement('a');
+    link.href = data.catalogue + '#' + id;
+    link.textContent = 'Open ' + id + ' in the shared catalogue';
+    return link;
+  }
+}
+async function batch() {
+  const current = generation;
+  const ids = visible.slice(shown,shown+12);
+  shown += ids.length;
+  more.disabled = true;
+  const chunks = await Promise.all(ids.map(fragment));
+  if (generation !== current) return;
+  for (const chunk of chunks) {
+    for (const node of chunk.querySelectorAll('.algebra-node')) {
       if (node.hash === '#' + active) node.setAttribute('aria-current','true');
     }
-    output.append(fragment);
+    output.append(chunk);
   }
-  shown += 12;
+  more.disabled = false;
   more.hidden = shown >= visible.length;
+  output.removeAttribute('aria-busy');
 }
 function show(preferred) {
+  const current = ++generation;
   const entry = entries.get(active);
   const eligible = (data.incidence[active] ?? []).filter(id => !kind.value || relations.get(id).style === kind.value);
   visible = preferred ? [preferred,...eligible.filter(id => id !== preferred)] : eligible;
   status.textContent = entry ? entry.name + ' · ' + visible.length + (visible.length === 1 ? ' adjacent relation' : ' adjacent relations') :
-    'No matching concepts';
-  if (entry && !visible.length) status.textContent += '. Use the shared catalogue for its definition.';
+    preferred ? relations.get(preferred).name : 'No matching records';
   shown = 0;
-  definition.replaceChildren(...(entry ? [read('algebra-node-' + active).content.cloneNode(true)] : []));
+  definition.replaceChildren();
+  if (entry) fragment(active).then(node => { if (generation === current) definition.replaceChildren(node); });
   output.replaceChildren();
+  output.setAttribute('aria-busy','true');
+  more.hidden = true;
   batch();
 }
 function select(id,move) {
@@ -50,7 +95,7 @@ function select(id,move) {
   if (entry) active = id;
   if (relation) active = relation.endpoints.includes(active) ? active : relation.endpoints[0] ?? active;
   find.value = domain.value = kind.value = '';
-  options();
+  options(active);
   show(relation?.id);
   if (move) {
     read('algebra-graph').scrollIntoView({block:'start'});
@@ -62,11 +107,10 @@ function setHash(id) {
   history.replaceState(null,'','#' + id);
 }
 controls.hidden = false;
-for (const input of [find,domain]) input.addEventListener(input === find ? 'input' : 'change',() => {
-  options(); show();
+for (const input of [find,domain,kind]) input.addEventListener(input === find ? 'input' : 'change',() => {
+  options(); show(relations.has(focus.value) ? focus.value : undefined);
 });
-kind.addEventListener('change',() => show());
-focus.addEventListener('change',() => { active = focus.value; setHash(active); show(); });
+focus.addEventListener('change',() => { const preferred = followFocus(); setHash(focus.value); show(preferred); });
 more.addEventListener('click',batch);
 document.querySelector('.algebra-atlas').addEventListener('click',event => {
   const link = event.target.closest('.algebra-node,[data-algebra-focus],.algebra-links a[href^="#"]');
@@ -77,5 +121,5 @@ document.querySelector('.algebra-atlas').addEventListener('click',event => {
   setHash(id);
 });
 addEventListener('hashchange',() => select(location.hash.slice(1),true));
-options();
+options(active);
 if (!select(location.hash.slice(1),Boolean(location.hash))) show();
