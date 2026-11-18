@@ -170,316 +170,83 @@
 
 (() => {
   'use strict';
-  const diagram = document.querySelector('[data-groth-diagram]');
-  if (!diagram) return;
-  const canvas = diagram.querySelector('[data-groth-canvas]');
-  const topicSelect = diagram.querySelector('[data-groth-topics]');
-  const nodeSelect = diagram.querySelector('[data-groth-nodes]');
-  const find = diagram.querySelector('[data-groth-find]');
-  const placeholder = nodeSelect.options[0];
-  const normalized = input => input.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
-  const nodeGroups = [...nodeSelect.querySelectorAll('optgroup')].map(group => ({
-    label:group.label, options:[...group.children].map(option => ({option,text:normalized(option.dataset.search)})),
+  const root = document.querySelector('[data-groth-diagram]');
+  if (!root) return;
+  const form = root.querySelector('.groth-controls');
+  const search = form.querySelector('[data-groth-find]');
+  const focus = form.querySelector('[data-groth-focus]');
+  const depth = form.querySelector('[data-groth-depth]');
+  const kind = form.querySelector('[data-groth-kind]');
+  const status = form.querySelector('output');
+  const groups = [...root.querySelectorAll('.groth-index-group')];
+  const nodes = [...root.querySelectorAll('[data-groth-node]')];
+  const edges = [...root.querySelectorAll('[data-groth-edge]')].map(el => ({
+    el,members:el.dataset.grothMembers.split(' '),kind:el.dataset.grothKind,
   }));
-  const passport = diagram.querySelector('[data-groth-passport]');
-  const controls = diagram.querySelector('.groth-controls');
-  const legend = diagram.querySelector('.groth-legend');
-  const viewChoices = [...diagram.querySelectorAll('[data-groth-view]')];
-  const localControls = diagram.querySelector('[data-groth-local-controls]');
-  const localCanvas = diagram.querySelector('[data-groth-local-canvas]');
-  const localSvg = localCanvas.querySelector('svg');
-  const depthSelect = diagram.querySelector('[data-groth-depth]');
-  const kindFilters = [...diagram.querySelectorAll('[data-groth-kind-filter]')];
-  const localStatus = diagram.querySelector('[data-groth-local-status]');
-  const nodes = new Map(Array.from(diagram.querySelectorAll('[data-groth-node]'), node => [node.dataset.grothNode,node]));
-  const edges = new Map(Array.from(diagram.querySelectorAll('[data-groth-edge]'), edge => [edge.dataset.grothEdge,edge]));
-  const templates = new Map(Array.from(diagram.querySelectorAll('template[id^="groth-info-"]'), template =>
-    [template.id.slice('groth-info-'.length),template]));
-  const incident = new Map([...nodes.keys()].map(id => [id,[]]));
-  for (const edge of edges.values()) {
-    incident.get(edge.dataset.from).push(edge);
-    incident.get(edge.dataset.to).push(edge);
-  }
-  let currentId = '';
-  let localRoot = '';
-  let local = false;
-
-  function panTo(item) {
-    const area = canvas.getBoundingClientRect();
-    const itemBox = item.getBoundingClientRect();
-    canvas.scrollTo({
-      left:canvas.scrollLeft + itemBox.left - area.left - 12,
-      top:canvas.scrollTop + itemBox.top - area.top - 12,
-    });
-  }
-
-  function neighbourhood(root, depth, kinds) {
-    const distance = new Map([[root,0]]);
-    const queue = [root];
-    for (const node of queue) {
-      const rank = distance.get(node);
-      if (rank === depth) continue;
-      for (const {dataset:{from,to,grothKind}} of incident.get(node)) {
-        if (!kinds.has(grothKind)) continue;
-        const next = from === node ? to : from;
-        if (distance.has(next)) continue;
-        distance.set(next,rank + 1);
-        queue.push(next);
-      }
-    }
-    const levels = Array.from({length:Math.max(...distance.values())+1},(_,rank) =>
-      queue.filter(node => distance.get(node) === rank));
-    const relations = [...edges.values()].filter(({dataset:{from,to,grothKind}}) =>
-      kinds.has(grothKind) && distance.has(from) && distance.has(to));
-    return {levels,relations,distance};
-  }
-
-  function localPaths(relations, positions, distance, width, height) {
-    const lanes = new Map();
-    const ports = new Map();
-    const paths = relations.map(edge => {
-      const {from,to} = edge.dataset;
-      const a = positions.get(from);
-      const b = positions.get(to);
-      const sourceRank = distance.get(from);
-      const targetRank = distance.get(to);
-      const sameLevel = sourceRank === targetRank;
-      const outgoing = sourceRank <= targetRank;
-      const fromSide = outgoing ? 'right' : 'left';
-      const toSide = sameLevel || !outgoing ? 'right' : 'left';
-      const lane = lanes.get(sourceRank) ?? 0;
-      const route = {edge, sameLevel, lane, startX:a.x + (fromSide === 'right' ? width+4 : -4),
-        endX:b.x + (toSide === 'right' ? width+4 : -4)};
-      if (sameLevel) lanes.set(sourceRank,lane+1);
-      for (const [id,side,y,port] of [[from,fromSide,a.y,'startY'],[to,toSide,b.y,'endY']]) {
-        const key = id + ':' + side;
-        if (!ports.has(key)) ports.set(key,[]);
-        ports.get(key).push({route,port,y,otherY:port === 'startY' ? b.y : a.y});
-      }
-      return route;
-    });
-    for (const users of ports.values()) {
-      users.sort((a,b) => a.otherY-b.otherY);
-      const step = Math.min(6,(height-14) / Math.max(1,users.length-1));
-      for (const [index,{route,port,y}] of users.entries()) {
-        route[port] = y + height/2 + step * (index - (users.length-1)/2);
-      }
-    }
-    return paths.map(({edge,sameLevel,lane,startX,startY,endX,endY}) => {
-      const turn = startX + 12 + 7 * lane;
-      const d = 'M ' + startX + ' ' + startY + (sameLevel ? ' H ' + turn + ' V ' + endY : '') + ' L ' + endX + ' ' + endY;
-      const clone = edge.cloneNode(true);
-      clone.removeAttribute('id');
-      clone.classList.add('is-visible');
-      for (const path of clone.querySelectorAll('path')) {
-        path.setAttribute('d',d);
-        for (const attr of ['marker-start','marker-end']) {
-          const marker = path.getAttribute(attr);
-          if (marker) path.setAttribute(attr,marker.replace('groth-arrow-','groth-local-arrow-'));
+  const normalize = text => text.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
+  const index = new Map([...nodes,...edges.map(e => e.el)].map(el => [el,normalize(el.dataset.grothSearch)]));
+  let filtering = false;
+  let saved = [];
+  function apply() {
+    const words = normalize(search.value.trim()).split(/\s+/u).filter(Boolean);
+    const active = Boolean(words.length || focus.value || kind.value);
+    if (active && !filtering) saved = groups.map(group => group.open);
+    const allowed = edges.filter(edge => !kind.value || edge.kind === kind.value);
+    let nearby = null;
+    if (focus.value) {
+      nearby = new Set([focus.value]);
+      for (let i=0; i<Number(depth.value); ++i) {
+        const frontier = new Set(nearby);
+        for (const edge of allowed) if (edge.members.some(id => frontier.has(id))) {
+          for (const id of edge.members) nearby.add(id);
         }
       }
-      return clone;
-    });
+    }
+    const hits = el => words.every(word => index.get(el).includes(word));
+    let nodeCount = 0;
+    let edgeCount = 0;
+    for (const el of nodes) {
+      el.hidden = !hits(el) || (nearby !== null && !nearby.has(el.dataset.grothNode));
+      if (!el.hidden) nodeCount++;
+    }
+    for (const edge of edges) {
+      edge.el.hidden = !hits(edge.el) || (kind.value && edge.kind !== kind.value)
+        || (nearby !== null && !edge.members.every(id => nearby.has(id)));
+      if (!edge.el.hidden) edgeCount++;
+    }
+    for (const [i,group] of groups.entries()) {
+      group.hidden = !group.querySelector('.groth-record:not([hidden])');
+      if (active) group.open = !group.hidden;
+      else if (filtering) group.open = saved[i];
+    }
+    depth.disabled = !focus.value;
+    status.textContent = active ? nodeCount + ' concepts · ' + edgeCount + ' relations' : '';
+    filtering = active;
   }
-
-  function drawLocal({reveal=false}={}) {
-    localCanvas.hidden = !local || !localRoot;
-    if (!local) return;
-    if (!localRoot) {
-      localSvg.replaceChildren();
-      localStatus.textContent = 'Choose a node to see its neighbourhood.';
-      return;
-    }
-    const kinds = new Set(kindFilters.filter(filter => filter.checked).map(filter => filter.value));
-    const {levels,relations,distance} = neighbourhood(localRoot,Number(depthSelect.value),kinds);
-    const card = nodes.get(localRoot).querySelector('rect');
-    const width = Number(card.getAttribute('width'));
-    const height = Number(card.getAttribute('height'));
-    const sameLevelCount = levels.map((_,rank) => relations.filter(({dataset:{from,to}}) =>
-      distance.get(from) === rank && distance.get(to) === rank).length);
-    const gap = Math.max(84,...sameLevelCount.map(count => 38+7*count));
-    const rows = Math.max(...levels.map(level => level.length));
-    const rowHeight = height+20;
-    const positions = new Map();
-    const drawings = [];
-    const labels = [];
-    const ns = localSvg.namespaceURI;
-    for (const [rank,level] of levels.entries()) {
-      const x = 18 + rank * (width+gap);
-      const title = document.createElementNS(ns,'text');
-      title.setAttribute('class','groth-local-heading');
-      title.setAttribute('x',x);
-      title.setAttribute('y',26);
-      title.textContent = ['Selected node','1 hop','2 hops'][rank];
-      labels.push(title);
-      for (const [index,id] of level.entries()) {
-        const y = 42 + (index + (rows-level.length)/2) * rowHeight;
-        positions.set(id,{x,y});
-        const clone = nodes.get(id).cloneNode(true);
-        const rect = clone.querySelector('rect');
-        const dx = x - Number(rect.getAttribute('x'));
-        const dy = y - Number(rect.getAttribute('y'));
-        clone.removeAttribute('id');
-        clone.classList.remove('is-related');
-        clone.setAttribute('transform','translate(' + dx + ' ' + dy + ')');
-        drawings.push(clone);
-      }
-    }
-    const totalWidth = 36 + levels.length * width + (levels.length-1) * gap + 7 * sameLevelCount.at(-1);
-    localSvg.setAttribute('viewBox','0 0 ' + totalWidth + ' ' + (52 + rows * rowHeight));
-    localSvg.setAttribute('width',totalWidth);
-    localSvg.setAttribute('aria-label','Relations near ' + nodes.get(localRoot).getAttribute('aria-label'));
-    const markers = canvas.querySelector('defs').cloneNode(true);
-    for (const marker of markers.querySelectorAll('marker')) {
-      marker.id = marker.id.replace('groth-arrow-','groth-local-arrow-');
-      marker.setAttribute('markerUnits','userSpaceOnUse');
-    }
-    localSvg.replaceChildren(markers,...labels,...localPaths(relations,positions,distance,width,height),...drawings);
-    localStatus.textContent = positions.size + (positions.size === 1 ? ' node · ' : ' nodes · ') +
-      relations.length + (relations.length === 1 ? ' relation' : ' relations');
-    if (reveal) {
-      const selected = localSvg.querySelector('[data-groth-node="' + localRoot + '"]');
-      localCanvas.scrollLeft = 0;
-      localCanvas.scrollTop = selected.getBoundingClientRect().top - localSvg.getBoundingClientRect().top - 44;
-    }
+  function reveal(id) {
+    const target = document.getElementById(id);
+    if (!target || !root.contains(target)) return;
+    const record = target.closest('.groth-record');
+    if (target.closest('[hidden]')) { reset(); }
+    const group = target.closest('.groth-index-group');
+    if (group) group.open = true;
+    if (record) record.open = true;
   }
-
-  function selectView(view) {
-    local = view === 'local';
-    for (const choice of viewChoices) choice.setAttribute('aria-pressed',String(choice.dataset.grothView === view));
-    topicSelect.disabled = local;
-    canvas.hidden = local;
-    legend.hidden = local;
-    localControls.hidden = !local;
-    nodeSelect.value = local ? localRoot : nodes.has(currentId) ? currentId : '';
-    drawLocal({reveal:true});
-    const selected = nodes.get(currentId) ?? nodes.get(edges.get(currentId)?.dataset.from);
-    if (!local && selected) panTo(selected);
+  function reset() {
+    search.value = '';
+    focus.value = '';
+    depth.value = '1';
+    kind.value = '';
+    apply();
   }
-
-  function display(id,{pan=false,detail=false,historyMode='none'}={}) {
-    currentId = id;
-    const selectedEdge = edges.get(id);
-    const selectedNode = nodes.get(id);
-    const nextRoot = selectedNode ? id : selectedEdge ? localRoot || selectedEdge.dataset.from : '';
-    const redrawLocal = nextRoot !== localRoot;
-    localRoot = nextRoot;
-    const active = new Set(selectedEdge ? [selectedEdge.dataset.from,selectedEdge.dataset.to] : [id]);
-    const neighbours = new Set();
-    for (const [edgeId,edge] of edges) {
-      const {from,to} = edge.dataset;
-      const visible = selectedEdge ? edgeId === id : active.has(from) || active.has(to);
-      edge.classList.toggle('is-visible',visible);
-      if (edgeId === id) edge.setAttribute('aria-current','true');
-      else edge.removeAttribute('aria-current');
-      if (visible) {
-        neighbours.add(from);
-        neighbours.add(to);
-      }
-    }
-    for (const [nodeId,node] of nodes) {
-      node.classList.toggle('is-selected',active.has(nodeId));
-      node.classList.toggle('is-related',neighbours.has(nodeId));
-      if (nodeId === id) node.setAttribute('aria-current','true');
-      else node.removeAttribute('aria-current');
-    }
-    if (redrawLocal) drawLocal({reveal:true});
-    if (local) {
-      for (const item of localSvg.querySelectorAll('[data-groth-node],[data-groth-edge]')) {
-        const nodeId = item.dataset.grothNode;
-        const selected = (nodeId ?? item.dataset.grothEdge) === id;
-        if (nodeId) item.classList.toggle('is-selected',active.has(nodeId));
-        if (selected) item.setAttribute('aria-current','true');
-        else item.removeAttribute('aria-current');
-      }
-    }
-    nodeSelect.value = local ? localRoot : selectedNode ? id : '';
-    const template = templates.get(id);
-    passport.replaceChildren(...(template ? [template.content.cloneNode(true)] : []));
-    passport.hidden = !template;
-    const element = selectedNode || selectedEdge;
-    if (element && historyMode === 'push' && location.hash !== '#' + element.id) {
-      history.pushState(null,'','#' + element.id);
-    }
-    if (pan && element && !local) panTo(selectedNode || nodes.get(selectedEdge.dataset.from));
-    if (detail) {
-      const heading = passport.querySelector('h3');
-      if (heading) {
-        heading.tabIndex = -1;
-        heading.focus({preventScroll:true});
-        if (passport.getBoundingClientRect().top > window.innerHeight - 80) passport.scrollIntoView({block:'nearest'});
-      }
-    }
-  }
-
-  function restore() {
-    const anchor = location.hash.slice(1);
-    if (anchor.startsWith('groth-node-') || anchor.startsWith('groth-relation-')) {
-      display(anchor.replace(/^groth-(node|relation)-/,''),{pan:true});
-      return;
-    }
-    display(diagram.dataset.grothDefault);
-  }
-
-  for (const edge of edges.values()) edge.removeAttribute('hidden');
-  controls.hidden = false;
-  diagram.addEventListener('click',event => {
-    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const link = event.target.closest('a[data-groth-node],a[data-groth-edge],a[data-groth-node-link],a[data-groth-relation-link]');
-    if (!link) return;
-    event.preventDefault();
-    const {grothNode,grothEdge,grothNodeLink,grothRelationLink} = link.dataset;
-    const refocus = local && grothNode && localSvg.contains(link) && document.activeElement === link;
-    display(grothNode ?? grothEdge ?? grothNodeLink ?? grothRelationLink,{
-      pan:Boolean(grothNodeLink),detail:Boolean(grothEdge || grothRelationLink),historyMode:'push',
-    });
-    if (refocus) localSvg.querySelector('[data-groth-node="' + grothNode + '"]')?.focus({preventScroll:true});
+  form.addEventListener('input',apply);
+  form.querySelector('[data-groth-reset]').addEventListener('click',reset);
+  root.addEventListener('click',event => {
+    const a = event.target.closest('a[href^="#groth-"]');
+    if (a && !event.defaultPrevented) reveal(a.hash.slice(1));
   });
-  for (const choice of viewChoices) choice.addEventListener('click',() => selectView(choice.dataset.grothView));
-  depthSelect.addEventListener('change',() => drawLocal({reveal:true}));
-  for (const filter of kindFilters) filter.addEventListener('change',() => drawLocal());
-  topicSelect.addEventListener('change',() => {
-    const group = document.getElementById(topicSelect.value);
-    if (group) panTo(group);
-  });
-  function filterNodes() {
-    const words = normalized(find.value).split(/\s+/).filter(Boolean);
-    const groups = [];
-    let count = 0;
-    for (const {label,options} of nodeGroups) {
-      const matches = options.filter(({text}) => words.every(word => text.includes(word)));
-      if (!matches.length) continue;
-      count += matches.length;
-      const group = document.createElement('optgroup');
-      group.label = label;
-      group.append(...matches.map(({option}) => option));
-      groups.push(group);
-    }
-    placeholder.textContent = count ? 'Choose a record' : 'No matching concepts';
-    nodeSelect.replaceChildren(placeholder,...groups);
-    nodeSelect.value = local ? localRoot : nodes.has(currentId) ? currentId : '';
-    if (nodeSelect.selectedIndex < 0) nodeSelect.selectedIndex = 0;
-    nodeSelect.disabled = !count;
-  }
-  find.addEventListener('input',filterNodes);
-  nodeSelect.addEventListener('change',() => {
-    if (nodeSelect.value) display(nodeSelect.value,{pan:true,historyMode:'push'});
-  });
-  function clear() {
-    display('');
-    topicSelect.value = find.value = '';
-    filterNodes();
-    if (/^#groth-(node|relation)-/.test(location.hash)) history.replaceState(null,'','#grothendieck-toposes');
-  }
-  diagram.querySelector('[data-groth-clear]').addEventListener('click',clear);
-  diagram.addEventListener('keydown',event => {
-    if (event.key !== 'Escape' || passport.hidden) return;
-    const focusInPassport = passport.contains(document.activeElement);
-    event.stopPropagation();
-    clear();
-    if (focusInPassport) nodeSelect.focus();
-  });
-  addEventListener('hashchange',restore);
-  addEventListener('popstate',restore);
-  restore();
+  addEventListener('hashchange',() => reveal(location.hash.slice(1)));
+  form.hidden = false;
+  apply();
+  reveal(location.hash.slice(1));
 })();

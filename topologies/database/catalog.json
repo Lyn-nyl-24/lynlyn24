@@ -1339,11 +1339,19 @@
       "name": "Quasi-projective",
       "aliases": [],
       "kind": "property",
-      "definition": "Of finite type and admitting a relatively ample invertible sheaf, in the Stacks convention.",
+      "definition": "Of finite type and admitting a relatively ample invertible sheaf, in the Stacks convention. Hoyois Definition 4.35(ii) uses a quasi-compact open immersion into a projective scheme over the base. Over a quasi-compact and quasi-separated base the Stacks criterion gives such a factorization.",
       "refs": [
         [
           "https://stacks.math.columbia.edu/tag/01VV",
           "Stacks 01VV · quasi-projective morphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07RM",
+          "Stacks 07RM · projective compactification over a qcqs base"
+        ],
+        [
+          "https://hoyois.app.uni-regensburg.de/SS26/alggeo2/script.pdf#page=47",
+          "Hoyois, Definition 4.35(ii)"
         ],
         [
           "https://stacks.math.columbia.edu/tag/01VW",
@@ -1909,8 +1917,12 @@
       "name": "Integral",
       "aliases": [],
       "kind": "property",
-      "definition": "Nonempty, reduced and irreducible; equivalently every nonempty affine open has a domain as coordinate ring.",
+      "definition": "A scheme is integral when it is nonempty and every nonempty affine open has an integral domain as its coordinate ring. Equivalently it is reduced and irreducible.",
       "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01OK",
+          "Stacks 01OK · affine-local definition of an integral scheme"
+        ],
         [
           "https://stacks.math.columbia.edu/tag/01OJ",
           "Stacks 01OJ · integral schemes"
@@ -4467,16 +4479,12 @@
       "key": "site-petit-fppf",
       "subject": "site",
       "name": "Petit fppf site",
-      "ambient": "Schemes flat and locally of finite presentation over X",
-      "definition": "Objects are the indicated X-schemes in the chosen size bound. Covering arrows are flat and locally of finite presentation with jointly surjective images.",
+      "ambient": "Flat, locally finitely presented schemes over a fixed scheme X",
+      "definition": "Use the small flat site convention: objects are flat, locally finitely presented X-schemes in a chosen universe, and arrows are X-morphisms. A family covers when its members are flat and locally of finite presentation and their images jointly cover its target.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/021S",
-          "Stacks 021S · big and small fppf sites"
-        ],
-        [
-          "https://stacks.math.columbia.edu/tag/021M",
-          "Stacks 021M · fppf coverings"
+          "https://www.numdam.org/item/10.5802/jtnb.863.pdf",
+          "Mézard–Romagny–Tossici, Sekiguchi–Suwa theory revisited, Appendix A (small flat site)"
         ],
         [
           "https://stacks.math.columbia.edu/tag/021M",
@@ -4484,7 +4492,8 @@
         ]
       ],
       "aliases": [
-        "small fppf"
+        "small fppf",
+        "small flat site"
       ],
       "role": "structure",
       "id": "G000077",
@@ -23846,11 +23855,11 @@
       "concludes": [
         "G000005"
       ],
-      "proof": "A smooth morphism is flat and locally finitely presented with geometrically regular fibres, hence is syntomic.",
+      "proof": "Each member of a smooth cover is syntomic, and the family still covers the target.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/020K",
-          "Stacks 020K · topologies on schemes"
+          "https://stacks.math.columbia.edu/tag/0226",
+          "Stacks 0226 · smooth covering families are syntomic"
         ],
         [
           "https://stacks.math.columbia.edu/tag/01VD",
@@ -23873,11 +23882,11 @@
       "concludes": [
         "G000006"
       ],
-      "proof": "The defining properties of syntomic maps include flatness and local finite presentation.",
+      "proof": "Each member of a syntomic cover is flat and locally of finite presentation, and the family is jointly surjective.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/020K",
-          "Stacks 020K · topologies on schemes"
+          "https://stacks.math.columbia.edu/tag/021N",
+          "Stacks 021N · syntomic covering families are fppf"
         ]
       ],
       "ambient": "Separated schemes of finite type over a separated Noetherian base S; see individual edge scope.",
@@ -23896,7 +23905,7 @@
       "concludes": [
         "G000007"
       ],
-      "proof": "An fppf family covers for fpqc by openness and quasi-compactness of affine opens. In this category every arrow is of finite type between locally Noetherian schemes and hence locally of finite presentation. Thus an fpqc covering family here is also fppf. The reverse argument depends on the finite-type category over the Noetherian base.",
+      "proof": "Every fppf family is fpqc. For the converse in this finite-type category over a Noetherian base, every source is locally of finite type over the base, hence locally of finite type over its target. The target is locally Noetherian, so the morphism is locally of finite presentation. An fpqc covering family is flat and jointly surjective, hence fppf here.",
       "refs": [
         [
           "https://stacks.math.columbia.edu/tag/022C",
@@ -23904,11 +23913,11 @@
         ],
         [
           "https://stacks.math.columbia.edu/tag/01T8",
-          "Stacks 01T8 · finite type over the base"
+          "Stacks 01T8 · local finite type over the target"
         ],
         [
           "https://stacks.math.columbia.edu/tag/01T6",
-          "Stacks 01T6 · locally Noetherian targets and sources"
+          "Stacks 01T6 · local Noetherianity of schemes locally of finite type over the base"
         ],
         [
           "https://stacks.math.columbia.edu/tag/01TX",
@@ -24600,8 +24609,8 @@
       "proof": "Geometrically regular fibres are locally complete intersections, and smoothness supplies flatness and local finite presentation.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/01UB",
-          "Stacks 01UB · syntomic morphisms"
+          "https://stacks.math.columbia.edu/tag/01VD",
+          "Stacks 01VD · smooth morphisms are syntomic"
         ],
         [
           "https://doi.org/10.1007/978-3-658-43031-3_4",
@@ -97427,7 +97436,7 @@
   "stacksIndex": {
     "revision": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "count": 21446,
-    "citedTagCount": 2809,
+    "citedTagCount": 2811,
     "directTagCount": 2575,
     "path": "stacks/tags.json",
     "citations": "stacks/citations.json",
