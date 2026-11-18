@@ -241,6 +241,10 @@ h1 {
   text-transform: uppercase;
 }
 .archive-columns button { background: none; border: 0; color: inherit; padding: .2rem 0; cursor: pointer; text-transform: inherit; }
+.archive-meta, .note-row-meta { display: flex; align-items: baseline; justify-content: flex-end; gap: .25rem 1rem; text-align: end; }
+.archive-meta > :last-child, .archive-index .note-row-meta > :last-child { min-inline-size: 3.8rem; }
+.publication-date { color: var(--muted); font: .78rem/1.45 var(--sans); }
+.publication-date time { white-space: nowrap; }
 .tag { color: var(--accent); font: .8rem/1.4 var(--sans); }
 .note-summary { display: block; }
 .empty { color: var(--muted); }
@@ -289,6 +293,15 @@ article.reading { inline-size: 100%; }
 .article-meta { display: flex; align-items: baseline; flex-wrap: wrap; gap: .35rem 1rem; margin-block-end: .85rem; }
 .article-meta .breadcrumbs ol, .article-meta .tag { margin: 0; }
 .article-header h1 { max-inline-size: 24ch; }
+.article-source { margin: .7rem 0 0; font-size: .8rem; }
+article.reading > .article-colophon { inline-size: var(--reading-width); margin: 2.25rem auto 0; border-block-start: 1px solid var(--line); padding-block-start: .4rem; }
+.article-colophon p { color: var(--muted); font: .8rem/1.5 var(--sans); }
+@media (max-width: 540px) {
+  .note-row-meta { flex-direction: column-reverse; align-items: flex-end; gap: .1rem; }
+  .archive-meta { gap: .5rem; }
+  .archive-meta > :last-child, .archive-index .note-row-meta > :last-child { min-inline-size: 0; }
+  .publication-date > span { display: block; }
+}
 .article-toc { margin-block: 1.15rem 0; border-block: 1px solid var(--line); }
 .article-toc ul {
   display: flex;
@@ -367,6 +380,8 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   color: var(--muted);
   font: .75rem/1.35 var(--sans);
 }
+.language-display { width: fit-content; padding: 0; margin: 0 0 .5rem auto; border: 0; font: .75rem/1.35 var(--sans); color: var(--muted); }
+.language-display .diagram-segments { flex-wrap: nowrap; }
 .diagram-options { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0 .35rem; }
 .site-header .diagram-options a { text-decoration: underline; }
 .diagram-segments { display: flex; flex-wrap: wrap; justify-content: flex-end; }
@@ -556,6 +571,7 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   font-size: .92rem;
 }
 .footer-name { font-weight: 750; }
+
 
 .literature-list { list-style: none; padding: 0; }
 .literature-list li { padding-block: .85rem; border-block-start: 1px solid var(--soft-line); }

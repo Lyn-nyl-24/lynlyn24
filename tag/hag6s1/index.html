@@ -7,8 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sieves and descent — Lynlyn24</title>
   <meta name="description" content="Section 6.1 · Sheaves">
-  <link rel="stylesheet" href="../../assets/site-8092640d46e5fc4b.css">
-  <script defer src="../../assets/site-e1cee55009d893ca.js"></script>
+  <link rel="stylesheet" href="../../assets/site-8801734bfcd8d2b7.css">
+  <link rel="canonical" href="https://lyn-nyl-24.github.io/lynlyn24/tag/hag6s1/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Lynlyn24">
+  <meta property="og:title" content="Sieves and descent — Lynlyn24">
+  <meta property="og:description" content="Section 6.1 · Sheaves">
+  <meta property="og:url" content="https://lyn-nyl-24.github.io/lynlyn24/tag/hag6s1/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Sieves and descent","description":"Section 6.1 · Sheaves","url":"https://lyn-nyl-24.github.io/lynlyn24/tag/hag6s1/","mainEntityOfPage":"https://lyn-nyl-24.github.io/lynlyn24/tag/hag6s1/","author":{"@type":"Person","name":"Lynlyn24"},"inLanguage":"en","articleSection":"Algebraic geometry"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Index","item":"https://lyn-nyl-24.github.io/lynlyn24/"},{"@type":"ListItem","position":2,"name":"Books","item":"https://lyn-nyl-24.github.io/lynlyn24/books/"},{"@type":"ListItem","position":3,"name":"Algebraic Geometry","item":"https://lyn-nyl-24.github.io/lynlyn24/books/algebraic-geometry-hoyois/"},{"@type":"ListItem","position":4,"name":"6 Sheaves","item":"https://lyn-nyl-24.github.io/lynlyn24/books/algebraic-geometry-hoyois/sheaves/"},{"@type":"ListItem","position":5,"name":"Sieves and descent","item":"https://lyn-nyl-24.github.io/lynlyn24/tag/hag6s1/"}]}]}</script>
+  <link rel="alternate" type="application/atom+xml" title="Lynlyn24" href="../../feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Lynlyn24 — Audio" href="../../podcast.xml">
+
+  <script defer src="../../assets/site-e6e903fed92e1f22.js"></script>
   <script defer src="../../assets/comments.js"></script>
 </head>
 <body>
@@ -29,12 +40,16 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
     <li><a href="../../">Index</a></li>
     <li><a href="../../books/">Books</a></li><li><a href="../../books/algebraic-geometry-hoyois/">Algebraic Geometry</a></li><li><a href="../../books/algebraic-geometry-hoyois/sheaves/">6 Sheaves</a></li>
+    <li aria-current="page">Sieves and descent</li>
   </ol></nav>
         <p class="tag">6.1 · <a href="../004X/" aria-label="Permanent tag 004X">Tag 004X</a></p>
       </div>
+
       <h1>Sieves and descent</h1>
       <p class="lede">Section 6.1 · Sheaves</p>
+
     </header>
+
 
     <div class="prose note-body"><p>In this chapter, we introduce the formalism of Grothendieck topologies and sheaves. A Grothendieck topology <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="169.431 467.666 5.522 5.107" width="0.554em" role="img" aria-label="τ"><use href="../../assets/editions/hoyois-sheet-1-574e5bf2d05f5add.svg#hf-5-14"></use></svg></span> on a category <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="407.358 624.016 5.592 7.792" width="0.561em" role="img" aria-label="C"><use href="../../assets/editions/hoyois-sheet-1-574e5bf2d05f5add.svg#hf-2-17"></use></svg></span> determines (and is determined by) a subcategory Sh<span class="hg-dual"><svg class="hg-inline hg-depth-6 hg-layout" viewBox="434.038 375.924 18.126 10.663" width="1.819em" role="img" aria-label="τ(C)"><g class="hg-latex"><foreignObject x="434.074" y="379.662" width="1" height="1" font-size="6.974"><math><mrow><mi>τ</mi></mrow></math></foreignObject><foreignObject x="439.052" y="375.776" width="1" height="1" font-size="9.963"><math><mrow><mo stretchy="false">(</mo></mrow></math></foreignObject><foreignObject x="442.927" y="375.776" width="1" height="1" font-size="9.963"><math><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow></math></foreignObject><foreignObject x="448.935" y="375.776" width="1" height="1" font-size="9.963"><math><mrow><mo stretchy="false">)</mo></mrow></math></foreignObject></g><g class="hg-svg"><use href="../../assets/editions/hoyois-sheet-7-363517fc8b7b27fd.svg#hg-57-35"></use></g></svg></span> of the presheaf category P(<span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\mathcal{C}),</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-6" viewBox="131.695 537.765 11.908 10.663" width="1.195em" role="img" aria-label="C),"><use href="../../assets/editions/hoyois-sheet-2-d8578182b563cd54.svg#hf-10-37"></use></svg></span> whose objects are called <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="169.431 467.666 5.522 5.107" width="0.554em" role="img" aria-label="τ"><use href="../../assets/editions/hoyois-sheet-1-574e5bf2d05f5add.svg#hf-5-14"></use></svg></span>-sheaves on <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}.</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="203.077 468.829 7.923 7.792" width="0.795em" role="img" aria-label="C."><use href="../../assets/editions/hoyois-sheet-2-d8578182b563cd54.svg#hf-10-31"></use></svg></span> These are presheaves on <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="407.358 624.016 5.592 7.792" width="0.561em" role="img" aria-label="C"><use href="../../assets/editions/hoyois-sheet-1-574e5bf2d05f5add.svg#hf-2-17"></use></svg></span> satsfying a certain local-to-global condition with respect to the topology <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\tau ,</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-4" viewBox="307.813 403.017 7.933 6.917" width="0.796em" role="img" aria-label="τ,"><use href="../../assets/editions/hoyois-sheet-7-363517fc8b7b27fd.svg#hf-57-36"></use></svg></span> called <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="169.431 467.666 5.522 5.107" width="0.554em" role="img" aria-label="τ"><use href="../../assets/editions/hoyois-sheet-1-574e5bf2d05f5add.svg#hf-5-14"></use></svg></span>-descent. In algebraic geometry, we typically use this formalism in the following situations:</p>
 <p>(i) <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi class="math-euler-script" mathvariant="normal">𝒞</mi></mrow><annotation encoding="application/x-tex">\mathcal{C}</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="407.358 624.016 5.592 7.792" width="0.561em" role="img" aria-label="C"><use href="../../assets/editions/hoyois-sheet-1-574e5bf2d05f5add.svg#hf-2-17"></use></svg></span> is the category of open subsets of a topological space <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">T,</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-5" viewBox="352.457 426.709 9.686 9.367" width="0.972em" role="img" aria-label="T,"><use href="../../assets/editions/hoyois-sheet-7-363517fc8b7b27fd.svg#hf-57-37"></use></svg></span> which has a canonical Grothendieck topology; one then speaks of <em>sheaves on</em> <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">T.</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-1" viewBox="143.251 397.599 9.577 7.441" width="0.961em" role="img" aria-label="T."><use href="../../assets/editions/hoyois-sheet-7-363517fc8b7b27fd.svg#hf-56-31"></use></svg></span> This was the original notion of sheaf discovered by Leray in the 1940s, before Grothendieck’s categorical generalization in the 1950s.</p>
@@ -114,6 +129,7 @@
       <h2>Referenced by</h2>
       <ul><li><a href="../hag6s2/">Grothendieck topologies and sheaves</a> <span class="tag">hag6s2</span></li><li><a href="../hag7s1/">The category of schemes</a> <span class="tag">hag7s1</span></li><li><a href="../hag10s1/">Effective divisors</a> <span class="tag">hag10s1</span></li></ul>
     </aside>
+
     <nav class="reader-navigation" aria-label="Book navigation">
     <a class="reader-prev" href="../hag5s4/" rel="prev">
       <span>← Previous section</span><strong>Open coverings</strong>
@@ -136,6 +152,10 @@
   <footer class="site-footer">
     <a class="footer-name" href="../../" aria-label="Lynlyn24"><span class="brand-initial">𝕃</span>ynlyn24</a>
     <a href="../../about/">About and privacy</a>
+    <a href="../../contact/">Contact</a>
+    <a href="../../license/">License and citation</a>
+    <a href="../../feed.xml">Feed</a>
+    <a href="../../audio/">Audio</a>
     <a href="https://glowing-disco-xr4xrwrqp59ghvgjp-4317.app.github.dev/" rel="noreferrer">Editor</a>
   </footer>
 </body>

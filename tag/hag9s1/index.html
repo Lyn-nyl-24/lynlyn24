@@ -7,8 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smooth and étale morphisms — Lynlyn24</title>
   <meta name="description" content="Section 9.1 · Smoothness">
-  <link rel="stylesheet" href="../../assets/site-8092640d46e5fc4b.css">
-  <script defer src="../../assets/site-e1cee55009d893ca.js"></script>
+  <link rel="stylesheet" href="../../assets/site-8801734bfcd8d2b7.css">
+  <link rel="canonical" href="https://lyn-nyl-24.github.io/lynlyn24/tag/hag9s1/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Lynlyn24">
+  <meta property="og:title" content="Smooth and étale morphisms — Lynlyn24">
+  <meta property="og:description" content="Section 9.1 · Smoothness">
+  <meta property="og:url" content="https://lyn-nyl-24.github.io/lynlyn24/tag/hag9s1/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Smooth and étale morphisms","description":"Section 9.1 · Smoothness","url":"https://lyn-nyl-24.github.io/lynlyn24/tag/hag9s1/","mainEntityOfPage":"https://lyn-nyl-24.github.io/lynlyn24/tag/hag9s1/","author":{"@type":"Person","name":"Lynlyn24"},"inLanguage":"en","articleSection":"Algebraic geometry"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Index","item":"https://lyn-nyl-24.github.io/lynlyn24/"},{"@type":"ListItem","position":2,"name":"Books","item":"https://lyn-nyl-24.github.io/lynlyn24/books/"},{"@type":"ListItem","position":3,"name":"Algebraic Geometry","item":"https://lyn-nyl-24.github.io/lynlyn24/books/algebraic-geometry-hoyois/"},{"@type":"ListItem","position":4,"name":"9 Smoothness","item":"https://lyn-nyl-24.github.io/lynlyn24/books/algebraic-geometry-hoyois/smoothness/"},{"@type":"ListItem","position":5,"name":"Smooth and étale morphisms","item":"https://lyn-nyl-24.github.io/lynlyn24/tag/hag9s1/"}]}]}</script>
+  <link rel="alternate" type="application/atom+xml" title="Lynlyn24" href="../../feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Lynlyn24 — Audio" href="../../podcast.xml">
+
+  <script defer src="../../assets/site-e6e903fed92e1f22.js"></script>
   <script defer src="../../assets/comments.js"></script>
 </head>
 <body>
@@ -29,12 +40,16 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
     <li><a href="../../">Index</a></li>
     <li><a href="../../books/">Books</a></li><li><a href="../../books/algebraic-geometry-hoyois/">Algebraic Geometry</a></li><li><a href="../../books/algebraic-geometry-hoyois/smoothness/">9 Smoothness</a></li>
+    <li aria-current="page">Smooth and étale morphisms</li>
   </ol></nav>
         <p class="tag">9.1 · <a href="../005E/" aria-label="Permanent tag 005E">Tag 005E</a></p>
       </div>
+
       <h1>Smooth and étale morphisms</h1>
       <p class="lede">Section 9.1 · Smoothness</p>
+
     </header>
+
 
     <div class="prose note-body"><p>Smooth morphisms in algebraic geometry are the analogue of <em>submersions</em> in differential geometry, i.e., morphisms along which tangent vectors (and more general tangential data) can be lifted. In particular, there is no relation to the usage of “smooth” to mean “C<span class="hg-dual"><svg class="hg-inline hg-depth--6 hg-layout" viewBox="81.873 128.494 12.061 4.071" width="1.211em" role="img" aria-label="∞”"><g class="hg-latex"><foreignObject x="81.686" y="126.567" width="1" height="1" font-size="6.974"><math><mrow><mi mathvariant="normal">∞</mi></mrow></math></foreignObject><foreignObject x="90.127" y="127.791" width="1" height="1" font-size="9.963"><math><mrow><mtext>”</mtext></mrow></math></foreignObject></g><g class="hg-svg"><use href="../../assets/editions/hoyois-sheet-10-bfca13c82449b959.svg#hg-86-3"></use></g></svg></span> in analysis (all maps in algebraic geometry are “smooth” in that sense, since they are polynomial maps). Étale morphisms are smooth morphisms of relative dimension zero, and they are analogous to <em>local diffeomorphisms</em> in differential geometry (indeed, submersions of relative dimension zero are local diffeomorphisms by the inverse function theorem). We begin with some recollections from differential geometry. If <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>f</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">f_{1},...,f_{m}</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-5" viewBox="367.798 176.208 43.26 9.768" width="4.342em" role="img" aria-label="f1,...,fm"><use href="../../assets/editions/hoyois-sheet-10-bfca13c82449b959.svg#hf-86-4"></use></svg></span> are C<span class="hg-dual"><svg class="hg-inline hg-depth--6 hg-layout" viewBox="439.897 176.538 7.562 3.846" width="0.759em" role="img" aria-label="∞"><g class="hg-latex"><foreignObject x="439.71" y="174.387" width="1" height="1" font-size="6.974"><math><mrow><mi mathvariant="normal">∞</mi></mrow></math></foreignObject></g><g class="hg-svg"><use href="../../assets/editions/hoyois-sheet-10-bfca13c82449b959.svg#hg-86-5"></use></g></svg></span>-functions on <span class="hg-dual"><span class="hg-latex"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">ℝ</mi><mi>n</mi></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\mathbb{R}^{n},</annotation></semantics></math></span></span><svg class="hg-svg hg-inline hg-depth-5" viewBox="439.868 694.674 15.131 9.447" width="1.519em" role="img" aria-label="Rn,"><use href="../../assets/editions/hoyois-sheet-8-118f5a75e5cf6a45.svg#hf-61-39"></use></svg></span> the implicit function theorem gives a sufficient condition under which the vanishing locus</p>
 <p><span class="hg-dual hg-block"><svg class="hg-display hg-layout" viewBox="242.921 202.904 108.869 12.563" width="10.928em" role="img" aria-label="X=V(f1,...,fm)⊂Rn"><g class="hg-latex"><foreignObject x="243.952" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi>X</mi></mrow></math></foreignObject><foreignObject x="255.758" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mo>=</mo></mrow></math></foreignObject><foreignObject x="266.278" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi mathvariant="normal">V</mi><mo stretchy="false">(</mo></mrow></math></foreignObject><foreignObject x="277.626" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi>f</mi></mrow></math></foreignObject><foreignObject x="282.494" y="207.592" width="1" height="1" font-size="6.974"><math><mrow><mn>1</mn></mrow></math></foreignObject><foreignObject x="286.964" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mo separator="true">,</mo></mrow></math></foreignObject><foreignObject x="291.397" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi mathvariant="normal">.</mi></mrow></math></foreignObject><foreignObject x="295.821" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi mathvariant="normal">.</mi></mrow></math></foreignObject><foreignObject x="300.254" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi mathvariant="normal">.</mi></mrow></math></foreignObject><foreignObject x="304.687" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mo separator="true">,</mo></mrow></math></foreignObject><foreignObject x="309.111" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi>f</mi></mrow></math></foreignObject><foreignObject x="313.98" y="207.592" width="1" height="1" font-size="6.974"><math><mrow><mi>m</mi></mrow></math></foreignObject><foreignObject x="321.548" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mo stretchy="false">)</mo></mrow></math></foreignObject><foreignObject x="328.193" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mo>⊂</mo></mrow></math></foreignObject><foreignObject x="338.713" y="203.706" width="1" height="1" font-size="9.963"><math><mrow><mi mathvariant="normal">ℝ</mi></mrow></math></foreignObject><foreignObject x="345.901" y="201.984" width="1" height="1" font-size="6.974"><math><mrow><mi>n</mi></mrow></math></foreignObject></g><g class="hg-svg"><use href="../../assets/editions/hoyois-sheet-10-bfca13c82449b959.svg#hg-86-6"></use></g></svg></span></p>
@@ -124,6 +139,7 @@
       <h2>Referenced by</h2>
       <ul><li><a href="../hag9s3/">The cotangent module of an algebraic functor</a> <span class="tag">hag9s3</span></li><li><a href="../hag9s4/">Smoothness over a field</a> <span class="tag">hag9s4</span></li><li><a href="../hag9s5/">Formal smoothness</a> <span class="tag">hag9s5</span></li><li><a href="../hag9s6/">Local structure of étale maps</a> <span class="tag">hag9s6</span></li><li><a href="../hag10s3/">Regular closed immersions</a> <span class="tag">hag10s3</span></li><li><a href="../hag11s1/">Prim and proper morphisms</a> <span class="tag">hag11s1</span></li></ul>
     </aside>
+
     <nav class="reader-navigation" aria-label="Book navigation">
     <a class="reader-prev" href="../hag8s7/" rel="prev">
       <span>← Previous section</span><strong>Normal schemes</strong>
@@ -146,6 +162,10 @@
   <footer class="site-footer">
     <a class="footer-name" href="../../" aria-label="Lynlyn24"><span class="brand-initial">𝕃</span>ynlyn24</a>
     <a href="../../about/">About and privacy</a>
+    <a href="../../contact/">Contact</a>
+    <a href="../../license/">License and citation</a>
+    <a href="../../feed.xml">Feed</a>
+    <a href="../../audio/">Audio</a>
     <a href="https://glowing-disco-xr4xrwrqp59ghvgjp-4317.app.github.dev/" rel="noreferrer">Editor</a>
   </footer>
 </body>

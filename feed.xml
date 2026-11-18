@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Lynlyn24</title>
+  <subtitle>Notes on mathematics, physics, and computing.</subtitle>
+  <id>https://lyn-nyl-24.github.io/lynlyn24/</id>
+  <link href="https://lyn-nyl-24.github.io/lynlyn24/"/>
+  <link rel="self" href="https://lyn-nyl-24.github.io/lynlyn24/feed.xml"/>
+  <author><name>Lynlyn24</name></author>
+  <updated>2026-11-12T13:34:55.000Z</updated>
+  <entry>
+    <title>Definition and basic properties</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0010/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/acbas/"/>
+    <published>2026-11-12T13:34:55.000Z</published>
+    <updated>2026-11-12T13:34:55.000Z</updated>
+    <summary>Axioms and basic properties of abelian categories.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Exact sequences and diagram chasing</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0013/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/acdia/"/>
+    <published>2026-11-12T13:34:55.000Z</published>
+    <updated>2026-11-12T13:34:55.000Z</updated>
+    <summary>Exact sequences, diagram lemmas, and connecting morphisms.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Title page and contents</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/000Y/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/acfront/"/>
+    <published>2026-11-12T13:34:55.000Z</published>
+    <updated>2026-11-12T13:34:55.000Z</updated>
+    <summary>Contents of Diagram Chasing in Abelian Categories.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>The image and inverse image functors</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0012/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/acimg/"/>
+    <published>2026-11-12T13:34:55.000Z</published>
+    <updated>2026-11-12T13:34:55.000Z</updated>
+    <summary>Images and inverse images of subobjects along a morphism.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Overview</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/000Z/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/acov/"/>
+    <published>2026-11-12T13:34:55.000Z</published>
+    <updated>2026-11-12T13:34:55.000Z</updated>
+    <summary>Chapter 1 of Diagram Chasing in Abelian Categories.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Subobjects and quotient objects</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0011/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/acsub/"/>
+    <published>2026-11-12T13:34:55.000Z</published>
+    <updated>2026-11-12T13:34:55.000Z</updated>
+    <summary>Subobjects, quotients, and their universal properties.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Mathematical notation</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0007/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0008/"/>
+    <published>2026-11-12T08:24:20.000Z</published>
+    <updated>2026-11-12T08:24:20.000Z</updated>
+    <summary>Double-struck notation for number systems, projective space, and the sphere spectrum.</summary>
+    <category term="Mathematics"/><category term="Foundations"/>
+  </entry>
+  <entry>
+    <title>Unrolled exact couples</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0006/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0007/"/>
+    <published>2026-11-12T07:42:34.000Z</published>
+    <updated>2026-11-12T07:42:34.000Z</updated>
+    <summary>Read the long exact sequences of a filtration and trace the first differential.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Commutative diagrams and the snake lemma</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0004/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0005/"/>
+    <published>2026-11-12T07:27:44.000Z</published>
+    <updated>2026-11-12T07:27:44.000Z</updated>
+    <summary>Read two commuting exact squares and construct the connecting map by a diagram chase.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>A spectral sequence with a nonzero d₂</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0005/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0006/"/>
+    <published>2026-11-12T07:27:44.000Z</published>
+    <updated>2026-11-12T07:27:44.000Z</updated>
+    <summary>Compute the pages of a filtered complex over F₂, including a differential that requires a corrected lift.</summary>
+    <category term="Mathematics"/><category term="Homological algebra"/>
+  </entry>
+  <entry>
+    <title>Equivalence relations and partitions</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0000/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0001/"/>
+    <published>2026-11-12T06:44:40.000Z</published>
+    <updated>2026-11-12T06:44:40.000Z</updated>
+    <summary>Recover a partition from an equivalence relation, and conversely.</summary>
+    <category term="Mathematics"/><category term="Foundations"/>
+  </entry>
+  <entry>
+    <title>Linear maps and kernels</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0001/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0002/"/>
+    <published>2026-11-12T06:44:40.000Z</published>
+    <updated>2026-11-12T06:44:40.000Z</updated>
+    <summary>Describe the fibres of a linear map as cosets of its kernel.</summary>
+    <category term="Mathematics"/><category term="Linear algebra"/>
+  </entry>
+  <entry>
+    <title>Relative URLs for static sites</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0002/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0003/"/>
+    <published>2026-11-12T06:44:40.000Z</published>
+    <updated>2026-11-12T06:44:40.000Z</updated>
+    <summary>Resolve internal links and assets beneath a project site&#39;s path.</summary>
+    <category term="Computing"/><category term="Web and publishing"/>
+  </entry>
+  <entry>
+    <title>Stable identifiers for notes</title>
+    <id>https://lyn-nyl-24.github.io/lynlyn24/tag/0003/</id>
+    <link href="https://lyn-nyl-24.github.io/lynlyn24/tag/n0004/"/>
+    <published>2026-11-12T06:44:40.000Z</published>
+    <updated>2026-11-12T06:44:40.000Z</updated>
+    <summary>Use tags that survive changes to a note&#39;s title and classification.</summary>
+    <category term="Writing"/><category term="Reading and writing"/>
+  </entry>
+</feed>

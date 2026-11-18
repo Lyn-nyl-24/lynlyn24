@@ -69,7 +69,7 @@
   const sortButton = document.querySelector('[data-title-sort]');
   if (sortButton) {
     const list = document.getElementById(sortButton.getAttribute('aria-controls'));
-    const entries = Array.from(list.children, element => ({ element, title: element.querySelector('.note-title').textContent }));
+    const entries = Array.from(list.children, element => ({ element, title: element.querySelector('.note-title') }));
     const status = document.querySelector('[data-title-status]');
     const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
     let ascending = false;
@@ -78,12 +78,35 @@
     sortButton.addEventListener('click', () => {
       ascending = !ascending;
       const direction = ascending ? 1 : -1;
-      const sorted = entries.toSorted((a, b) => direction * collator.compare(a.title, b.title));
+      const { compare } = collator;
+      const sorted = entries.toSorted((a, b) => direction * compare(a.title.textContent, b.title.textContent));
       list.append(...sorted.map(entry => entry.element));
       sortButton.firstElementChild.textContent = ascending ? '↑' : '↓';
       sortButton.setAttribute('aria-label', 'Sort titles ' + (ascending ? 'Z to A' : 'A to Z'));
       status.textContent = 'Titles sorted ' + (ascending ? 'A to Z.' : 'Z to A.');
     });
+    const dateSort = document.querySelector('[data-date-sort]');
+    if (dateSort) {
+      let newestFirst = false;
+      dateSort.hidden = false;
+      document.querySelector('[data-date-label]').hidden = true;
+      dateSort.addEventListener('click', () => {
+        newestFirst = !newestFirst;
+        const direction = newestFirst ? -1 : 1;
+        const { compare } = collator;
+        const sorted = entries.toSorted((a, b) => {
+          const first = a.element.dataset.published;
+          const second = b.element.dataset.published;
+          if (!first || !second) return Number(Boolean(second)) - Number(Boolean(first));
+          return direction * first.localeCompare(second) || compare(a.title.textContent, b.title.textContent);
+        });
+        list.append(...sorted.map(entry => entry.element));
+        sortButton.firstElementChild.textContent = '↑↓';
+        dateSort.firstElementChild.textContent = newestFirst ? '↓' : '↑';
+        status.textContent = newestFirst ? 'Publication date, newest first.' : 'Publication date, oldest first.';
+      });
+      sortButton.addEventListener('click', () => { dateSort.firstElementChild.textContent = '↑↓'; });
+    }
   }
 
   const query = document.querySelector('#query');

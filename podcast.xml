@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Lynlyn24 — Audio</title>
+    <link>https://lyn-nyl-24.github.io/lynlyn24/</link>
+    <description>Notes on mathematics, physics, and computing.</description>
+    <language>en</language>
+    <itunes:author>Lynlyn24</itunes:author>
+    <atom:link href="https://lyn-nyl-24.github.io/lynlyn24/podcast.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Stable identifiers for notes</title>
+      <link>https://lyn-nyl-24.github.io/lynlyn24/tag/n0004/</link>
+      <guid isPermaLink="false">https://lyn-nyl-24.github.io/lynlyn24/tag/0003/#audio</guid>
+      <description>Use tags that survive changes to a note&#39;s title and classification. Narrated with Ming-3.0-tts-0.5B. The audio paraphrases the printed link examples.</description>
+      <pubDate>Thu, 12 Nov 2026 06:44:40 GMT</pubDate>
+      <itunes:duration>31</itunes:duration>
+      <enclosure url="https://lyn-nyl-24.github.io/lynlyn24/assets/audio/n0004-8a544daae95a0c44.mp3" length="486965" type="audio/mpeg"/>
+    </item>
+  </channel>
+</rss>
