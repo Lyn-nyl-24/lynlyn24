@@ -177,6 +177,19 @@
 .stacks-citation-content ul { padding-inline: 0; margin: .15rem 0 .5rem; }
 .stacks-citation-content li { grid-template-columns: 3.2rem minmax(0,1fr); padding-block: .18rem; }
 .stacks-citation-content small { color: var(--muted); }
+.stacks-mapped ol { padding-inline-start: 1.5em; }
+.stacks-mapped li { display: list-item; padding-block: .16rem; border: 0; overflow-wrap: anywhere; }
+.stacks-mapped code { color: var(--muted); font-size: .88em; }
+.stacks-editorial { border-inline-start: 2px solid var(--accent); padding-inline-start: .75em; overflow-wrap: anywhere; }
+.atlas-statement-reader { width: min(48rem, 94vw); max-width: 94vw; max-height: 85vh; box-sizing: border-box; padding: clamp(.8rem, 3vw, 1.6rem); background: var(--paper, #fff8e8); color: inherit; border: 1px solid currentColor; overflow: auto; }
+.atlas-statement-reader::backdrop { background: rgb(20 18 13 / .36); }
+.atlas-statement-reader header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.atlas-statement-reader h2 { margin: 0; }
+.atlas-statement-reader label:not([hidden]) { display: grid; gap: .25rem; margin-top: .8rem; }
+.atlas-statement-reader select { max-width: 100%; }
+.atlas-statement-reader pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: .5rem 0 0; font-size: .78rem; line-height: 1.55; }
+.atlas-statement-reader pre span { display: block; }
+.atlas-statement-reader pre .selected { background: var(--rule, #e2dbc4); }
 .source-logic { display: grid; grid-template-columns: fit-content(8rem) minmax(0,1fr); gap: .45rem .75rem; margin-block: .65rem; }
 .source-logic dt { font-weight: 750; font-size: .85rem; }
 .source-logic dd { margin: 0; min-width: 0; }

@@ -1,1 +1,1 @@
-{"rows":{"072H":[[],[["0ELS",4]]],"072I":[[],[["026L",4]]]},"locations":{"0ELS":"book","026L":"algebraic"}}
+{"rows":{"072H":[[],[["0ELS",4]]],"072I":[[],[["026L",4]]]},"locations":{"0ELS":"book","026L":"algebraic"},"spans":{"072M":[201,206],"072N":[216,225],"072P":[230,238],"072R":[260,269,[[264,264],[265,265],[266,267]]],"072T":[385,389],"072U":[433,439]},"equivalences":{},"revision":"a04446e57ec1fbc252a871afcec7752fb2807b14","file":"stacks-introduction.tex"}

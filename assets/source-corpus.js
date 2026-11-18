@@ -136,6 +136,12 @@ if (pi) {
 const chapter = document.querySelector('[data-stacks-citations]');
 if (chapter) {
   let shared;
+  function chapterData() {
+    return shared ??= fetch(new URL(chapter.dataset.stacksCitations,document.baseURI)).then(response => {
+      if (!response.ok) throw new Error('Could not load the chapter');
+      return response.json();
+    }).catch(error => { shared = undefined; throw error; });
+  }
   const contextNames = [[1,'Statement'],[2,'Proof'],[4,'Chapter or section prose']];
   const make = (tag,text) => Object.assign(document.createElement(tag),{textContent:text});
   async function populate(details) {
@@ -143,12 +149,7 @@ if (chapter) {
     const content = details.querySelector('.stacks-citation-content');
     content.textContent = 'Loading references…';
     try {
-      shared ??= fetch(new URL(chapter.dataset.stacksCitations,document.baseURI))
-        .then(response => {
-          if (!response.ok) throw new Error('Could not fetch citations');
-          return response.json();
-        });
-      const {rows,locations} = await shared;
+      const {rows,locations} = await chapterData();
       const [outgoing,incoming] = rows[details.dataset.stacksCite] ?? [[],[]];
       content.replaceChildren();
       for (const [label,edges] of [['Cites',outgoing],['Cited by',incoming]]) {
@@ -183,6 +184,86 @@ if (chapter) {
   chapter.addEventListener('toggle',event => {
     if (event.target.matches('[data-stacks-cite]')) populate(event.target);
   },true);
+
+  // Keep the whole statement visible when locating an item: hypotheses may
+  // occur after a list, or apply only to one case within the list.
+  const reader = chapter.querySelector('.atlas-statement-reader');
+  const source = reader.querySelector('[data-reader-source]');
+  const passage = reader.querySelector('[data-reader-passage]');
+  const equivalence = reader.querySelector('[data-reader-equivalence]');
+  const status = reader.querySelector('[data-reader-status]');
+  const link = (name,url) => Object.assign(make('a',name),{href:url});
+  let chapterText, request = 0;
+  reader.querySelector('[data-reader-close]').addEventListener('click',() => reader.close());
+  reader.addEventListener('close',() => { request++; });
+  passage.addEventListener('change',() => {
+    const [first,last] = passage.value.split(':').map(Number);
+    for (const button of equivalence.querySelectorAll('button')) button.setAttribute('aria-pressed',String(button.value === passage.value));
+    let firstLine;
+    for (const line of source.children) {
+      const number = Number(line.dataset.line);
+      line.classList.toggle('selected',number >= first && number <= last);
+      if (number === first) firstLine = line;
+    }
+    (firstLine ?? source.firstElementChild)?.scrollIntoView({block:'nearest'});
+  });
+  chapter.addEventListener('click',async event => {
+    const trigger = event.target.closest('[data-read-tag]');
+    if (!trigger || !reader.showModal || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const tag = trigger.dataset.readTag, current = ++request;
+    reader.querySelector('h2').textContent = 'Stacks ' + tag;
+    reader.querySelector('[data-reader-meta]').textContent = trigger.closest('li').querySelector('.stacks-name').textContent;
+    const links = reader.querySelector('[data-reader-links]');
+    links.replaceChildren(link('Typeset original',trigger.href),link('Pinned TeX',trigger.previousElementSibling.href));
+    const label = passage.closest('label');
+    label.hidden = true;
+    equivalence.hidden = true;
+    source.replaceChildren();
+    status.textContent = 'Loading the original statement…';
+    reader.showModal();
+    try {
+      const {file,revision,spans,equivalences} = await chapterData();
+      const [first,last,...lists] = spans[tag];
+      chapterText ??= fetch('https://raw.githubusercontent.com/stacks/stacks-project/' + revision + '/' + file)
+        .then(response => { if (!response.ok) throw new Error('Source unavailable'); return response.text(); })
+        .then(text => text.split(/\r?\n/)).catch(error => { chapterText = undefined; throw error; });
+      const lines = await chapterText;
+      if (current !== request || !reader.open) return;
+      if (last > lines.length) throw new Error('Missing source lines');
+      passage.replaceChildren(new Option('Whole statement','0:0'));
+      lists.forEach((items,g) => items.forEach(([a,b],i) => passage.add(new Option(
+        (lists.length > 1 ? 'List ' + (g+1) + ' · ' : '') + 'Item ' + (i+1) + ' · lines ' + a + '–' + b,a + ':' + b))));
+      label.hidden = passage.length === 1;
+      if (equivalences[tag]) {
+        const nav = equivalence.querySelector('nav');
+        nav.replaceChildren();
+        for (const [i,[a,b]] of lists[0].entries()) {
+          if (i) nav.append(make('span','⇔'));
+          const button = make('button','Condition ' + (i+1));
+          button.type = 'button';
+          button.value = a + ':' + b;
+          button.setAttribute('aria-pressed','false');
+          button.addEventListener('click',() => {
+            passage.value = button.value;
+            passage.dispatchEvent(new Event('change'));
+          });
+          nav.append(button);
+        }
+        equivalence.hidden = false;
+      }
+      const fragment = document.createDocumentFragment();
+      for (let n=first; n <= last; n++) {
+        const line = make('span',lines[n-1] || ' ');
+        line.dataset.line = n;
+        fragment.append(line);
+      }
+      source.append(fragment);
+      status.textContent = 'The Stacks Project · ' + file + ' · lines ' + first + '–' + last + ' · ' + revision.slice(0,12);
+    } catch {
+      if (current === request) status.textContent = 'The source could not load. Use the pinned TeX link above or reopen to retry.';
+    }
+  });
 }
 
 const piCheck = document.getElementById('pi-logic');
