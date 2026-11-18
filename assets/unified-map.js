@@ -230,9 +230,14 @@ function initializeMap(root) {
   function fitNodeLabels() {
     const adjusted=[];
     for(const group of stage.querySelectorAll('.um-node g')) {
-      const available=group.querySelector('rect').width.baseVal.value-10;
+      const frame=group.querySelector('rect').getBBox();
       for(const span of group.querySelectorAll('tspan')){
-        if(span.getComputedTextLength()>available)adjusted.push([span,available]);
+        const ink=span.getBBox();
+        const advance=span.getComputedTextLength();
+        // Glyph overhang and font hinting affect the ink at small zoom levels.
+        if(ink.x<frame.x+3 || ink.x+ink.width>frame.x+frame.width-3 || advance>frame.width-10) {
+          adjusted.push([span,advance*(frame.width-15)/Math.max(ink.width,advance)]);
+        }
       }
     }
     for(const [span,width] of adjusted){
