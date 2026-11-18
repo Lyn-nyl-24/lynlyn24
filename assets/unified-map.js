@@ -1,5 +1,18 @@
 // The same deterministic SVG renderer runs at build time and in the browser.
-export const mapGroups = {all:'Complete map',appendix:'Appendix D',hoyois:'Hoyois',grothendieck:'Grothendieck',bridges:'Cross-references'};
+export const mapGroups = {classified:'Scheme properties together',all:'Complete map',appendix:'Appendix D',
+  'absolute-local':'Absolute · local','absolute-global':'Absolute · global',
+  'relative-local':'Relative · local','relative-global':'Relative · global',
+  'relative-topological':'Behaviour under base change','coverings':'Classical covering topologies',
+  grothendieck:'Grothendieck topologies, sites and topoi',hoyois:'Hoyois diagrams',bridges:'Cross-references'};
+const panels = [
+  ['Absolute · local','al-regular','al-normal'],['Absolute · global','ag-affine','ag-quasiaffine'],
+  ['Relative · global','rg-affine','rg-quasiaffine'],['Under base change','re-integral','re-closed'],
+  ['Appendix D','md-iso','md-open'],['Relative · local','rl-smooth','rl-etale'],
+  ['Covering topologies','Nis','et'],['Sites and topoi','found-topos','site-gros-et'],
+];
+const overviewKeys = new Set(panels.flatMap(([,a,b]) => [a,b]));
+const overviewBridges = new Set(['bridge-affine-structure','bridge-etale-et','bridge-big-et','bridge-topos-big-etale']);
+const propertyLayers=['absolute-local','absolute-global','relative-local','relative-global','relative-topological'];
 export const escapeMap = value => String(value ?? '').replace(/[&<>"']/g, c =>
   ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const h = escapeMap;
@@ -14,7 +27,19 @@ const portrait = [[94,45],[94,146],[286,146],[80,245],[291,245],[98,356],[287,45
 
 export function mapSelection(model, mode, key) {
   let relations, nodeKeys;
-  if (mode === 'start') {
+  if (mode === 'overview') {
+    nodeKeys = overviewKeys;
+    relations = model.relations.filter(r => r.from.length===1 && r.to.length===1
+      && nodeKeys.has(r.from[0]) && nodeKeys.has(r.to[0]) && !r.participants.length
+      && (overviewBridges.has(r.id) || (!r.groups.includes('bridges') && ['implication','refinement'].includes(r.kind))));
+  } else if (mode === 'classified') {
+    relations=model.relations.filter(r=>r.groups.some(g=>propertyLayers.includes(g)) || r.kind==='structure-morphism');
+    nodeKeys=new Set(relations.flatMap(ends));
+    for(const n of model.nodes)if(n.groups.some(g=>propertyLayers.includes(g)))nodeKeys.add(n.key);
+  } else if (mode === 'coverings') {
+    nodeKeys = new Set(model.nodes.filter(n => n.topic==='Classical refinement').map(n => n.key));
+    relations = model.relations.filter(r => ends(r).every(k => nodeKeys.has(k)));
+  } else if (mode === 'start') {
     relations = choices.flatMap(([from,to]) => {
       const match = model.relations.find(r => r.from.length===1 && r.to.length===1 && r.from[0]===from && r.to[0]===to && !(r.participants?.length));
       return match ? [match] : [];
@@ -54,6 +79,43 @@ function geometry(rows, mode, mobile) {
     const lines=linesFor(n.name,width,mobile),leading=mobile?19:16;
     return [n.key,{...n,width,height:Math.max(40,lines.length*leading+14),leading,lines,x:0,y:0}];
   }));
+  if (mode==='overview') {
+    const cellWidth=mobile?380:482,cellHeight=112,headings=[];
+    for(const [index,[title,a,b]] of panels.entries()){
+      const x=mobile?0:Math.floor(index/4)*cellWidth, y=(mobile?index:index%4)*cellHeight;
+      headings.push({title,x:x+cellWidth/2,y:y+20,center:true});
+      nodes.get(a).x=x+cellWidth*.25; nodes.get(b).x=x+cellWidth*.75;
+      nodes.get(a).y=nodes.get(b).y=y+68;
+    }
+    return {nodes,w:cellWidth*(mobile?1:2),h:cellHeight*(mobile?8:4),headings};
+  }
+  if (mode==='classified' || mode==='all') {
+    const groups=new Map();
+    const rank=propertyLayers.map(key=>mapGroups[key]);
+    const sector=n=>n.topic==='Relative · behaviour under base change' ? mapGroups['relative-topological'] : n.topic;
+    for(const n of nodes.values()){
+      const title=sector(n);
+      if(!groups.has(title))groups.set(title,[]);
+      groups.get(title).push(n);
+    }
+    const priority=t=>rank.includes(t)?rank.indexOf(t):rank.length;
+    const titles=[...groups.keys()].sort((a,b)=>priority(a)-priority(b)||a.localeCompare(b,'en'));
+    const across=mobile?2:3,columns=mobile||mode==='classified'?2:3;
+    const step=width+65,panelWidth=across*step,heights=Array(columns).fill(8),headings=[];
+    for(const title of titles){
+      const members=groups.get(title);
+      const c=heights.indexOf(Math.min(...heights)),x=c*panelWidth+10,y=heights[c];
+      const rowHeight=Math.max(100,...members.map(n=>n.height+36));
+      const panelHeight=40+Math.ceil(members.length/across)*rowHeight;
+      headings.push({title,x:x+10,y:y+23,width:panelWidth-20,height:panelHeight});
+      members.forEach((n,i)=>{
+        n.x=x+step*(i%across+.5)-5;
+        n.y=y+36+rowHeight*(Math.floor(i/across)+.5);
+      });
+      heights[c]+=panelHeight+18;
+    }
+    return {nodes,w:columns*panelWidth,h:Math.max(...heights),headings};
+  }
   if (mode==='start' && [...nodes.keys()].every(k=>defaultKeys.includes(k))) {
     const positions=mobile?portrait:desktop;
     for (const [k,n] of nodes) [n.x,n.y]=positions[defaultKeys.indexOf(k)];
@@ -163,7 +225,7 @@ function joinPoint(members,target,shift) {
 }
 const average = list => ({x:list.reduce((s,n)=>s+n.x,0)/list.length,y:list.reduce((s,n)=>s+n.y,0)/list.length});
 const mark = (n,s) => `<g class="um-mark" transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})"><rect x="-9" y="-9" width="18" height="18" rx="2"/><text y="4">${s}</text></g>`;
-function relationShape(r,nodes,prefix,verbose,bend,route) {
+function relationShape(r,nodes,prefix,verbose,bend,route,overview) {
   const as=r.from.map(k=>nodes.get(k)).filter(Boolean),bs=r.to.map(k=>nodes.get(k)).filter(Boolean);
   const context=(r.participants??[]).filter(k=>!r.from.includes(k)&&!r.to.includes(k)).map(k=>nodes.get(k)).filter(Boolean);
   const all=[...as,...bs,...context];
@@ -178,7 +240,7 @@ function relationShape(r,nodes,prefix,verbose,bend,route) {
     const a=as.length===1?as[0]:joinPoint(as,average(bs),bend-15);
     const b=bs.length===1?bs[0]:joinPoint(bs,average(as),-bend-15);
     // Spokes are membership in a tuple, not arrows from/to individual assumptions.
-    if(as.length>1){paths+=as.map(n=>leg(n,a,'um-member')).join('');marks+=mark(a,'∧');}
+    if(as.length>1){paths+=as.map(n=>leg(n,a,'um-member')).join('');marks+=mark(a,r.kind==='topology-join'?'∨':'∧');}
     if(bs.length>1){paths+=bs.map(n=>leg(b,n,'um-member')).join('');marks+=mark(b,'∧');}
     const p=route(a,b,bend);
     paths+=line(p.d,'',arrows);
@@ -190,21 +252,54 @@ function relationShape(r,nodes,prefix,verbose,bend,route) {
     for(const n of context)paths+=leg(n,badge,'um-context');
     marks+=mark(badge,symmetric?'≃':'·');
   }
-  const short=r.conditional?'if':symmetric?'≃':r.kind==='class-inclusion'?'⊆':null;
+  const extra=r.conditional && (r.groups.includes('hoyois') || r.groups.includes('appendix') || r.groups.includes('relative-global')) && r.directed;
+  const compound=r.kind==='equivalence' && (as.length>1 || bs.length>1);
+  const overviewLabels={'structure-morphism':'affine base','covering-family':'cover','site-presentation':'slice','sheaf-topos':'sheaves',refinement:'⊆'};
+  const short=(overview && overviewLabels[r.kind]) || (r.kind==='topology-join'?'=':extra?'⇢':compound?'⟺':r.conditional?'if':symmetric?'≃':r.kind==='class-inclusion'?'⊆':null);
   if(verbose && short && as.length && bs.length){
-    marks+=`<g class="um-edge-badge" transform="translate(${badge.x.toFixed(1)} ${badge.y.toFixed(1)})"><rect x="-11" y="-8" width="22" height="16" rx="6"/><text y="4">${h(short)}</text></g>`;
+    const badgeWidth=Math.max(22,8+6*short.length);
+    marks+=`<g class="um-edge-badge" transform="translate(${badge.x.toFixed(1)} ${badge.y.toFixed(1)})"><rect x="${-badgeWidth/2}" y="-8" width="${badgeWidth}" height="16" rx="6"/><text y="4">${h(short)}</text></g>`;
   }
   const label=[r.label,r.kind,r.condition].filter(Boolean).join(' · ');
   const groups=r.groups ?? [];
-  return `<a class="um-edge ${groups.includes('bridges')?'um-bridge':''} ${!directional?'um-undirected':''}" href="#unified-relation-${h(r.id)}" aria-label="${h(label)}"><title>${h(label)}</title>${paths}${marks}</a>`;
+  return `<a class="um-edge ${extra?'um-extra':''} ${groups.includes('bridges')?'um-bridge':''} ${!directional?'um-undirected':''}" href="#unified-relation-${h(r.id)}" aria-label="${h(label)}"><title>${h(label)}</title>${paths}${marks}</a>`;
 }
-function nodeShape(n,selected) {
+function nodeShape(n,state) {
   const first=n.groups?.find(g=>g!=='bridges')??'bridges';
-  return `<a class="um-node um-group-${h(first)}${n.key===selected?' um-selected':''}" href="#unified-node-${h(n.key)}" aria-label="${h(n.name)}"><title>${h(n.name)}</title><g transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})"><rect x="${-n.width/2}" y="${-n.height/2}" width="${n.width}" height="${n.height}" rx="3"/><text>${n.lines.map((line,i)=>`<tspan x="0" y="${(i-(n.lines.length-1)/2)*n.leading+5}">${h(line)}</tspan>`).join('')}</text></g></a>`;
+  return `<a class="um-node um-group-${h(first)}${state ? ' topo-'+state : ''}" href="#unified-node-${h(n.key)}" aria-label="${h(n.name + (state ? ', '+({current:'Selected',prior:'Implies the selection',later:'Follows from the selection'})[state] : ''))}"${state==='current'?' aria-current="true"':'' }><title>${h(n.name)}</title><g transform="translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})"><rect x="${-n.width/2}" y="${-n.height/2}" width="${n.width}" height="${n.height}" rx="3"/><text>${n.lines.map((line,i)=>`<tspan x="0" y="${(i-(n.lines.length-1)/2)*n.leading+5}">${h(line)}</tspan>`).join('')}</text></g></a>`;
+}
+// Reverse inference from a conjunction needs all its terms. Compute what each
+// single choice entails in the same property calculus, in the forward direction.
+function selectionStates(relations,selected,visible) {
+  const rules=[];
+  for (const r of relations) {
+    if (!r.directed || r.conditional || r.condition || !['implication','equivalence'].includes(r.kind)) continue;
+    rules.push([r.from,r.to]);
+    if(r.kind==='equivalence')rules.push([r.to,r.from]);
+  }
+  function closure(seed) {
+    const known=new Set([seed]);
+    let previous;
+    do {
+      previous=known.size;
+      for(const [inputs,outputs] of rules) if(inputs.every(k=>known.has(k))) for(const k of outputs)known.add(k);
+    } while(known.size!==previous);
+    return known;
+  }
+  const follows=closure(selected),states=new Map([[selected,'current']]);
+  for(const k of visible) {
+    if(k===selected)continue;
+    if(follows.has(k))states.set(k,'later');
+    else if(closure(k).has(selected))states.set(k,'prior');
+  }
+  return states;
 }
 export function mapSvg(model,{mode='start',key='',mobile=false,prefix='um-live'}={}) {
   const rows=mapSelection(model,mode,key);
-  const {nodes,w,h:height}=geometry(rows,mode,mobile);
+  const {nodes,w,h:height,headings=[]}=geometry(rows,mode,mobile);
+  const states=mode==='node'?selectionStates(model.relations,key,nodes.keys()):new Map();
+  const titles=headings.map(p=>`<text class="um-panel-title" x="${p.x}" y="${p.y}" text-anchor="${p.center?'middle':'start'}">${h(p.title)}</text>`).join('');
+  const frames=headings.filter(p=>p.width).map(p=>`<rect class="um-panel-frame" x="${p.x-10}" y="${p.y-23}" width="${p.width}" height="${p.height}"/>`).join('');
   const route=router(nodes,w,height);
   const taken=new Map();
   const shapes=rows.relations.map(r=>{
@@ -212,11 +307,11 @@ export function mapSvg(model,{mode='start',key='',mobile=false,prefix='um-live'}
     const occurrence=taken.get(pair)??0;taken.set(pair,occurrence+1);
     const bend=mode==='start' && mobile && r.from[0]==='rl-etale' && r.to[0]==='site-petit-et'
       ? -188 : occurrence===0?0:(occurrence%2?1:-1)*Math.ceil(occurrence/2)*34;
-    return relationShape(r,nodes,prefix,rows.relations.length<95,bend,route);
+    return relationShape(r,nodes,prefix,rows.relations.length<95,bend,route,mode==='overview');
   }).join('');
-  const label=mode==='start'?'Étale morphisms, topology and sites':mode==='node'?nodes.get(key)?.name??'Selected record':mode==='relation'?rows.relations[0]?.label??'Selected relation':mapGroups[mode]??'Map';
+  const label=mode==='overview'?'Properties, coverings and topoi':mode==='start'?'Étale morphisms, topology and sites':mode==='node'?nodes.get(key)?.name??'Selected record':mode==='relation'?rows.relations[0]?.label??'Selected relation':mapGroups[mode]??'Map';
   return {count:rows.nodes.length,edges:rows.relations.length,label,w,height,focus:nodes.get(key),
-    markup:`<svg class="um-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${height}" role="group" aria-label="${h(label)}"><defs><marker id="${prefix}-head" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="um-arrow" d="M1 1 L9 4 1 7"/></marker></defs>${shapes}${[...nodes.values()].map(n=>nodeShape(n,key)).join('')}</svg>`};
+    markup:`<svg class="um-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${height}" role="group" aria-label="${h(label)}"><defs><marker id="${prefix}-head" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="9" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path class="um-arrow" d="M1 1 L9 4 1 7"/></marker></defs>${frames}${shapes}${titles}${[...nodes.values()].map(n=>nodeShape(n,states.get(n.key))).join('')}</svg>`};
 }
 
 function initializeMap(root) {
@@ -273,7 +368,7 @@ function initializeMap(root) {
   }
   function choose(next,id='') {
     if(next==='node' && !nodes.has(id) || next==='relation' && !records.has(id))return;
-    mode=next;key=id;
+    mode=next;key=id;stage.dataset.mode=mode;
     let focused=view.querySelector('[value="focus"]');
     if(mode==='node'||mode==='relation'){
       if(!focused){focused=document.createElement('option');focused.value='focus';view.append(focused);}
@@ -377,7 +472,7 @@ function initializeMap(root) {
     // Native activation completes while the original SVG link is still attached.
     if(url.hash===location.hash)setTimeout(()=>readHash(url.hash),0);
   });
-  choose('start');readHash(location.hash,true);
+  choose('overview');readHash(location.hash,true);
   if(document.fonts)document.fonts.ready.then(fitNodeLabels);
   find('[data-um-controls]').hidden=false;
   find('[data-um-zoom]').hidden=false;
