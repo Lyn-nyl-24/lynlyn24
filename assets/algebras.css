@@ -299,12 +299,6 @@
   overflow-wrap: anywhere;
 }
 .atlas-workspace :is(.atlas-panel,.algebra-card,.property-record-body) math { font-family: var(--math-font); }
-.atlas-math {
-  display: inline-block;
-  max-inline-size: 100%;
-  overflow: auto;
-  vertical-align: middle;
-}
 .atlas-workspace [data-relation-style] { --relation-color: var(--ink); }
 .atlas-workspace [data-relation-style="equivalence"], .atlas-workspace [data-relation-style="criterion"] { --relation-color: var(--atlas-equivalence); }
 .atlas-workspace [data-relation-style="site"] { --relation-color: var(--atlas-site); }

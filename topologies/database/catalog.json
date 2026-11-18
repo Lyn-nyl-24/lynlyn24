@@ -1689,8 +1689,12 @@
       "definition": "Every point of the target has a preimage. Surjectivity of schemes is preserved under arbitrary base change.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/01S0",
-          "Stacks 01S0 · surjective morphisms"
+          "https://stacks.math.columbia.edu/tag/01RZ",
+          "Stacks 01RZ · surjectivity"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01S1",
+          "Stacks 01S1 · base change of a surjective morphism"
         ]
       ],
       "diagram": "top-re-surj",
@@ -2362,6 +2366,342 @@
           "title": "Spectral spaces and locales"
         }
       ]
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-iso",
+      "name": "Isomorphism",
+      "definition": "Has a two-sided inverse in the category of schemes.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0017",
+          "Stacks 0017 · isomorphisms in a category"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000545"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-open",
+      "name": "Open immersion",
+      "definition": "An isomorphism onto an open subscheme of the target.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01HE",
+          "Stacks 01HE · open immersions"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000546"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-closed",
+      "name": "Closed immersion",
+      "definition": "An isomorphism onto a closed subscheme of the target, with its specified scheme structure.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01HK",
+          "Stacks 01HK · closed immersions"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000547"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-immersion",
+      "name": "Immersion",
+      "definition": "An isomorphism onto a locally closed subscheme of the target.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01IO",
+          "Stacks 01IO · immersions"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000548"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-qc-immersion",
+      "name": "Quasi-compact immersion",
+      "definition": "An immersion whose inverse image of every affine open of the target is quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01IO",
+          "Stacks 01IO · immersions"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K3",
+          "Stacks 01K3 · quasi-compactness"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000549",
+      "expression": {
+        "and": [
+          "P000548",
+          "P000022"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-mono",
+      "name": "Monomorphism",
+      "definition": "For every test scheme, two maps to the source with the same composite to the target coincide. Equivalently, the relative diagonal is an isomorphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01L3",
+          "Stacks 01L3 · diagonal criterion"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000550"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-faithfully-flat",
+      "name": "Faithfully flat",
+      "definition": "Flat and surjective.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · flatness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01RZ",
+          "Stacks 01RZ · surjectivity"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000551",
+      "expression": {
+        "and": [
+          "P000006",
+          "P000043"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-fpqc",
+      "name": "Faithfully flat and qc",
+      "definition": "Flat, surjective and quasi-compact. This single morphism defines an fpqc cover.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/022A",
+          "Stacks 022A · fpqc coverings"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000552",
+      "expression": {
+        "and": [
+          "P000551",
+          "P000022"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-submersive",
+      "name": "Universally submersive",
+      "definition": "After every base change, the underlying map is surjective and equips the target with the quotient topology.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/040H",
+          "Stacks 040H · universal submersiveness"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000553"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-homeo-ft",
+      "name": "Universal homeomorphism of finite type",
+      "definition": "A universal homeomorphism that is also of finite type.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04DF",
+          "Stacks 04DF · characterization of universal homeomorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000554",
+      "expression": {
+        "and": [
+          "P000041",
+          "P000026"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-qf-separated",
+      "name": "Separated and quasi-finite",
+      "definition": "Separated and of finite type with finite underlying fibres.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · separatedness and quasi-separatedness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02NH",
+          "Stacks 02NH · finite fibres and quasi-finiteness"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000555",
+      "expression": {
+        "and": [
+          "P000560",
+          "P000024"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-qa-ft",
+      "name": "Quasi-affine of finite type",
+      "definition": "Quasi-affine and of finite type over the target.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01SK",
+          "Stacks 01SK · quasi-affine"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000556",
+      "expression": {
+        "and": [
+          "P000018",
+          "P000026"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-proper-qp",
+      "name": "Proper and quasi-projective",
+      "definition": "Proper and quasi-projective over the same target.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01W1",
+          "Stacks 01W1 · properness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01VW",
+          "Stacks 01VW · quasi-projective"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000557",
+      "expression": {
+        "and": [
+          "P000023",
+          "P000021"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-separated-qc",
+      "name": "Separated and qc",
+      "definition": "Separated and quasi-compact as a morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · separatedness and quasi-separatedness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K3",
+          "Stacks 01K3 · quasi-compactness"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "compound",
+      "id": "P000558",
+      "expression": {
+        "and": [
+          "P000024",
+          "P000022"
+        ]
+      }
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-source-noetherian",
+      "name": "Noetherian source",
+      "definition": "The source is a Noetherian scheme, so every subspace of its underlying space is quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01OV",
+          "Stacks 01OV · Noetherian schemes"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/04ZA",
+          "Stacks 04ZA · subspaces of Noetherian spaces"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000559"
+    },
+    {
+      "topic": "Relations between properties of morphisms",
+      "kind": "property",
+      "key": "md-quasi-finite",
+      "name": "Quasi-finite",
+      "definition": "Of finite type with finite underlying fibres.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02NH",
+          "Stacks 02NH · finite fibres and quasi-finiteness"
+        ]
+      ],
+      "subject": "morphism",
+      "role": "predicate",
+      "id": "P000560"
     },
     {
       "topic": "Foundations",
@@ -17928,8 +18268,8 @@
       "proof": "Factor through the identity open immersion into the affine Y-scheme X itself.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/01SM",
-          "Stacks 01SM · quasi-affine morphisms"
+          "https://stacks.math.columbia.edu/tag/01SP",
+          "Stacks 01SP · affine morphisms are quasi-affine"
         ]
       ],
       "ambient": "Properties of $f\\colon X\\to Y$ with conditions on full inverse images, the diagonal, or all base changes.",
@@ -18149,8 +18489,8 @@
       "proof": "Use local finite presentation ⇒ local finite type and retain quasi-compactness.",
       "refs": [
         [
-          "https://stacks.math.columbia.edu/tag/01TO",
-          "Stacks 01TO · morphisms of finite presentation"
+          "https://stacks.math.columbia.edu/tag/01TW",
+          "Stacks 01TW · finite presentation implies finite type"
         ]
       ],
       "ambient": "Properties of $f\\colon X\\to Y$ with conditions on full inverse images, the diagonal, or all base changes.",
@@ -19364,6 +19704,1005 @@
       "subject": "scheme",
       "name": "Locally Noetherian ⇒ Quasi-separated",
       "id": "T000096"
+    },
+    {
+      "key": "md-fpqc-and",
+      "requires": [
+        "P000551",
+        "P000022"
+      ],
+      "concludes": [
+        "P000552"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/022A",
+          "Stacks 022A · fpqc coverings"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Faithfully flat + Quasi-compact ⇔ Faithfully flat and qc",
+      "id": "T001282"
+    },
+    {
+      "key": "md-faithfully-flat-and",
+      "requires": [
+        "P000006",
+        "P000043"
+      ],
+      "concludes": [
+        "P000551"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01U3",
+          "Stacks 01U3 · flatness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01RZ",
+          "Stacks 01RZ · surjectivity"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Flat + Surjective ⇔ Faithfully flat",
+      "id": "T001283"
+    },
+    {
+      "key": "md-homeo-ft-and",
+      "requires": [
+        "P000041",
+        "P000026"
+      ],
+      "concludes": [
+        "P000554"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04DF",
+          "Stacks 04DF · characterization of universal homeomorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Universal homeomorphism + Of finite type ⇔ Universal homeomorphism of finite type",
+      "id": "T001284"
+    },
+    {
+      "key": "md-qc-immersion-and",
+      "requires": [
+        "P000548",
+        "P000022"
+      ],
+      "concludes": [
+        "P000549"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01IO",
+          "Stacks 01IO · immersions"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K3",
+          "Stacks 01K3 · quasi-compactness"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Immersion + Quasi-compact ⇔ Quasi-compact immersion",
+      "id": "T001285"
+    },
+    {
+      "key": "md-qf-separated-and",
+      "requires": [
+        "P000560",
+        "P000024"
+      ],
+      "concludes": [
+        "P000555"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · separatedness and quasi-separatedness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02NH",
+          "Stacks 02NH · finite fibres and quasi-finiteness"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Quasi-finite + Separated ⇔ Separated and quasi-finite",
+      "id": "T001286"
+    },
+    {
+      "key": "md-qa-ft-and",
+      "requires": [
+        "P000018",
+        "P000026"
+      ],
+      "concludes": [
+        "P000556"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01SK",
+          "Stacks 01SK · quasi-affine"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Quasi-affine + Of finite type ⇔ Quasi-affine of finite type",
+      "id": "T001287"
+    },
+    {
+      "key": "md-proper-qp-and",
+      "requires": [
+        "P000023",
+        "P000021"
+      ],
+      "concludes": [
+        "P000557"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01W1",
+          "Stacks 01W1 · properness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01VW",
+          "Stacks 01VW · quasi-projective"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Proper + Quasi-projective ⇔ Proper and quasi-projective",
+      "id": "T001288"
+    },
+    {
+      "key": "md-separated-qc-and",
+      "requires": [
+        "P000024",
+        "P000022"
+      ],
+      "concludes": [
+        "P000558"
+      ],
+      "proof": "Both conditions concern the same morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · separatedness and quasi-separatedness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K3",
+          "Stacks 01K3 · quasi-compactness"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Separated + Quasi-compact ⇔ Separated and qc",
+      "id": "T001289"
+    },
+    {
+      "key": "md-iso-open",
+      "requires": [
+        "P000545"
+      ],
+      "concludes": [
+        "P000546"
+      ],
+      "proof": "Use the entire target as the open subscheme.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01HE",
+          "Stacks 01HE · open immersions"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Isomorphism ⇒ Open immersion",
+      "id": "T001290"
+    },
+    {
+      "key": "md-iso-closed",
+      "requires": [
+        "P000545"
+      ],
+      "concludes": [
+        "P000547"
+      ],
+      "proof": "Use the entire target as the closed subscheme.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01HK",
+          "Stacks 01HK · closed immersions"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Isomorphism ⇒ Closed immersion",
+      "id": "T001291"
+    },
+    {
+      "key": "md-iso-fpqc",
+      "requires": [
+        "P000545"
+      ],
+      "concludes": [
+        "P000552"
+      ],
+      "proof": "An isomorphism is flat, surjective and quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/022A",
+          "Stacks 022A · fpqc coverings"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Isomorphism ⇒ Faithfully flat and qc",
+      "id": "T001292"
+    },
+    {
+      "key": "md-iso-homeo-ft",
+      "requires": [
+        "P000545"
+      ],
+      "concludes": [
+        "P000554"
+      ],
+      "proof": "A base change of an isomorphism is an isomorphism. A ring is finitely generated as an algebra over itself.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04DF",
+          "Stacks 04DF · characterization of universal homeomorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Isomorphism ⇒ Universal homeomorphism of finite type",
+      "id": "T001293"
+    },
+    {
+      "key": "md-open-etale",
+      "requires": [
+        "P000546"
+      ],
+      "concludes": [
+        "P000003"
+      ],
+      "proof": "An open immersion is étale.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GP",
+          "Stacks 02GP · open immersions are étale"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Open immersion ⇒ Étale",
+      "id": "T001294"
+    },
+    {
+      "key": "md-open-immersion",
+      "requires": [
+        "P000546"
+      ],
+      "concludes": [
+        "P000548"
+      ],
+      "proof": "The open subscheme is a closed subscheme of itself.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01IO",
+          "Stacks 01IO · immersions"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Open immersion ⇒ Immersion",
+      "id": "T001295"
+    },
+    {
+      "key": "md-open-qc-noetherian",
+      "requires": [
+        "P000546",
+        "P000559"
+      ],
+      "concludes": [
+        "P000549"
+      ],
+      "proof": "Every inverse image of an affine open is a subspace of the Noetherian source, hence quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04ZA",
+          "Stacks 04ZA · all subspaces of a Noetherian space are quasi-compact"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K3",
+          "Stacks 01K3 · quasi-compactness"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Open immersion + Noetherian source ⇒ Quasi-compact immersion",
+      "id": "T001296"
+    },
+    {
+      "key": "md-closed-qc-immersion",
+      "requires": [
+        "P000547"
+      ],
+      "concludes": [
+        "P000549"
+      ],
+      "proof": "Closed immersions are quasi-compact immersions.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01IO",
+          "Stacks 01IO · immersions"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K7",
+          "Stacks 01K7 · closed immersions are quasi-compact"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Closed immersion ⇒ Quasi-compact immersion",
+      "id": "T001297"
+    },
+    {
+      "key": "md-closed-finite",
+      "requires": [
+        "P000547"
+      ],
+      "concludes": [
+        "P000019"
+      ],
+      "proof": "The quotient ring on an affine chart is cyclic over the base ring.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/035C",
+          "Stacks 035C · closed immersions are finite"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Closed immersion ⇒ Finite",
+      "id": "T001298"
+    },
+    {
+      "key": "md-closed-proper-mono",
+      "requires": [
+        "P000547"
+      ],
+      "concludes": [
+        "P000023",
+        "P000550"
+      ],
+      "proof": "The cited lemma proves both directions.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04XV",
+          "Stacks 04XV · closed immersion iff proper monomorphism"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Closed immersion ⇔ Proper + Monomorphism",
+      "id": "T001299"
+    },
+    {
+      "key": "md-qc-immersion-qf-separated",
+      "requires": [
+        "P000549"
+      ],
+      "concludes": [
+        "P000555"
+      ],
+      "proof": "An immersion is locally quasi-finite and a monomorphism. Quasi-compactness gives quasi-finiteness, and monomorphisms are separated.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01TN",
+          "Stacks 01TN · immersions are locally quasi-finite"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02NH",
+          "Stacks 02NH · finite fibres and quasi-finiteness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01L7",
+          "Stacks 01L7 · immersions are monomorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01L4",
+          "Stacks 01L4 · monomorphisms are separated"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Quasi-compact immersion ⇒ Separated and quasi-finite",
+      "id": "T001300"
+    },
+    {
+      "key": "md-immersion-mono",
+      "requires": [
+        "P000548"
+      ],
+      "concludes": [
+        "P000550"
+      ],
+      "proof": "Apply the monomorphism criterion to the open and closed factors.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01L7",
+          "Stacks 01L7 · immersions are monomorphisms"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Immersion ⇒ Monomorphism",
+      "id": "T001301"
+    },
+    {
+      "key": "md-mono-radicial",
+      "requires": [
+        "P000550"
+      ],
+      "concludes": [
+        "P000044"
+      ],
+      "proof": "The diagonal is an isomorphism, so it is surjective. Surjectivity of the diagonal characterizes universal injectivity.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01L3",
+          "Stacks 01L3 · monomorphism criterion"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01S4",
+          "Stacks 01S4 · universal injectivity criterion"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Monomorphism ⇒ Universally injective",
+      "id": "T001302"
+    },
+    {
+      "key": "md-radicial-separated",
+      "requires": [
+        "P000044"
+      ],
+      "concludes": [
+        "P000024"
+      ],
+      "proof": "The diagonal is a surjective immersion and hence a closed immersion.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/05VE",
+          "Stacks 05VE · universally injective morphisms are separated"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Universally injective ⇒ Separated",
+      "id": "T001303"
+    },
+    {
+      "key": "md-etale-smooth",
+      "requires": [
+        "P000003"
+      ],
+      "concludes": [
+        "P000004"
+      ],
+      "proof": "Étale morphisms are smooth of relative dimension zero.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02GK",
+          "Stacks 02GK · étale iff smooth and unramified"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Étale ⇒ Smooth",
+      "id": "T001304"
+    },
+    {
+      "key": "md-smooth-flat-lfp",
+      "requires": [
+        "P000004"
+      ],
+      "concludes": [
+        "P000039"
+      ],
+      "proof": "Smooth morphisms are flat and locally of finite presentation.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01VF",
+          "Stacks 01VF · flatness of smooth morphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01VE",
+          "Stacks 01VE · local finite presentation of smooth morphisms"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Smooth ⇒ Flat ∧ locally finitely presented",
+      "id": "T001305"
+    },
+    {
+      "key": "md-fpqc-submersive",
+      "requires": [
+        "P000552"
+      ],
+      "concludes": [
+        "P000553"
+      ],
+      "proof": "The hypotheses survive arbitrary base change. The quotient-topology lemma applies to each base-changed morphism.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02JY",
+          "Stacks 02JY · flat quasi-compact surjections are submersive"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01U9",
+          "Stacks 01U9 · flat base change"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01S1",
+          "Stacks 01S1 · surjectivity under base change"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K5",
+          "Stacks 01K5 · quasi-compactness under base change"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Faithfully flat and qc ⇒ Universally submersive",
+      "id": "T001306"
+    },
+    {
+      "key": "md-submersive-surjective",
+      "requires": [
+        "P000553"
+      ],
+      "concludes": [
+        "P000043"
+      ],
+      "proof": "Apply the quotient-map condition to the identity base change.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/040H",
+          "Stacks 040H · universal submersiveness"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Universally submersive ⇒ Surjective",
+      "id": "T001307"
+    },
+    {
+      "key": "md-homeo-ft-finite-radicial-surj",
+      "requires": [
+        "P000554"
+      ],
+      "concludes": [
+        "P000019",
+        "P000044",
+        "P000043"
+      ],
+      "proof": "Universal homeomorphisms are integral, surjective and universally injective. An integral morphism of finite type is finite. Conversely a finite morphism is integral, and adding surjectivity and universal injectivity gives a universal homeomorphism of finite type.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04DF",
+          "Stacks 04DF · characterization of universal homeomorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01WJ",
+          "Stacks 01WJ · finite and integral morphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01WN",
+          "Stacks 01WN · finite implies proper, hence finite type"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Universal homeomorphism of finite type ⇔ Finite + Universally injective + Surjective",
+      "id": "T001308"
+    },
+    {
+      "key": "md-homeo-open",
+      "requires": [
+        "P000041"
+      ],
+      "concludes": [
+        "P000040"
+      ],
+      "proof": "A homeomorphism maps opens to opens, after any base change.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04DD",
+          "Stacks 04DD · universal homeomorphisms"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Universal homeomorphism ⇒ Universally open",
+      "id": "T001309"
+    },
+    {
+      "key": "md-homeo-submersive",
+      "requires": [
+        "P000041"
+      ],
+      "concludes": [
+        "P000553"
+      ],
+      "proof": "A homeomorphism is a quotient map, after any base change.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/04DD",
+          "Stacks 04DD · universal homeomorphisms"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/040H",
+          "Stacks 040H · universal submersiveness"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Universal homeomorphism ⇒ Universally submersive",
+      "id": "T001310"
+    },
+    {
+      "key": "md-finite-qf-separated",
+      "requires": [
+        "P000019"
+      ],
+      "concludes": [
+        "P000555"
+      ],
+      "proof": "A finite morphism is quasi-finite and separated.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02NU",
+          "Stacks 02NU · finite implies quasi-finite"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01WN",
+          "Stacks 01WN · finite implies proper"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Finite ⇒ Separated and quasi-finite",
+      "id": "T001311"
+    },
+    {
+      "key": "md-finite-qa-proper",
+      "requires": [
+        "P000019"
+      ],
+      "concludes": [
+        "P000018",
+        "P000023"
+      ],
+      "proof": "For the converse, the structure sheaf of a quasi-affine morphism is relatively ample. Apply the universally closed ampleness lemma with section 1 to obtain affineness. Affine and proper is equivalent to finite.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0891",
+          "Stacks 0891 · relative ampleness of the structure sheaf"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/0EKE",
+          "Stacks 0EKE · affine nonvanishing locus over a universally closed map"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01WN",
+          "Stacks 01WN · finite iff affine and proper"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01SP",
+          "Stacks 01SP · affine implies quasi-affine"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Finite ⇔ Quasi-affine + Proper",
+      "id": "T001312"
+    },
+    {
+      "key": "md-integral-affine-closed",
+      "requires": [
+        "P000045"
+      ],
+      "concludes": [
+        "P000017",
+        "P000042"
+      ],
+      "proof": "The cited lemma gives both directions, with no finiteness hypothesis.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01WM",
+          "Stacks 01WM · integral iff affine and universally closed"
+        ]
+      ],
+      "kind": "equivalence",
+      "subject": "morphism",
+      "name": "Integral morphism ⇔ Affine + Universally closed",
+      "id": "T001313"
+    },
+    {
+      "key": "md-qf-qa-ft",
+      "requires": [
+        "P000555"
+      ],
+      "concludes": [
+        "P000556"
+      ],
+      "proof": "Zariski’s Main Theorem factors the map through a quasi-compact open immersion into a scheme integral over the target. Quasi-finiteness supplies finite type.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/02LR",
+          "Stacks 02LR · separated quasi-finite morphisms are quasi-affine"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/02NH",
+          "Stacks 02NH · finite fibres and quasi-finiteness"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Separated and quasi-finite ⇒ Quasi-affine of finite type",
+      "id": "T001314"
+    },
+    {
+      "key": "md-qa-ft-qp",
+      "requires": [
+        "P000556"
+      ],
+      "concludes": [
+        "P000021"
+      ],
+      "proof": "The structure sheaf is relatively ample and the morphism is of finite type.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0B3H",
+          "Stacks 0B3H · quasi-affine of finite type implies quasi-projective"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Quasi-affine of finite type ⇒ Quasi-projective",
+      "id": "T001315"
+    },
+    {
+      "key": "md-projective-proper-qp",
+      "requires": [
+        "P000020"
+      ],
+      "concludes": [
+        "P000557"
+      ],
+      "proof": "Projectivity implies both properness and quasi-projectivity over any target.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01WC",
+          "Stacks 01WC · locally projective implies proper"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/07RL",
+          "Stacks 07RL · projective implies quasi-projective"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Projective ⇒ Proper and quasi-projective",
+      "id": "T001316"
+    },
+    {
+      "key": "md-proper-qp-projective",
+      "requires": [
+        "P000557",
+        "P000470"
+      ],
+      "concludes": [
+        "P000020"
+      ],
+      "proof": "Over a qcqs target, quasi-projectivity gives an open immersion into a projective scheme over the target. Properness makes this immersion closed.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/0BCL",
+          "Stacks 0BCL · projectivity over a qcqs target"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Proper and quasi-projective + Qcqs target ⇒ Projective",
+      "id": "T001317"
+    },
+    {
+      "key": "md-qa-separated-qc",
+      "requires": [
+        "P000018"
+      ],
+      "concludes": [
+        "P000558"
+      ],
+      "proof": "Over affine opens of the target the inverse images are quasi-compact open subschemes of affine schemes.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01SL",
+          "Stacks 01SL · quasi-affine implies separated and quasi-compact"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Quasi-affine ⇒ Separated and qc",
+      "id": "T001318"
+    },
+    {
+      "key": "md-proper-separated-qc",
+      "requires": [
+        "P000023"
+      ],
+      "concludes": [
+        "P000558"
+      ],
+      "proof": "Properness includes separatedness and finite type. Finite type includes quasi-compactness.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01W1",
+          "Stacks 01W1 · properness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Proper ⇒ Separated and qc",
+      "id": "T001319"
+    },
+    {
+      "key": "md-qp-separated-qc",
+      "requires": [
+        "P000021"
+      ],
+      "concludes": [
+        "P000558"
+      ],
+      "proof": "Quasi-projectivity implies separatedness and finite type, hence quasi-compactness.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01VX",
+          "Stacks 01VX · quasi-projective implies separated and of finite type"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Quasi-projective ⇒ Separated and qc",
+      "id": "T001320"
+    },
+    {
+      "key": "md-qp-finite-type",
+      "requires": [
+        "P000021"
+      ],
+      "concludes": [
+        "P000026"
+      ],
+      "proof": "Finite type is included in the definition of quasi-projectivity used here.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01VW",
+          "Stacks 01VW · quasi-projectivity"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01VX",
+          "Stacks 01VX · quasi-projective implies separated and of finite type"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Quasi-projective ⇒ Of finite type",
+      "id": "T001321"
+    },
+    {
+      "key": "md-separated-qc-qcqs",
+      "requires": [
+        "P000558"
+      ],
+      "concludes": [
+        "P000047"
+      ],
+      "proof": "The diagonal is a closed immersion, hence quasi-compact.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01KK",
+          "Stacks 01KK · separatedness and quasi-separatedness"
+        ],
+        [
+          "https://stacks.math.columbia.edu/tag/01K7",
+          "Stacks 01K7 · closed immersions are quasi-compact"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Separated and qc ⇒ Qcqs morphism",
+      "id": "T001322"
+    },
+    {
+      "key": "md-ft-qc",
+      "requires": [
+        "P000026"
+      ],
+      "concludes": [
+        "P000022"
+      ],
+      "proof": "Finite type includes quasi-compactness.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01T1",
+          "Stacks 01T1 · finite type"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Of finite type ⇒ Quasi-compact",
+      "id": "T001323"
+    },
+    {
+      "key": "md-fp-qcqs",
+      "requires": [
+        "P000027"
+      ],
+      "concludes": [
+        "P000047"
+      ],
+      "proof": "Finite presentation includes quasi-compactness and quasi-separatedness.",
+      "refs": [
+        [
+          "https://stacks.math.columbia.edu/tag/01TY",
+          "Stacks 01TY · finite presentation implies qcqs"
+        ]
+      ],
+      "kind": "implies",
+      "subject": "morphism",
+      "name": "Of finite presentation ⇒ Qcqs morphism",
+      "id": "T001324"
     },
     {
       "key": "pointset-sober-t0",
@@ -49264,7 +50603,7 @@
   "stacksIndex": {
     "revision": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "count": 21446,
-    "citedTagCount": 1302,
+    "citedTagCount": 1339,
     "directTagCount": 757,
     "path": "stacks/tags.json",
     "citations": "stacks/citations.json",

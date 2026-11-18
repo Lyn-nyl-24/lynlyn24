@@ -40,6 +40,12 @@
       const fitted = canvas.classList.toggle('topo-fitted');
       fit.setAttribute('aria-pressed', String(fitted));
       fit.textContent = fitted ? 'Full size' : 'Fit diagram';
+      const map = canvas.querySelector('.morphism-board');
+      if (map && !fitted) {
+        const anchor = map.querySelector('.topo-node[aria-current]') ?? map.querySelector('.topo-node');
+        const bounds = anchor.getBoundingClientRect();
+        canvas.scrollLeft += bounds.left + bounds.width/2 - canvas.getBoundingClientRect().left - canvas.clientWidth/2;
+      }
     });
     reset.addEventListener('click', () => {
       clear();

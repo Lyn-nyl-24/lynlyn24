@@ -100,6 +100,25 @@
 .topo-field-graph .topo-edge:is(:hover,:focus-visible,.topo-current) { color: var(--relation-ink); }
 .topo-fields .topo-field-graph { margin-block: 1.6rem; }
 .topo-field-graph .topo-board { min-width: 45rem; }
+.topo-field-graph .morphism-board { min-width: 88.875rem; }
+.morphism-board .topo-node {
+  display: inline;
+  position: static;
+  font: 500 16px/1 var(--sans);
+}
+.morphism-board ellipse { fill: var(--paper); stroke: var(--ink); stroke-width: 1.2; }
+.morphism-board text { fill: var(--ink); }
+.morphism-board .topo-edge text {
+  fill: var(--accent); font: 600 14px var(--sans);
+  paint-order: stroke; stroke: var(--plate); stroke-width: 5; stroke-linejoin: round;
+}
+.morphism-board .topo-edge { color: var(--ink); }
+.morphism-board .emphasized :is(.topo-edge-line,.topo-arrowhead) { stroke-width: 2.8; }
+.morphism-board .topo-node:is(:hover,:focus-visible,.topo-current) ellipse {
+  fill: var(--atlas-selected); stroke: var(--accent); stroke-width: 3;
+}
+.morphism-board .topo-edge:is(:hover,:focus-visible,.topo-current,.topo-related) { color: var(--accent); }
+@media (pointer: coarse) { .morphism-board .topo-edge-hit { stroke-width: 22; } }
 .topo-field-legend { margin-block: .85rem; }
 .topo-relation-chip { display: inline-flex; gap: .3rem; align-items: baseline; color: var(--relation-color); font: 650 .78rem/1.35 var(--sans); }
 .topo-relation-chip > span { font-size: 1.15em; }
@@ -366,12 +385,6 @@
   overflow-wrap: anywhere;
 }
 .atlas-workspace :is(.atlas-panel,.algebra-card,.property-record-body) math { font-family: var(--math-font); }
-.atlas-math {
-  display: inline-block;
-  max-inline-size: 100%;
-  overflow: auto;
-  vertical-align: middle;
-}
 .atlas-workspace [data-relation-style] { --relation-color: var(--ink); }
 .atlas-workspace [data-relation-style="equivalence"], .atlas-workspace [data-relation-style="criterion"] { --relation-color: var(--atlas-equivalence); }
 .atlas-workspace [data-relation-style="site"] { --relation-color: var(--atlas-site); }
