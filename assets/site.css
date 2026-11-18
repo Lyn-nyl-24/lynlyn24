@@ -313,6 +313,22 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .hg-inline, .hg-display { max-inline-size: 100%; height: auto; }
 .hg-inline { display: inline-block; }
 .hg-display { display: block; margin: .65em auto; }
+.hg-block { display:block; text-align:center; margin-block:.65em; }
+.hg-block .hg-display { margin-block:0; }
+.hg-semantic { display:block; container-type:inline-size; }
+.hg-case-formula { container-type:inline-size; }
+.hg-case-stacked { display:none; }
+@container (max-width: 27rem) {
+  .hg-case-full { display:none; }
+  .hg-case-stacked { display:block; }
+  .hg-case-formula .hg-semantic math { font-size:min(1em, calc(98cqi / var(--hg-case-columns))); }
+  .hg-case-body { display:flex; flex-direction:column; align-items:center; gap:.16em; }
+}
+.hg-layout foreignObject { overflow:visible; line-height:1; font-weight:normal; font-style:normal; color:black; white-space:nowrap; }
+.hg-layout foreignObject math { display:inline math; font-size:inherit; }
+.hg-layout > .hg-svg { display:none; }
+.site-header:has(.diagram-display input[value="svg"]:checked) + main .hg-layout > .hg-latex { display:none; }
+.site-header:has(.diagram-display input[value="svg"]:checked) + main .hg-layout > .hg-svg { display:inline; }
 .hg-equation {
   display: grid;
   scroll-margin-block-start: 5.5rem;
@@ -320,11 +336,11 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   align-items: center;
   column-gap: .25em;
 }
-.hg-equation > svg { grid-column: 2; }
+.hg-equation > :is(svg, .hg-dual) { grid-column: 2; min-inline-size: 0; }
 .hg-equation > .equation-number { justify-self: end; }
 @media (max-width: 32rem) {
   .hg-equation { grid-template-columns: minmax(0,1fr); }
-  .hg-equation > svg { grid-column: 1; }
+  .hg-equation > :is(svg, .hg-dual) { grid-column: 1; }
 }
 :root[data-theme="dark"] :is(.hg-inline,.hg-display) { filter: invert(1); }
 .edition-original { margin-block: .65rem; }
@@ -387,13 +403,16 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .diagram-file { text-align: end; color: var(--muted); font: .72rem/1.35 var(--sans); }
 .diagram-panel { min-inline-size: 0; margin-block: .55rem; }
 .diagram-web-panel { display: none; }
+.hg-dual > .hg-svg { display: none; }
 @supports selector(:has(*)) {
   .diagram-display, .diagram-web-panel { display: block; }
   .diagram-svg-panel,
-  .site-header:has(.diagram-display input[value="svg"]:checked) + main .diagram-web-panel { display: none; }
+  .site-header:has(.diagram-display input[value="svg"]:checked) + main .diagram-web-panel,
+  .site-header:has(.diagram-display input[value="svg"]:checked) + main .hg-dual > .hg-latex { display: none; }
   .site-header:has(.diagram-display input[value="svg"]:checked) + main .diagram-svg-panel { display: block; }
+  .site-header:has(.diagram-display input[value="svg"]:checked) + main .hg-dual > .hg-svg { display: inline; }
 }
-@media (max-width: 760px) {
+@media (max-width: 60rem) {
   .site-header:has(.diagram-display) { flex-wrap: wrap; row-gap: 0; }
   .site-header .diagram-display { flex-basis: 100%; order: 4; }
 }
@@ -1604,4 +1623,63 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
 .hg-depth-45{vertical-align:-2.25em}
 .hg-depth-46{vertical-align:-2.30em}
 .hg-depth-47{vertical-align:-2.35em}
-.hg-depth-48{vertical-align:-2.40em}
+.hg-depth-48{vertical-align:-2.40em}.hg-fit-1 math{font-size:min(1em,88.000cqi)}.hg-case-size-1{--hg-case-columns:1}
+.hg-fit-2 math{font-size:min(1em,44.000cqi)}.hg-case-size-2{--hg-case-columns:2}
+.hg-fit-3 math{font-size:min(1em,29.333cqi)}.hg-case-size-3{--hg-case-columns:3}
+.hg-fit-4 math{font-size:min(1em,22.000cqi)}.hg-case-size-4{--hg-case-columns:4}
+.hg-fit-5 math{font-size:min(1em,17.600cqi)}.hg-case-size-5{--hg-case-columns:5}
+.hg-fit-6 math{font-size:min(1em,14.667cqi)}.hg-case-size-6{--hg-case-columns:6}
+.hg-fit-7 math{font-size:min(1em,12.571cqi)}.hg-case-size-7{--hg-case-columns:7}
+.hg-fit-8 math{font-size:min(1em,11.000cqi)}.hg-case-size-8{--hg-case-columns:8}
+.hg-fit-9 math{font-size:min(1em,9.778cqi)}.hg-case-size-9{--hg-case-columns:9}
+.hg-fit-10 math{font-size:min(1em,8.800cqi)}.hg-case-size-10{--hg-case-columns:10}
+.hg-fit-11 math{font-size:min(1em,8.000cqi)}.hg-case-size-11{--hg-case-columns:11}
+.hg-fit-12 math{font-size:min(1em,7.333cqi)}.hg-case-size-12{--hg-case-columns:12}
+.hg-fit-13 math{font-size:min(1em,6.769cqi)}.hg-case-size-13{--hg-case-columns:13}
+.hg-fit-14 math{font-size:min(1em,6.286cqi)}.hg-case-size-14{--hg-case-columns:14}
+.hg-fit-15 math{font-size:min(1em,5.867cqi)}.hg-case-size-15{--hg-case-columns:15}
+.hg-fit-16 math{font-size:min(1em,5.500cqi)}.hg-case-size-16{--hg-case-columns:16}
+.hg-fit-17 math{font-size:min(1em,5.176cqi)}.hg-case-size-17{--hg-case-columns:17}
+.hg-fit-18 math{font-size:min(1em,4.889cqi)}.hg-case-size-18{--hg-case-columns:18}
+.hg-fit-19 math{font-size:min(1em,4.632cqi)}.hg-case-size-19{--hg-case-columns:19}
+.hg-fit-20 math{font-size:min(1em,4.400cqi)}.hg-case-size-20{--hg-case-columns:20}
+.hg-fit-21 math{font-size:min(1em,4.190cqi)}.hg-case-size-21{--hg-case-columns:21}
+.hg-fit-22 math{font-size:min(1em,4.000cqi)}.hg-case-size-22{--hg-case-columns:22}
+.hg-fit-23 math{font-size:min(1em,3.826cqi)}.hg-case-size-23{--hg-case-columns:23}
+.hg-fit-24 math{font-size:min(1em,3.667cqi)}.hg-case-size-24{--hg-case-columns:24}
+.hg-fit-25 math{font-size:min(1em,3.520cqi)}.hg-case-size-25{--hg-case-columns:25}
+.hg-fit-26 math{font-size:min(1em,3.385cqi)}.hg-case-size-26{--hg-case-columns:26}
+.hg-fit-27 math{font-size:min(1em,3.259cqi)}.hg-case-size-27{--hg-case-columns:27}
+.hg-fit-28 math{font-size:min(1em,3.143cqi)}.hg-case-size-28{--hg-case-columns:28}
+.hg-fit-29 math{font-size:min(1em,3.034cqi)}.hg-case-size-29{--hg-case-columns:29}
+.hg-fit-30 math{font-size:min(1em,2.933cqi)}.hg-case-size-30{--hg-case-columns:30}
+.hg-fit-31 math{font-size:min(1em,2.839cqi)}.hg-case-size-31{--hg-case-columns:31}
+.hg-fit-32 math{font-size:min(1em,2.750cqi)}.hg-case-size-32{--hg-case-columns:32}
+.hg-fit-33 math{font-size:min(1em,2.667cqi)}.hg-case-size-33{--hg-case-columns:33}
+.hg-fit-34 math{font-size:min(1em,2.588cqi)}.hg-case-size-34{--hg-case-columns:34}
+.hg-fit-35 math{font-size:min(1em,2.514cqi)}.hg-case-size-35{--hg-case-columns:35}
+.hg-fit-36 math{font-size:min(1em,2.444cqi)}.hg-case-size-36{--hg-case-columns:36}
+.hg-fit-37 math{font-size:min(1em,2.378cqi)}.hg-case-size-37{--hg-case-columns:37}
+.hg-fit-38 math{font-size:min(1em,2.316cqi)}.hg-case-size-38{--hg-case-columns:38}
+.hg-fit-39 math{font-size:min(1em,2.256cqi)}.hg-case-size-39{--hg-case-columns:39}
+.hg-fit-40 math{font-size:min(1em,2.200cqi)}.hg-case-size-40{--hg-case-columns:40}
+.hg-fit-41 math{font-size:min(1em,2.146cqi)}.hg-case-size-41{--hg-case-columns:41}
+.hg-fit-42 math{font-size:min(1em,2.095cqi)}.hg-case-size-42{--hg-case-columns:42}
+.hg-fit-43 math{font-size:min(1em,2.047cqi)}.hg-case-size-43{--hg-case-columns:43}
+.hg-fit-44 math{font-size:min(1em,2.000cqi)}.hg-case-size-44{--hg-case-columns:44}
+.hg-fit-45 math{font-size:min(1em,1.956cqi)}.hg-case-size-45{--hg-case-columns:45}
+.hg-fit-46 math{font-size:min(1em,1.913cqi)}.hg-case-size-46{--hg-case-columns:46}
+.hg-fit-47 math{font-size:min(1em,1.872cqi)}.hg-case-size-47{--hg-case-columns:47}
+.hg-fit-48 math{font-size:min(1em,1.833cqi)}.hg-case-size-48{--hg-case-columns:48}
+.hg-fit-49 math{font-size:min(1em,1.796cqi)}.hg-case-size-49{--hg-case-columns:49}
+.hg-fit-50 math{font-size:min(1em,1.760cqi)}.hg-case-size-50{--hg-case-columns:50}
+.hg-fit-51 math{font-size:min(1em,1.725cqi)}.hg-case-size-51{--hg-case-columns:51}
+.hg-fit-52 math{font-size:min(1em,1.692cqi)}.hg-case-size-52{--hg-case-columns:52}
+.hg-fit-53 math{font-size:min(1em,1.660cqi)}.hg-case-size-53{--hg-case-columns:53}
+.hg-fit-54 math{font-size:min(1em,1.630cqi)}.hg-case-size-54{--hg-case-columns:54}
+.hg-fit-55 math{font-size:min(1em,1.600cqi)}.hg-case-size-55{--hg-case-columns:55}
+.hg-fit-56 math{font-size:min(1em,1.571cqi)}.hg-case-size-56{--hg-case-columns:56}
+.hg-fit-57 math{font-size:min(1em,1.544cqi)}.hg-case-size-57{--hg-case-columns:57}
+.hg-fit-58 math{font-size:min(1em,1.517cqi)}.hg-case-size-58{--hg-case-columns:58}
+.hg-fit-59 math{font-size:min(1em,1.492cqi)}.hg-case-size-59{--hg-case-columns:59}
+.hg-fit-60 math{font-size:min(1em,1.467cqi)}.hg-case-size-60{--hg-case-columns:60}
