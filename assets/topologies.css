@@ -122,6 +122,11 @@
   paint-order: stroke; stroke: var(--plate); stroke-width: 5; stroke-linejoin: round;
 }
 .morphism-board .topo-edge { color: var(--ink); }
+.morphism-board .topo-node:is(.topo-prior,.topo-later) ellipse {
+  stroke: var(--state-color); fill: color-mix(in srgb,var(--state-color) 10%,var(--paper)); stroke-width: 2;
+}
+.morphism-board .topo-prior ellipse { stroke-dasharray: 6 3; }
+.morphism-board .topo-later ellipse { stroke-dasharray: 2 3; }
 .morphism-board .emphasized :is(.topo-edge-line,.topo-arrowhead) { stroke-width: 2.8; }
 .morphism-board .topo-node:is(:hover,:focus-visible,.topo-current) ellipse {
   fill: var(--atlas-selected); stroke: var(--accent); stroke-width: 3;
@@ -352,6 +357,10 @@
   background: var(--paper); touch-action: pan-y pinch-zoom;
 }
 .um-stage.um-can-pan { cursor: grab; touch-action: none; }
+.um-stage[data-mode="overview"] { aspect-ratio: 964 / 448; }
+.um-panel-title { font: 650 15px var(--sans); fill: var(--ink); paint-order: stroke; stroke: var(--paper); stroke-width: 5; }
+.um-panel-frame { fill: none; stroke: var(--um-rule); stroke-width: 1; pointer-events: none; }
+.um-edge.um-extra .um-line:not(.um-member,.um-context) { stroke-dasharray: 6 4; }
 .um-stage.um-can-pan:active { cursor: grabbing; }
 .um-stage:focus-visible, .um-tools select:focus-visible, .um-zoom button:focus-visible {
   outline: 2px solid var(--accent); outline-offset: 2px;
@@ -373,10 +382,15 @@
 .um-node text,.um-mark text,.um-edge-badge text {
   fill: var(--ink); text-anchor: middle; font: 600 14px var(--sans,sans-serif);
 }
-.um-selected rect,.um-node:is(:hover,:focus-visible) rect {
+.um-node:is(.topo-prior,.topo-later) rect {
+  fill: color-mix(in srgb,var(--state-color) 10%,var(--paper)); stroke: var(--state-color); stroke-width: 2;
+}
+.um-node.topo-prior rect { stroke-dasharray: 6 3; }
+.um-node.topo-later rect { stroke-dasharray: 2 3; }
+.um-node.topo-current rect,.um-node:is(:hover,:focus-visible) rect {
   fill: color-mix(in srgb, var(--accent) 8%, var(--paper)); stroke: var(--accent); stroke-width: 2;
 }
-.um-node:is(:hover,:focus-visible) text,.um-selected text { fill: var(--accent); }
+.um-node:is(:hover,:focus-visible,.topo-current) text { fill: var(--accent); }
 .um-mark rect,.um-edge-badge rect { fill: var(--paper); stroke: var(--um-rule); stroke-width: 1; }
 .um-mark text { font-size: 13px; }
 .um-edge-badge text { font-size: 11px; font-weight: 650; }
@@ -396,6 +410,7 @@
   .um-tools label:first-child { grid-column: 1/-1; }
   .um-narrow { display: block; } .um-wide { display: none; }
   .um-stage { aspect-ratio: 384 / 515; min-height: 0; }
+  .um-stage[data-mode="overview"] { aspect-ratio: 380 / 896; }
   .um-stage .um-node text { font-size: 17px; }
   .um-zoom button { min-height: 2.5rem; min-width: 2.5rem; }
   .um-key { gap: .2rem .6rem; }
