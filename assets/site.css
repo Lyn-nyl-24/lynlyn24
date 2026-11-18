@@ -256,6 +256,7 @@ h1 {
 .reference-page .lede a { display: inline-block; }
 
 .book-chapters { margin-block-start: 42px; }
+.book-attribution { margin: clamp(1.6rem, 2.5vw, 2.4rem) var(--edge) 0; line-height: 1.55; }
 .book-chapter + .book-chapter { margin-block-start: 32px; }
 .book-chapter h2 { margin: 0; padding-inline: var(--edge); font-size: 1.3rem; letter-spacing: -.035em; }
 .book-chapter h2 a { color: var(--ink); text-decoration-color: var(--soft-line); }
