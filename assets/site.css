@@ -564,6 +564,7 @@ article.reading > :is(.prose, .backlinks, .reader-navigation) { inline-size: var
   min-height: 67px;
   padding: 1rem 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
